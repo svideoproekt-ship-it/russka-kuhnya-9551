@@ -1,0 +1,300 @@
+/* DessertsCategory.css - Ягодная/Розово-лавандовая палитра */
+
+.desserts-category {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #2D1B4E 0%, #5A2D82 40%, #8E44AD 100%);
+  padding: 20px;
+  font-family: 'Times New Roman', serif;
+}
+
+.desserts-category .back-button,
+.desserts-category .back-home {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #E91E8C, #C73E8F);
+  color: #FFF0F5;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.desserts-category .back-button:hover,
+.desserts-category .back-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(233, 30, 140, 0.6);
+}
+
+.desserts-category .category-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #E91E8C, #C73E8F);
+  border: 3px solid #FFB6D9;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.desserts-category .category-header h1 {
+  color: #FFF0F5;
+  font-size: 3rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.desserts-category .category-description {
+  color: #FFE4F1;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.desserts-category .recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.desserts-category .recipe-card {
+  background: linear-gradient(135deg, #8E44AD, #6C3483);
+  border: 2px solid #FFB6D9;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.desserts-category .recipe-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(142, 68, 173, 0.7);
+  border-color: #E91E8C;
+}
+
+.desserts-category .recipe-card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #5B2C6F, #4A235A);
+}
+
+.desserts-category .recipe-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.desserts-category .recipe-card:hover .recipe-card-image img {
+  transform: scale(1.1);
+}
+
+.desserts-category .recipe-card-content {
+  padding: 20px;
+}
+
+.desserts-category .recipe-card-content h3 {
+  color: #FFF0F5;
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.desserts-category .recipe-card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #FFB6D9;
+  font-size: 0.9rem;
+}
+
+.desserts-category .view-recipe-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #FFB6D9, #E91E8C);
+  border: 2px solid #FFF0F5;
+  border-radius: 8px;
+  color: #5B2C6F;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.desserts-category .view-recipe-btn:hover {
+  background: linear-gradient(135deg, #E91E8C, #C73E8F);
+  color: #FFF0F5;
+  transform: scale(1.05);
+}
+
+/* Детальная страница десертов */
+.desserts-category .recipe-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #E91E8C, #C73E8F);
+  border: 3px solid #FFB6D9;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.desserts-category .recipe-header h1 {
+  color: #FFF0F5;
+  font-size: 2.5rem;
+  margin: 0 0 15px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.desserts-category .recipe-meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.1rem;
+  color: #FFE4F1;
+}
+
+.desserts-category .recipe-meta span {
+  background: rgba(255, 182, 217, 0.3);
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #FFB6D9;
+}
+
+.desserts-category .recipe-image-container {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #FFB6D9;
+}
+
+.desserts-category .recipe-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.desserts-category .recipe-content {
+  background: rgba(255, 240, 245, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  color: #5B2C6F;
+}
+
+.desserts-category .recipe-section h2 {
+  color: #8E44AD;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #FFB6D9;
+  padding-bottom: 10px;
+}
+
+.desserts-category .ingredients-list li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #FFB6D9, #E91E8C);
+  border-radius: 8px;
+  color: #5B2C6F;
+  font-weight: 500;
+  position: relative;
+  padding-left: 35px;
+  list-style: none;
+}
+
+.desserts-category .ingredients-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 15px;
+  color: #5B2C6F;
+  font-weight: bold;
+}
+
+.desserts-category .preparation-list {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.desserts-category .preparation-list li {
+  padding: 15px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #FFE4F1, #FFB6D9);
+  border-radius: 8px;
+  color: #5B2C6F;
+  position: relative;
+  padding-left: 50px;
+  counter-increment: step-counter;
+}
+
+.desserts-category .preparation-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #8E44AD;
+  color: #FFF0F5;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.desserts-category .history-section {
+  background: linear-gradient(135deg, #FFE4F1, #FFB6D9);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #8E44AD;
+}
+
+.desserts-category .history-text {
+  color: #5B2C6F;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .desserts-category .category-header h1 { font-size: 2rem; }
+  .desserts-category .recipes-grid { grid-template-columns: 1fr; }
+  .desserts-category .recipe-header h1 { font-size: 1.8rem; }
+  .desserts-category .recipe-meta { flex-direction: column; gap: 10px; }
+  .desserts-category .recipe-detail { padding: 20px; }
+}/* АДАПТИВНОСТЬ ДЕСЕРТОВ */
+@media screen and (max-width: 768px) {
+  .desserts-category .category-header h1 { font-size: 2.1rem !important; }
+  .desserts-category .category-description { font-size: 1.1rem !important; }
+  .desserts-category .recipe-card-content h3 { font-size: 1.35rem !important; }
+  .desserts-category .recipe-card-meta { font-size: 0.95rem !important; }
+  .desserts-category .view-recipe-btn { font-size: 1.05rem !important; padding: 13px; }
+  .desserts-category .recipe-section h2 { font-size: 1.6rem !important; }
+  .desserts-category .ingredients-list li, .desserts-category .preparation-list li { font-size: 1.05rem !important; line-height: 1.55; padding: 12px 15px 12px 40px; }
+  .desserts-category .history-text { font-size: 1.05rem !important; line-height: 1.7; }
+}
+@media screen and (max-width: 480px) {
+  .desserts-category .category-header h1 { font-size: 1.7rem !important; }
+  .desserts-category .category-description { font-size: 1rem !important; }
+  .desserts-category .recipe-card-image { height: 170px; }
+  .desserts-category .recipe-card-content { padding: 16px 14px; }
+  .desserts-category .recipe-card-content h3 { font-size: 1.2rem !important; }
+  .desserts-category .recipe-card-meta { font-size: 0.9rem !important; flex-direction: column; gap: 4px; }
+  .desserts-category .view-recipe-btn { font-size: 1rem !important; padding: 12px; }
+  .desserts-category .recipe-detail { padding: 18px 14px; }
+  .desserts-category .recipe-header h1 { font-size: 1.5rem !important; }
+  .desserts-category .recipe-meta { flex-direction: column; gap: 6px; font-size: 0.95rem !important; }
+  .desserts-category .recipe-section h2 { font-size: 1.35rem !important; }
+  .desserts-category .ingredients-list li, .desserts-category .preparation-list li { font-size: 1rem !important; padding: 11px 12px 11px 38px; }
+  .desserts-category .history-section { padding: 16px 14px; }
+  .desserts-category .history-text { font-size: 1rem !important; }
+  .desserts-category .back-button, .desserts-category .back-home { font-size: 1rem !important; padding: 11px 16px; }
+}

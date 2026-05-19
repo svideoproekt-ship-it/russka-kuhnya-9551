@@ -1,0 +1,103 @@
+/* RecipePage.css - обновлённая версия */
+.recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button {
+  background-color: #D4AF37;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #B8860B;
+}
+
+.main-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.recipe-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.ingredients-list h4 {
+  border-bottom: 2px solid #D4AF37;
+  padding-bottom: 5px;
+  margin-top: 15px;
+}
+
+.instructions h4 {
+  border-bottom: 2px solid #D4AF37;
+  padding-bottom: 5px;
+  margin-top: 15px;
+}
+
+.history-note {
+  font-style: italic;
+  color: #555;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-left: 4px solid #D4AF37;
+}
+
+@media (max-width: 768px) {
+  .recipe-title {
+    font-size: 1.5rem;
+  }
+}/* Добавь это в конец RecipePage.css */
+.baking-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-title {
+  color: #8B0000; /* Темно-красный, как в логотипе */
+  margin: 0;
+}
+
+.recipes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Отступ между рецептами */
+}
+
+.recipe-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.recipe-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 6px;
+}

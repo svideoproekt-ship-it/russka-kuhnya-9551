@@ -1,0 +1,300 @@
+/* SnacksCategory.css - Терракотовая/Тёплая глина */
+
+.snacks-category {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #2A1B12 0%, #4A2C1A 50%, #6B3A2A 100%);
+  padding: 20px;
+  font-family: 'Times New Roman', serif;
+}
+
+.snacks-category .back-button,
+.snacks-category .back-home {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #C25E3A, #A0452A);
+  color: #F5E6D3;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.snacks-category .back-button:hover,
+.snacks-category .back-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(194, 94, 58, 0.6);
+}
+
+.snacks-category .category-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #C25E3A, #A0452A);
+  border: 3px solid #D4A574;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.snacks-category .category-header h1 {
+  color: #F5E6D3;
+  font-size: 3rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+.snacks-category .category-description {
+  color: #E8D5C0;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.snacks-category .recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.snacks-category .recipe-card {
+  background: linear-gradient(135deg, #8B4513, #6B3A2A);
+  border: 2px solid #D4A574;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.snacks-category .recipe-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(139, 69, 19, 0.7);
+  border-color: #C25E3A;
+}
+
+.snacks-category .recipe-card-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #5C2E1C, #4A2315);
+}
+
+.snacks-category .recipe-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.snacks-category .recipe-card:hover .recipe-card-image img {
+  transform: scale(1.1);
+}
+
+.snacks-category .recipe-card-content {
+  padding: 20px;
+}
+
+.snacks-category .recipe-card-content h3 {
+  color: #F5E6D3;
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
+  text-align: center;
+}
+
+.snacks-category .recipe-card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #D4A574;
+  font-size: 0.9rem;
+}
+
+.snacks-category .view-recipe-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #D4A574, #C25E3A);
+  border: 2px solid #F5E6D3;
+  border-radius: 8px;
+  color: #2A1B12;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.snacks-category .view-recipe-btn:hover {
+  background: linear-gradient(135deg, #C25E3A, #A0452A);
+  color: #F5E6D3;
+  transform: scale(1.05);
+}
+
+/* Детальная страница закусок */
+.snacks-category .recipe-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #C25E3A, #A0452A);
+  border: 3px solid #D4A574;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.snacks-category .recipe-header h1 {
+  color: #F5E6D3;
+  font-size: 2.5rem;
+  margin: 0 0 15px 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.snacks-category .recipe-meta {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  font-size: 1.1rem;
+  color: #E8D5C0;
+}
+
+.snacks-category .recipe-meta span {
+  background: rgba(212, 165, 116, 0.3);
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #D4A574;
+}
+
+.snacks-category .recipe-image-container {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  overflow: hidden;
+  border: 3px solid #D4A574;
+}
+
+.snacks-category .recipe-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.snacks-category .recipe-content {
+  background: rgba(245, 230, 211, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  color: #2A1B12;
+}
+
+.snacks-category .recipe-section h2 {
+  color: #8B4513;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #D4A574;
+  padding-bottom: 10px;
+}
+
+.snacks-category .ingredients-list li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #D4A574, #C25E3A);
+  border-radius: 8px;
+  color: #2A1B12;
+  font-weight: 500;
+  position: relative;
+  padding-left: 35px;
+  list-style: none;
+}
+
+.snacks-category .ingredients-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 15px;
+  color: #2A1B12;
+  font-weight: bold;
+}
+
+.snacks-category .preparation-list {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.snacks-category .preparation-list li {
+  padding: 15px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #E8D5C0, #D4A574);
+  border-radius: 8px;
+  color: #2A1B12;
+  position: relative;
+  padding-left: 50px;
+  counter-increment: step-counter;
+}
+
+.snacks-category .preparation-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #8B4513;
+  color: #F5E6D3;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.snacks-category .history-section {
+  background: linear-gradient(135deg, #E8D5C0, #D4A574);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #8B4513;
+}
+
+.snacks-category .history-text {
+  color: #2A1B12;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .snacks-category .category-header h1 { font-size: 2rem; }
+  .snacks-category .recipes-grid { grid-template-columns: 1fr; }
+  .snacks-category .recipe-header h1 { font-size: 1.8rem; }
+  .snacks-category .recipe-meta { flex-direction: column; gap: 10px; }
+  .snacks-category .recipe-detail { padding: 20px; }
+}/* АДАПТИВНОСТЬ ЗАКУСОК */
+@media screen and (max-width: 768px) {
+  .snacks-category .category-header h1 { font-size: 2.1rem !important; }
+  .snacks-category .category-description { font-size: 1.1rem !important; }
+  .snacks-category .recipe-card-content h3 { font-size: 1.35rem !important; }
+  .snacks-category .recipe-card-meta { font-size: 0.95rem !important; }
+  .snacks-category .view-recipe-btn { font-size: 1.05rem !important; padding: 13px; }
+  .snacks-category .recipe-section h2 { font-size: 1.6rem !important; }
+  .snacks-category .ingredients-list li, .snacks-category .preparation-list li { font-size: 1.05rem !important; line-height: 1.55; padding: 12px 15px 12px 40px; }
+  .snacks-category .history-text { font-size: 1.05rem !important; line-height: 1.7; }
+}
+@media screen and (max-width: 480px) {
+  .snacks-category .category-header h1 { font-size: 1.7rem !important; }
+  .snacks-category .category-description { font-size: 1rem !important; }
+  .snacks-category .recipe-card-image { height: 170px; }
+  .snacks-category .recipe-card-content { padding: 16px 14px; }
+  .snacks-category .recipe-card-content h3 { font-size: 1.2rem !important; }
+  .snacks-category .recipe-card-meta { font-size: 0.9rem !important; flex-direction: column; gap: 4px; }
+  .snacks-category .view-recipe-btn { font-size: 1rem !important; padding: 12px; }
+  .snacks-category .recipe-detail { padding: 18px 14px; }
+  .snacks-category .recipe-header h1 { font-size: 1.5rem !important; }
+  .snacks-category .recipe-meta { flex-direction: column; gap: 6px; font-size: 0.95rem !important; }
+  .snacks-category .recipe-section h2 { font-size: 1.35rem !important; }
+  .snacks-category .ingredients-list li, .snacks-category .preparation-list li { font-size: 1rem !important; padding: 11px 12px 11px 38px; }
+  .snacks-category .history-section { padding: 16px 14px; }
+  .snacks-category .history-text { font-size: 1rem !important; }
+  .snacks-category .back-button, .snacks-category .back-home { font-size: 1rem !important; padding: 11px 16px; }
+}

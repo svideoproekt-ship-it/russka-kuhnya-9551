@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Выпечка — Русская кухня</title>
+  <link rel="stylesheet" href="/src/styles/RecipePage.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #D4AF37;
+      margin-bottom: 30px;
+    }
+    .recipe-item {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+    .recipe-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .back-button {
+      background-color: #D4AF37;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+    }
+    .back-button:hover {
+      background-color: #B8860B;
+    }
+    .main-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    .recipe-title {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .recipe-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .ingredients-list h4 {
+      border-bottom: 2px solid #D4AF37;
+      padding-bottom: 5px;
+      margin-top: 15px;
+    }
+    .instructions h4 {
+      border-bottom: 2px solid #D4AF37;
+      padding-bottom: 5px;
+      margin-top: 15px;
+    }
+    .history-note {
+      font-style: italic;
+      color: #555;
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-left: 4px solid #D4AF37;
+    }
+    @media (max-width: 768px) {
+      .recipe-title {
+        font-size: 1.5rem;
+      }
+      .recipe-header {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Выпечка</h1>
+
+    <!-- Рецепт 1 -->
+    <div class="recipe-item">
+      <div class="recipe-header">
+        <h2 class="recipe-title">Блины классические</h2>
+        <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+      </div>
+      <img src="/images/Klassicheskie-bliny-na-moloke-500x350-1-933x700.jpg" alt="Классические блины" class="main-image">
+      <div class="recipe-meta">
+        <strong>Эпоха:</strong> Древняя Русь (IX век) – наши дни<br>
+        <strong>Время приготовления:</strong> 45 минут
+      </div>
+      <div class="ingredients-list">
+        <h4>Ингредиенты:</h4>
+        <ul>
+          <li>Молоко — 500 мл</li>
+          <li>Яйца — 3 шт</li>
+          <li>Мука — 250 г</li>
+          <li>Сахар — 2 ст. л.</li>
+          <li>Соль — 0.5 ч. л.</li>
+          <li>Растительное масло — 3 ст. л.</li>
+          <li>Сливочное масло — для смазывания</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h4>Приготовление:</h4>
+        <ol>
+          <li>Яйца взбить с сахаром и солью</li>
+          <li>Добавить молоко, перемешать</li>
+          <li>Постепенно всыпать муку, размешивая венчиком</li>
+          <li>Добавить растительное масло</li>
+          <li>Оставить тесто на 30 минут</li>
+          <li>Жарить на раскалённой сковороде с двух сторон</li>
+          <li>Готовые блины смазывать сливочным маслом</li>
+        </ol>
+      </div>
+      <div class="history-note">
+        <strong>Историческая справка:</strong> Блины — древнейший символ солнца. А.С. Пушкин очень любил блины, особенно с икрой. Императрица Екатерина II также обожала блины и ела их с мёдом и сметаной.
+      </div>
+    </div>
+
+    <!-- Рецепт 2 -->
+    <div class="recipe-item">
+      <div class="recipe-header">
+        <h2 class="recipe-title">Курник (Царский пирог)</h2>
+        <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+      </div>
+      <img src="/images/kurnik.jpg" alt="Курник" class="main-image">
+      <div class="recipe-meta">
+        <strong>Эпоха:</strong> XVI–XVII век<br>
+        <strong>Время приготовления:</strong> 2 часа 30 минут
+      </div>
+      <div class="ingredients-list">
+        <h4>Тесто:</h4>
+        <ul>
+          <li>Мука — 500 г</li>
+          <li>Яйца — 2 шт</li>
+          <li>Сметана — 200 г</li>
+          <li>Сливочное масло — 200 г</li>
+          <li>Соль — 1 ч. л.</li>
+        </ul>
+        <h4>Начинка:</h4>
+        <ul>
+          <li>Курица — 500 г</li>
+          <li>Рис — 150 г</li>
+          <li>Варёные яйца — 4 шт</li>
+          <li>Грибы — 300 г</li>
+          <li>Лук — 2 шт</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h4>Приготовление:</h4>
+        <ol>
+          <li>Приготовить тесто, оставить на 30 минут</li>
+          <li>Отварить курицу, разобрать на волокна</li>
+          <li>Сварить рис, яйца нарезать</li>
+          <li>Грибы обжарить с луком</li>
+          <li>Раскатать тесто, выложить слоями начинку</li>
+          <li>Закрыть пирог, смазать яйцом</li>
+          <li>Выпекать 1 час при 180°C</li>
+        </ol>
+      </div>
+      <div class="history-note">
+        <strong>Историческая справка:</strong> Курник называли "царём пирогов". Подавали на свадьбах и праздниках. Николай II очень любил курник, его готовили специально для царской семьи.
+      </div>
+    </div>
+
+    <!-- Рецепт 3 -->
+    <div class="recipe-item">
+      <div class="recipe-header">
+        <h2 class="recipe-title">Калачи московские</h2>
+        <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+      </div>
+      <img src="/images/kalachi.jpg" alt="Калачи московские" class="main-image">
+      <div class="recipe-meta">
+        <strong>Эпоха:</strong> XIV–XV век<br>
+        <strong>Время приготовления:</strong> 3 часа
+      </div>
+      <div class="ingredients-list">
+        <h4>Ингредиенты:</h4>
+        <ul>
+          <li>Мука пшеничная — 500 г</li>
+          <li>Молоко — 250 мл</li>
+          <li>Дрожжи — 10 г</li>
+          <li>Яйца — 2 шт</li>
+          <li>Масло сливочное — 100 г</li>
+          <li>Сахар — 2 ст. л.</li>
+          <li>Соль — 1 ч. л.</li>
+          <li>Мак или тмин — для посыпки</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h4>Приготовление:</h4>
+        <ol>
+          <li>Приготовить опару из дрожжей, молока и сахара</li>
+          <li>Добавить яйца, растопленное масло, соль</li>
+          <li>Замесить тесто, оставить на 1.5 часа</li>
+          <li>Сформировать калачи с характерной ручкой</li>
+          <li>Смазать яйцом, посыпать маком</li>
+          <li>Выпекать 25–30 минут при 200°C</li>
+        </ol>
+      </div>
+      <div class="history-note">
+        <strong>Историческая справка:</strong> Калачи — символ достатка. Пётр I любил свежие калачи и часто покупал их у уличных торговцев. В Москве существовала целая калачная улица.
+      </div>
+    </div>
+
+    <!-- Рецепт 4 -->
+    <div class="recipe-item">
+      <div class="recipe-header">
+        <h2 class="recipe-title">Ватрушки с творогом</h2>
+        <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+      </div>
+      <img src="/images/vatrushki_s_tvorogom_drozhzhevye.jpg" alt="Ватрушки с творогом" class="main-image">
+      <div class="recipe-meta">
+        <strong>Эпоха:</strong> XVIII век<br>
+        <strong>Время приготовления:</strong> 2 часа
+      </div>
+      <div class="ingredients-list">
+        <h4>Тесто:</h4>
+        <ul>
+          <li>Мука — 400 г</li>
+          <li>Молоко — 200 мл</li>
+          <li>Дрожжи — 7 г</li>
+          <li>Сахар — 3 ст. л.</li>
+          <li>Масло сливочное — 100 г</li>
+          <li>Яйцо — 1 шт</li>
+        </ul>
+        <h4>Начинка:</h4>
+        <ul>
+          <li>Творог — 400 г</li>
+          <li>Сахар — 100 г</li>
+          <li>Яйца — 2 шт</li>
+          <li>Ванилин</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h4>Приготовление:</h4>
+        <ol>
+          <li>Приготовить дрожжевое тесто</li>
+          <li>Оставить на 1 час для подъёма</li>
+          <li>Творог растереть с сахаром и яйцами</li>
+          <li>Раскатать тесто, вырезать кружки</li>
+          <li>Сделать углубления, выложить начинку</li>
+          <li>Оставить на 20 минут</li>
+          <li>Выпекать 20–25 минут при 180°C</li>
+        </ol>
+      </div>
+      <div class="history-note">
+        <strong>Историческая справка:</strong> Ватрушки были любимым лакомством Ф.М. Достоевского. Также их обожала А.А. Ахматова, которая вспоминала о них в стихах.
+      </div>
+    </div>
+
+    <!-- Рецепт 5 -->
+    <div class="recipe-item">
+      <div class="recipe-header">
+        <h2 class="recipe-title">Пряники тульские</h2>
+        <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+      </div>
+      <img src="/images/pryaniki.jpg" alt="Пряники тульские" class="main-image">
+      <div class="recipe-meta">
+        <strong>Эпоха:</strong> XVII век<br>
+        <strong>Время приготовления:</strong> 1 час 30 минут + настаивание
+      </div>
+      <div class="ingredients-list">
+        <h4>Ингредиенты:</h4>
+        <ul>
+          <li>Мука — 500 г</li>
+          <li>Мёд — 200 г</li>
+          <li>Сахар — 150 г</li>
+          <li>Яйца — 2 шт</li>
+          <li>Масло сливочное — 100 г</li>
+          <li>Сода — 1 ч. л.</li>
+          <li>Корица, гвоздика, кардамон</li>
+          <li>Повидло — для начинки</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h4>Приготовление:</h4>
+        <ol>
+          <li>Мёд подогреть, добавить сахар</li>
+          <li>Добавить яйца, масло, специи</li>
+          <li>Всыпать муку с содой</li>
+          <li>Замесить тесто, оставить на 30 минут</li>
+          <li>Раскатать, вырезать фигурки</li>
+          <li>Положить начинку, закрыть вторым слоем</li>
+          <li>Выпекать 15 минут при 180°C</li>
+          <li>Смазать сахарным сиропом</li>
+        </ol>
+      </div>
+      <div class="history-note">
+        <strong>Историческая справка:</strong> Тульские пряники известны с XVII века. Екатерина II любила тульские пряники и часто получала их в подарок. Николай II также обожал эти пряники с чаем.
+      </div>
+    </div>
+
+    <!-- Рецепт 6 -->
+    <div class="recipe-item">
+      <div class="recipe-header">
+        <h2 class="recipe-title">Кулебяка с рыбой</h2>
+        <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+      </div>
+      <img src="/images/kulebaka.jpg" alt="Кулебяка с рыбой" class="main-image">
+      <div class="recipe-meta">
+        <strong>Эпоха:</strong> XVI–XVII век<br>
+        <strong>Время приготовления:</strong> 2 часа 30 минут
+      </div>
+      <div class="ingredients-list">
+        <h4>Тесто:</h4>
+        <ul>
+          <li>Мука — 600 г</li>
+          <li>Молоко — 300 мл</li>
+          <li>Дрожжи — 10 г</li>
+          <li>Яйца — 3 шт</li>
+          <li>Масло сливочное — 150 г</li>
+        </ul>
+        <h4>Начинка:</h4>
+        <ul>
+          <li>Осётр/сёмга — 800 г</li>
+          <li>Рис — 150 г</li>
+          <li>Варёные яйца — 3 шт</li>
+          <li>Зелень</li>
+          <li>Чёрный перец</li>
+        </ul>
+      </div>
+      <div class="instructions">
+        <h4>Приготовление:</h4>
+        <ol>
+          <li>Приготовить сдобное тесто</li>
+          <li>Рыбу очистить, нарезать кусками</li>
+          <li>Сварить рис, яйца нарезать</li>
+          <li>Раскатать тесто пластом</li>
+          <li>Выложить слоями: рис, рыба, яйца</li>
+          <li>Закрыть, защипнуть края</li>
+          <li>Смазать яйцом, сделать отверстия</li>
+          <li>Выпекать 1 час при 180°C</li>
+        </ol>
+      </div>
+      <div class="history-note">
+        <strong>Историческая справка:</strong> Кулебяка — праздничное блюдо. А.П. Чехов очень любил кулебяку и упоминал её в рассказах. Также её обожал И.С. Тургенев.
+      </div>
+    </div>
+
+<div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Пирожки с капустой</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/pirozhki.jpg" alt="Пирожки с капустой" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> Древняя Русь<br>
+    <strong>Время приготовления:</strong> 2 часа
+  </div>
+  <div class="ingredients-list">
+    <h4>Тесто:</h4>
+    <ul>
+      <li>Мука — 500 г</li>
+      <li>Кефир — 250 мл</li>
+      <li>Дрожжи — 7 г</li>
+      <li>Сахар — 1 ст. л.</li>
+      <li>Растительное масло — 50 мл</li>
+      <li>Соль — 1 ч. л.</li>
+    </ul>
+    <h4>Начинка:</h4>
+    <ul>
+      <li>Капуста — 600 г</li>
+      <li>Лук — 2 шт</li>
+      <li>Морковь — 1 шт</li>
+      <li>Варёные яйца — 2 шт</li>
+      <li>Соль, перец</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Приготовить тесто на кефире</li>
+      <li>Капусту нашинковать, потушить с овощами</li>
+      <li>Добавить нарезанные яйца</li>
+      <li>Тесто раскатать, вырезать кружки</li>
+      <li>Выложить начинку, защипнуть</li>
+      <li>Оставить на 20 минут</li>
+      <li>Выпекать 20 минут при 200°C</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Пирожки — самое демократичное блюдо. Пётр I любил пирожки с капустой и ел их во время своих путешествий по России.
+  </div>
+</div>
+<div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Сочники с творогом</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/schniki.jpg" alt="Сочники с творогом" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> XIX век<br>
+    <strong>Время приготовления:</strong> 1 час 30 минут
+  </div>
+  <div class="ingredients-list">
+    <h4>Ингредиенты:</h4>
+    <ul>
+      <li>Мука — 400 г</li>
+      <li>Творог — 400 г</li>
+      <li>Сметана — 200 г</li>
+      <li>Сахар — 150 г</li>
+      <li>Яйца — 3 шт</li>
+      <li>Масло сливочное — 100 г</li>
+      <li>Сода — 0.5 ч. л.</li>
+      <li>Ванилин</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Масло растереть с сахаром</li>
+      <li>Добавить яйца, сметану, соду</li>
+      <li>Всыпать муку, замесить тесто</li>
+      <li>Творог смешать с сахаром и ванилином</li>
+      <li>Раскатать тесто, вырезать кружки</li>
+      <li>На половину выложить начинку</li>
+      <li>Накрыть второй половиной, защипнуть</li>
+      <li>Выпекать 20 минут при 180°C</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Сочники были популярны в русских трактирах XIX века. Н.В. Гоголь упоминает сочники в "Мёртвых душах" как любимое блюдо Чичикова.
+  </div>
+</div>
+<div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Каравай свадебный</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/karavai.jpg" alt="Каравай свадебный" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> Древняя Русь<br>
+    <strong>Время приготовления:</strong> 3 часа
+  </div>
+  <div class="ingredients-list">
+    <h4>Ингредиенты:</h4>
+    <ul>
+      <li>Мука — 1 кг</li>
+      <li>Молоко — 500 мл</li>
+      <li>Дрожжи — 15 г</li>
+      <li>Яйца — 5 шт</li>
+      <li>Масло сливочное — 200 г</li>
+      <li>Сахар — 200 г</li>
+      <li>Соль — 1 ч. л.</li>
+      <li>Изюм, орехи</li>
+      <li>Мак, кунжут — для украшения</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Приготовить сдобное дрожжевое тесто</li>
+      <li>Оставить на 1.5 часа</li>
+      <li>Добавить изюм и орехи</li>
+      <li>Сформировать большой круглый каравай</li>
+      <li>Украсить косичками из теста</li>
+      <li>Смазать яйцом, посыпать маком</li>
+      <li>Выпекать 1 час 15 минут при 180°C</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Каравай — главный свадебный хлеб. Традиция печь каравай сохранилась с языческих времён. Николай II и Александра Фёдоровна соблюдали традицию с караваем на своей свадьбе.
+  </div>
+</div><div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Шаньги с картофелем</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/shanygi.jpg" alt="Шаньги с картофелем" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> XVI–XVII век (поморская кухня)<br>
+    <strong>Время приготовления:</strong> 2 часа
+  </div>
+  <div class="ingredients-list">
+    <h4>Тесто:</h4>
+    <ul>
+      <li>Мука — 500 г</li>
+      <li>Молоко — 250 мл</li>
+      <li>Дрожжи — 10 г</li>
+      <li>Сахар — 2 ст. л.</li>
+      <li>Масло сливочное — 100 г</li>
+    </ul>
+    <h4>Начинка:</h4>
+    <ul>
+      <li>Картофель — 600 г</li>
+      <li>Лук — 2 шт</li>
+      <li>Сало или шкварки — 100 г</li>
+      <li>Соль, перец</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Приготовить дрожжевое тесто</li>
+      <li>Картофель отварить, размять</li>
+      <li>Лук обжарить с салом</li>
+      <li>Смешать картофель с луком</li>
+      <li>Тесто раскатать, вырезать кружки</li>
+      <li>Выложить начинку горкой</li>
+      <li>Оставить на 20 минут</li>
+      <li>Выпекать 25 минут при 190°C</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Шаньги — традиционная выпечка русского Севера и Сибири. Любимое блюдо поморов и старообрядцев. Михаил Ломоносов вспоминал шаньги из детства.
+  </div>
+</div>
+  <div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Плюшки с сахаром</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/plushki.jpg" alt="Плюшки с сахаром" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> XIX век<br>
+    <strong>Время приготовления:</strong> 2 часа
+  </div>
+  <div class="ingredients-list">
+    <h4>Ингредиенты:</h4>
+    <ul>
+      <li>Мука — 500 г</li>
+      <li>Молоко — 250 мл</li>
+      <li>Дрожжи — 10 г</li>
+      <li>Сахар — 150 г</li>
+      <li>Яйца — 2 шт</li>
+      <li>Масло сливочное — 100 г</li>
+      <li>Корица — 1 ч. л.</li>
+      <li>Соль — 0.5 ч. л.</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Приготовить сдобное тесто</li>
+      <li>Оставить на 1 час</li>
+      <li>Раскатать пластом</li>
+      <li>Смазать растопленным маслом</li>
+      <li>Посыпать сахаром с корицей</li>
+      <li>Свернуть рулетом, нарезать</li>
+      <li>Сформировать плюшки</li>
+      <li>Выпекать 20 минут при 180°C</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Плюшки стали популярны в XIX веке. Ф.М. Достоевский упоминает плюшки в "Братьях Карамазовых". Также их любил А.П. Чехов.
+  </div>
+</div>
+ <div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Расстегаи с рыбой</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/rasstegai.jpg" alt="Расстегаи с рыбой" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> XVII–XVIII век<br>
+    <strong>Время приготовления:</strong> 2 часа
+  </div>
+  <div class="ingredients-list">
+    <h4>Тесто:</h4>
+    <ul>
+      <li>Мука — 500 г</li>
+      <li>Молоко — 250 мл</li>
+      <li>Дрожжи — 10 г</li>
+      <li>Яйца — 2 шт</li>
+      <li>Масло сливочное — 100 г</li>
+    </ul>
+    <h4>Начинка:</h4>
+    <ul>
+      <li>Рыба (сёмга, осётр) — 600 г</li>
+      <li>Лук — 2 шт</li>
+      <li>Рис — 100 г</li>
+      <li>Яйца — 2 шт</li>
+      <li>Чёрный перец</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Приготовить дрожжевое тесто</li>
+      <li>Рыбу отварить, разобрать</li>
+      <li>Сварить рис, яйца нарезать</li>
+      <li>Смешать начинку</li>
+      <li>Тесто раскатать, вырезать кружки</li>
+      <li>Выложить начинку, оставить отверстие сверху</li>
+      <li>Смазать яйцом</li>
+      <li>Выпекать 25 минут при 190°C</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Расстегаи — праздничное блюдо. Александр I любил расстегаи с рыбой. Также их обожал И.А. Гончаров, упоминавший в "Обломове".
+  </div>
+</div>
+<div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Крендели с маком</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/kreml.jpg" alt="Крендели с маком" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> XVIII век<br>
+    <strong>Время приготовления:</strong> 2 часа
+  </div>
+  <div class="ingredients-list">
+    <h4>Ингредиенты:</h4>
+    <ul>
+      <li>Мука — 500 г</li>
+      <li>Молоко — 200 мл</li>
+      <li>Дрожжи — 10 г</li>
+      <li>Сахар — 100 г</li>
+      <li>Масло сливочное — 100 г</li>
+      <li>Яйца — 2 шт</li>
+      <li>Мак — 50 г</li>
+      <li>Соль</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Приготовить сдобное тесто</li>
+      <li>Оставить на 1 час</li>
+      <li>Раскатать жгуты</li>
+      <li>Сформировать крендели</li>
+      <li>Смазать яйцом</li>
+      <li>Посыпать маком и сахаром</li>
+      <li>Оставить на 20 минут</li>
+      <li>Выпекать 20 минут при 190°C</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Крендели пекли к праздникам. Пётр I любил крендели и привёз моду на них из Европы. В Санкт-Петербурге существовали специальные крендельные лавки.
+  </div>
+</div>
+ <div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Пышки дрожжевые</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/pyshki.jpg" alt="Пышки дрожжевые" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> XIX век<br>
+    <strong>Время приготовления:</strong> 1 час 30 минут
+  </div>
+  <div class="ingredients-list">
+    <h4>Ингредиенты:</h4>
+    <ul>
+      <li>Мука — 500 г</li>
+      <li>Кефир — 300 мл</li>
+      <li>Дрожжи — 7 г</li>
+      <li>Сахар — 100 г</li>
+      <li>Яйца — 2 шт</li>
+      <li>Растительное масло — 100 мл</li>
+      <li>Соль — 0.5 ч. л.</li>
+      <li>Сахарная пудра</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Кефир подогреть, добавить дрожжи</li>
+      <li>Добавить яйца, сахар, соль</li>
+      <li>Всыпать муку, замесить тесто</li>
+      <li>Оставить на 40 минут</li>
+      <li>Раскатать тесто</li>
+      <li>Вырезать кружки</li>
+      <li>Жарить в масле с двух сторон</li>
+      <li>Посыпать сахарной пудрой</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Пышки были популярны в трактирах. А.С. Пушкин любил пышки с чаем. В Санкт-Петербурге пышечная на Большой Конюшенной работает с 1958 года по старинным рецептам.
+  </div>
+</div>
+<div class="recipe-item">
+  <div class="recipe-header">
+    <h2 class="recipe-title">Коврижка медовая</h2>
+    <button class="back-button" onclick="window.location.href='/categories'">← Категории</button>
+  </div>
+  <img src="/images/kovrizhka.jpg" alt="Коврижка медовая" class="main-image">
+  <div class="recipe-meta">
+    <strong>Эпоха:</strong> XVI–XVII век<br>
+    <strong>Время приготовления:</strong> 1 час 30 минут
+  </div>
+  <div class="ingredients-list">
+    <h4>Ингредиенты:</h4>
+    <ul>
+      <li>Мёд — 200 г</li>
+      <li>Мука — 400 г</li>
+      <li>Сахар — 150 г</li>
+      <li>Яйца — 3 шт</li>
+      <li>Масло сливочное — 100 г</li>
+      <li>Сода — 1 ч. л.</li>
+      <li>Корица, гвоздика</li>
+      <li>Орехи, изюм</li>
+    </ul>
+  </div>
+  <div class="instructions">
+    <h4>Приготовление:</h4>
+    <ol>
+      <li>Мёд подогреть с сахаром</li>
+      <li>Добавить яйца, взбить</li>
+      <li>Добавить растопленное масло</li>
+      <li>Всыпать муку с содой и специями</li>
+      <li>Добавить орехи и изюм</li>
+      <li>Вылить в форму</li>
+      <li>Выпекать 40–45 минут при 180°C</li>
+      <li>Подавать с чаем</li>
+    </ol>
+  </div>
+  <div class="history-note">
+    <strong>Историческая справка:</strong> Коврижка — древнерусское лакомство. Екатерина II любила медовую коврижку. Также её обожал Н.В. Гоголь, упоминавший в "Вечерах на хуторе близ Диканьки".
+  </div>
+</div>

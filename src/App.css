@@ -1,0 +1,393 @@
+/* App.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5dc; /* Бежевый фон */
+  font-family: 'Times New Roman', serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background-color: #00008B; /* Темно-синий */
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 3px solid #FFD700; /* Золотая рамка */
+  text-align: center;
+  overflow: hidden;
+}
+
+.title {
+  font-family: 'Ruslan Display', cursive;
+  color: #FFD700;
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 2px;
+}
+
+.search-bar {
+  width: 100%; /* 👈 ВАЖНО: растягивается на всю ширину */
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: #e6f7ff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #00008B;
+  text-align: center;
+  outline: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+  transform: scale(1.02);
+}
+
+.categories-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+.category-btn {
+  width: 100%; /* 👈 ВАЖНО: растягивается на всю ширину */
+  background: linear-gradient(135deg, #e6f7ff, #b3e0ff);
+  border: 2px solid #FFD700;
+  border-radius: 15px;
+  padding: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00008B;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.category-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.4);
+  border-color: #FF4500;
+  background: linear-gradient(135deg, #fff0f0, #ffd1d1);
+}
+
+.category-btn:nth-child(even) {
+  background: linear-gradient(135deg, #fff0f0, #ffd1d1);
+}
+
+.category-btn:nth-child(even):hover {
+  background: linear-gradient(135deg, #ffe6e6, #ffcccc);
+}
+
+.category-btn i {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  color: #FF4500;
+}
+
+.category-btn:hover i {
+  color: #00008B;
+  transform: rotate(10deg);
+}/* --- Стили для страницы Супов --- */
+
+.soups-page {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.back-btn {
+  background: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #FFD700;
+  color: #00008B;
+}
+
+.page-title {
+  font-family: 'Ruslan Display', cursive;
+  color: #FFD700;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.recipe-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+.card-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.recipe-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: #00008B;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-time {
+  color: #FF4500;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-ingredients ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-history {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}/* --- Улучшения для страницы Супов --- */
+
+.soups-page {
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.back-btn {
+  background: transparent;
+  border: 2px solid #FFD700;
+  color: #FFD700;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: #FFD700;
+  color: #00008B;
+}
+
+.page-title {
+  font-family: 'Ruslan Display', cursive;
+  color: #00FF00; /* 👈 Зелёный цвет */
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.recipe-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  color: #333;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+.card-image-wrapper {
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.recipe-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: #00008B;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-time {
+  color: #FF4500;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.card-ingredients ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.card-history {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* Новый стиль для способа приготовления */
+.card-preparation {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+}.soups-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header h1 {
+  text-align: center;
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+}
+
+.card p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.card button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.card button:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,50 @@
+/* src/index.css */
+
+/* 1. Загрузка шрифтов (самый надежный способ) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* 2. Твоя палитра "Russian Style" */
+:root {
+  --red: #F7504A;       /* Jelly Bean */
+  --gold: #FFC670;      /* Amber Glow */
+  --green: #428F75;     /* Antique Green */
+  --blue: #50507D;      /* Purple Navy */
+  
+  --bg: #FFFBF0;        /* Warm Cream */
+  --text: #2C2C2C;      /* Dark Grey */
+  
+  --font-head: 'Playfair Display', serif;
+  --font-body: 'Roboto', sans-serif;
+}
+
+/* 3. Базовые настройки */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Контейнер для центровки */
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
