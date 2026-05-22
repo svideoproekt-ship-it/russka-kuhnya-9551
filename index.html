@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!-- OneSignal Push Notifications -->
+ <!-- OneSignal Push Notifications -->
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
   OneSignalDeferred.push(async function(OneSignal) {
     await OneSignal.init({
       appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
+      notifyButton: {
+        enable: true,
+        size: "medium",
+        position: "bottom-right",
+        text: {
+          'tip.state.unsubscribed': 'Подпишись на вкусную пищу и хорошее настроение',
+          'tip.state.subscribed': 'Ты подписан',
+          'msg.subscribed': 'Отлично! Теперь ты будешь сыт и весел! 🍲',
+          'msg.unsubscribe': 'Отписаться от уведомлений',
+        },
+      },
     });
   });
+</script>   
 </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
