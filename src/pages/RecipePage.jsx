@@ -38,6 +38,7 @@ const RecipePage = () => {
           </ol>
         </div>
       </div>
+      <ShareButtons title={recipe.title} />
     </div>
   );
 };
