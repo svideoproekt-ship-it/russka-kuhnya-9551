@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import recipes from '../data/recipes';
 import '../styles/RecipePage.css';
+import ShareButtons from '../components/ShareButtons';
 
 const RecipePage = () => {
   const { id } = useParams();

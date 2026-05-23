@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, ChefHat } from 'lucide-react';
 import '../styles/RecipeCard.css';
+import ShareButtons from '../components/ShareButtons';
 
 const RecipeCard = ({ recipe }) => {
   return (
@@ -16,6 +17,7 @@ const RecipeCard = ({ recipe }) => {
           <span><Clock size={16} /> {recipe.time}</span>
           <span><ChefHat size={16} /> {recipe.difficulty}</span>
         </div>
+        <ShareButtons title={recipe.title} />
       </div>
     </Link>
   );
