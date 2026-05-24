@@ -11,6 +11,7 @@ import SnacksCategory from './pages/SnacksCategory';
 import DessertsCategory from './pages/DessertsCategory';
 import DrinksCategory from './pages/DrinksCategory';
 import DoughCategory from './pages/DoughCategory';
+import RecipePage from './pages/RecipePage';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/category/desserts" element={<DessertsCategory />} />
         <Route path="/category/drinks" element={<DrinksCategory />} />
         <Route path="/category/dough" element={<DoughCategory />} />
+        <Route path="/recipe/:id" element={<RecipePage />} />
       </Routes>
     </Router>
   );
