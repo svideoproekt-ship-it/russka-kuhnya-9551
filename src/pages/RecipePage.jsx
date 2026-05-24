@@ -1,48 +1,91 @@
+// src/pages/RecipePage.jsx
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import recipes from '../data/recipes';
-import '../styles/RecipePage.css';
+import { soupsData } from '../data/soupsData';
+import { bakingData } from '../data/bakingData';
+import { meatData } from '../data/meatData';
+import { fishData } from '../data/fishData';
+import { snacksData } from '../data/snacksData';
+import { dessertsData } from '../data/dessertsData';
+import { drinksData } from '../data/drinksData';
+import { doughData } from '../data/doughData';
 import ShareButtons from '../components/ShareButtons';
+import '../styles/RecipePage.css';
 
 const RecipePage = () => {
   const { id } = useParams();
-  const recipe = recipes.find(r => r.id === parseInt(id));
+  
+  // Объединяем все источники данных
+  const allRecipes = [
+    ...recipes,
+    ...soupsData.map(r => ({
+      ...r,
+      title: r.name,
+      ingredients: r.ingredients,
+      steps: r.preparation
+    })),
+    // ... можно добавить остальные категории при необходимости
+  ];
+
+  // Ищем по id (и строковому, и числовому)
+  const recipe = allRecipes.find(r => 
+    r.id === id || r.id === parseInt(id) || String(r.id) === String(id)
+  );
 
   if (!recipe) return <div>Рецепт не найден</div>;
 
   return (
     <div className="recipe-page">
-      <Link to="/" style={{color: '#8B0000'}}>← На главную</Link>
+      <Link to="/" className="back-link">← На главную</Link>
       
-      <div className="recipe-header">
-        <h1>{recipe.title}</h1>
-        <span className="badge">{recipe.era}</span>
-      </div>
+      <div className="recipe-container">
+        <h1>{recipe.title || recipe.name}</h1>
+        
+        <ShareButtons 
+          title={recipe.title || recipe.name}
+          url={`${window.location.origin}/recipe/${recipe.id}`}
+        />
+        
+        <div className="recipe-meta">
+          <span>🕰 {recipe.epoch}</span>
+          <span>⏱ {recipe.time}</span>
+        </div>
 
-      <img src={recipe.image} alt={recipe.title} className="main-image" />
-      
-      <p className="description">{recipe.description}</p>
+        {recipe.image && (
+          <img src={recipe.image} alt={recipe.title || recipe.name} className="recipe-image" />
+        )}
 
-      <div className="recipe-details">
-        <div className="detail-block">
-          <h3>Ингредиенты:</h3>
+        <div className="recipe-section">
+          <h2>📝 Ингредиенты</h2>
           <ul>
-            {recipe.ingredients.map((ing, i) => <li key={i}>{ing}</li>)}
+            {(recipe.ingredients || []).map((item, index) => (
+              <li key={index}>
+                {typeof item === 'string' 
+                  ? item 
+                  : `${item.name} - ${item.amount} ${item.unit}`
+                }
+              </li>
+            ))}
           </ul>
         </div>
-        
-        <div className="detail-block">
-          <h3>Приготовление:</h3>
+
+        <div className="recipe-section">
+          <h2>👨‍🍳 Приготовление</h2>
           <ol>
-            {recipe.steps.map((step, i) => <li key={i}>{step}</li>)}
+            {(recipe.steps || recipe.preparation || []).map((step, index) => (
+              <li key={index}>{step}</li>
+            ))}
           </ol>
         </div>
+
+        {recipe.history && (
+          <div className="recipe-section history-section">
+            <h2>📚 Историческая справка</h2>
+            <p>{recipe.history}</p>
+          </div>
+        )}
       </div>
-      
-<ShareButtons 
-  title={recipe.title} 
-  url={`${window.location.origin}/recipe/${recipe.id}`}
-/>
     </div>
   );
 };
