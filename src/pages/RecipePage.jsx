@@ -38,7 +38,11 @@ const RecipePage = () => {
           </ol>
         </div>
       </div>
-      <ShareButtons title={recipe.title} />
+      
+<ShareButtons 
+  title={recipe.title} 
+  url={`${window.location.origin}/recipe/${recipe.id}`}
+/>
     </div>
   );
 };

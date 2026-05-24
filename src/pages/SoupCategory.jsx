@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { soupsData } from '../data/soupsData';
+import RecipeCard from '../components/RecipeCard';
+import ShareButtons from '../components/ShareButtons';
 import './SoupCategory.css';
 
 function SoupCategory() {
@@ -27,6 +29,14 @@ function SoupCategory() {
         <div className="recipe-detail">
           <div className="recipe-header">
             <h1>{selectedRecipe.name}</h1>
+            
+            {/* Кнопки поделиться на странице рецепта */}
+            <ShareButtons 
+              title={selectedRecipe.name}
+              url={`${window.location.origin}/category/soups`}
+              compact
+            />
+            
             <div className="recipe-meta">
               <span className="epoch">🕰 {selectedRecipe.epoch}</span>
               <span className="time">⏱ {selectedRecipe.time}</span>
@@ -87,34 +97,18 @@ function SoupCategory() {
 
       <div className="recipes-grid">
         {soupsData.map((recipe) => (
-          <div 
-            key={recipe.id} 
-            className="recipe-card"
-            onClick={() => handleRecipeClick(recipe)}
-          >
-            <div className="recipe-card-image">
-              {recipe.image ? (
-                <img 
-                  src={recipe.image} 
-                  alt={recipe.name}
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
-                  }}
-                />
-              ) : (
-                <div className="no-image">🍲</div>
-              )}
-            </div>
-            <div className="recipe-card-content">
-              <h3>{recipe.name}</h3>
-              <div className="recipe-card-meta">
-                <span>🕰 {recipe.epoch}</span>
-                <span>⏱ {recipe.time}</span>
-              </div>
-              <button className="view-recipe-btn">
-                Смотреть рецепт
-              </button>
-            </div>
+          <div key={recipe.id} onClick={() => handleRecipeClick(recipe)}>
+            <RecipeCard 
+              recipe={{
+                id: recipe.id,
+                title: recipe.name,
+                category: 'Супы',
+                era: recipe.epoch,
+                time: recipe.time,
+                difficulty: 'Средне',
+                image: recipe.image || 'https://via.placeholder.com/300x200?text=Нет+фото'
+              }}
+            />
           </div>
         ))}
       </div>
