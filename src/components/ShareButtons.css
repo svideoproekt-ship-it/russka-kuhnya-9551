@@ -1,0 +1,34 @@
+.share-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.share-buttons.compact {
+  gap: 8px;
+}
+
+.share-icon {
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.share-icon:hover {
+  transform: scale(1.2);
+}
+
+.share-icon.telegram {
+  color: #0088cc;
+}
+
+.share-icon.vk {
+  color: #4a76a8;
+}
+
+.share-icon.facebook {
+  color: #1877f2;
+}
+
+.share-icon.whatsapp {
+  color: #25d366;
+}
