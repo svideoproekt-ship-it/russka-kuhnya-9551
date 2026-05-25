@@ -101,3 +101,11 @@
   padding: 10px;
   border-radius: 6px;
 }
+.recipe-image {
+  display: block;          /* Делаем картинку блоком */
+  max-width: 100%;         /* Картинка не будет шире экрана */
+  height: auto;            /* Сохраняем пропорции */
+  margin: 20px auto;       /* Центрируем картинку */
+  border-radius: 12px;     /* Скругляем углы */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Красивая тень */
+}

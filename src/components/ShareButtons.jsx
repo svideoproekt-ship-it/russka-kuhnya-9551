@@ -18,82 +18,52 @@ const ShareButtons = ({ title }) => {
     }
   };
 
+  // Стили для контейнера
+  const containerStyle = {
+    marginTop: '30px',
+    padding: '20px',
+    background: '#fff8e1',
+    borderRadius: '12px',
+    border: '2px solid #ffca28',
+    textAlign: 'center'
+  };
+
+  // Стили для кнопок
+  const buttonStyle = {
+    display: 'inline-block',
+    padding: '12px 20px',
+    margin: '5px',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    color: 'white',
+    textDecoration: 'none',
+    borderRadius: '8px',
+    cursor: 'pointer',
+    border: 'none',
+    minWidth: '100px'
+  };
+
   return (
-    <div style={{ 
-      marginTop: '30px', 
-      padding: '20px', 
-      background: '#fff8e1', 
-      borderRadius: '12px', 
-      border: '2px solid #ffca28',
-      width: '100%',
-      maxWidth: '600px',
-      margin: '30px auto 0',
-      boxSizing: 'border-box'
-    }}>
-      <h3 style={{ margin: '0 0 15px 0', fontSize: '18px', color: '#d32f2f', textAlign: 'center' }}>
-        Понравился рецепт? Поделись с друзьями! 👇
+    <div style={containerStyle}>
+      <h3 style={{ margin: '0 0 15px 0', fontSize: '18px', color: '#d32f2f' }}>
+        Поделись рецептом с друзьями! 👇
       </h3>
       
-      <div style={{ 
-        display: 'flex', 
-        justifyContent: 'center', 
-        gap: '10px', 
-        flexWrap: 'wrap' 
-      }}>
-        <button 
-          onClick={handleNativeShare}
-          style={{ 
-            padding: '12px 24px', 
-            fontSize: '16px', 
-            cursor: 'pointer', 
-            background: '#ff9800', 
-            color: 'white', 
-            border: 'none', 
-            borderRadius: '8px', 
-            fontWeight: 'bold',
-            minWidth: '140px'
-          }}
-        >
+      <div>
+        <button onClick={handleNativeShare} style={{ ...buttonStyle, background: '#ff9800' }}>
           📱 Поделиться
         </button>
 
-        <a href={vkLink} target="_blank" rel="noopener noreferrer" style={{ 
-          padding: '12px 24px', 
-          fontSize: '16px', 
-          background: '#0077FF', 
-          color: 'white', 
-          textDecoration: 'none', 
-          borderRadius: '8px',
-          minWidth: '120px',
-          textAlign: 'center'
-        }}>
-          🔵 ВКонтакте
+        <a href={vkLink} target="_blank" rel="noopener noreferrer" style={{ ...buttonStyle, background: '#0077FF' }}>
+          ВКонтакте
         </a>
 
-        <a href={tgLink} target="_blank" rel="noopener noreferrer" style={{ 
-          padding: '12px 24px', 
-          fontSize: '16px', 
-          background: '#0088cc', 
-          color: 'white', 
-          textDecoration: 'none', 
-          borderRadius: '8px',
-          minWidth: '100px',
-          textAlign: 'center'
-        }}>
-          🔵 Telegram
+        <a href={tgLink} target="_blank" rel="noopener noreferrer" style={{ ...buttonStyle, background: '#0088cc' }}>
+          Telegram
         </a>
 
-        <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ 
-          padding: '12px 24px', 
-          fontSize: '16px', 
-          background: '#25D366', 
-          color: 'white', 
-          textDecoration: 'none', 
-          borderRadius: '8px',
-          minWidth: '120px',
-          textAlign: 'center'
-        }}>
-          🟢 WhatsApp
+        <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ ...buttonStyle, background: '#25D366' }}>
+          WhatsApp
         </a>
       </div>
     </div>
