@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, ChefHat } from 'lucide-react';
-import ShareButtons from './ShareButtons';
 import '../styles/RecipeCard.css';
 
 const RecipeCard = ({ recipe }) => {
@@ -22,14 +21,7 @@ const RecipeCard = ({ recipe }) => {
         </div>
       </Link>
       
-      {/* Кнопка поделиться снаружи ссылки */}
-      <div className="card-share">
-        <ShareButtons 
-          title={recipe.title}
-          url={`${window.location.origin}/recipe/${recipe.id}`}
-          compact
-        />
-      </div>
+           
     </div>
   );
 };
