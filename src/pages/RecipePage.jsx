@@ -42,7 +42,7 @@ const RecipePage = () => {
       <div className="recipe-container">
         <h1>{recipe.title || recipe.name}</h1>
         
-        <ShareButtons title={recipe.title || recipe.name} />
+        
         />
         
         <div className="recipe-meta">
