@@ -20,41 +20,41 @@ const ShareButtons = ({ title }) => {
 
   return (
     <div style={{ 
-      marginTop: '30px', 
-      padding: '16px', 
+      marginTop: '20px', 
+      padding: '15px', 
       background: '#fff8e1', 
-      borderRadius: '12px', 
-      border: '2px solid #ffca28',
-      maxWidth: '100%',
+      borderRadius: '8px', 
+      border: '1px solid #ffca28',
+      width: '100%',
       boxSizing: 'border-box'
     }}>
-      <h3 style={{ margin: '0 0 12px 0', fontSize: '18px', color: '#d32f2f', textAlign: 'center' }}>
-        Понравился рецепт? Поделись с друзьями! 👇
+      <h3 style={{ margin: '0 0 10px 0', fontSize: '16px', color: '#d32f2f', textAlign: 'center' }}>
+        Поделись рецептом! 👇
       </h3>
       
       <div style={{ 
         display: 'flex', 
         justifyContent: 'center', 
-        gap: '8px', 
+        gap: '10px', 
         flexWrap: 'wrap' 
       }}>
         <button 
           onClick={handleNativeShare}
-          style={{ padding: '10px 16px', fontSize: '14px', cursor: 'pointer', background: '#ff9800', color: 'white', border: 'none', borderRadius: '8px', fontWeight: 'bold', flex: '1 1 auto', minWidth: '120px' }}
+          style={{ padding: '8px 16px', fontSize: '14px', cursor: 'pointer', background: '#ff9800', color: 'white', border: 'none', borderRadius: '6px', fontWeight: 'bold' }}
         >
-          📱 Поделиться
+          📱
         </button>
 
-        <a href={vkLink} target="_blank" rel="noopener noreferrer" style={{ padding: '10px 16px', fontSize: '14px', background: '#0077FF', color: 'white', textDecoration: 'none', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1 1 auto', minWidth: '120px' }}>
-          🔵 ВКонтакте
+        <a href={vkLink} target="_blank" rel="noopener noreferrer" style={{ padding: '8px 16px', fontSize: '14px', background: '#0077FF', color: 'white', textDecoration: 'none', borderRadius: '6px' }}>
+          ВК
         </a>
 
-        <a href={tgLink} target="_blank" rel="noopener noreferrer" style={{ padding: '10px 16px', fontSize: '14px', background: '#0088cc', color: 'white', textDecoration: 'none', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1 1 auto', minWidth: '120px' }}>
-          🔵 Telegram
+        <a href={tgLink} target="_blank" rel="noopener noreferrer" style={{ padding: '8px 16px', fontSize: '14px', background: '#0088cc', color: 'white', textDecoration: 'none', borderRadius: '6px' }}>
+          TG
         </a>
 
-        <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ padding: '10px 16px', fontSize: '14px', background: '#25D366', color: 'white', textDecoration: 'none', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '1 1 auto', minWidth: '120px' }}>
-          🟢 WhatsApp
+        <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ padding: '8px 16px', fontSize: '14px', background: '#25D366', color: 'white', textDecoration: 'none', borderRadius: '6px' }}>
+          WA
         </a>
       </div>
     </div>
