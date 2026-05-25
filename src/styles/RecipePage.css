@@ -125,3 +125,34 @@
 .recipe-section h2 {
   text-align: center;     /* Заголовки "Ингредиенты" и т.д. по центру */
 }
+/* Фиксим мета-информацию (эпоха и время) */
+.recipe-meta {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: nowrap;      /* Запрещаем перенос */
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.recipe-meta span {
+  white-space: nowrap;    /* Текст не разрывается */
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Адаптация для очень маленьких экранов */
+@media (max-width: 480px) {
+  .recipe-meta {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .recipe-meta span {
+    white-space: nowrap;
+    font-size: 13px;
+  }
+}
