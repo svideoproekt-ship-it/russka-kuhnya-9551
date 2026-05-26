@@ -7,7 +7,9 @@ const RecipeCard = ({ recipe }) => {
   return (
     <div className="recipe-card">
       <Link to={`/recipe/${recipe.id}`} className="card-link">
-        <div className="card-image" style={{ backgroundImage: `url(${recipe.image})` }}>
+        {/* ИСПРАВЛЕНО: используем <img> вместо backgroundImage */}
+        <div className="card-image">
+          <img src={recipe.image} alt={recipe.title} />
           <span className="era-badge">{recipe.era}</span>
         </div>
         
@@ -20,8 +22,6 @@ const RecipeCard = ({ recipe }) => {
           </div>
         </div>
       </Link>
-      
-           
     </div>
   );
 };
