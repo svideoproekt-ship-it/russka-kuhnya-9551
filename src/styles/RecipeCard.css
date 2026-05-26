@@ -31,20 +31,27 @@
 }
 
 /* Контейнер изображения */
+
 .card-image {
   width: 100%;
-  height: auto;  /* Автоматическая высота */
-  aspect-ratio: 4/3;  /* Пропорции 4:3 */
-  position: relative;
+  height: 250px; /* Фиксируем высоту, чтобы карточки были ровными */
+  background: #ffffff; /* Белый фон, чтобы не было пустых мест */
+  display: flex;       /* Центрируем картинку */
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
-  background: #006064;
 }
 
+/* Само изображение */
 .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 20%;  /* Сдвиг вверх на 20% */
+  object-fit: contain; /*  ГЛАВНОЕ: Показывает картинку ЦЕЛИКОМ */
+  transition: transform 0.4s ease;
+}
+
+.recipe-card:hover .card-image img {
+  transform: scale(1.05); /* Легкое увеличение при наведении */
 }
 
 
