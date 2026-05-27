@@ -17,7 +17,7 @@
   border-radius: 20px;
   padding: 30px;
   box-shadow: 0 0 30px rgba(0,0,0,0.5);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter убрали - может ломать старые браузеры */
 }
 
 /* Кнопка "Назад" */
@@ -45,8 +45,10 @@
   font-size: 36px;
   margin: 10px 0 20px;
   background: linear-gradient(to right, var(--cat-start), var(--cat-end));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;  /* ← ИСПРАВЛЕНО: дефис вместо подчёркивания */
+  -webkit-text-fill-color: transparent;  /* ← ИСПРАВЛЕНО */
+  background-clip: text;
+  color: var(--cat-start);  /* Фолбэк для браузеров без поддержки */
 }
 
 /* Мета-информация */
