@@ -1,35 +1,102 @@
 /* === КАРТОЧКА РЕЦЕПТА (КАТЕГОРИЯ СУПЫ) === */
 
+/* 1. Сама карточка */
 .recipe-card {
-  background: linear-gradient(135deg, #20B2AA, #008080) !important; /* Бирюзовый с приоритетом */
+  background: linear-gradient(135deg, #20B2AA, #008080) !important;
   border: 2px solid #00CED1 !important;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  
+  /* ГЛАВНОЕ: Заставляем карточку занимать всю высоту ячейки сетки */
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
-  z-index: 1;
 }
 
 .recipe-card:hover {
-  transform: translateY(-8px) scale(1.02);
+  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(32, 178, 170, 0.6);
   border-color: #FFD700 !important;
 }
 
-/* Ссылка-обёртка */
 .recipe-card .card-link {
-  text-decoration: none !important;
+  text-decoration: none;
   color: inherit;
   display: flex;
   flex-direction: column;
-  flex: 1;
+  height: 100%; /* Ссылка тоже на всю высоту */
 }
 
+/* 2. Блок с картинкой (фиксированный размер) */
+.recipe-card .card-image {
+  width: 100%;
+  height: 250px; /* Фиксированная высота для всех */
+  flex-shrink: 0; /* Запрещаем сжиматься */
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.recipe-card .card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Показываем целиком */
+  transition: transform 0.4s ease;
+}
+
+/* 3. Текстовый блок (РАСТЯГИВАЕТСЯ) */
+.recipe-card .card-content {
+  padding: 20px;
+  color: #fff;
+  
+  /* ГЛАВНОЕ: Занимает всё оставшееся место и выравнивает контент */
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+.recipe-card .card-content h3 {
+  color: #fff !important;
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.3;
+  /* Если заголовок очень длинный, ограничиваем строки (опционально) */
+  /* display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden; */
+}
+
+.recipe-card .category {
+  margin: 0 0 15px 0;
+  color: #b2ebf2 !important;
+  font-size: 0.9rem;
+  text-align: center;
+  font-style: italic;
+}
+
+/* 4. Мета-информация (Время и Сложность) */
+.recipe-card .card-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #b2ebf2 !important;
+  font-size: 0.9rem;
+  gap: 15px;
+  
+  /* ГЛАВНОЕ: Прижимаем к самому низу карточки */
+  margin-top: auto; 
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Легкая линия для красоты */
+}
 /* Контейнер изображения */
 
 .card-image {
