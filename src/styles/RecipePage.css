@@ -44,11 +44,9 @@
   text-align: center;
   font-size: 36px;
   margin: 10px 0 20px;
-  background: linear-gradient(to right, var(--cat-start), var(--cat-end));
-  -webkit-background-clip: text;  /* ← ИСПРАВЛЕНО: дефис вместо подчёркивания */
-  -webkit-text-fill-color: transparent;  /* ← ИСПРАВЛЕНО */
-  background-clip: text;
-  color: var(--cat-start);  /* Фолбэк для браузеров без поддержки */
+  color: #FFD700; /* Золотой */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 
 /* Мета-информация */
