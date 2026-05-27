@@ -1,15 +1,14 @@
-/* Общий фон страницы */
+/* === ОБЩИЕ СТИЛИ СТРАНИЦЫ === */
 .recipe-page {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 20px; /* ⬆️ Увеличили базовый шрифт для ПК */
+  line-height: 1.7;
+  color: #333;
   background: #fafafa;
   min-height: 100vh;
   padding: 20px;
-  font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 18px; /* Увеличенный шрифт для десктопа */
-  line-height: 1.6;
-  color: #333;
 }
 
-/* Контейнер рецепта */
 .recipe-container {
   max-width: 900px;
   margin: 0 auto;
@@ -19,36 +18,57 @@
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
 }
 
-/* Заголовок рецепта */
-.recipe-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
+/* Заголовки */
 .recipe-header h1 {
-  color: #2c3e50;
-  font-size: 36px;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-/* Мета-информация */
-.recipe-meta {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  font-size: 44px; /* ⬆️ Крупнее */
   margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
 }
 
-.meta-item {
-  background: #f5f5f5;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 16px;
-  color: #666;
-  white-space: nowrap;
+.recipe-section h2 {
+  font-size: 32px; /* ⬆️ Крупнее */
+  text-align: center;
+  margin-bottom: 25px;
+  color: #2c3e50;
 }
+
+/* Ингредиенты и шаги */
+.recipe-section ul li,
+.recipe-section ol li {
+  font-size: 20px; /* ⬆️ Читабельнее */
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* Историческая справка */
+.history-section p {
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Мета-данные */
+.recipe-meta {
+  font-size: 18px;
+  gap: 20px;
+}
+
+/* === МОБИЛЬНАЯ ВЕРСИЯ (оставляем компактной) === */
+@media (max-width: 768px) {
+  .recipe-page {
+    font-size: 17px;
+    padding: 15px;
+  }
+  .recipe-container { padding: 20px; }
+  .recipe-header h1 { font-size: 28px; }
+  .recipe-section h2 { font-size: 24px; }
+  .recipe-section ul li, .recipe-section ol li { font-size: 17px; padding: 12px 15px; }
+  .history-section p { font-size: 17px; }
+  .recipe-meta { font-size: 16px; flex-direction: column; gap: 8px; }
+}
+
 
 /* Картинка рецепта */
 .recipe-image {

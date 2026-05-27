@@ -2,70 +2,54 @@ import React from 'react';
 
 const ShareButtons = ({ title }) => {
   const currentUrl = window.location.href;
-  const shareText = `Посмотри рецепт "${title}" в приложении Русская Кухня! 🍲`;
+  const shareText = `Посмотри рецепт "${title}" в Русской Кухне! 🍲`;
 
-  const vkLink = `https://vk.com/share.php?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(title)}`;
-  const tgLink = `https://t.me/share/url?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(shareText)}`;
-  const waLink = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText + ' ' + currentUrl)}`;
-
-  const handleNativeShare = async () => {
+  const handleShare = async () => {
     if (navigator.share) {
       try {
-        await navigator.share({ title, text: shareText, url: currentUrl });
+        await navigator.share({
+          title: title || 'Рецепт',
+          text: shareText,
+          url: currentUrl,
+        });
       } catch (err) {
-        console.log('Ошибка шаринга', err);
+        if (err.name !== 'AbortError') console.error('Ошибка шаринга:', err);
+      }
+    } else {
+      // Фолбэк для ПК: копируем ссылку
+      try {
+        await navigator.clipboard.writeText(currentUrl);
+        alert('✅ Ссылка на рецепт скопирована!');
+      } catch (err) {
+        console.error('Не удалось скопировать', err);
       }
     }
   };
 
-  // Стили для контейнера
-  const containerStyle = {
-    marginTop: '30px',
-    padding: '20px',
-    background: '#fff8e1',
-    borderRadius: '12px',
-    border: '2px solid #ffca28',
-    textAlign: 'center'
-  };
-
-  // Стили для кнопок
-  const buttonStyle = {
-    display: 'inline-block',
-    padding: '12px 20px',
-    margin: '5px',
-    fontSize: '16px',
-    fontWeight: 'bold',
-    color: 'white',
-    textDecoration: 'none',
-    borderRadius: '8px',
-    cursor: 'pointer',
-    border: 'none',
-    minWidth: '100px'
-  };
-
   return (
-    <div style={containerStyle}>
-      <h3 style={{ margin: '0 0 15px 0', fontSize: '18px', color: '#d32f2f' }}>
-        Поделись рецептом с друзьями! 👇
-      </h3>
-      
-      <div>
-        <button onClick={handleNativeShare} style={{ ...buttonStyle, background: '#ff9800' }}>
-          📱 Поделиться
-        </button>
-
-        <a href={vkLink} target="_blank" rel="noopener noreferrer" style={{ ...buttonStyle, background: '#0077FF' }}>
-          ВКонтакте
-        </a>
-
-        <a href={tgLink} target="_blank" rel="noopener noreferrer" style={{ ...buttonStyle, background: '#0088cc' }}>
-          Telegram
-        </a>
-
-        <a href={waLink} target="_blank" rel="noopener noreferrer" style={{ ...buttonStyle, background: '#25D366' }}>
-          WhatsApp
-        </a>
-      </div>
+    <div style={{ textAlign: 'center', marginTop: '40px', marginBottom: '20px' }}>
+      <button
+        onClick={handleShare}
+        style={{
+          padding: '14px 32px',
+          fontSize: '18px',
+          background: 'linear-gradient(135deg, #ff9800, #f57c00)',
+          color: 'white',
+          border: 'none',
+          borderRadius: '12px',
+          cursor: 'pointer',
+          fontWeight: '600',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '10px',
+          boxShadow: '0 4px 12px rgba(255, 152, 0, 0.3)',
+          transition: 'all 0.2s ease'
+        }}
+        onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
+        onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+      >
+        📤 Поделиться рецептом
+      </button>
     </div>
   );
 };
