@@ -22,33 +22,34 @@ const RecipePage = () => {
   console.log('Ингредиенты:', recipe?.ingredients);
 
   // === ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ЦВЕТОВ КАТЕГОРИИ ===
-  const getCategoryTheme = () => {
-    const category = recipe?.category?.toLowerCase() || '';
-    
-    // СУПЫ (Бирюзовый градиент)
-    if (category.includes('суп') || category.includes('щи') || category.includes('борщ')) {
-      return { bg: '#00BFFF', end: '#008080', pageBg: '#001f3f' };
-    }
-    // МЯСО (Красный градиент)
-    if (category.includes('мясн') || category.includes('мясо') || category.includes('беф')) {
-      return { bg: '#d32f2f', end: '#8b0000', pageBg: '#1a0505' };
-    }
-    // ВЫПЕЧКА (Оранжевый градиент)
-    if (category.includes('выпечк') || category.includes('блин') || category.includes('пирог')) {
-      return { bg: '#ff9800', end: '#f57c00', pageBg: '#1a1000' };
-    }
-    // РЫБА (Синий градиент)
-    if (category.includes('рыб') || category.includes('рыба')) {
-      return { bg: '#1976d2', end: '#0d47a1', pageBg: '#001020' };
-    }
-    // ДЕСЕРТЫ (Розовый градиент)
-    if (category.includes('десерт') || category.includes('сладк')) {
-      return { bg: '#e91e63', end: '#880e4f', pageBg: '#1a0010' };
-    }
-    
-    // По умолчанию (Серый)
-    return { bg: '#607d8b', end: '#37474f', pageBg: '#101518' };
-  };
+  
+    const getCategoryTheme = () => {
+  const category = recipe?.category?.toLowerCase() || '';
+  
+  // СУПЫ (Светло-синий градиент)
+  if (category.includes('суп') || category.includes('щи') || category.includes('борщ')) {
+    return { bg: '#00BFFF', end: '#008080', pageBg: '#1E3A5F' };
+  }
+  // МЯСО (Тёплый красно-коричневый)
+  if (category.includes('мясн') || category.includes('мясо') || category.includes('беф')) {
+    return { bg: '#d32f2f', end: '#8b0000', pageBg: '#4A1C1C' };
+  }
+  // ВЫПЕЧКА (Тёплый оранжевый)
+  if (category.includes('выпечк') || category.includes('блин') || category.includes('пирог')) {
+    return { bg: '#ff9800', end: '#f57c00', pageBg: '#4A3C1A' };
+  }
+  // РЫБА (Светло-синий)
+  if (category.includes('рыб') || category.includes('рыба')) {
+    return { bg: '#1976d2', end: '#0d47a1', pageBg: '#1A3A5C' };
+  }
+  // ДЕСЕРТЫ (Розовый)
+  if (category.includes('десерт') || category.includes('сладк')) {
+    return { bg: '#e91e63', end: '#880e4f', pageBg: '#4A1A3C' };
+  }
+  
+  // По умолчанию (Синий)
+  return { bg: '#607d8b', end: '#37474f', pageBg: '#1E3A5F' };
+};
 
   const theme = getCategoryTheme();
 

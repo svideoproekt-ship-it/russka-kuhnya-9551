@@ -1,7 +1,8 @@
 /* === ГЛАВНЫЙ ФОН СТРАНИЦЫ === */
 .recipe-page {
   min-height: 100vh;
-  background: linear-gradient(160deg, var(--page-bg, #0a0a2a) 0%, #000000 100%);
+  /* Приятный синий градиент вместо тёмного */
+  background: linear-gradient(135deg, var(--page-bg, #1E3A5F) 0%, #2E5C8A 100%);
   padding: 20px;
   font-family: 'Georgia', serif;
   color: #fff;
@@ -12,12 +13,11 @@
 .recipe-container {
   max-width: 900px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1); /* Чуть светлее */
   border: 2px solid var(--cat-start);
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-  /* backdrop-filter убрали - может ломать старые браузеры */
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
 }
 
 /* Кнопка "Назад" */
