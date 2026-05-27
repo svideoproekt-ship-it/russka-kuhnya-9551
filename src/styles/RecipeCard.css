@@ -1,25 +1,27 @@
-/* === КАРТОЧКА РЕЦЕПТА (КАТЕГОРИЯ СУПЫ) === */
+/* === ОБЩИЙ КОНТЕЙНЕР (СЕТКА) === */
+/* Убедись, что в файле категории (например SoupCategory.css или App.css) 
+   для контейнера с карточками есть display: grid и gap */
 
-/* 1. Сама карточка */
+/* === САМА КАРТОЧКА === */
 .recipe-card {
-  background: linear-gradient(135deg, #20B2AA, #008080) !important;
-  border: 2px solid #00CED1 !important;
+  background: linear-gradient(135deg, #20B2AA, #008080);
+  border: 2px solid #00CED1;
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   
-  /* ГЛАВНОЕ: Заставляем карточку занимать всю высоту ячейки сетки */
+  /* ГЛАВНОЕ: Карточка занимает всю высоту ячейки */
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .recipe-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 0 8px 25px rgba(32, 178, 170, 0.6);
-  border-color: #FFD700 !important;
+  border-color: #FFD700;
 }
 
 .recipe-card .card-link {
@@ -27,106 +29,30 @@
   color: inherit;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ссылка тоже на всю высоту */
+  height: 100%;
 }
 
-/* 2. Блок с картинкой (фиксированный размер) */
+/* === БЛОК КАРТИНКИ (ФИКСИРОВАННЫЙ) === */
 .recipe-card .card-image {
   width: 100%;
-  height: 250px; /* Фиксированная высота для всех */
-  flex-shrink: 0; /* Запрещаем сжиматься */
-  background: #ffffff;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 220px; /* Фиксированная высота для всех карточек */
   overflow: hidden;
+  position: relative;
+  background: #006064; /* Цвет фона, если картинка не загрузится */
+  flex-shrink: 0; /* Запрещаем сжиматься */
 }
 
 .recipe-card .card-image img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Показываем целиком */
-  transition: transform 0.4s ease;
-}
-
-/* 3. Текстовый блок (РАСТЯГИВАЕТСЯ) */
-.recipe-card .card-content {
-  padding: 20px;
-  color: #fff;
-  
-  /* ГЛАВНОЕ: Занимает всё оставшееся место и выравнивает контент */
-  flex-grow: 1; 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; 
-}
-
-.recipe-card .card-content h3 {
-  color: #fff !important;
-  font-size: 1.5rem;
-  margin: 0 0 10px 0;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1.3;
-  /* Если заголовок очень длинный, ограничиваем строки (опционально) */
-  /* display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden; */
-}
-
-.recipe-card .category {
-  margin: 0 0 15px 0;
-  color: #b2ebf2 !important;
-  font-size: 0.9rem;
-  text-align: center;
-  font-style: italic;
-}
-
-/* 4. Мета-информация (Время и Сложность) */
-.recipe-card .card-meta {
-  display: flex;
-  justify-content: space-between;
-  color: #b2ebf2 !important;
-  font-size: 0.9rem;
-  gap: 15px;
-  
-  /* ГЛАВНОЕ: Прижимаем к самому низу карточки */
-  margin-top: auto; 
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2); /* Легкая линия для красоты */
-}
-/* Контейнер изображения */
-
-.card-image {
-  width: 100%;
-  height: 250px; /* Фиксируем высоту, чтобы карточки были ровными */
-  background: #ffffff; /* Белый фон, чтобы не было пустых мест */
-  display: flex;       /* Центрируем картинку */
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-/* Само изображение */
-.card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /*  ГЛАВНОЕ: Показывает картинку ЦЕЛИКОМ */
+  object-fit: cover; /*  ЗАПОЛНЯЕТ БЛОК ПОЛНОСТЬЮ (обрезает края, но нет дыр) */
   transition: transform 0.4s ease;
 }
 
 .recipe-card:hover .card-image img {
-  transform: scale(1.05); /* Легкое увеличение при наведении */
+  transform: scale(1.1);
 }
 
-
-.recipe-card:hover .card-image img {
-  transform: scale(1.05); /* Чуть меньше зум, чтобы не обрезало */
-}
-
-/* Бейдж эпохи */
 .recipe-card .era-badge {
   position: absolute;
   top: 10px;
@@ -139,20 +65,19 @@
   font-weight: bold;
   border: 1px solid #FFD700;
   z-index: 10;
-  pointer-events: none;
 }
 
-/* Контент карточки */
+/* === ТЕКСТОВЫЙ БЛОК === */
 .recipe-card .card-content {
   padding: 20px;
-  flex: 1;
+  flex: 1; /* Занимает всё оставшееся место */
   display: flex;
   flex-direction: column;
-  color: #fff;
+  justify-content: space-between; /* Распределяет текст и мету по краям */
 }
 
 .recipe-card .card-content h3 {
-  color: #fff !important;
+  color: #fff;
   font-size: 1.5rem;
   margin: 0 0 15px 0;
   text-align: center;
@@ -162,81 +87,38 @@
 
 .recipe-card .category {
   margin: 0 0 12px 0;
-  color: #b2ebf2 !important;
+  color: #b2ebf2;
   font-size: 0.95rem;
   text-align: center;
   font-style: italic;
 }
 
-/* Мета-информация */
+/* === МЕТА-ИНФОРМАЦИЯ (ВРЕМЯ/СЛОЖНОСТЬ) === */
 .recipe-card .card-meta {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
-  color: #b2ebf2 !important;
+  color: #b2ebf2;
   font-size: 0.9rem;
   gap: 15px;
+  
+  /* ГЛАВНОЕ: Прижимаем к низу */
+  margin-top: auto; 
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .recipe-card .card-meta span {
   display: flex;
   align-items: center;
   gap: 4px;
-  flex: 1;
-  white-space: nowrap;
 }
 
-/* УБРАЛ .card-share — кнопки теперь только в RecipePage */
-
-/* === АДАПТИВНОСТЬ === */
+/* Адаптивность для мобильных */
 @media (max-width: 768px) {
-  .recipe-card {
-    border-radius: 12px;
-  }
-  
   .recipe-card .card-image {
     height: 180px;
   }
-  
   .recipe-card .card-content h3 {
-    font-size: 1.4rem;
-  }
-  
-  .recipe-card .card-meta {
-    font-size: 0.85rem;
-    flex-direction: column;
-    gap: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .recipe-card {
-    border-radius: 10px;
-  }
-  
-  .recipe-card .card-image {
-    height: 160px;
-  }
-  
-  .recipe-card .card-content {
-    padding: 16px 14px;
-  }
-  
-  .recipe-card .card-content h3 {
-    font-size: 1.2rem;
-    margin-bottom: 12px;
-  }
-  
-  .recipe-card .category {
-    font-size: 0.9rem;
-  }
-  
-  .recipe-card .card-meta {
-    font-size: 0.85rem;
-  }
-  
-  .recipe-card .era-badge {
-    font-size: 10px;
-    padding: 4px 10px;
+    font-size: 1.3rem;
   }
 }
