@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { meatData } from '../data/meatData';
-import ShareButtons from '../components/ShareButtons';  // ← ДОБАВИЛИ
+import ShareButtons from '../components/ShareButtons';
 import './MeatCategory.css';
 
 function MeatCategory() {
@@ -32,6 +32,9 @@ function MeatCategory() {
               <span className="time">⏱ {selectedRecipe.time}</span>
             </div>
           </div>
+
+          {/* КНОПКА "ПОДЕЛИТЬСЯ" — СРАЗУ ПОСЛЕ ЗАГОЛОВКА */}
+          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">
@@ -69,10 +72,6 @@ function MeatCategory() {
               <h2>📚 Историческая справка</h2>
               <p className="history-text">{selectedRecipe.history}</p>
             </div>
-
-            {/* ← ДОБАВИЛИ КНОПКУ "ПОДЕЛИТЬСЯ" */}
-            <ShareButtons title={selectedRecipe.name} />
-            
           </div>
         </div>
       </div>

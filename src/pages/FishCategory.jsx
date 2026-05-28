@@ -1,7 +1,7 @@
-// src/pages/FishCategory.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fishData } from '../data/fishData';
+import ShareButtons from '../components/ShareButtons';
 import './FishCategory.css';
 
 function FishCategory() {
@@ -20,32 +20,21 @@ function FishCategory() {
   if (selectedRecipe) {
     return (
       <div className="fish-category">
-        <button className="back-button" onClick={handleBack}>
-          ← Назад к списку
-        </button>
-        
+        <button className="back-button" onClick={handleBack}>← Назад к списку</button>
         <div className="recipe-detail">
           <div className="recipe-header">
             <h1>{selectedRecipe.name}</h1>
             <div className="recipe-meta">
-              <span className="epoch">🕰 {selectedRecipe.epoch}</span>
-              <span className="time">⏱ {selectedRecipe.time}</span>
+              <span>🕰 {selectedRecipe.epoch}</span>
+              <span>⏱ {selectedRecipe.time}</span>
             </div>
           </div>
-
+          <ShareButtons title={selectedRecipe.name} />
           {selectedRecipe.image && (
             <div className="recipe-image-container">
-              <img 
-                src={selectedRecipe.image} 
-                alt={selectedRecipe.name}
-                className="recipe-image"
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
-                }}
-              />
+              <img src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />
             </div>
           )}
-
           <div className="recipe-content">
             <div className="recipe-section">
               <h2>📝 Ингредиенты</h2>
@@ -55,20 +44,20 @@ function FishCategory() {
                 ))}
               </ul>
             </div>
-
             <div className="recipe-section">
-              <h2>👨‍🍳 Приготовление</h2>
+              <h2>👨‍ Приготовление</h2>
               <ol className="preparation-list">
                 {selectedRecipe.preparation.map((step, index) => (
                   <li key={index}>{step}</li>
                 ))}
               </ol>
             </div>
-
-            <div className="recipe-section history-section">
-              <h2>📚 Историческая справка</h2>
-              <p className="history-text">{selectedRecipe.history}</p>
-            </div>
+            {selectedRecipe.history && (
+              <div className="recipe-section history-section">
+                <h2>📚 Историческая справка</h2>
+                <p className="history-text">{selectedRecipe.history}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -80,30 +69,13 @@ function FishCategory() {
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🐟 Рыбные блюда</h1>
-        <p className="category-description">
-          Традиционные русские рыбные блюда от древности до наших дней
-        </p>
+        <p className="category-description">Традиционные русские рыбные блюда</p>
       </div>
-
       <div className="recipes-grid">
         {fishData.map((recipe) => (
-          <div 
-            key={recipe.id} 
-            className="recipe-card"
-            onClick={() => handleRecipeClick(recipe)}
-          >
+          <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
             <div className="recipe-card-image">
-              {recipe.image ? (
-                <img 
-                  src={recipe.image} 
-                  alt={recipe.name}
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
-                  }}
-                />
-              ) : (
-                <div className="no-image">🐟</div>
-              )}
+              <img src={recipe.image} alt={recipe.name} />
             </div>
             <div className="recipe-card-content">
               <h3>{recipe.name}</h3>
@@ -111,9 +83,7 @@ function FishCategory() {
                 <span>🕰 {recipe.epoch}</span>
                 <span>⏱ {recipe.time}</span>
               </div>
-              <button className="view-recipe-btn">
-                Смотреть рецепт
-              </button>
+              <button className="view-recipe-btn">Смотреть рецепт</button>
             </div>
           </div>
         ))}

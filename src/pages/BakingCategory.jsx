@@ -1,7 +1,7 @@
-// src/pages/BakingCategory.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { bakingData } from '../data/bakingData';
+import ShareButtons from '../components/ShareButtons';
 import './BakingCategory.css';
 
 function BakingCategory() {
@@ -20,10 +20,7 @@ function BakingCategory() {
   if (selectedRecipe) {
     return (
       <div className="baking-category">
-        <button className="back-button" onClick={handleBack}>
-          ← Назад к списку
-        </button>
-        
+        <button className="back-button" onClick={handleBack}>← Назад к списку</button>
         <div className="recipe-detail">
           <div className="recipe-header">
             <h1>{selectedRecipe.name}</h1>
@@ -32,20 +29,12 @@ function BakingCategory() {
               <span className="time">⏱ {selectedRecipe.time}</span>
             </div>
           </div>
-
+          <ShareButtons title={selectedRecipe.name} />
           {selectedRecipe.image && (
             <div className="recipe-image-container">
-              <img 
-                src={selectedRecipe.image} 
-                alt={selectedRecipe.name}
-                className="recipe-image"
-                onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
-                }}
-              />
+              <img src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />
             </div>
           )}
-
           <div className="recipe-content">
             <div className="recipe-section">
               <h2>📝 Ингредиенты</h2>
@@ -55,7 +44,6 @@ function BakingCategory() {
                 ))}
               </ul>
             </div>
-
             <div className="recipe-section">
               <h2>👨‍🍳 Приготовление</h2>
               <ol className="preparation-list">
@@ -64,11 +52,12 @@ function BakingCategory() {
                 ))}
               </ol>
             </div>
-
-            <div className="recipe-section history-section">
-              <h2>📚 Историческая справка</h2>
-              <p className="history-text">{selectedRecipe.history}</p>
-            </div>
+            {selectedRecipe.history && (
+              <div className="recipe-section history-section">
+                <h2>📚 Историческая справка</h2>
+                <p className="history-text">{selectedRecipe.history}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -79,31 +68,14 @@ function BakingCategory() {
     <div className="baking-category">
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
-        <h1>🥟 Выпечка</h1>
-        <p className="category-description">
-          Традиционная русская выпечка от древности до наших дней
-        </p>
+        <h1>🥐 Выпечка</h1>
+        <p className="category-description">Традиционная русская выпечка от древности до наших дней</p>
       </div>
-
       <div className="recipes-grid">
         {bakingData.map((recipe) => (
-          <div 
-            key={recipe.id} 
-            className="recipe-card"
-            onClick={() => handleRecipeClick(recipe)}
-          >
+          <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
             <div className="recipe-card-image">
-              {recipe.image ? (
-                <img 
-                  src={recipe.image} 
-                  alt={recipe.name}
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
-                  }}
-                />
-              ) : (
-                <div className="no-image">🥟</div>
-              )}
+              <img src={recipe.image} alt={recipe.name} />
             </div>
             <div className="recipe-card-content">
               <h3>{recipe.name}</h3>
@@ -111,9 +83,7 @@ function BakingCategory() {
                 <span>🕰 {recipe.epoch}</span>
                 <span>⏱ {recipe.time}</span>
               </div>
-              <button className="view-recipe-btn">
-                Смотреть рецепт
-              </button>
+              <button className="view-recipe-btn">Смотреть рецепт</button>
             </div>
           </div>
         ))}
