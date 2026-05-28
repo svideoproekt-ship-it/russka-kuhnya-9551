@@ -1,7 +1,7 @@
-// src/pages/SnacksCategory.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { snacksData } from '../data/snacksData';
+import ShareButtons from '../components/ShareButtons';  // ← ДОБАВИЛИ ИМПОРТ
 import './SnacksCategory.css';
 
 function SnacksCategory() {
@@ -28,10 +28,13 @@ function SnacksCategory() {
           <div className="recipe-header">
             <h1>{selectedRecipe.name}</h1>
             <div className="recipe-meta">
-              <span className="epoch"> {selectedRecipe.epoch}</span>
+              <span className="epoch">🕰 {selectedRecipe.epoch}</span>
               <span className="time">⏱ {selectedRecipe.time}</span>
             </div>
           </div>
+
+          {/* ← КНОПКА "ПОДЕЛИТЬСЯ" ЗДЕСЬ */}
+          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">
@@ -48,7 +51,7 @@ function SnacksCategory() {
 
           <div className="recipe-content">
             <div className="recipe-section">
-              <h2> Ингредиенты</h2>
+              <h2>🥗 Ингредиенты</h2>
               <ul className="ingredients-list">
                 {selectedRecipe.ingredients.map((item, index) => (
                   <li key={index}>{item}</li>
@@ -57,7 +60,7 @@ function SnacksCategory() {
             </div>
 
             <div className="recipe-section">
-              <h2>‍🍳 Приготовление</h2>
+              <h2>👨‍🍳 Приготовление</h2>
               <ol className="preparation-list">
                 {selectedRecipe.preparation.map((step, index) => (
                   <li key={index}>{step}</li>
