@@ -81,6 +81,7 @@ function DrinksCategory() {
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🍺 Напитки</h1>
+        <ShareButtons title={selectedRecipe.name} />
         <p className="category-description">
           Традиционные русские напитки: от кваса и сбитня до настоек и наливок
         </p>
