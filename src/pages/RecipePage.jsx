@@ -1,72 +1,80 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { soupsData } from '../data/soupsData';
+import allRecipes from '../data/recipes';  // ← ИМПОРТИРУЕМ ВСЕ РЕЦЕПТЫ
 import ShareButtons from '../components/ShareButtons';
 import '../styles/RecipePage.css';
 
 const RecipePage = () => {
   const { id } = useParams();
   
-  // === КОНСОЛЬНЫЕ ЛОГИ (для отладки) ===
-  console.log('=== RecipePage ===');
-  console.log('ID из URL:', id);
-  console.log('ID как число:', parseInt(id));
-  
-  // Ищем рецепт по числовому id
-  const recipe = soupsData.find(r => {
-    console.log(`Сравниваем: ${r.id} === ${parseInt(id)} ? ${r.id === parseInt(id)}`);
-    return r.id === parseInt(id);
+  // Ищем рецепт по ID (работает и со строками "soup-1", и с числами)
+  const recipe = allRecipes.find(r => {
+    // Прямое совпадение
+    if (r.id === id) return true;
+    
+    // Если в URL число (1), а в данных "soup-1" — извлекаем число
+    const urlNum = parseInt(id);
+    const recipeIdMatch = String(r.id).match(/\d+/);
+    if (recipeIdMatch && parseInt(recipeIdMatch[0]) === urlNum) return true;
+    
+    return false;
   });
-  
-  console.log('Найденный рецепт:', recipe);
-  console.log('Ингредиенты:', recipe?.ingredients);
 
-  // === ФУНКЦИЯ ДЛЯ ПОЛУЧЕНИЯ ЦВЕТОВ КАТЕГОРИИ ===
-  
-    const getCategoryTheme = () => {
-  const category = recipe?.category?.toLowerCase() || '';
-  
-  // СУПЫ (Светло-синий градиент)
-  if (category.includes('суп') || category.includes('щи') || category.includes('борщ')) {
-    return { bg: '#00BFFF', end: '#008080', pageBg: '#1E3A5F' };
-  }
-  // МЯСО (Тёплый красно-коричневый)
-  if (category.includes('мясн') || category.includes('мясо') || category.includes('беф')) {
-    return { bg: '#d32f2f', end: '#8b0000', pageBg: '#4A1C1C' };
-  }
-  // ВЫПЕЧКА (Тёплый оранжевый)
-  if (category.includes('выпечк') || category.includes('блин') || category.includes('пирог')) {
-    return { bg: '#ff9800', end: '#f57c00', pageBg: '#4A3C1A' };
-  }
-  // РЫБА (Светло-синий)
-  if (category.includes('рыб') || category.includes('рыба')) {
-    return { bg: '#1976d2', end: '#0d47a1', pageBg: '#1A3A5C' };
-  }
-  // ДЕСЕРТЫ (Розовый)
-  if (category.includes('десерт') || category.includes('сладк')) {
-    return { bg: '#e91e63', end: '#880e4f', pageBg: '#4A1A3C' };
-  }
-  
-  // По умолчанию (Синий)
-  return { bg: '#607d8b', end: '#37474f', pageBg: '#1E3A5F' };
-};
+  // Функция для получения цветов категории
+  const getCategoryTheme = () => {
+    const category = recipe?.category?.toLowerCase() || '';
+    
+    // СУПЫ (Светло-синий градиент)
+    if (category === 'soups') {
+      return { bg: '#00BFFF', end: '#008080', pageBg: '#1E3A5F' };
+    }
+    // МЯСО (Тёплый красно-коричневый)
+    if (category === 'meat') {
+      return { bg: '#d32f2f', end: '#8b0000', pageBg: '#4A1C1C' };
+    }
+    // ВЫПЕЧКА (Тёплый оранжевый)
+    if (category === 'baking') {
+      return { bg: '#ff9800', end: '#f57c00', pageBg: '#4A3C1A' };
+    }
+    // РЫБА (Светло-синий)
+    if (category === 'fish') {
+      return { bg: '#1976d2', end: '#0d47a1', pageBg: '#1A3A5C' };
+    }
+    // ЗАКУСКИ (Зелёный)
+    if (category === 'snacks') {
+      return { bg: '#4caf50', end: '#2e7d32', pageBg: '#1C3C1C' };
+    }
+    // ДЕСЕРТЫ (Розовый)
+    if (category === 'desserts') {
+      return { bg: '#e91e63', end: '#880e4f', pageBg: '#4A1A3C' };
+    }
+    // НАПИТКИ (Фиолетовый)
+    if (category === 'drinks') {
+      return { bg: '#9c27b0', end: '#6a1b9a', pageBg: '#2E1C3C' };
+    }
+    // ТЕСТО (Коричневый)
+    if (category === 'dough') {
+      return { bg: '#8d6e63', end: '#5d4037', pageBg: '#3C2E1C' };
+    }
+    
+    // По умолчанию (Синий)
+    return { bg: '#607d8b', end: '#37474f', pageBg: '#1E3A5F' };
+  };
 
   const theme = getCategoryTheme();
 
-  // Если рецепт не найден
   if (!recipe) {
     return (
       <div style={{ padding: '40px', textAlign: 'center', minHeight: '100vh', background: theme.pageBg }}>
         <h1 style={{ color: '#fff' }}>😔 Рецепт не найден</h1>
         <p style={{ color: '#ccc' }}>ID: {id}</p>
-        <Link to="/category/soups" style={{ color: theme.bg, textDecoration: 'none', fontWeight: 'bold' }}>
-          ← Вернуться к супам
+        <Link to="/" style={{ color: theme.bg, textDecoration: 'none', fontWeight: 'bold' }}>
+          ← На главную
         </Link>
       </div>
     );
   }
 
-  // === ОСНОВНОЙ РЕНДЕР ===
   return (
     <div 
       className="recipe-page" 
@@ -77,32 +85,23 @@ const RecipePage = () => {
       }}
     >
       <div className="recipe-container">
+        <Link to="/" className="back-link">← На главную</Link>
         
-        {/* Кнопка "Назад" */}
-        <Link to="/category/soups" className="back-link">← Назад к списку</Link>
-        
-        {/* Заголовок рецепта */}
         <div className="recipe-header">
-          <h1>{recipe.name}</h1>
+          <h1>{recipe.title}</h1>  {/* ← ИСПОЛЬЗУЕМ title ВМЕСТО name */}
           <div className="recipe-meta">
             {recipe.epoch && <span className="meta-item">🏛 {recipe.epoch}</span>}
             {recipe.time && <span className="meta-item">⏱ {recipe.time}</span>}
           </div>
         </div>
 
-        {/* Кнопка "Поделиться" */}
-        <ShareButtons title={recipe.name} />
+        <ShareButtons title={recipe.title} />
         
-        {/* Картинка */}
         {recipe.image && (
           <img 
             src={recipe.image} 
-            alt={recipe.name} 
+            alt={recipe.title} 
             className="recipe-image"
-            onError={(e) => {
-              console.log('Ошибка загрузки изображения');
-              e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
-            }}
           />
         )}
 
@@ -110,7 +109,7 @@ const RecipePage = () => {
         <div className="recipe-section">
           <h2>📝 Ингредиенты</h2>
           <ul>
-            {recipe.ingredients && recipe.ingredients.map((item, index) => (
+            {(recipe.ingredients || []).map((item, index) => (
               <li key={index}>
                 {typeof item === 'string' 
                   ? item 
@@ -121,11 +120,11 @@ const RecipePage = () => {
           </ul>
         </div>
 
-        {/* Приготовление */}
+        {/* Приготовление — ИСПОЛЬЗУЕМ steps ВМЕСТО preparation */}
         <div className="recipe-section">
           <h2>👨‍🍳 Приготовление</h2>
           <ol>
-            {recipe.preparation && recipe.preparation.map((step, index) => (
+            {(recipe.steps || []).map((step, index) => (
               <li key={index}>{step}</li>
             ))}
           </ol>
