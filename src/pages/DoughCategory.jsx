@@ -1,7 +1,7 @@
-// src/pages/DoughCategory.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { doughData } from '../data/doughData';
+import ShareButtons from '../components/ShareButtons';  // ← ДОБАВИЛИ ИМПОРТ
 import './DoughCategory.css';
 
 function DoughCategory() {
@@ -32,6 +32,9 @@ function DoughCategory() {
               <span className="time">⏱ {selectedRecipe.time}</span>
             </div>
           </div>
+
+          {/* ← КНОПКА "ПОДЕЛИТЬСЯ" ЗДЕСЬ */}
+          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">
