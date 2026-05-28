@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { dessertsData } from '../data/dessertsData';
 import './DessertsCategory.css';
+import ShareButtons from '../components/ShareButtons';
 
 function DessertsCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -80,6 +81,7 @@ function DessertsCategory() {
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🍰 Десерты и сладости</h1>
+        <ShareButtons title={selectedRecipe.name} />
         <p className="category-description">
           Традиционные русские десерты и сладости от древности до наших дней
         </p>
