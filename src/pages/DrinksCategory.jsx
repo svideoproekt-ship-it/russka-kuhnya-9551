@@ -1,4 +1,3 @@
-// src/pages/DrinksCategory.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { drinksData } from '../data/drinksData';
@@ -33,6 +32,9 @@ function DrinksCategory() {
               <span className="time">⏱ {selectedRecipe.time}</span>
             </div>
           </div>
+
+          {/* ← КНОПКА ЗДЕСЬ ПРАВИЛЬНО! */}
+          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">
@@ -76,12 +78,12 @@ function DrinksCategory() {
     );
   }
 
+  // СПИСОК РЕЦЕПТОВ — БЕЗ КНОПКИ!
   return (
     <div className="drinks-category">
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🍺 Напитки</h1>
-        <ShareButtons title={selectedRecipe.name} />
         <p className="category-description">
           Традиционные русские напитки: от кваса и сбитня до настоек и наливок
         </p>
