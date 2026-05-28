@@ -1,7 +1,7 @@
-// src/pages/MeatCategory.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { meatData } from '../data/meatData';
+import ShareButtons from '../components/ShareButtons';  // ← ДОБАВИЛИ
 import './MeatCategory.css';
 
 function MeatCategory() {
@@ -69,6 +69,10 @@ function MeatCategory() {
               <h2>📚 Историческая справка</h2>
               <p className="history-text">{selectedRecipe.history}</p>
             </div>
+
+            {/* ← ДОБАВИЛИ КНОПКУ "ПОДЕЛИТЬСЯ" */}
+            <ShareButtons title={selectedRecipe.name} />
+            
           </div>
         </div>
       </div>
