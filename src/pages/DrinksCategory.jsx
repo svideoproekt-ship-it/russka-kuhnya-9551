@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { drinksData } from '../data/drinksData';
+import ShareButtons from '../components/ShareButtons';
 import './DrinksCategory.css';
 
 function DrinksCategory() {
