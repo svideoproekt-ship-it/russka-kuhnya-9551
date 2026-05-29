@@ -1,29 +1,25 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!-- OneSignal Push Notifications -->
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <!-- OneSignal Push Notifications (МАКСИМАЛЬНО ПРОСТОЙ ВАРИАНТ) -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-      OneSignalDeferred.push(function(OneSignal) {
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
         OneSignal.init({
           appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
-          
-          // Настройки кнопки уведомлений
+          autoRegister: true,
           notifyButton: {
             enable: true,
-            size: "medium",
+            size: "large",
             position: "bottom-right",
-            // Тексты для всплывающей подсказки
-            strings: {
+            text: {
               'tip.state.unsubscribed': 'Подпишись на вкусную пищу и хорошее настроение',
               'tip.state.subscribed': 'Ты подписан ✓',
               'msg.subscribed': 'Отлично! Теперь ты будешь сыт и весел! 🍲',
               'msg.unsubscribe': 'Отписаться от уведомлений',
             },
           },
-          
-          // Приветственное уведомление
           welcomeNotification: {
             title: "Русская Кухня 🍲",
             message: "Спасибо за подписку! Готовься к вкусным рецептам!",
@@ -33,20 +29,26 @@
       });
     </script>
     
+    <!-- Принудительные стили для колокольчика (если нужно) -->
+    <style>
+      #onesignal-bell-container {
+        z-index: 999999 !important;
+        position: fixed !important;
+        bottom: 20px !important;
+        right: 20px !important;
+      }
+    </style>
+    
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Русская Кухня</title>
     
-    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-    <!-- Иконки и манифест -->
     <link rel="manifest" href="/manifest.json">
     <meta name="theme-color" content="#E85D4E">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
