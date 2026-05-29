@@ -12,10 +12,12 @@ import DessertsCategory from './pages/DessertsCategory';
 import DrinksCategory from './pages/DrinksCategory';
 import DoughCategory from './pages/DoughCategory';
 import RecipePage from './pages/RecipePage';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <Router>
+      <Analytics />  {/* ← ВОТ ЭТО ДОБАВЬ */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
