@@ -1,50 +1,57 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
- <!-- OneSignal Push Notifications -->
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-<script>
-  window.OneSignalDeferred = window.OneSignalDeferred || [];
-  OneSignalDeferred.push(async function(OneSignal) {
-    await OneSignal.init({
-      appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
-      notifyButton: {
-        enable: true,
-        size: "medium",
-        position: "bottom-right",
-        text: {
-          'tip.state.unsubscribed': 'Подпишись на вкусную пищу и хорошее настроение',
-          'tip.state.subscribed': 'Ты подписан',
-          'msg.subscribed': 'Отлично! Теперь ты будешь сыт и весел! 🍲',
-          'msg.unsubscribe': 'Отписаться от уведомлений',
-        },
-      },
-    });
-  });
-</script>   
-</script>
+    <!-- OneSignal Push Notifications -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
+          
+          // Настройки кнопки уведомлений
+          notifyButton: {
+            enable: true,
+            size: "medium",
+            position: "bottom-right",
+            // Тексты для всплывающей подсказки (то, что видит пользователь при наведении)
+            strings: {
+              'tip.state.unsubscribed': 'Подпишись на вкусную пищу и хорошее настроение',
+              'tip.state.subscribed': 'Ты подписан ✓',
+              'msg.subscribed': 'Отлично! Теперь ты будешь сыт и весел! 🍲',
+              'msg.unsubscribe': 'Отписаться от уведомлений',
+            },
+          },
+          
+          // Приветственное уведомление (появится после подписки)
+          welcomeNotification: {
+            title: "Русская Кухня 🍲",
+            message: "Спасибо за подписку! Готовься к вкусным рецептам!",
+            url: "https://russka-kuhnya-9551.vercel.app",
+          },
+        });
+      });
+    </script>
+    
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Русская Кухня</title>
     
-    <!-- Подключаем красивые шрифты (опционально, но делает текст лучше) -->
+    <!-- Шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Подключаем иконки Font Awesome -->
-     <link rel="manifest" href="/manifest.json">
-<meta name="theme-color" content="#E85D4E">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!-- Иконки и манифест -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#E85D4E">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
-    <!-- Сюда React будет вставлять наше приложение -->
     <div id="root"></div>
-    
-    <!-- Точка входа для JavaScript -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
