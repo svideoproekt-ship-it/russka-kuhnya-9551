@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Главная страница -->
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+
+  <!-- Категории (основные разделы) -->
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/soups</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/meat</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/baking</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/fish</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/snacks</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/desserts</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/drinks</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://russka-kuhnya-9551.vercel.app/category/dough</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
