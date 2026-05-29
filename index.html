@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <!-- OneSignal Push Notifications (МАКСИМАЛЬНО ПРОСТОЙ ВАРИАНТ) -->
+    <!-- OneSignal Push Notifications -->
     <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
     <script>
       var OneSignal = window.OneSignal || [];
@@ -29,7 +29,7 @@
       });
     </script>
     
-    <!-- Принудительные стили для колокольчика (если нужно) -->
+    <!-- Принудительные стили для колокольчика -->
     <style>
       #onesignal-bell-container {
         z-index: 999999 !important;
@@ -41,15 +41,20 @@
     
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />  <!-- ← ДОБАВИЛИ -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Русская Кухня</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#E85D4E">
+    <meta name="theme-color" content="#E85D4E" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Русская Кухня">  <!-- ← ДОБАВИЛИ -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
