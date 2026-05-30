@@ -98,7 +98,8 @@ function SoupCategory() {
       <div className="recipes-grid">
         {soupsData.map((recipe) => (
           <div key={recipe.id} onClick={() => handleRecipeClick(recipe)}>
-            <RecipeCard 
+            <RecipeCard
+            disableLink={true} 
               recipe={{
                 id: recipe.id,
                 title: recipe.name,

@@ -1,28 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Clock, ChefHat } from 'lucide-react';
-import '../styles/RecipeCard.css';
+import './RecipeCard.css';
 
-const RecipeCard = ({ recipe }) => {
+const RecipeCard = ({ recipe, disableLink = false }) => {
+  // Если disableLink = true, не рендерим Link, а просто div
+  const CardWrapper = disableLink ? 'div' : Link;
+  const wrapperProps = disableLink 
+    ? { className: 'card-container' } 
+    : { to: `/recipe/${recipe.id}`, className: 'card-link' };
+
   return (
-    <div className="recipe-card">
-      <Link to={`/recipe/${recipe.id}`} className="card-link">
-        {/* ИСПРАВЛЕНО: используем <img> вместо backgroundImage */}
+    <CardWrapper {...wrapperProps}>
+      <div className="recipe-card">
         <div className="card-image">
           <img src={recipe.image} alt={recipe.title} />
-          <span className="era-badge">{recipe.era}</span>
+          {recipe.era && <span className="era-badge">{recipe.era}</span>}
         </div>
         
         <div className="card-content">
           <h3>{recipe.title}</h3>
-          <p className="category">{recipe.category}</p>
+          {recipe.category && <p className="category">{recipe.category}</p>}
+          
           <div className="card-meta">
-            <span><Clock size={16} /> {recipe.time}</span>
-            <span><ChefHat size={16} /> {recipe.difficulty}</span>
+            {recipe.time && <span>⏱ {recipe.time}</span>}
+            {recipe.difficulty && <span>📊 {recipe.difficulty}</span>}
           </div>
         </div>
-      </Link>
-    </div>
+      </div>
+    </CardWrapper>
   );
 };
 
