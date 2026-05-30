@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './RecipeCard.css';
+// Стало (ПРАВИЛЬНО):
+import '../styles/RecipeCard.css';
 
 const RecipeCard = ({ recipe, disableLink = false }) => {
   // Если disableLink = true, не рендерим Link, а просто div
