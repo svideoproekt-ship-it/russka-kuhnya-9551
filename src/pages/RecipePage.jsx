@@ -58,39 +58,45 @@ const RecipePage = () => {
     <>
       {/* 🔹 Динамические мета-теги */}
       <Helmet>
-        <title>{metaTitle}</title>
-        <meta name="description" content={metaDesc} />
-        <link rel="canonical" href={canonicalUrl} />
-        
-        {/* Open Graph / VK / Telegram */}
-        <meta property="og:title" content={metaTitle} />
-        <meta property="og:description" content={metaDesc} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:site_name" content="Русская Кухня" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={metaTitle} />
-        <meta name="twitter:description" content={metaDesc} />
-        <meta name="twitter:image" content={ogImage} />
-        
-        {/* Schema.org Recipe (для богатых сниппетов в поиске) */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Recipe",
-            "name": title,
-            "image": ogImage,
-            "description": metaDesc,
-            "prepTime": time,
-            "recipeIngredient": ingredients.map(i => typeof i === 'string' ? i : `${i.name} ${i.amount}${i.unit}`),
-            "recipeInstructions": steps.map(s => ({ "@type": "HowToStep", "text": s })),
-            "author": { "@type": "Organization", "name": "Русская Кухня" }
-          })}
-        </script>
-      </Helmet>
+  <title>{metaTitle}</title>
+  <meta name="description" content={metaDesc} />
+  <link rel="canonical" href={canonicalUrl} />
+  
+  {/* Open Graph */}
+  <meta property="og:title" content={metaTitle} />
+  <meta property="og:description" content={metaDesc} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Русская Кухня" />
+  
+  {/* Telegram App Links */}
+  <meta property="al:ios:app_name" content="Telegram" />
+  <meta property="al:ios:url" content={`tg://msg?text=${encodeURIComponent(shareText)}`} />
+  <meta property="al:android:app_name" content="Telegram" />
+  <meta property="al:android:url" content={`tg://msg?text=${encodeURIComponent(shareText)}`} />
+  
+  {/* Twitter */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={metaTitle} />
+  <meta name="twitter:description" content={metaDesc} />
+  <meta name="twitter:image" content={ogImage} />
+  
+  {/* Schema.org */}
+  <script type="application/ld+json">
+    {JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Recipe",
+      "name": title,
+      "image": ogImage,
+      "description": metaDesc,
+      "prepTime": time,
+      "recipeIngredient": ingredients.map(i => typeof i === 'string' ? i : `${i.name} ${i.amount}${i.unit}`),
+      "recipeInstructions": steps.map(s => ({ "@type": "HowToStep", "text": s })),
+      "author": { "@type": "Organization", "name": "Русская Кухня" }
+    })}
+  </script>
+</Helmet>
 
       {/* 🔹 Визуальный контент */}
       <div style={{ minHeight: '100vh', background: 'linear-gradient(160deg, #0a0a2a 0%, #001f3f 100%)', padding: '20px', fontFamily: "'Times New Roman', serif" }}>
