@@ -50,14 +50,17 @@ const RecipePage = () => {
   // 5. SEO-переменные для Helmet
   const canonicalUrl = `${window.location.origin}/recipe/${recipe.id}`;
   const metaTitle = `${title} — Русская Кухня`;
-  const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
+    const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
+  const ogImage = image 
+  ? (image.startsWith('http') ? image : `${window.location.origin}${image}`)
+  : `${window.location.origin}/og-default.jpg`;
   const ogImage = image ? (image.startsWith('http') ? image : `${window.location.origin}${image}`) : `${window.location.origin}/og-default.jpg`;
 
   // 6. Рендер страницы
   return (
     <>
       {/* 🔹 Динамические мета-теги */}
-      <Helmet>
+ <Helmet>
   <title>{metaTitle}</title>
   <meta name="description" content={metaDesc} />
   <link rel="canonical" href={canonicalUrl} />
@@ -66,23 +69,19 @@ const RecipePage = () => {
   <meta property="og:title" content={metaTitle} />
   <meta property="og:description" content={metaDesc} />
   <meta property="og:image" content={ogImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:url" content={canonicalUrl} />
   <meta property="og:type" content="article" />
-  <meta property="og:site_name" content="Русская Кухня" />
   
-  {/* Telegram App Links */}
-  <meta property="al:ios:app_name" content="Telegram" />
-  <meta property="al:ios:url" content={`tg://msg?text=${encodeURIComponent(shareText)}`} />
-  <meta property="al:android:app_name" content="Telegram" />
-  <meta property="al:android:url" content={`tg://msg?text=${encodeURIComponent(shareText)}`} />
-  
-  {/* Twitter */}
+  {/* Twitter Card */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={metaTitle} />
   <meta name="twitter:description" content={metaDesc} />
   <meta name="twitter:image" content={ogImage} />
   
-  {/* Schema.org */}
+  {/* Schema.org Recipe */}
   <script type="application/ld+json">
     {JSON.stringify({
       "@context": "https://schema.org",
