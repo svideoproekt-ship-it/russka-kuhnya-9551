@@ -50,7 +50,7 @@ const RecipePage = () => {
   // 5. SEO-переменные для Helmet
   const canonicalUrl = `${window.location.origin}/recipe/${recipe.id}`;
   const metaTitle = `${title} — Русская Кухня`;
-    const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
+  const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
   const ogImage = image 
   ? (image.startsWith('http') ? image : `${window.location.origin}${image}`)
   : `${window.location.origin}/og-default.jpg`;
