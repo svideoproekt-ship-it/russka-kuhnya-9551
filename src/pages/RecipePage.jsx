@@ -54,7 +54,6 @@ const RecipePage = () => {
   const ogImage = image 
   ? (image.startsWith('http') ? image : `${window.location.origin}${image}`)
   : `${window.location.origin}/og-default.jpg`;
-  const ogImage = image ? (image.startsWith('http') ? image : `${window.location.origin}${image}`) : `${window.location.origin}/og-default.jpg`;
 
   // 6. Рендер страницы
   return (
