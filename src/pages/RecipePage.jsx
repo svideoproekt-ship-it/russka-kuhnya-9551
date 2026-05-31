@@ -43,7 +43,7 @@ const RecipePage = () => {
     );
   }
 
-  // 4. Нормализация полей (на случай разных названий в файлах данных)
+  // 4. Нормализация полей
   const title = recipe.title || recipe.name || 'Без названия';
   const ingredients = recipe.ingredients || [];
   const steps = recipe.steps || recipe.preparation || [];
@@ -52,7 +52,7 @@ const RecipePage = () => {
   const time = recipe.time || '';
   const history = recipe.history || '';
 
-  // 5. Рендер страницы (полностью в старом стиле)
+  // 5. Рендер страницы
   return (
     <div style={{ minHeight: '100vh', background: 'linear-gradient(160deg, #0a0a2a 0%, #001f3f 100%)', padding: '20px', fontFamily: "'Times New Roman', serif" }}>
       <button
@@ -94,7 +94,7 @@ const RecipePage = () => {
                 {ingredients.map((item, index) => {
                   const text = typeof item === 'string' ? item : `${item.name} — ${item.amount} ${item.unit}`;
                   return (
-                    <li key={index} style={{ padding: '10px 15px', background: 'linear-gradient(135deg, #20B2AA, #008080)', borderRadius: '8px', color: '#fff', fontWeight: '500', position: 'relative', paddingLeft: '35px' }}>
+                    <li key={index} style={{ padding: '12px 15px', background: 'linear-gradient(135deg, #20B2AA, #008080)', borderRadius: '8px', color: '#fff', fontWeight: '500', position: 'relative', paddingLeft: '35px', fontSize: '1.15rem' }}>
                       <span style={{ position: 'absolute', left: '15px', color: '#FFD700', fontWeight: 'bold' }}>✓</span>
                       {text}
                     </li>
@@ -107,10 +107,10 @@ const RecipePage = () => {
           {/* Приготовление */}
           {steps.length > 0 && (
             <div style={{ marginBottom: '30px' }}>
-              <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>👨‍ Приготовление</h2>
+              <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>👨‍🍳 Приготовление</h2>
               <ol style={{ counterReset: 'step-counter', listStyle: 'none', padding: 0 }}>
                 {steps.map((step, index) => (
-                  <li key={index} style={{ padding: '15px', marginBottom: '12px', background: 'linear-gradient(135deg, #b2ebf2, #80deea)', borderRadius: '8px', color: '#004d40', position: 'relative', paddingLeft: '50px', counterIncrement: 'step-counter' }}>
+                  <li key={index} style={{ padding: '15px', marginBottom: '12px', background: 'linear-gradient(135deg, #b2ebf2, #80deea)', borderRadius: '8px', color: '#004d40', position: 'relative', paddingLeft: '50px', counterIncrement: 'step-counter', fontSize: '1.15rem', lineHeight: '1.5' }}>
                     <span style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', background: '#008080', color: '#fff', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>{index + 1}</span>
                     {step}
                   </li>
@@ -123,7 +123,7 @@ const RecipePage = () => {
           {history && (
             <div style={{ background: 'linear-gradient(135deg, #e0f7fa, #b2ebf2)', padding: '25px', borderRadius: '15px', border: '2px solid #008080' }}>
               <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '15px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>📚 Историческая справка</h2>
-              <p style={{ color: '#004d40', fontSize: '1.1rem', lineHeight: '1.6', fontStyle: 'italic', margin: 0 }}>{history}</p>
+              <p style={{ color: '#004d40', fontSize: '1.15rem', lineHeight: '1.7', fontStyle: 'italic', margin: 0 }}>{history}</p>
             </div>
           )}
 
