@@ -1,138 +1,132 @@
-import React, { useEffect } from 'react';  // ← Добавили useEffect
+import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import allRecipes from '../data/recipes';
+import { soupsData } from '../data/soupsData';
+import { bakingData } from '../data/bakingData';
+import { meatData } from '../data/meatData';
+import { fishData } from '../data/fishData';
+import { snacksData } from '../data/snacksData';
+import { dessertsData } from '../data/dessertsData';
+import { drinksData } from '../data/drinksData';
+import { doughData } from '../data/doughData';
 import ShareButtons from '../components/ShareButtons';
-import '../styles/RecipePage.css';
 
 const RecipePage = () => {
   const { id } = useParams();
-  
-  const recipe = allRecipes.find(r => {
-    if (r.id === id) return true;
-    const urlNum = parseInt(id);
-    const recipeIdMatch = String(r.id).match(/\d+/);
-    if (recipeIdMatch && parseInt(recipeIdMatch[0]) === urlNum) return true;
-    return false;
-  });
 
-  // === ВСТАВКА SCHEMA.ORG В <head> ===
-  useEffect(() => {
-    if (!recipe) return;
-    
-    const schemaData = {
-      "@context": "https://schema.org",
-      "@type": "Recipe",
-      "name": recipe.title || recipe.name,
-      "description": `Традиционный рецепт: ${recipe.title || recipe.name}`,
-      "image": recipe.image ? [recipe.image] : [],
-      "author": { "@type": "Organization", "name": "Русская Кухня" },
-      "datePublished": "2024-01-01",
-      "prepTime": "PT30M",
-      "cookTime": "PT1H30M",
-      "totalTime": "PT2H",
-      "recipeYield": "6 порций",
-      "recipeCategory": recipe.category === 'soups' ? 'Суп' : 'Блюдо',
-      "recipeCuisine": "Русская",
-      "keywords": `${recipe.title || recipe.name}, рецепт, русская кухня`,
-      "recipeIngredient": (recipe.ingredients || []).map(item => 
-        typeof item === 'string' ? item : `${item.name} — ${item.amount} ${item.unit}`
-      ),
-      "recipeInstructions": (recipe.preparation || []).map(step => ({
-        "@type": "HowToStep",
-        "text": step
-      }))
-    };
+  // 1. Объединяем все источники данных в один массив
+  const allRecipes = [
+    ...soupsData,
+    ...bakingData,
+    ...meatData,
+    ...fishData,
+    ...snacksData,
+    ...dessertsData,
+    ...drinksData,
+    ...doughData
+  ];
 
-    // Создаём script элемент
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(schemaData);
-    
-    // Добавляем в <head>
-    document.head.appendChild(script);
+  // 2. Ищем рецепт по ID (поддержка чисел, строк и URL-параметров)
+  const recipe = allRecipes.find(r =>
+    r.id === id || r.id === parseInt(id) || String(r.id) === String(id)
+  );
 
-    // Очистка при уходе со страницы
-    return () => {
-      if (document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
-  }, [recipe]);
-
-  // === ЦВЕТА КАТЕГОРИЙ ===
-  const getCategoryTheme = () => {
-    const category = recipe?.category?.toLowerCase() || '';
-    if (category === 'soups') return { bg: '#00BFFF', end: '#008080', pageBg: '#1E3A5F' };
-    if (category === 'meat') return { bg: '#d32f2f', end: '#8b0000', pageBg: '#4A1C1C' };
-    if (category === 'baking') return { bg: '#ff9800', end: '#f57c00', pageBg: '#4A3C1A' };
-    if (category === 'fish') return { bg: '#1976d2', end: '#0d47a1', pageBg: '#1A3A5C' };
-    if (category === 'snacks') return { bg: '#4caf50', end: '#2e7d32', pageBg: '#1C3C1C' };
-    if (category === 'desserts') return { bg: '#e91e63', end: '#880e4f', pageBg: '#4A1A3C' };
-    if (category === 'drinks') return { bg: '#9c27b0', end: '#6a1b9a', pageBg: '#2E1C3C' };
-    if (category === 'dough') return { bg: '#8d6e63', end: '#5d4037', pageBg: '#3C2E1C' };
-    return { bg: '#607d8b', end: '#37474f', pageBg: '#1E3A5F' };
-  };
-
-  const theme = getCategoryTheme();
-
+  // 3. Обработка "не найдено"
   if (!recipe) {
     return (
-      <div style={{ padding: '40px', textAlign: 'center', minHeight: '100vh', background: theme.pageBg }}>
-        <h1 style={{ color: '#fff' }}>😔 Рецепт не найден</h1>
-        <p style={{ color: '#ccc' }}>ID: {id}</p>
-        <Link to="/" style={{ color: theme.bg, textDecoration: 'none', fontWeight: 'bold' }}>
-          ← На главную
+      <div style={{ padding: '60px 20px', textAlign: 'center', minHeight: '100vh', background: 'linear-gradient(160deg, #0a0a2a 0%, #001f3f 100%)', color: '#fff', fontFamily: "'Times New Roman', serif" }}>
+        <h1 style={{ fontSize: '2.5rem', marginBottom: '10px' }}>😔 Рецепт не найден</h1>
+        <p style={{ fontSize: '1.2rem', marginBottom: '30px', color: '#b2ebf2' }}>Запрашиваемый ID: {id}</p>
+        <Link to="/" style={{ display: 'inline-block', padding: '12px 24px', background: 'linear-gradient(135deg, #00BFFF, #008080)', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', fontSize: '1.1rem' }}>
+          ← Вернуться на главную
         </Link>
       </div>
     );
   }
 
+  // 4. Нормализация полей (на случай разных названий в файлах данных)
+  const title = recipe.title || recipe.name || 'Без названия';
+  const ingredients = recipe.ingredients || [];
+  const steps = recipe.steps || recipe.preparation || [];
+  const image = recipe.image || '';
+  const epoch = recipe.epoch || '';
+  const time = recipe.time || '';
+  const history = recipe.history || '';
+
+  // 5. Рендер страницы (полностью в старом стиле)
   return (
-    <div className="recipe-page" style={{ '--cat-start': theme.bg, '--cat-end': theme.end, '--page-bg': theme.pageBg }}>
-      <div className="recipe-container">
-        <Link to="/" className="back-link">← На главную</Link>
+    <div style={{ minHeight: '100vh', background: 'linear-gradient(160deg, #0a0a2a 0%, #001f3f 100%)', padding: '20px', fontFamily: "'Times New Roman', serif" }}>
+      <button
+        onClick={() => window.history.back()}
+        style={{ display: 'inline-block', marginBottom: '20px', padding: '10px 20px', background: 'linear-gradient(135deg, #00BFFF, #008080)', color: '#fff', border: 'none', borderRadius: '8px', fontSize: '1rem', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s ease' }}
+        onMouseOver={e => e.target.style.transform = 'translateY(-2px)'}
+        onMouseOut={e => e.target.style.transform = 'translateY(0)'}
+      >
+        ← Назад к списку
+      </button>
+
+      <div style={{ maxWidth: '900px', margin: '0 auto', padding: '30px', background: 'linear-gradient(135deg, #00BFFF, #4682B4)', border: '3px solid #20B2AA', borderRadius: '20px', boxShadow: '0 8px 25px rgba(0,0,0,0.4)' }}>
         
-        <div className="recipe-header">
-          <h1>{recipe.title || recipe.name}</h1>
-          <div className="recipe-meta">
-            {recipe.epoch && <span className="meta-item">🏛 {recipe.epoch}</span>}
-            {recipe.time && <span className="meta-item">⏱ {recipe.time}</span>}
+        {/* Заголовок + Мета + Шеринг */}
+        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+          <h1 style={{ color: '#fff', fontSize: '2.5rem', margin: '0 0 15px 0', textShadow: '2px 2px 4px rgba(0,0,0,0.4)' }}>{title}</h1>
+          <ShareButtons title={title} url={`${window.location.origin}/recipe/${recipe.id}`} />
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '30px', fontSize: '1.1rem', color: '#e0f7fa', marginTop: '15px', flexWrap: 'wrap' }}>
+            {epoch && <span style={{ background: 'rgba(0, 191, 255, 0.3)', padding: '8px 15px', borderRadius: '20px', border: '1px solid #00CED1' }}> {epoch}</span>}
+            {time && <span style={{ background: 'rgba(0, 191, 255, 0.3)', padding: '8px 15px', borderRadius: '20px', border: '1px solid #00CED1' }}>⏱ {time}</span>}
           </div>
         </div>
 
-        <ShareButtons title={recipe.title || recipe.name} />
-        
-        {recipe.image && (
-          <img src={recipe.image} alt={recipe.title || recipe.name} className="recipe-image" />
+        {/* Фото */}
+        {image && (
+          <div style={{ width: '100%', marginBottom: '30px', borderRadius: '15px', overflow: 'hidden', border: '3px solid #00CED1' }}>
+            <img src={image} alt={title} style={{ width: '100%', height: 'auto', display: 'block' }} onError={e => e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'} />
+          </div>
         )}
 
-        <div className="recipe-content">
-          <div className="recipe-section">
-            <h2>📝 Ингредиенты</h2>
-            <ul>
-              {(recipe.ingredients || []).map((item, index) => (
-                <li key={index}>
-                  {typeof item === 'string' ? item : `${item.name} — ${item.amount} ${item.unit}`}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="recipe-section">
-            <h2>👨‍🍳 Приготовление</h2>
-            <ol>
-              {(recipe.preparation || []).map((step, index) => (
-                <li key={index}>{step}</li>
-              ))}
-            </ol>
-          </div>
-
-          {recipe.history && (
-            <div className="recipe-section history-section">
-              <h2>📚 Историческая справка</h2>
-              <p>{recipe.history}</p>
+        {/* Контент на белом фоне */}
+        <div style={{ background: 'rgba(255, 255, 255, 0.95)', borderRadius: '15px', padding: '30px', color: '#001f3f' }}>
+          
+          {/* Ингредиенты */}
+          {ingredients.length > 0 && (
+            <div style={{ marginBottom: '30px' }}>
+              <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>📝 Ингредиенты</h2>
+              <ul style={{ listStyle: 'none', padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', gap: '10px' }}>
+                {ingredients.map((item, index) => {
+                  const text = typeof item === 'string' ? item : `${item.name} — ${item.amount} ${item.unit}`;
+                  return (
+                    <li key={index} style={{ padding: '10px 15px', background: 'linear-gradient(135deg, #20B2AA, #008080)', borderRadius: '8px', color: '#fff', fontWeight: '500', position: 'relative', paddingLeft: '35px' }}>
+                      <span style={{ position: 'absolute', left: '15px', color: '#FFD700', fontWeight: 'bold' }}>✓</span>
+                      {text}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           )}
+
+          {/* Приготовление */}
+          {steps.length > 0 && (
+            <div style={{ marginBottom: '30px' }}>
+              <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>👨‍ Приготовление</h2>
+              <ol style={{ counterReset: 'step-counter', listStyle: 'none', padding: 0 }}>
+                {steps.map((step, index) => (
+                  <li key={index} style={{ padding: '15px', marginBottom: '12px', background: 'linear-gradient(135deg, #b2ebf2, #80deea)', borderRadius: '8px', color: '#004d40', position: 'relative', paddingLeft: '50px', counterIncrement: 'step-counter' }}>
+                    <span style={{ position: 'absolute', left: '15px', top: '50%', transform: 'translateY(-50%)', background: '#008080', color: '#fff', width: '30px', height: '30px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 'bold' }}>{index + 1}</span>
+                    {step}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          )}
+
+          {/* История */}
+          {history && (
+            <div style={{ background: 'linear-gradient(135deg, #e0f7fa, #b2ebf2)', padding: '25px', borderRadius: '15px', border: '2px solid #008080' }}>
+              <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '15px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>📚 Историческая справка</h2>
+              <p style={{ color: '#004d40', fontSize: '1.1rem', lineHeight: '1.6', fontStyle: 'italic', margin: 0 }}>{history}</p>
+            </div>
+          )}
+
         </div>
       </div>
     </div>
