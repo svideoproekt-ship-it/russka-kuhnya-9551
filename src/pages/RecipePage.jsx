@@ -51,9 +51,12 @@ const RecipePage = () => {
   const canonicalUrl = `${window.location.origin}/recipe/${recipe.id}`;
   const metaTitle = `${title} — Русская Кухня`;
   const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
-  const ogImage = image 
-  ? (image.startsWith('http') ? image : `${window.location.origin}${image}`)
-  : `${window.location.origin}/og-default.jpg`;
+  // Формируем правильный путь к картинке на GitHub Raw
+const ogImage = image 
+  ? (image.startsWith('http') 
+      ? image 
+      : `https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public${image}`)
+  : 'https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public/og-fallback.jpg';
 
   // 6. Рендер страницы
   return (
