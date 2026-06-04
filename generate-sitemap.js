@@ -48,6 +48,13 @@ allRecipes.forEach(recipe => {
 sitemap += `</urlset>\n`;
 
 // Сохраняем в public/sitemap.xml
+// Сохраняем в public/sitemap.xml (для локальной разработки)
 fs.writeFileSync(path.join('public', 'sitemap.xml'), sitemap, 'utf8');
+
+// Сохраняем в корень dist/ (для Vercel)
+if (fs.existsSync('dist')) {
+  fs.writeFileSync(path.join('dist', 'sitemap.xml'), sitemap, 'utf8');
+  console.log('✅ sitemap.xml скопирован в dist/');
+}
 
 console.log(`✅ Sitemap.xml сгенерирован! Всего рецептов: ${allRecipes.length}`);
