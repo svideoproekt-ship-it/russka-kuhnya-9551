@@ -47,14 +47,11 @@ allRecipes.forEach(recipe => {
 
 sitemap += `</urlset>\n`;
 
-// Сохраняем в public/sitemap.xml
-// Сохраняем в public/sitemap.xml (для локальной разработки)
+// Сохраняем ТОЛЬКО в public/sitemap.xml
 fs.writeFileSync(path.join('public', 'sitemap.xml'), sitemap, 'utf8');
-
-// Сохраняем в корень dist/ (для Vercel)
-if (fs.existsSync('dist')) {
-  fs.writeFileSync(path.join('dist', 'sitemap.xml'), sitemap, 'utf8');
-  console.log('✅ sitemap.xml скопирован в dist/');
+console.log('✅ sitemap.xml сохранён в public/');
+// Копируем в api папку для Vercel Edge Function
+if (fs.existsSync('api')) {
+  // API endpoint уже создан
 }
-
 console.log(`✅ Sitemap.xml сгенерирован! Всего рецептов: ${allRecipes.length}`);
