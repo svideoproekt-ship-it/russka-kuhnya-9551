@@ -13,6 +13,7 @@ const Categories = () => {
     { id: 6, name: 'Десерты', icon: '🍰', link: '/category/desserts' },
     { id: 7, name: 'Напитки', icon: '🍺', link: '/category/drinks' },
     { id: 8, name: 'Тесто', icon: '🥖', link: '/category/dough' },
+    { id: 9, name: 'Каши', icon: '🥣', link: '/category/porridge' },
   ];
 
   return (
