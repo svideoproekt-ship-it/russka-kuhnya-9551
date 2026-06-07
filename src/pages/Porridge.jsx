@@ -32,7 +32,6 @@ function Porridge() {
             </div>
           </div>
 
-          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">
