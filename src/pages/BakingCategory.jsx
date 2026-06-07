@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { bakingData } from '../data/bakingData';
-import ShareButtons from '../components/ShareButtons';
 import './BakingCategory.css';
 
 function BakingCategory() {

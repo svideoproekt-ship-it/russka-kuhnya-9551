@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { meatData } from '../data/meatData';
-import ShareButtons from '../components/ShareButtons';
 import './MeatCategory.css';
 
 function MeatCategory() {

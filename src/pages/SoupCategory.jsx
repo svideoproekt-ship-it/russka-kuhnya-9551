@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { soupsData } from '../data/soupsData';
 import RecipeCard from '../components/RecipeCard';
-import ShareButtons from '../components/ShareButtons';
 import './SoupCategory.css';
 
 function SoupCategory() {

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { doughData } from '../data/doughData';
-import ShareButtons from '../components/ShareButtons';  // ← ДОБАВИЛИ ИМПОРТ
+import { doughData } from '../data/doughData'; 
 import './DoughCategory.css';
 
 function DoughCategory() {

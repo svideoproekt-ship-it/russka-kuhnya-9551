@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fishData } from '../data/fishData';
-import ShareButtons from '../components/ShareButtons';
 import './FishCategory.css';
 
 function FishCategory() {
