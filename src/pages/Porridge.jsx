@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { porridgeData } from '../data/porridgeData';
-import ShareButtons from '../components/ShareButtons';
 import './Porridge.css';
 
 function Porridge() {
