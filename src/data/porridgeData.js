@@ -1,13 +1,9 @@
 export const porridgeData = [
   {
     id: 131,
-    title: "Гречневая каша рассыпчатая",
-    description: "Классическая русская гречневая каша — рассыпчатая, ароматная, с золотистой корочкой. Идеальный гарнир или самостоятельное блюдо с молоком.",
+    name: "Гречневая каша рассыпчатая",
+    epoch: "VII век",
     time: "40 мин",
-    servings: "4",
-    difficulty: "Легко",
-    calories: "313 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/grechka.jpg",
     ingredients: [
       "Гречневая крупа — 1 стакан",
@@ -15,7 +11,7 @@ export const porridgeData = [
       "Масло сливочное — 50 г",
       "Соль — по вкусу"
     ],
-    steps: [
+    preparation: [
       "Переберите и промойте гречку в холодной воде.",
       "Высыпьте крупу в кастрюлю и залейте холодной водой (пропорция 1:2).",
       "Посолите, доведите до кипения на сильном огне.",
@@ -29,13 +25,9 @@ export const porridgeData = [
   },
   {
     id: 132,
-    title: "Овсяная каша на молоке",
-    description: "Нежная овсяная каша на молоке — традиционный русский завтрак. Сытная, полезная, с ароматом сливочного масла и лёгкой сладостью.",
+    name: "Овсяная каша на молоке",
+    epoch: "IX век",
     time: "25 мин",
-    servings: "3",
-    difficulty: "Легко",
-    calories: "189 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/ovsyanka.jpg",
     ingredients: [
       "Овсяные хлопья — 1 стакан",
@@ -45,7 +37,7 @@ export const porridgeData = [
       "Масло сливочное — 30 г",
       "Соль — щепотка"
     ],
-    steps: [
+    preparation: [
       "Вскипятите воду в кастрюле.",
       "Добавьте овсяные хлопья, варите 5 минут.",
       "Влейте горячее молоко, перемешайте.",
@@ -59,13 +51,9 @@ export const porridgeData = [
   },
   {
     id: 133,
-    title: "Пшённая каша с тыквой",
-    description: "Яркая, солнечная пшённая каша с тыквой — настоящий осенний шедевр русской кухни. Сладковатая, ароматная, невероятно полезная.",
+    name: "Пшённая каша с тыквой",
+    epoch: "X век",
     time: "50 мин",
-    servings: "4",
-    difficulty: "Легко",
-    calories: "156 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/psheno-tykva.jpg",
     ingredients: [
       "Пшённая крупа — 1 стакан",
@@ -76,7 +64,7 @@ export const porridgeData = [
       "Масло сливочное — 40 г",
       "Соль — щепотка"
     ],
-    steps: [
+    preparation: [
       "Очистите тыкву, нарежьте кубиками.",
       "Отварите тыкву в воде до мягкости (15 минут).",
       "Промойте пшено, добавьте к тыкве.",
@@ -90,13 +78,9 @@ export const porridgeData = [
   },
   {
     id: 134,
-    title: "Манная каша с вареньем",
-    description: "Нежная, воздушная манная каша — любимый детский завтрак. С ароматом ванили и сладким вареньем — вкус детства!",
+    name: "Манная каша с вареньем",
+    epoch: "XIX век",
     time: "15 мин",
-    servings: "2",
-    difficulty: "Легко",
-    calories: "142 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/manka.jpg",
     ingredients: [
       "Манная крупа — 3 ст.л.",
@@ -106,7 +90,7 @@ export const porridgeData = [
       "Масло сливочное — 20 г",
       "Варенье — для подачи"
     ],
-    steps: [
+    preparation: [
       "Вскипятите молоко в кастрюле.",
       "Тонкой струйкой всыпьте манку, постоянно помешивая.",
       "Добавьте сахар и ванилин.",
@@ -119,13 +103,9 @@ export const porridgeData = [
   },
   {
     id: 135,
-    title: "Рисовая молочная каша",
-    description: "Классическая рисовая каша на молоке — нежная, кремовая, с лёгкой сладостью. Идеальный завтрак для всей семьи.",
+    name: "Рисовая молочная каша",
+    epoch: "XVIII век",
     time: "35 мин",
-    servings: "3",
-    difficulty: "Легко",
-    calories: "167 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/ris-moloko.jpg",
     ingredients: [
       "Рис круглозерный — 1 стакан",
@@ -136,7 +116,7 @@ export const porridgeData = [
       "Соль — щепотка",
       "Корица — по желанию"
     ],
-    steps: [
+    preparation: [
       "Промойте рис до прозрачной воды.",
       "Отварите рис в воде до полуготовности (10 минут).",
       "Слейте воду, влейте горячее молоко.",
@@ -149,13 +129,9 @@ export const porridgeData = [
   },
   {
     id: 136,
-    title: "Перловая каша с грибами",
-    description: "Сытная перловая каша с лесными грибами — настоящий мужской обед. Ароматная, наваристая, с дымком.",
+    name: "Перловая каша с грибами",
+    epoch: "XV век",
     time: "1 час 15 мин",
-    servings: "4",
-    difficulty: "Средне",
-    calories: "198 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/perlovka-griby.jpg",
     ingredients: [
       "Перловая крупа — 1 стакан",
@@ -166,7 +142,7 @@ export const porridgeData = [
       "Соль, перец — по вкусу",
       "Зелень — для подачи"
     ],
-    steps: [
+    preparation: [
       "Замочите перловку на 2 часа (или на ночь).",
       "Отварите крупу до готовности (40 минут).",
       "Нарежьте грибы и лук.",
@@ -180,13 +156,9 @@ export const porridgeData = [
   },
   {
     id: 137,
-    title: "Ячневая каша в горшочке",
-    description: "Древнерусская ячневая каша, томлёная в горшочке. Рассыпчатая, с ореховым вкусом и неповторимым ароматом.",
+    name: "Ячневая каша в горшочке",
+    epoch: "IX век",
     time: "1 час 30 мин",
-    servings: "4",
-    difficulty: "Легко",
-    calories: "176 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/yachka.jpg",
     ingredients: [
       "Ячневая крупа — 1 стакан",
@@ -194,7 +166,7 @@ export const porridgeData = [
       "Масло сливочное — 50 г",
       "Соль — по вкусу"
     ],
-    steps: [
+    preparation: [
       "Промойте ячневую крупу.",
       "Засыпьте крупу в горшочки.",
       "Залейте холодной водой, посолите.",
@@ -208,13 +180,9 @@ export const porridgeData = [
   },
   {
     id: 138,
-    title: "Кукурузная каша",
-    description: "Солнечная кукурузная каша — сытная и полезная. С лёгкой сладостью и нежной текстурой.",
+    name: "Кукурузная каша",
+    epoch: "XVII век",
     time: "40 мин",
-    servings: "3",
-    difficulty: "Легко",
-    calories: "145 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/kukuruza.jpg",
     ingredients: [
       "Кукурузная крупа — 1 стакан",
@@ -224,7 +192,7 @@ export const porridgeData = [
       "Масло сливочное — 30 г",
       "Соль — щепотка"
     ],
-    steps: [
+    preparation: [
       "Вскипятите воду с солью.",
       "Всыпьте кукурузную крупу тонкой струйкой.",
       "Варите на медленном огне 30 минут, помешивая.",
@@ -237,13 +205,9 @@ export const porridgeData = [
   },
   {
     id: 139,
-    title: "Гороховая каша",
-    description: "Старинная русская гороховая каша — сытная, питательная, с насыщенным вкусом. Идеальна для поста.",
+    name: "Гороховая каша",
+    epoch: "XII век",
     time: "1 час 15 мин",
-    servings: "4",
-    difficulty: "Средне",
-    calories: "189 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/goroh.jpg",
     ingredients: [
       "Горох колотый — 1 стакан",
@@ -252,7 +216,7 @@ export const porridgeData = [
       "Масло растительное — 2 ст.л.",
       "Соль — по вкусу"
     ],
-    steps: [
+    preparation: [
       "Замочите горох на 2-3 часа.",
       "Слейте воду, залейте свежей.",
       "Варите на медленном огне 1 час.",
@@ -266,13 +230,9 @@ export const porridgeData = [
   },
   {
     id: 140,
-    title: "Полбяная каша",
-    description: "Древнерусская полбяная каша — полезная, с ореховым вкусом. Полба — прародительница пшеницы, очень питательная.",
+    name: "Полбяная каша",
+    epoch: "VI век",
     time: "45 мин",
-    servings: "3",
-    difficulty: "Легко",
-    calories: "198 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/polba.jpg",
     ingredients: [
       "Полба — 1 стакан",
@@ -280,7 +240,7 @@ export const porridgeData = [
       "Масло сливочное — 40 г",
       "Соль — по вкусу"
     ],
-    steps: [
+    preparation: [
       "Промойте полбу.",
       "Засыпьте в кастрюлю, залейте водой.",
       "Посолите, доведите до кипения.",
@@ -294,13 +254,9 @@ export const porridgeData = [
   },
   {
     id: 141,
-    title: "Каша из чечевицы",
-    description: "Питательная чечевичная каша — богата белком, очень сытная. Постное блюдо с насыщенным вкусом.",
+    name: "Каша из чечевицы",
+    epoch: "X век",
     time: "50 мин",
-    servings: "4",
-    difficulty: "Легко",
-    calories: "212 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/chechevica.jpg",
     ingredients: [
       "Чечевица зелёная — 1 стакан",
@@ -310,7 +266,7 @@ export const porridgeData = [
       "Масло растительное — 2 ст.л.",
       "Соль, специи — по вкусу"
     ],
-    steps: [
+    preparation: [
       "Промойте чечевицу.",
       "Залейте водой, доведите до кипения.",
       "Варите 30 минут на медленном огне.",
@@ -324,13 +280,9 @@ export const porridgeData = [
   },
   {
     id: 142,
-    title: "Пшённая каша с грибами",
-    description: "Ароматная пшённая каша с лесными грибами — сытное осеннее блюдо. С дымком и лесным ароматом.",
+    name: "Пшённая каша с грибами",
+    epoch: "XIII век",
     time: "55 мин",
-    servings: "4",
-    difficulty: "Средне",
-    calories: "178 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/psheno-griby.jpg",
     ingredients: [
       "Пшённая крупа — 1 стакан",
@@ -340,7 +292,7 @@ export const porridgeData = [
       "Масло растительное — 3 ст.л.",
       "Соль, перец — по вкусу"
     ],
-    steps: [
+    preparation: [
       "Промойте пшено.",
       "Отварите крупу до готовности (25 минут).",
       "Нарежьте грибы и лук.",
@@ -354,13 +306,9 @@ export const porridgeData = [
   },
   {
     id: 143,
-    title: "Гречневая каша по-купечески",
-    description: "Праздничная гречневая каша с мясом и овощами — сытная, наваристая, настоящая русская классика.",
+    name: "Гречневая каша по-купечески",
+    epoch: "XVIII век",
     time: "1 час",
-    servings: "4",
-    difficulty: "Средне",
-    calories: "267 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/grechka-kupecheskaya.jpg",
     ingredients: [
       "Гречневая крупа — 1 стакан",
@@ -371,7 +319,7 @@ export const porridgeData = [
       "Масло растительное — 2 ст.л.",
       "Соль, перец — по вкусу"
     ],
-    steps: [
+    preparation: [
       "Нарежьте мясо кубиками.",
       "Обжарьте мясо на масле 10 минут.",
       "Добавьте лук и морковь.",
@@ -385,13 +333,9 @@ export const porridgeData = [
   },
   {
     id: 144,
-    title: "Рисовая каша с яблоками",
-    description: "Нежная рисовая каша с яблоками и корицей — десертный завтрак. Ароматная, сладкая, очень вкусная.",
+    name: "Рисовая каша с яблоками",
+    epoch: "XIX век",
     time: "40 мин",
-    servings: "3",
-    difficulty: "Легко",
-    calories: "156 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/ris-yabloki.jpg",
     ingredients: [
       "Рис — 1 стакан",
@@ -402,7 +346,7 @@ export const porridgeData = [
       "Масло сливочное — 30 г",
       "Соль — щепотка"
     ],
-    steps: [
+    preparation: [
       "Отварите рис в молоке до готовности.",
       "Нарежьте яблоки кубиками.",
       "Добавьте яблоки к рису.",
@@ -415,13 +359,9 @@ export const porridgeData = [
   },
   {
     id: 145,
-    title: "Овсяная каша с ягодами",
-    description: "Полезная овсяная каша с лесными ягодами — летний завтрак. Витаминная, ароматная, очень вкусная.",
+    name: "Овсяная каша с ягодами",
+    epoch: "XIX век",
     time: "25 мин",
-    servings: "2",
-    difficulty: "Легко",
-    calories: "167 ккал",
-    category: "Каши",
     image: "/publicimagesporridge/ovsyanka-yagody.jpg",
     ingredients: [
       "Овсяные хлопья — 1 стакан",
@@ -430,7 +370,7 @@ export const porridgeData = [
       "Мёд — 2 ст.л.",
       "Масло сливочное — 20 г"
     ],
-    steps: [
+    preparation: [
       "Сварите овсяную кашу на молоке.",
       "Добавьте мёд, перемешайте.",
       "Выложите кашу в тарелки.",
