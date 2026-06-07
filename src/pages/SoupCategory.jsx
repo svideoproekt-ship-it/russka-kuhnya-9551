@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { soupsData } from '../data/soupsData';
 import RecipeCard from '../components/RecipeCard';
 import './SoupCategory.css';
-
+import ShareButtons from '../components/ShareButtons';
 function SoupCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -27,6 +27,7 @@ function SoupCategory() {
         
         <div className="recipe-detail">
           <div className="recipe-header">
+            <ShareButtons title={selectedRecipe.name} />
             <h1>{selectedRecipe.name}</h1>
             
             {/* Кнопки поделиться на странице рецепта */}

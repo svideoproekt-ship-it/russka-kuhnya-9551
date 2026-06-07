@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { porridgeData } from '../data/porridgeData';
 import './Porridge.css';
-
+import ShareButtons from '../components/ShareButtons';
 function Porridge() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -25,6 +25,7 @@ function Porridge() {
         
         <div className="recipe-detail">
           <div className="recipe-header">
+            <ShareButtons title={selectedRecipe.name} />
             <h1>{selectedRecipe.name}</h1>
             <div className="recipe-meta">
               <span className="epoch">🕰 {selectedRecipe.epoch}</span>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fishData } from '../data/fishData';
 import './FishCategory.css';
-
+import ShareButtons from '../components/ShareButtons';
 function FishCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -22,6 +22,7 @@ function FishCategory() {
         <button className="back-button" onClick={handleBack}>← Назад к списку</button>
         <div className="recipe-detail">
           <div className="recipe-header">
+            <ShareButtons title={selectedRecipe.name} />
             <h1>{selectedRecipe.name}</h1>
             <div className="recipe-meta">
               <span>🕰 {selectedRecipe.epoch}</span>

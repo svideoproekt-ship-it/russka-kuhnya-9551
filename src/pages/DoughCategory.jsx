@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { doughData } from '../data/doughData'; 
 import './DoughCategory.css';
-
+import ShareButtons from '../components/ShareButtons';
 function DoughCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -25,6 +25,7 @@ function DoughCategory() {
         
         <div className="recipe-detail">
           <div className="recipe-header">
+            <ShareButtons title={selectedRecipe.name} />
             <h1>{selectedRecipe.name}</h1>
             <div className="recipe-meta">
               <span className="epoch">🕰 {selectedRecipe.epoch}</span>

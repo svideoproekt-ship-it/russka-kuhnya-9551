@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { dessertsData } from '../data/dessertsData';
 import './DessertsCategory.css';
-
+import ShareButtons from '../components/ShareButtons';
 function DessertsCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -33,7 +33,7 @@ function DessertsCategory() {
           </div>
 
           {/* КНОПКА "ПОДЕЛИТЬСЯ" — ЗДЕСЬ ПРАВИЛЬНО! */}
-
+          <ShareButtons title={selectedRecipe.name} />
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img 
