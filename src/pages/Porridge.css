@@ -187,7 +187,7 @@
 
 .porridge-category .recipe-section h2 {
   color: #8B4513;
-  font-size: 1.8rem;
+  font-size: 2rem;
   margin-bottom: 20px;
   border-bottom: 3px solid #CD853F;
   padding-bottom: 10px;
@@ -200,10 +200,12 @@
   border-radius: 8px;
   color: #fff;
   font-weight: 500;
+  font-size: 1.20rem;  /* ← ДОБАВИТЬ */
   position: relative;
   padding-left: 35px;
   list-style: none;
 }
+
 
 .porridge-category .ingredients-list li::before {
   content: "✓";
@@ -225,6 +227,8 @@
   background: linear-gradient(135deg, #ffe4b5, #deb887);
   border-radius: 8px;
   color: #5d3a1a;
+  font-size: 1.20rem;  /* ← ДОБАВИТЬ */
+  line-height: 1.6;     /* ← ДОБАВИТЬ */
   position: relative;
   padding-left: 50px;
   counter-increment: step-counter;
