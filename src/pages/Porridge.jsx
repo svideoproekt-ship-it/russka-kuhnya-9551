@@ -1,3 +1,4 @@
+import './Porridge.css';
 import { Link } from 'react-router-dom';
 import { porridgeData } from '../data/porridgeData';
 import { ArrowLeft, Clock, Users, ChefHat, Flame } from 'lucide-react';
