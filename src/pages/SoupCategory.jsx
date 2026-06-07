@@ -30,11 +30,9 @@ function SoupCategory() {
             <h1>{selectedRecipe.name}</h1>
             
             {/* Кнопки поделиться на странице рецепта */}
-            <ShareButtons 
-              title={selectedRecipe.name}
               url={`${window.location.origin}/category/soups`}
               compact
-            />
+            /
             
             <div className="recipe-meta">
               <span className="epoch">🕰 {selectedRecipe.epoch}</span>

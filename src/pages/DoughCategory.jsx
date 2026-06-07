@@ -33,7 +33,6 @@ function DoughCategory() {
           </div>
 
           {/* ← КНОПКА "ПОДЕЛИТЬСЯ" ЗДЕСЬ */}
-          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">

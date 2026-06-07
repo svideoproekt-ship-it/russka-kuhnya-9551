@@ -33,7 +33,6 @@ function DrinksCategory() {
           </div>
 
           {/* ← КНОПКА ЗДЕСЬ ПРАВИЛЬНО! */}
-          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">

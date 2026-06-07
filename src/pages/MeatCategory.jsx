@@ -33,7 +33,6 @@ function MeatCategory() {
           </div>
 
           {/* КНОПКА "ПОДЕЛИТЬСЯ" — СРАЗУ ПОСЛЕ ЗАГОЛОВКА */}
-          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">

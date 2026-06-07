@@ -28,7 +28,6 @@ function BakingCategory() {
               <span className="time">⏱ {selectedRecipe.time}</span>
             </div>
           </div>
-          <ShareButtons title={selectedRecipe.name} />
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />

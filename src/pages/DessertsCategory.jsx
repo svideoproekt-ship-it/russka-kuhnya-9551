@@ -33,7 +33,6 @@ function DessertsCategory() {
           </div>
 
           {/* КНОПКА "ПОДЕЛИТЬСЯ" — ЗДЕСЬ ПРАВИЛЬНО! */}
-          <ShareButtons title={selectedRecipe.name} />
 
           {selectedRecipe.image && (
             <div className="recipe-image-container">
