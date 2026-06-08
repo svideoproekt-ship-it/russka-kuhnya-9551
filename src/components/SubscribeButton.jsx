@@ -1,52 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './SubscribeButton.css';
 
 const SubscribeButton = () => {
-  const [isSubscribed, setIsSubscribed] = useState(false);
-
-  useEffect(() => {
-    console.log('✅ SubscribeButton загружен!');
-    console.log('OneSignalDeferred:', typeof window.OneSignalDeferred);
-    console.log('OneSignal:', typeof window.OneSignal);
-  }, []);
-
   const handleSubscribe = () => {
     console.log('🔔 Клик по кнопке!');
     
-    // Проверяем старую версию OneSignal
-    if (window.OneSignal) {
-      console.log('Используем старую версию OneSignal');
+    if (typeof window.OneSignal !== 'undefined') {
+      console.log('✅ OneSignal найден!');
+      
       window.OneSignal.push(function() {
+        console.log('✅ OneSignal.push вызван');
+        
+        // Используем метод регистрации для пушей
         window.OneSignal.registerForPushNotifications({
           onSuccess: function() {
             console.log('✅ Подписка успешна!');
-            setIsSubscribed(true);
+            alert('🔔 Отлично! Теперь ты будешь получать уведомления!');
           },
           onFailure: function(error) {
             console.error('❌ Ошибка подписки:', error);
+            alert('⚠️ Не удалось подписаться: ' + error);
           }
         });
       });
-      return;
+    } else {
+      console.error('❌ OneSignal не найден!');
+      alert('⚠️ Сервис уведомлений загружается. Подождите и попробуйте снова.');
     }
-    
-    // Проверяем новую версию OneSignal
-    if (window.OneSignalDeferred) {
-      console.log('Используем новую версию OneSignal');
-      window.OneSignalDeferred.push(async function(OneSignal) {
-        try {
-          await OneSignal.showSlidedownPrompt();
-          console.log('✅ Показан слайд-даун');
-        } catch (error) {
-          console.error('❌ Ошибка:', error);
-        }
-      });
-      return;
-    }
-    
-    // Если ничего не работает
-    console.error('❌ OneSignal не найден!');
-    alert('⚠️ Сервис уведомлений не загружен. Попробуйте позже.');
   };
 
   return (
@@ -70,7 +50,7 @@ const SubscribeButton = () => {
             className="subscribe-button"
             onClick={handleSubscribe}
           >
-            <span>🔔 Подписаться</span>
+            <span> Подписаться</span>
           </button>
         </div>
       </div>
