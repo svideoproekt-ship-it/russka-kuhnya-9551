@@ -1,0 +1,229 @@
+/* SubscribeButton.css - Кнопка подписки на пуши */
+
+.subscribe-section {
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.subscribe-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.subscribe-content {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 2px solid rgba(107, 203, 119, 0.4);
+  border-radius: 20px;
+  padding: 35px 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.subscribe-content:hover {
+  border-color: rgba(107, 203, 119, 0.7);
+  box-shadow: 0 12px 40px rgba(76, 175, 80, 0.3);
+  transform: translateY(-2px);
+}
+
+.subscribe-icon-wrapper {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #6BCB77 0%, #4CAF50 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+  }
+}
+
+.subscribe-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.subscribe-text {
+  flex: 1;
+}
+
+.subscribe-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #F8F9FA;
+  margin: 0 0 8px 0;
+  letter-spacing: -0.5px;
+}
+
+.subscribe-description {
+  font-size: 1.05rem;
+  color: #B8D4B8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.subscribe-button {
+  flex-shrink: 0;
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(135deg, #6BCB77 0%, #4CAF50 100%);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  white-space: nowrap;
+}
+
+.subscribe-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #57b865 0%, #43a047 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.6);
+}
+
+.subscribe-button:active:not(:disabled) {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.subscribe-button.subscribed {
+  background: linear-gradient(135deg, #4CAF50 0%, #388E3C 100%);
+  cursor: default;
+}
+
+.subscribe-button.loading {
+  opacity: 0.8;
+  cursor: wait;
+}
+
+.button-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =================================== */
+/* МОБИЛЬНАЯ АДАПТИВНОСТЬ              */
+/* =================================== */
+
+@media (max-width: 768px) {
+  .subscribe-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    padding: 30px 25px;
+  }
+
+  .subscribe-icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+
+  .subscribe-icon {
+    font-size: 2.2rem;
+  }
+
+  .subscribe-title {
+    font-size: 1.4rem;
+  }
+
+  .subscribe-description {
+    font-size: 1rem;
+  }
+
+  .subscribe-button {
+    width: 100%;
+    padding: 15px 28px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscribe-section {
+    padding: 30px 15px;
+  }
+
+  .subscribe-content {
+    padding: 25px 20px;
+    border-radius: 16px;
+  }
+
+  .subscribe-icon-wrapper {
+    width: 65px;
+    height: 65px;
+  }
+
+  .subscribe-icon {
+    font-size: 2rem;
+  }
+
+  .subscribe-title {
+    font-size: 1.3rem;
+  }
+
+  .subscribe-description {
+    font-size: 0.95rem;
+  }
+
+  .subscribe-button {
+    padding: 14px 24px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .subscribe-icon-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .subscribe-icon {
+    font-size: 1.8rem;
+  }
+
+  .subscribe-title {
+    font-size: 1.2rem;
+  }
+
+  .subscribe-description {
+    font-size: 0.9rem;
+  }
+
+  .subscribe-button {
+    padding: 13px 20px;
+    font-size: 0.95rem;
+  }
+}

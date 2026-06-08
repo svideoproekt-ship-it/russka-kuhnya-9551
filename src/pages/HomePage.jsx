@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Categories from '../components/Categories';
+import SubscribeButton from '../components/SubscribeButton';
 import './HomePage.css';
 
 function HomePage() {
@@ -39,6 +40,10 @@ function HomePage() {
           <button type="submit" className="search-icon">🔍</button>
         </form>
       </div>
+
+      {/* Категории */}
+            {/* Кнопка подписки */}
+      <SubscribeButton />
 
       {/* Категории */}
       <main className="main-content">
