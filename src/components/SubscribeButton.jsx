@@ -6,24 +6,22 @@ const SubscribeButton = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // Проверяем статус подписки
+    // Проверяем статус подписки при загрузке
     checkSubscriptionStatus();
   }, []);
 
-  const checkSubscriptionStatus = async () => {
+  const checkSubscriptionStatus = () => {
     if (typeof window.OneSignal !== 'undefined') {
-      try {
-        const subscription = await window.OneSignal.getSubscription();
-        setIsSubscribed(subscription);
-      } catch (err) {
-        console.error('Error checking subscription:', err);
-      }
+      window.OneSignal.push(function() {
+        window.OneSignal.isPushNotificationsEnabled(function(enabled) {
+          setIsSubscribed(enabled);
+        });
+      });
     }
   };
 
-  const handleSubscribe = async () => {
+  const handleSubscribe = () => {
     if (isSubscribed) {
-      // Если уже подписан, показываем уведомление
       alert('✅ Вы уже подписаны на уведомления!');
       return;
     }
@@ -31,20 +29,21 @@ const SubscribeButton = () => {
     setIsLoading(true);
 
     if (typeof window.OneSignal !== 'undefined') {
-      try {
-        // Показываем нативное окно подписки OneSignal
-        await window.OneSignal.showNativePrompt();
-        
-        // Проверяем статус после попытки подписки
-        setTimeout(async () => {
-          const subscription = await window.OneSignal.getSubscription();
-          setIsSubscribed(subscription);
-          setIsLoading(false);
-        }, 1000);
-      } catch (err) {
-        console.error('Error subscribing:', err);
-        setIsLoading(false);
-      }
+      window.OneSignal.push(function() {
+        // Показываем нативное окно подписки
+        window.OneSignal.registerForPushNotifications({
+          onSuccess: function() {
+            setIsSubscribed(true);
+            setIsLoading(false);
+            alert('🔔 Отлично! Теперь вы будете получать уведомления о новых рецептах!');
+          },
+          onFailure: function(error) {
+            console.error('Error subscribing:', error);
+            setIsLoading(false);
+            alert('⚠️ Не удалось подписаться. Попробуйте позже.');
+          }
+        });
+      });
     } else {
       alert('⚠️ Сервис уведомлений загружается. Попробуйте позже.');
       setIsLoading(false);
@@ -73,7 +72,7 @@ const SubscribeButton = () => {
           <button 
             className={`subscribe-button ${isSubscribed ? 'subscribed' : ''} ${isLoading ? 'loading' : ''}`}
             onClick={handleSubscribe}
-            disabled={isLoading}
+            disabled={isLoading || isSubscribed}
           >
             {isLoading ? (
               <span className="button-loading">
