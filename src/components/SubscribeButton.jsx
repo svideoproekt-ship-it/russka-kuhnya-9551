@@ -8,24 +8,28 @@ const SubscribeButton = () => {
     if (typeof window.OneSignal !== 'undefined') {
       console.log('✅ OneSignal найден!');
       
+      // Показываем слайд-даун подсказку (работает надёжнее)
       window.OneSignal.push(function() {
-        console.log('✅ OneSignal.push вызван');
+        console.log('✅ Вызываем showSlidedownPrompt');
         
-        // Используем метод регистрации для пушей
-        window.OneSignal.registerForPushNotifications({
-          onSuccess: function() {
-            console.log('✅ Подписка успешна!');
-            alert('🔔 Отлично! Теперь ты будешь получать уведомления!');
-          },
-          onFailure: function(error) {
-            console.error('❌ Ошибка подписки:', error);
-            alert('⚠️ Не удалось подписаться: ' + error);
-          }
-        });
+        // Пробуем показать слайд-даун
+        try {
+          window.OneSignal.showSlidedownPrompt();
+          console.log('✅ showSlidedownPrompt вызван');
+        } catch (error) {
+          console.error('❌ Ошибка showSlidedownPrompt:', error);
+          
+          // Если не сработало - пробуем registerForPushNotifications
+          window.OneSignal.registerForPushNotifications(function(permission) {
+            console.log('Разрешение:', permission);
+            if (permission === 'granted') {
+              alert('🔔 Отлично! Ты подписан!');
+            }
+          });
+        }
       });
     } else {
-      console.error('❌ OneSignal не найден!');
-      alert('⚠️ Сервис уведомлений загружается. Подождите и попробуйте снова.');
+      alert('⚠️ Сервис уведомлений загружается. Подождите несколько секунд.');
     }
   };
 
@@ -50,7 +54,7 @@ const SubscribeButton = () => {
             className="subscribe-button"
             onClick={handleSubscribe}
           >
-            <span> Подписаться</span>
+            <span>🔔 Подписаться</span>
           </button>
         </div>
       </div>
