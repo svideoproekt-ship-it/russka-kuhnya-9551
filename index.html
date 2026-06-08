@@ -1,76 +1,63 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    -<!-- OneSignal Push Notifications -->
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-<script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
-      autoRegister: true,
-      notifyButton: {
-        enable: true,
-        size: "large",
-        position: "bottom-right",
-        text: {
-          'tip.state.unsubscribed': 'Подпишись на вкусную пищу и хорошее настроение',
-          'tip.state.subscribed': 'Ты подписан ✓',
-          'msg.subscribed': 'Отлично! Теперь ты будешь сыт и весел! 🍲',
-          'msg.unsubscribe': 'Отписаться от уведомлений',
-        },
-      },
-      welcomeNotification: {
-        title: "Русская Кухня 🍲",
-        message: "Спасибо за подписку! Готовься к вкусным рецептам!",
-        url: "https://russka-kuhnya-9551.vercel.app",
-      },
-    });
-  });
-</script>
-    
-    <!-- Стили для колокольчика -->
-    <style>
-      #onesignal-bell-container {
-        z-index: 999999 !important;
-        position: fixed !important;
-        bottom: 20px !important;
-        right: 20px !important;
-      }
-    </style>
-    
     <meta charset="UTF-8" />
-    <meta name="yandex-verification" content="511f5754872f34ec" />
-    
-    <!-- ✅ ОПТИМИЗИРОВАННЫЙ TITLE -->
-    <title>Рецепты русской кухни с фото — щи, борщ, пельмени, блины | Русская Кухня</title>
-    
-    <!-- ✅ ОПТИМИЗИРОВАННЫЙ DESCRIPTION -->
-    <meta name="description" content="Традиционные рецепты русской кухни с пошаговыми фото: щи из свежей капусты, борщ классический, пельмени, блины. Готовьте как в старину!"/>
-    <!-- ✅ FALLBACK Open Graph для соцсетей (для роботов) -->
-<meta property="og:title" content="Русская Кухня — Традиционные рецепты с историей" />
-<meta property="og:description" content="Щи, борщ, пельмени, блины и другие рецепты русской кухни с пошаговыми фото и историческими справками" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://russka-kuhnya-9551.vercel.app" />
-<meta property="og:image" content="https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public/og-fallback.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-<meta property="og:site_name" content="Русская Кухня" />
- 
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="apple-touch-icon" href="/icon-192x192.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- OneSignal Push Notifications (v16) -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.js" async=""></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+      OneSignalDeferred.push(async function(OneSignal) {
+        await OneSignal.init({
+          appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
+          notifyButton: {
+            enable: true,
+            size: 'large',
+            position: 'bottom-right',
+            text: {
+              'tip.state.unsubscribed': 'Подпишись на вкусную пищу и хорошее настроение',
+              'tip.state.subscribed': 'Ты подписан ✓',
+              'msg.subscribed': 'Отлично! Теперь ты будешь сыт и весел! 🍲',
+              'msg.unsubscribe': 'Отписаться от уведомлений',
+            },
+          },
+          welcomeNotification: {
+            title: "Русская Кухня 🍲",
+            message: "Спасибо за подписку! Готовься к вкусным рецептам!",
+            url: "https://russka-kuhnya-9551.vercel.app",
+          },
+        });
+      });
+    </script>
+    
+    <title>Рецепты русской кухни с фото — щи, борщ, пельмени, блины | Русская Кухня</title>
+    <meta name="description" content="Традиционные рецепты русской кухни с пошаговыми фото: щи из свежей капусты, борщ классический, пельмени, блины. Готовьте как в старину!"/>
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Русская Кухня — Традиционные рецепты с историей" />
+    <meta property="og:description" content="Щи, борщ, пельмени, блины и другие рецепты русской кухни с пошаговыми фото и историческими справками" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://russka-kuhnya-9551.vercel.app" />
+    <meta property="og:image" content="https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public/og-fallback.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Русская Кухня" />
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="/icon-192x192.png" />
+    <link rel="apple-touch-icon" href="/icon-192x192.png" />
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#E85D4E" />
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     
-    <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#E85D4E" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Русская Кухня">
-    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
   <body>
