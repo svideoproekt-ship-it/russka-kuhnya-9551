@@ -1,22 +1,52 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SubscribeButton.css';
 
 const SubscribeButton = () => {
-  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [oneSignalReady, setOneSignalReady] = useState(false);
+
+  useEffect(() => {
+    // Проверяем загрузился ли OneSignal
+    const checkOneSignal = setInterval(() => {
+      if (typeof window.OneSignal !== 'undefined') {
+        setOneSignalReady(true);
+        clearInterval(checkOneSignal);
+      }
+    }, 500);
+
+    return () => clearInterval(checkOneSignal);
+  }, []);
 
   const handleSubscribe = () => {
-    if (typeof window.OneSignal !== 'undefined') {
-      // Просто вызываем стандартный метод OneSignal
+    console.log('Клик по кнопке!');
+    
+    if (!oneSignalReady) {
+      alert('⚠️ Сервис уведомлений загружается... Подождите несколько секунд и попробуйте снова.');
+      return;
+    }
+
+    try {
       window.OneSignal.push(function() {
-        window.OneSignal.showNativePrompt();
+        console.log('OneSignal.push вызван');
+        
+        // Пробуем разные методы
+        if (window.OneSignal.showNativePrompt) {
+          console.log('Используем showNativePrompt');
+          window.OneSignal.showNativePrompt();
+        } else if (window.OneSignal.showSlidedownPrompt) {
+          console.log('Используем showSlidedownPrompt');
+          window.OneSignal.showSlidedownPrompt();
+        } else if (window.OneSignal.registerForPushNotifications) {
+          console.log('Используем registerForPushNotifications');
+          window.OneSignal.registerForPushNotifications();
+        } else {
+          console.log('Показываем колокольчик');
+          // Если ничего не работает - просто покажем что OneSignal есть
+          alert('✅ OneSignal загружен! Нажмите на колокольчик в правом нижнем углу чтобы подписаться.');
+        }
       });
-      
-      // Через 2 секунды считаем что подписался (OneSignal сам покажет статус)
-      setTimeout(() => {
-        setIsSubscribed(true);
-      }, 2000);
-    } else {
-      alert('⚠️ Сервис уведомлений ещё загружается. Обновите страницу.');
+    } catch (error) {
+      console.error('Ошибка при подписке:', error);
+      alert('❌ Ошибка: ' + error.message);
     }
   };
 
@@ -40,8 +70,15 @@ const SubscribeButton = () => {
           <button 
             className="subscribe-button"
             onClick={handleSubscribe}
+            disabled={!oneSignalReady}
+            style={{
+              opacity: oneSignalReady ? 1 : 0.6,
+              cursor: oneSignalReady ? 'pointer' : 'not-allowed'
+            }}
           >
-            <span>🔔 Подписаться</span>
+            <span>
+              {oneSignalReady ? '🔔 Подписаться' : '⏳ Загрузка...'}
+            </span>
           </button>
         </div>
       </div>
