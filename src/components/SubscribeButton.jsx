@@ -8,21 +8,20 @@ const SubscribeButton = () => {
     if (typeof window.OneSignal !== 'undefined') {
       console.log('✅ OneSignal найден!');
       
-      // Просто вызываем стандартный метод показа колокольчика
       window.OneSignal.push(function() {
-        console.log('✅ Показываем колокольчик');
+        console.log('✅ OneSignal.push вызван');
         
-        // Показываем уведомление о том что можно подписаться
-        window.OneSignal.notifyButton.display(true);
-        
-        // И через секунду кликаем на него программно
-        setTimeout(() => {
-          const bellButton = document.querySelector('.onesignal-bell-container');
-          if (bellButton) {
-            console.log('✅ Кликаем на колокольчик');
-            bellButton.click();
+        // Просто запрашиваем разрешение на пуши
+        window.OneSignal.registerForPushNotifications({
+          onSuccess: function() {
+            console.log('✅ Подписка успешна!');
+            alert('🔔 Отлично! Теперь ты будешь получать уведомления!');
+          },
+          onFailure: function(error) {
+            console.error('❌ Ошибка:', error);
+            alert('⚠️ Не удалось подписаться. Проверь настройки браузера.');
           }
-        }, 500);
+        });
       });
     } else {
       alert('⚠️ Сервис уведомлений загружается. Подождите несколько секунд.');
