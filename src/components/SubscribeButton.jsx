@@ -8,25 +8,21 @@ const SubscribeButton = () => {
     if (typeof window.OneSignal !== 'undefined') {
       console.log('✅ OneSignal найден!');
       
-      // Показываем слайд-даун подсказку (работает надёжнее)
+      // Просто вызываем стандартный метод показа колокольчика
       window.OneSignal.push(function() {
-        console.log('✅ Вызываем showSlidedownPrompt');
+        console.log('✅ Показываем колокольчик');
         
-        // Пробуем показать слайд-даун
-        try {
-          window.OneSignal.showSlidedownPrompt();
-          console.log('✅ showSlidedownPrompt вызван');
-        } catch (error) {
-          console.error('❌ Ошибка showSlidedownPrompt:', error);
-          
-          // Если не сработало - пробуем registerForPushNotifications
-          window.OneSignal.registerForPushNotifications(function(permission) {
-            console.log('Разрешение:', permission);
-            if (permission === 'granted') {
-              alert('🔔 Отлично! Ты подписан!');
-            }
-          });
-        }
+        // Показываем уведомление о том что можно подписаться
+        window.OneSignal.notifyButton.display(true);
+        
+        // И через секунду кликаем на него программно
+        setTimeout(() => {
+          const bellButton = document.querySelector('.onesignal-bell-container');
+          if (bellButton) {
+            console.log('✅ Кликаем на колокольчик');
+            bellButton.click();
+          }
+        }, 500);
       });
     } else {
       alert('⚠️ Сервис уведомлений загружается. Подождите несколько секунд.');
