@@ -3,44 +3,61 @@ import './SubscribeButton.css';
 
 const SubscribeButton = () => {
   const [status, setStatus] = useState('idle');
+  const [oneSignalReady, setOneSignalReady] = useState(false);
 
   useEffect(() => {
-    // Проверяем статус подписки при загрузке
-    if (window.OneSignalDeferred) {
-      window.OneSignalDeferred.push(async function(OneSignal) {
-        try {
-          const permission = await OneSignal.Notifications.getPermission();
-          console.log('Текущее разрешение:', permission);
-          
-          if (permission === 'granted') {
-            setStatus('subscribed');
+    console.log('✅ SubscribeButton загружен');
+    console.log('window.OneSignalDeferred:', window.OneSignalDeferred);
+    console.log('window.OneSignal:', window.OneSignal);
+
+    // Ждём пока OneSignal загрузится
+    const checkOneSignal = setInterval(() => {
+      if (window.OneSignalDeferred) {
+        console.log('✅ OneSignalDeferred найден!');
+        setOneSignalReady(true);
+        clearInterval(checkOneSignal);
+        
+        // Проверяем статус подписки
+        window.OneSignalDeferred.push(async function(OneSignal) {
+          try {
+            const permission = await OneSignal.Notifications.getPermission();
+            console.log('Текущее разрешение:', permission);
+            
+            if (permission === 'granted') {
+              setStatus('subscribed');
+            }
+          } catch (error) {
+            console.error('Ошибка проверки разрешения:', error);
           }
-        } catch (error) {
-          console.error('Ошибка проверки разрешения:', error);
-        }
-      });
-    }
+        });
+      }
+    }, 500);
+
+    return () => clearInterval(checkOneSignal);
   }, []);
 
   const handleSubscribe = async () => {
     console.log('🔔 Клик по кнопке!');
-    setStatus('loading');
-
-    if (!window.OneSignalDeferred) {
-      alert('⚠️ Сервис уведомлений загружается. Подождите несколько секунд.');
-      setStatus('idle');
+    console.log('OneSignal готов?', oneSignalReady);
+    console.log('window.OneSignalDeferred:', window.OneSignalDeferred);
+    
+    if (!oneSignalReady || !window.OneSignalDeferred) {
+      console.error('❌ OneSignal ещё не загрузился!');
+      alert('⚠️ Сервис уведомлений загружается. Подождите 5-10 секунд и попробуйте снова.');
       return;
     }
 
     try {
+      console.log('Запускаем OneSignalDeferred.push...');
+      
       await window.OneSignalDeferred.push(async function(OneSignal) {
-        console.log('✅ OneSignalDeferred.push вызван');
-        console.log('OneSignal объект:', OneSignal);
+        console.log('✅ Inside push callback');
+        console.log('OneSignal:', OneSignal);
         console.log('OneSignal.Notifications:', OneSignal.Notifications);
         
         // Проверяем текущее разрешение
         const permission = await OneSignal.Notifications.getPermission();
-        console.log('Разрешение перед запросом:', permission);
+        console.log('Разрешение:', permission);
 
         if (permission === 'granted') {
           console.log('✅ Уже подписан!');
@@ -50,9 +67,10 @@ const SubscribeButton = () => {
         }
 
         if (permission === 'default') {
-          // Запрашиваем разрешение - это вызовет окно браузера!
+          // Запрашиваем разрешение
           console.log('Запрашиваем разрешение...');
           await OneSignal.Notifications.requestPermission();
+          console.log('Запрос отправлен!');
           
           // Проверяем результат
           setTimeout(async () => {
@@ -60,20 +78,18 @@ const SubscribeButton = () => {
             console.log('Новое разрешение:', newPermission);
             
             if (newPermission === 'granted') {
-              console.log('✅ Подписка успешна!');
               setStatus('subscribed');
               alert('🔔 Отлично! Теперь ты будешь получать уведомления!');
             } else {
-              console.log('❌ Пользователь отклонил');
               setStatus('blocked');
             }
-          }, 1000);
+          }, 2000);
         }
       });
     } catch (error) {
       console.error('❌ Ошибка при подписке:', error);
       setStatus('blocked');
-      alert('⚠️ Не удалось подписаться. Проверь настройки браузера.');
+      alert('⚠️ Не удалось подписаться: ' + error.message);
     }
   };
 
@@ -101,10 +117,11 @@ const SubscribeButton = () => {
           <button 
             className="subscribe-button"
             onClick={handleSubscribe}
-            disabled={status === 'loading' || status === 'subscribed'}
+            disabled={!oneSignalReady || status === 'loading' || status === 'subscribed'}
           >
             <span>
-              {status === 'loading' ? '⏳ Подписка...' : 
+              {!oneSignalReady ? '⏳ Загрузка...' :
+               status === 'loading' ? '⏳ Подписка...' : 
                status === 'subscribed' ? '✓ Подписан' : 
                '🔔 Подписаться'}
             </span>
