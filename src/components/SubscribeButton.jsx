@@ -8,30 +8,35 @@ const SubscribeButton = () => {
   useEffect(() => {
     console.log('✅ SubscribeButton загружен');
     console.log('window.OneSignalDeferred:', window.OneSignalDeferred);
-    console.log('window.OneSignal:', window.OneSignal);
 
-    // Ждём пока OneSignal загрузится
+    // Ждём пока OneSignal инициализируется
     const checkOneSignal = setInterval(() => {
       if (window.OneSignalDeferred) {
         console.log('✅ OneSignalDeferred найден!');
-        setOneSignalReady(true);
-        clearInterval(checkOneSignal);
         
-        // Проверяем статус подписки
+        // Проверяем инициализировался ли OneSignal
         window.OneSignalDeferred.push(async function(OneSignal) {
-          try {
-            const permission = await OneSignal.Notifications.getPermission();
-            console.log('Текущее разрешение:', permission);
+          console.log('✅ OneSignal callback вызван в useEffect');
+          console.log('OneSignal объект:', OneSignal);
+          console.log('OneSignal.Notifications:', OneSignal.Notifications);
+          
+          if (OneSignal.Notifications) {
+            setOneSignalReady(true);
             
-            if (permission === 'granted') {
-              setStatus('subscribed');
+            try {
+              const permission = await OneSignal.Notifications.getPermission();
+              console.log('Текущее разрешение:', permission);
+              
+              if (permission === 'granted') {
+                setStatus('subscribed');
+              }
+            } catch (error) {
+              console.error('Ошибка проверки разрешения:', error);
             }
-          } catch (error) {
-            console.error('Ошибка проверки разрешения:', error);
           }
         });
       }
-    }, 500);
+    }, 1000);
 
     return () => clearInterval(checkOneSignal);
   }, []);
@@ -39,13 +44,14 @@ const SubscribeButton = () => {
   const handleSubscribe = async () => {
     console.log('🔔 Клик по кнопке!');
     console.log('OneSignal готов?', oneSignalReady);
-    console.log('window.OneSignalDeferred:', window.OneSignalDeferred);
     
-    if (!oneSignalReady || !window.OneSignalDeferred) {
-      console.error('❌ OneSignal ещё не загрузился!');
+    if (!oneSignalReady) {
+      console.error('❌ OneSignal ещё не готов!');
       alert('⚠️ Сервис уведомлений загружается. Подождите 5-10 секунд и попробуйте снова.');
       return;
     }
+
+    setStatus('loading');
 
     try {
       console.log('Запускаем OneSignalDeferred.push...');
@@ -54,6 +60,12 @@ const SubscribeButton = () => {
         console.log('✅ Inside push callback');
         console.log('OneSignal:', OneSignal);
         console.log('OneSignal.Notifications:', OneSignal.Notifications);
+        
+        if (!OneSignal.Notifications) {
+          console.error('❌ OneSignal.Notifications не найден!');
+          alert('❌ Ошибка: Notifications API недоступен');
+          return;
+        }
         
         // Проверяем текущее разрешение
         const permission = await OneSignal.Notifications.getPermission();
@@ -68,11 +80,11 @@ const SubscribeButton = () => {
 
         if (permission === 'default') {
           // Запрашиваем разрешение
-          console.log('Запрашиваем разрешение...');
+          console.log('🔔 Запрашиваем разрешение на уведомления...');
           await OneSignal.Notifications.requestPermission();
-          console.log('Запрос отправлен!');
+          console.log('✅ Запрос отправлен!');
           
-          // Проверяем результат
+          // Проверяем результат через 2 секунды
           setTimeout(async () => {
             const newPermission = await OneSignal.Notifications.getPermission();
             console.log('Новое разрешение:', newPermission);
