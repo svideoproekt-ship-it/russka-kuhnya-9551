@@ -1,51 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './SubscribeButton.css';
 
 const SubscribeButton = () => {
   const [status, setStatus] = useState('idle');
+  const [ready, setReady] = useState(false);
+
+  useEffect(() => {
+    console.log('✅ SubscribeButton загружен');
+    
+    // Ждём пока OneSignal инициализируется
+    const checkReady = setInterval(() => {
+      if (window.OneSignalDeferred) {
+        console.log('✅ OneSignalDeferred найден');
+        
+        // Пытаемся получить OneSignal объект
+        window.OneSignalDeferred.push(function(OneSignal) {
+          console.log('✅ OneSignal инициализирован в useEffect');
+          console.log('OneSignal:', OneSignal);
+          console.log('OneSignal.Notifications:', OneSignal.Notifications);
+          setReady(true);
+        });
+        
+        clearInterval(checkReady);
+      }
+    }, 1000);
+
+    return () => clearInterval(checkReady);
+  }, []);
 
   const handleSubscribe = () => {
     console.log('🔔 Клик по кнопке!');
+    console.log('Готов?', ready);
     
-    if (!window.OneSignalDeferred) {
-      alert('⚠️ Сервис уведомлений загружается. Подождите несколько секунд.');
+    if (!ready) {
+      alert('⚠️ Сервис уведомлений загружается. Подождите 5-10 секунд.');
       return;
     }
 
     setStatus('loading');
 
-    // Просто вызываем OneSignal
-    window.OneSignalDeferred.push(function(OneSignal) {
-      console.log('✅ OneSignal callback вызван');
-      console.log('OneSignal:', OneSignal);
-      console.log('OneSignal.Notifications:', OneSignal.Notifications);
-      
-      // Проверяем что Notifications существует
-      if (!OneSignal.Notifications || !OneSignal.Notifications.requestPermission) {
-        console.error('❌ OneSignal.Notifications.requestPermission не найден!');
-        console.log('Доступные методы:', Object.keys(OneSignal));
-        alert('❌ Ошибка: Notifications API недоступен. Проверь настройки OneSignal.');
-        setStatus('blocked');
-        return;
-      }
+    if (!window.OneSignalDeferred) {
+      alert('❌ OneSignal не найден!');
+      setStatus('idle');
+      return;
+    }
 
-      // Запрашиваем разрешение
-      console.log('🔔 Запрашиваем разрешение...');
+    window.OneSignalDeferred.push(function(OneSignal) {
+      console.log('✅ Запрашиваем разрешение...');
       
-      OneSignal.Notifications.requestPermission().then(function(permission) {
-        console.log('Разрешение:', permission);
-        
-        if (permission === 'granted') {
-          setStatus('subscribed');
-          alert('🔔 Отлично! Теперь ты будешь получать уведомления!');
-        } else {
+      if (OneSignal.Notifications && OneSignal.Notifications.requestPermission) {
+        OneSignal.Notifications.requestPermission().then(function(permission) {
+          console.log('Разрешение:', permission);
+          
+          if (permission === 'granted') {
+            setStatus('subscribed');
+            alert('🔔 Отлично! Ты подписан!');
+          } else {
+            setStatus('blocked');
+          }
+        }).catch(function(error) {
+          console.error('❌ Ошибка:', error);
           setStatus('blocked');
-        }
-      }).catch(function(error) {
-        console.error('❌ Ошибка:', error);
+          alert('⚠️ Ошибка: ' + error);
+        });
+      } else {
+        console.error('❌ Notifications API не найден');
+        console.log('Доступно:', Object.keys(OneSignal));
+        alert('❌ Notifications API недоступен');
         setStatus('blocked');
-        alert('⚠️ Не удалось подписаться: ' + error);
-      });
+      }
     });
   };
 
@@ -73,10 +96,11 @@ const SubscribeButton = () => {
           <button 
             className="subscribe-button"
             onClick={handleSubscribe}
-            disabled={status === 'loading' || status === 'subscribed'}
+            disabled={!ready || status === 'loading' || status === 'subscribed'}
           >
             <span>
-              {status === 'loading' ? '⏳ Подписка...' : 
+              {!ready ? '⏳ Загрузка...' :
+               status === 'loading' ? '⏳ Подписка...' : 
                status === 'subscribed' ? '✓ Подписан' : 
                '🔔 Подписаться'}
             </span>
