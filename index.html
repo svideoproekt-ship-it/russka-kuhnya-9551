@@ -5,31 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <!-- OneSignal Push Notifications (v16) -->
-    <!-- OneSignal Push Notifications -->
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.js" async=""></script>
 <script>
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
       appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
-      autoRegister: false,
       notifyButton: {
-  enable: false,  // ОТКЛЮЧАЕМ колокольчик!
-        size: "large",
-        position: "bottom-right",
-        text: {
-          'tip.state.unsubscribed': 'Подпишись на вкусную пищу и хорошее настроение',
-          'tip.state.subscribed': 'Ты подписан ✓',
-          'msg.subscribed': 'Отлично! Теперь ты будешь сыт и весел! 🍲',
-          'msg.unsubscribe': 'Отписаться от уведомлений',
-        },
+        enable: false,
       },
       welcomeNotification: {
-        title: "Русская Кухня ",
+        title: "Русская Кухня 🍲",
         message: "Спасибо за подписку! Готовься к вкусным рецептам!",
         url: "https://russka-kuhnya-9551.vercel.app",
       },
     });
+    console.log('✅ OneSignal v16 инициализирован!');
   });
 </script>
     
