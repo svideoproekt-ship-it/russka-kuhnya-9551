@@ -14,15 +14,17 @@ const SubscribeButton = () => {
 
     setStatus('loading');
 
-    // Просто вызываем OneSignal без сложных проверок
+    // Просто вызываем OneSignal
     window.OneSignalDeferred.push(function(OneSignal) {
       console.log('✅ OneSignal callback вызван');
       console.log('OneSignal:', OneSignal);
+      console.log('OneSignal.Notifications:', OneSignal.Notifications);
       
       // Проверяем что Notifications существует
-      if (!OneSignal.Notifications) {
-        console.error('❌ OneSignal.Notifications не найден!');
-        alert('❌ Ошибка: Notifications API недоступен');
+      if (!OneSignal.Notifications || !OneSignal.Notifications.requestPermission) {
+        console.error('❌ OneSignal.Notifications.requestPermission не найден!');
+        console.log('Доступные методы:', Object.keys(OneSignal));
+        alert('❌ Ошибка: Notifications API недоступен. Проверь настройки OneSignal.');
         setStatus('blocked');
         return;
       }
