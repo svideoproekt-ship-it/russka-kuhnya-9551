@@ -6,21 +6,28 @@ const SubscribeButton = () => {
   const [status, setStatus] = useState('idle');
 
   useEffect(() => {
-    // Проверяем статус через 1 секунду после загрузки
+    // Проверяем статус через 1.5 секунды
     const timer = setTimeout(async () => {
       try {
         const permission = await OneSignal.Notifications.permission;
-        console.log('Разрешение:', permission);
+        console.log('Разрешение при загрузке:', permission, 'тип:', typeof permission);
         
-        if (permission === 'granted') {
+        // OneSignal возвращает boolean true/false
+        if (permission === true || permission === 'granted') {
+          console.log('✅ Пользователь подписан!');
           setStatus('subscribed');
-        } else if (permission === 'denied') {
+        } else if (permission === false || permission === 'denied') {
+          console.log('❌ Уведомления заблокированы');
           setStatus('blocked');
+        } else {
+          console.log(' Статус не определён');
+          setStatus('idle');
         }
       } catch (error) {
         console.error('Ошибка проверки статуса:', error);
+        setStatus('idle');
       }
-    }, 1000);
+    }, 1500);
     
     return () => clearTimeout(timer);
   }, []);
@@ -36,19 +43,19 @@ const SubscribeButton = () => {
         const permission = await OneSignal.Notifications.permission;
         console.log('Разрешение после запроса:', permission);
         
-        if (permission === 'granted') {
+        if (permission === true || permission === 'granted') {
           setStatus('subscribed');
-          alert(' Отлично! Теперь ты будешь получать уведомления!');
-        } else if (permission === 'denied') {
+          alert('🔔 Отлично! Теперь ты будешь получать уведомления!');
+        } else if (permission === false || permission === 'denied') {
           setStatus('blocked');
         } else {
           setStatus('idle');
         }
-      }, 1500);
+      }, 2000);
     } catch (error) {
       console.error('❌ Ошибка:', error);
       setStatus('blocked');
-      alert('⚠️ Не удалось подписаться: ' + error.message);
+      alert('️ Не удалось подписаться: ' + error.message);
     }
   };
 
@@ -57,7 +64,7 @@ const SubscribeButton = () => {
       <div className="subscribe-container">
         <div className="subscribe-content">
           <div className="subscribe-icon-wrapper">
-            <span className="subscribe-icon"></span>
+            <span className="subscribe-icon">🔔</span>
           </div>
           
           <div className="subscribe-text">
@@ -81,7 +88,7 @@ const SubscribeButton = () => {
             <span>
               {status === 'loading' ? '⏳ Подписка...' : 
                status === 'subscribed' ? '✓ Подписан' : 
-               ' Подписаться'}
+               '🔔 Подписаться'}
             </span>
           </button>
         </div>
