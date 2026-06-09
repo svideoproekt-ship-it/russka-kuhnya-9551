@@ -2,21 +2,18 @@ import React, { useState, useEffect } from 'react';
 import './SubscribeButton.css';
 
 const SubscribeButton = () => {
-  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'subscribed' | 'blocked'
+  const [status, setStatus] = useState('idle');
 
   useEffect(() => {
-    // Проверяем текущее состояние при загрузке
-    if (typeof window.OneSignal !== 'undefined') {
-      window.OneSignal.push(async function() {
+    // Проверяем статус подписки при загрузке
+    if (window.OneSignalDeferred) {
+      window.OneSignalDeferred.push(async function(OneSignal) {
         try {
-          // Проверяем разрешение
           const permission = await OneSignal.Notifications.getPermission();
           console.log('Текущее разрешение:', permission);
           
-          if (permission === true) {
+          if (permission === 'granted') {
             setStatus('subscribed');
-          } else if (permission === false) {
-            setStatus('idle');
           }
         } catch (error) {
           console.error('Ошибка проверки разрешения:', error);
@@ -29,26 +26,30 @@ const SubscribeButton = () => {
     console.log('🔔 Клик по кнопке!');
     setStatus('loading');
 
-    if (typeof window.OneSignal === 'undefined') {
+    if (!window.OneSignalDeferred) {
       alert('⚠️ Сервис уведомлений загружается. Подождите несколько секунд.');
       setStatus('idle');
       return;
     }
 
     try {
-      await window.OneSignal.push(async function() {
+      await window.OneSignalDeferred.push(async function(OneSignal) {
+        console.log('✅ OneSignalDeferred.push вызван');
+        console.log('OneSignal объект:', OneSignal);
+        console.log('OneSignal.Notifications:', OneSignal.Notifications);
+        
         // Проверяем текущее разрешение
         const permission = await OneSignal.Notifications.getPermission();
         console.log('Разрешение перед запросом:', permission);
 
-        if (permission === true) {
+        if (permission === 'granted') {
           console.log('✅ Уже подписан!');
           setStatus('subscribed');
           alert('✅ Вы уже подписаны на уведомления!');
           return;
         }
 
-        if (permission === false) {
+        if (permission === 'default') {
           // Запрашиваем разрешение - это вызовет окно браузера!
           console.log('Запрашиваем разрешение...');
           await OneSignal.Notifications.requestPermission();
@@ -56,7 +57,9 @@ const SubscribeButton = () => {
           // Проверяем результат
           setTimeout(async () => {
             const newPermission = await OneSignal.Notifications.getPermission();
-            if (newPermission === true) {
+            console.log('Новое разрешение:', newPermission);
+            
+            if (newPermission === 'granted') {
               console.log('✅ Подписка успешна!');
               setStatus('subscribed');
               alert('🔔 Отлично! Теперь ты будешь получать уведомления!');
