@@ -1,6 +1,6 @@
-// src/App.jsx
-import React from 'react';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import OneSignal from 'react-onesignal';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import SoupCategory from './pages/SoupCategory';
@@ -13,9 +13,30 @@ import DrinksCategory from './pages/DrinksCategory';
 import DoughCategory from './pages/DoughCategory';
 import Porridge from './pages/Porridge';
 import RecipePage from './pages/RecipePage';
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
+  // Инициализация OneSignal
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const initializeOneSignal = async () => {
+        try {
+          await OneSignal.init({
+            appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
+            allowLocalhostAsSecureOrigin: true,
+            serviceWorkerParam: { scope: '/' },
+            serviceWorkerPath: '/OneSignalSDKWorker.js',
+          });
+          console.log('✅ OneSignal инициализирован!');
+        } catch (error) {
+          console.error('❌ Ошибка инициализации OneSignal:', error);
+        }
+      };
+      
+      initializeOneSignal();
+    }
+  }, []);
+
   return (
     <Router>
       <Analytics />
