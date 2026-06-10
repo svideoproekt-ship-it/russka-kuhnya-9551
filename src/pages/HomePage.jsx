@@ -47,6 +47,24 @@ function HomePage() {
 
       {/* Категории */}
       <main className="main-content">
+        {/* Кухонные хитрости - специальная секция */}
+<div className="hacks-promo">
+  <a href="/kitchen-hacks" className="hacks-promo-link">
+    <div className="hacks-promo-content">
+      <div className="hacks-promo-icon"></div>
+      <div className="hacks-promo-text">
+        <h3>Кухонные хитрости</h3>
+        <p>Полезные советы для приготовления, хранения и организации кухни</p>
+      </div>
+      <div className="hacks-promo-arrow">→</div>
+    </div>
+  </a>
+</div>
+
+{/* Категории */}
+<main className="main-content">
+  <Categories />
+</main>
         <Categories />
       </main>
 

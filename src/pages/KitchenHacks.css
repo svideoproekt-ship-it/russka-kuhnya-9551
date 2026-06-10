@@ -1,0 +1,250 @@
+/* Кухонные хитрости - страница */
+.kitchen-hacks-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0B2118 0%, #1a3a2a 100%);
+  color: #FAF7F0;
+  padding: 40px 20px;
+}
+
+/* Шапка */
+.hacks-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hacks-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hacks-header-icon {
+  font-size: 64px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.hacks-header h1 {
+  font-family: 'Ruslan Display', cursive;
+  font-size: 48px;
+  color: #E85D4E;
+  margin: 0 0 16px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hacks-header p {
+  font-size: 18px;
+  color: rgba(250, 247, 240, 0.8);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Фильтр категорий */
+.hacks-filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  border: 2px solid rgba(232, 93, 78, 0.3);
+  background: rgba(232, 93, 78, 0.1);
+  color: #FAF7F0;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter-btn:hover {
+  background: rgba(232, 93, 78, 0.3);
+  border-color: #E85D4E;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #E85D4E;
+  border-color: #E85D4E;
+  color: white;
+  font-weight: 700;
+}
+
+/* Сетка лайфхаков */
+.hacks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Карточка лайфхака */
+.hack-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
+}
+
+.hack-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(232, 93, 78, 0.2);
+  border-color: rgba(232, 93, 78, 0.3);
+}
+
+.hack-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+}
+
+.hack-icon {
+  font-size: 48px;
+  background: rgba(232, 93, 78, 0.2);
+  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hack-category-badge {
+  background: rgba(232, 93, 78, 0.3);
+  color: #E85D4E;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hack-card-body {
+  padding: 20px;
+}
+
+.hack-card-body h3 {
+  font-size: 20px;
+  color: #FAF7F0;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hack-description {
+  color: rgba(250, 247, 240, 0.7);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+}
+
+.hack-steps {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.hack-steps h4 {
+  color: #E85D4E;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hack-steps ol {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(250, 247, 240, 0.8);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.hack-steps li {
+  margin-bottom: 4px;
+}
+
+.hack-card-footer {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hack-meta {
+  font-size: 14px;
+  color: rgba(250, 247, 240, 0.6);
+}
+
+/* Подвал */
+.hacks-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hacks-footer p {
+  font-size: 18px;
+  color: rgba(250, 247, 240, 0.8);
+  margin: 0 0 20px 0;
+}
+
+.hacks-back-link {
+  color: #E85D4E;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.hacks-back-link:hover {
+  color: #ff7a6a;
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hacks-header h1 {
+    font-size: 32px;
+  }
+  
+  .hacks-header p {
+    font-size: 16px;
+  }
+  
+  .hacks-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .kitchen-hacks-page {
+    padding: 20px 12px;
+  }
+  
+  .hacks-header h1 {
+    font-size: 28px;
+  }
+  
+  .hack-card-body h3 {
+    font-size: 18px;
+  }
+}

@@ -16,7 +16,8 @@
 /* Шапка с эффектом стекла */
 .header {
   background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(12px);
   padding: 80px 20px 50px;
   text-align: center;
@@ -153,7 +154,8 @@
   padding: 40px 20px;
   text-align: center;
   color: #B8D4B8;
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
 }
 
 .footer p {
@@ -439,5 +441,91 @@
   }
   .footer p {
     font-size: 0.85rem;
+  }
+}
+/* Кухонные хитрости - промо секция */
+.hacks-promo {
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.hacks-promo-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.hacks-promo-content {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hacks-promo-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.3);
+}
+
+.hacks-promo-icon {
+  font-size: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hacks-promo-text {
+  flex: 1;
+}
+
+.hacks-promo-text h3 {
+  color: white;
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.hacks-promo-text p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.hacks-promo-arrow {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.hacks-promo-content:hover .hacks-promo-arrow {
+  transform: translateX(8px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hacks-promo-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hacks-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .hacks-promo-text p {
+    font-size: 14px;
   }
 }

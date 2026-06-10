@@ -13,6 +13,7 @@ import DrinksCategory from './pages/DrinksCategory';
 import DoughCategory from './pages/DoughCategory';
 import Porridge from './pages/Porridge';
 import RecipePage from './pages/RecipePage';
+import KitchenHacks from './pages/KitchenHacks';
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
         <Route path="/category/drinks" element={<DrinksCategory />} />
         <Route path="/category/dough" element={<DoughCategory />} />
         <Route path="/category/porridge" element={<Porridge />} />
+        <Route path="/kitchen-hacks" element={<KitchenHacks />} />
         <Route path="/recipe/:id" element={<RecipePage />} />
       </Routes>
     </Router>
