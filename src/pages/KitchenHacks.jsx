@@ -11,7 +11,7 @@ const KitchenHacks = () => {
       category: 'Хранение',
       time: '5 минут',
       difficulty: 'Легко',
-      icon: '',
+      icon: '🌿',
       description: 'Поставьте пучок в стакан с водой как букет и накройте пакетом. Меняйте воду каждые 2-3 дня.',
       steps: [
         'Промойте зелень холодной водой',
@@ -74,7 +74,7 @@ const KitchenHacks = () => {
       category: 'Приготовление',
       time: '10 секунд',
       difficulty: 'Легко',
-      icon: '🧄',
+      icon: '',
       description: 'Положите зубчик в банку, закройте крышкой и потрясите 10 секунд!',
       steps: [
         'Отделите зубчики от головки',
@@ -154,7 +154,7 @@ const KitchenHacks = () => {
       category: 'Приготовление',
       time: '5 минут',
       difficulty: 'Легко',
-      icon: '🥤',
+      icon: '',
       description: 'Оберните бутылку мокрой бумажной салфеткой и положите в морозилку!',
       steps: [
         'Смочите бумажное полотенце водой',
@@ -165,55 +165,48 @@ const KitchenHacks = () => {
       ],
     },
   ];
-<div className="hack-card-footer">
-  <span className="hack-meta">⏱️ {hack.time}</span>
-  <span className="hack-meta">📊 {hack.difficulty}</span>
-  <button 
-    className="hack-share-btn"
-    onClick={() => handleShare(hack)}
-    title="Поделиться"
-  >
-    📤
-  </button>
-</div>
+
   const categories = ['all', 'Хранение', 'Приготовление', 'Инструменты', 'Организация'];
 
   const filteredHacks = activeCategory === 'all' 
     ? hacks 
     : hacks.filter(hack => hack.category === activeCategory);
-const handleShare = async (hack) => {
-  const shareUrl = `https://russka-kuhnya-9551.vercel.app/kitchen-hacks`;
-  const shareText = `${hack.title} - Кухонные хитрости`;
-  
-  // Проверяем поддержку Web Share API
-  if (navigator.share) {
-    try {
-      await navigator.share({
-        title: shareText,
-        text: hack.description,
-        url: shareUrl,
-      });
-      console.log('✅ Успешно поделились!');
-    } catch (error) {
-      console.log('Отменено пользователем');
+
+  // Функция поделиться
+  const handleShare = async (hack) => {
+    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/kitchen-hacks';
+    const shareText = `${hack.title} - Кухонные хитрости`;
+    
+    // Проверяем поддержку Web Share API
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: shareText,
+          text: hack.description,
+          url: shareUrl,
+        });
+        console.log('✅ Успешно поделились!');
+      } catch (error) {
+        console.log('Отменено пользователем');
+      }
+    } else {
+      // Fallback: копируем ссылку
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        alert('✅ Ссылка скопирована в буфер обмена!');
+      } catch (error) {
+        console.error('Ошибка копирования:', error);
+        alert('️ Не удалось скопировать ссылку');
+      }
     }
-  } else {
-    // Fallback: копируем ссылку
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      alert('✅ Ссылка скопирована в буфер обмена!');
-    } catch (error) {
-      console.error('Ошибка копирования:', error);
-      alert('⚠️ Не удалось скопировать ссылку');
-    }
-  }
-};
+  };
+
   return (
     <div className="kitchen-hacks-page">
       {/* Шапка */}
       <header className="hacks-header">
         <div className="hacks-header-content">
-          <span className="hacks-header-icon"></span>
+          <span className="hacks-header-icon">💡</span>
           <h1>Кухонные хитрости</h1>
           <p>Полезные советы для приготовления, хранения и организации кухни</p>
         </div>
@@ -256,8 +249,15 @@ const handleShare = async (hack) => {
             </div>
 
             <div className="hack-card-footer">
-              <span className="hack-meta">️ {hack.time}</span>
+              <span className="hack-meta">⏱️ {hack.time}</span>
               <span className="hack-meta">📊 {hack.difficulty}</span>
+              <button 
+                className="hack-share-btn"
+                onClick={() => handleShare(hack)}
+                title="Поделиться"
+              >
+                📤
+              </button>
             </div>
           </div>
         ))}
