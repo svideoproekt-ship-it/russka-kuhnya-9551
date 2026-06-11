@@ -256,7 +256,8 @@ const KitchenHacks = () => {
   onClick={() => handleShare(hack)}
   title="Поделиться"
 >
-  📤
+  <span className="share-icon">📤</span>
+  <span className="share-text">Поделиться</span>
 </button>
             </div>
           </div>
