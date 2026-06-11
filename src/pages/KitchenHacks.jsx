@@ -252,12 +252,12 @@ const KitchenHacks = () => {
               <span className="hack-meta">⏱️ {hack.time}</span>
               <span className="hack-meta">📊 {hack.difficulty}</span>
               <button 
-                className="hack-share-btn"
-                onClick={() => handleShare(hack)}
-                title="Поделиться"
-              >
-                📤
-              </button>
+  className="hack-share-btn"
+  onClick={() => handleShare(hack)}
+  title="Поделиться"
+>
+  📤
+</button>
             </div>
           </div>
         ))}

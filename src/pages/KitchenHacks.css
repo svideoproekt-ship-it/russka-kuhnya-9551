@@ -267,13 +267,54 @@ backdrop-filter: blur(10px);
   box-shadow: 0 2px 8px rgba(232, 93, 78, 0.2);
 }
 
+/* Кнопка поделиться */
+.hack-share-btn {
+  background: rgba(232, 93, 78, 0.3);
+  border: 2px solid rgba(232, 93, 78, 0.5);
+  border-radius: 8px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  margin-left: auto;
+  color: #FAF7F0;
+  box-shadow: 0 2px 8px rgba(232, 93, 78, 0.2);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+}
+
+.share-icon {
+  font-size: 18px;
+}
+
+.share-text {
+  font-size: 14px;
+}
+
 .hack-share-btn:hover {
   background: rgba(232, 93, 78, 0.5);
   border-color: #E85D4E;
-  transform: scale(1.1);
+  transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(232, 93, 78, 0.4);
 }
 
 .hack-share-btn:active {
-  transform: scale(0.95);
+  transform: translateY(0);
+}
+
+/* На мобильных - только иконка */
+@media (max-width: 480px) {
+  .hack-share-btn {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .share-text {
+    display: none;
+  }
 }
