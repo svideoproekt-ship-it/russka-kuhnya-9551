@@ -255,7 +255,7 @@ backdrop-filter: blur(10px);
   border: 2px solid rgba(232, 93, 78, 0.5);
   border-radius: 8px;
   padding: 8px 14px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
@@ -268,17 +268,21 @@ backdrop-filter: blur(10px);
   font-weight: 500;
   white-space: nowrap;
   flex-shrink: 0;
+  min-width: auto;
+  max-width: 100%;
 }
 
 .share-icon {
   font-size: 16px;
   line-height: 1;
+  flex-shrink: 0;
 }
 
 .share-text {
   color: #FAF7F0;
   font-size: 13px;
-  line-height: 1;
+  line-height: 1.2;
+  flex-shrink: 0;
 }
 
 .hack-share-btn:hover {
