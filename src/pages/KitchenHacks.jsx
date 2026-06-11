@@ -165,13 +165,49 @@ const KitchenHacks = () => {
       ],
     },
   ];
-
+<div className="hack-card-footer">
+  <span className="hack-meta">⏱️ {hack.time}</span>
+  <span className="hack-meta">📊 {hack.difficulty}</span>
+  <button 
+    className="hack-share-btn"
+    onClick={() => handleShare(hack)}
+    title="Поделиться"
+  >
+    📤
+  </button>
+</div>
   const categories = ['all', 'Хранение', 'Приготовление', 'Инструменты', 'Организация'];
 
   const filteredHacks = activeCategory === 'all' 
     ? hacks 
     : hacks.filter(hack => hack.category === activeCategory);
-
+const handleShare = async (hack) => {
+  const shareUrl = `https://russka-kuhnya-9551.vercel.app/kitchen-hacks`;
+  const shareText = `${hack.title} - Кухонные хитрости`;
+  
+  // Проверяем поддержку Web Share API
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: shareText,
+        text: hack.description,
+        url: shareUrl,
+      });
+      console.log('✅ Успешно поделились!');
+    } catch (error) {
+      console.log('Отменено пользователем');
+    }
+  } else {
+    // Fallback: копируем ссылку
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert('✅ Ссылка скопирована в буфер обмена!');
+    } catch (error) {
+      console.error('Ошибка копирования:', error);
+      alert('⚠️ Не удалось скопировать ссылку');
+    }
+  }
+};
   return (
     <div className="kitchen-hacks-page">
       {/* Шапка */}
