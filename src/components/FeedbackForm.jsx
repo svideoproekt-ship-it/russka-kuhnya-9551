@@ -7,21 +7,25 @@ const FeedbackForm = () => {
   const [message, setMessage] = useState('');
   const [isSent, setIsSent] = useState(false);
 
-  const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Здесь будет отправка на сервер (пока просто показываем успех)
-    console.log('Отзыв:', { name, message });
+    // ВСТАВЬ СЮДА СВОЮ ССЫЛКУ НА GOOGLE ФОРМУ
+    const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSf7V86jFEytJmRpbcCixQ3Ar6McHpTVOSnEwUlDSVsoPuOO3g/viewform?usp=publish-editor';
     
+    // Открываем форму в новой вкладке
+    window.open(GOOGLE_FORM_URL, '_blank');
+    
+    // Показываем успех
     setIsSent(true);
     setName('');
     setMessage('');
     
-    // Закрываем через 3 секунды
+    // Закрываем модальное окно через 2 секунды
     setTimeout(() => {
       setIsSent(false);
       setIsOpen(false);
-    }, 3000);
+    }, 2000);
   };
 
   return (
