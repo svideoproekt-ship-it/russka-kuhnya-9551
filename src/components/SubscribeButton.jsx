@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import OneSignal from 'react-onesignal';
+import NotificationHelp from './NotificationHelp';
 import './SubscribeButton.css';
 
 const SubscribeButton = () => {
@@ -91,6 +92,8 @@ const SubscribeButton = () => {
                '🔔 Подписаться'}
             </span>
           </button>
+
+          {status === 'blocked' && <NotificationHelp />}
         </div>
       </div>
     </div>

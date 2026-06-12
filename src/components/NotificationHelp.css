@@ -1,0 +1,142 @@
+/* Кнопка помощи */
+.help-btn {
+  background: rgba(232, 93, 78, 0.2);
+  border: 2px solid rgba(232, 93, 78, 0.5);
+  color: #FAF7F0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.help-btn:hover {
+  background: rgba(232, 93, 78, 0.4);
+  border-color: #E85D4E;
+  transform: translateY(-2px);
+}
+
+/* Модальное окно */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #1a3a2a;
+  border: 2px solid rgba(232, 93, 78, 0.5);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  color: #FAF7F0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #FAF7F0;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.modal-close:hover {
+  color: #E85D4E;
+}
+
+.modal-content h2 {
+  color: #E85D4E;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.browser-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.browser-section h3 {
+  color: #E85D4E;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.browser-section ol {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(250, 247, 240, 0.9);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.browser-section li {
+  margin-bottom: 5px;
+}
+
+.modal-footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-footer p {
+  color: rgba(250, 247, 240, 0.8);
+  margin-bottom: 15px;
+}
+
+.modal-ok {
+  background: #E85D4E;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.modal-ok:hover {
+  background: #ff7a6a;
+  transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .modal-content {
+    padding: 20px;
+  }
+  
+  .modal-content h2 {
+    font-size: 20px;
+  }
+  
+  .browser-section h3 {
+    font-size: 14px;
+  }
+  
+  .browser-section ol {
+    font-size: 13px;
+  }
+}
