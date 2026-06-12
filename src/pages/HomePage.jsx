@@ -1,4 +1,5 @@
 // src/pages/HomePage.jsx
+import FeedbackForm from '../components/FeedbackForm';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Categories from '../components/Categories';
@@ -65,10 +66,10 @@ function HomePage() {
   <Categories />
 </main>
 
-      {/* Подвал */}
       <footer className="footer">
-        <p>© 2026 Русская Кухня. Сохраняем традиции.</p>
-      </footer>
+  <FeedbackForm />
+  <p>© 2026 Русская Кухня. Сохраняем традиции.</p>
+</footer>
     </div>
   );
 }
