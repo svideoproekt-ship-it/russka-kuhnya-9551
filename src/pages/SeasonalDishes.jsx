@@ -195,6 +195,34 @@ const SeasonalDishes = () => {
   ];
 
   const categories = ['all', 'Супы', 'Салаты', 'Горячее', 'Напитки', 'Десерты'];
+  // Функция поделиться
+  const handleShare = async (dish) => {
+    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
+    const shareText = `${dish.title} - Блюда сезона`;
+    
+    // Проверяем поддержку Web Share API
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: shareText,
+          text: dish.description,
+          url: shareUrl,
+        });
+        console.log('✅ Успешно поделились!');
+      } catch (error) {
+        console.log('Отменено пользователем');
+      }
+    } else {
+      // Fallback: копируем ссылку
+      try {
+        await navigator.clipboard.writeText(shareUrl);
+        alert('✅ Ссылка скопирована в буфер обмена!');
+      } catch (error) {
+        console.error('Ошибка копирования:', error);
+        alert('❌ Не удалось скопировать ссылку');
+      }
+    }
+  };
 
   const filteredDishes = activeCategory === 'all' 
     ? dishes 
@@ -257,9 +285,17 @@ const SeasonalDishes = () => {
             </div>
 
             <div className="dish-card-footer">
-              <span className="dish-meta">⏱️ {dish.time}</span>
-              <span className="dish-meta">📊 {dish.difficulty}</span>
-            </div>
+  <span className="dish-meta">⏱️ {dish.time}</span>
+  <span className="dish-meta">📊 {dish.difficulty}</span>
+  <button 
+    className="dish-share-btn"
+    onClick={() => handleShare(dish)}
+    title="Поделиться"
+  >
+    <span className="share-icon">📤</span>
+    <span className="share-text">Поделиться</span>
+  </button>
+</div>
           </div>
         ))}
       </div>

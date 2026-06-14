@@ -215,6 +215,47 @@
   font-size: 14px;
   color: rgba(250, 247, 240, 0.6);
 }
+/* Кнопка поделиться */
+.dish-share-btn {
+  background: rgba(232, 93, 78, 0.3) !important;
+  border: 2px solid rgba(232, 93, 78, 0.5) !important;
+  border-radius: 8px !important;
+  padding: 8px 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  font-size: 13px !important;
+  color: #FAF7F0 !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+  transition: all 0.3s ease !important;
+  margin-left: auto !important;
+  box-shadow: 0 2px 8px rgba(232, 93, 78, 0.2) !important;
+  width: auto !important;
+  height: auto !important;
+  flex-shrink: 0 !important;
+}
+
+.dish-share-btn .share-icon {
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+
+.dish-share-btn .share-text {
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  color: #FAF7F0 !important;
+}
+
+.dish-share-btn:hover {
+  background: rgba(232, 93, 78, 0.5) !important;
+  border-color: #E85D4E !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(232, 93, 78, 0.4) !important;
+}
+ 
 
 /* Подвал */
 .seasonal-footer {
