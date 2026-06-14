@@ -61,6 +61,19 @@ function HomePage() {
       </div>
     </a>
   </div>
+{/* Блюда сезона - специальная секция */}
+<div className="seasonal-promo">
+  <a href="/seasonal-dishes" className="seasonal-promo-link">
+    <div className="seasonal-promo-content">
+      <div className="seasonal-promo-icon">☀️</div>
+      <div className="seasonal-promo-text">
+        <h3>Блюда сезона</h3>
+        <p>Летние рецепты из свежих овощей, фруктов и ягод</p>
+      </div>
+      <div className="seasonal-promo-arrow">→</div>
+    </div>
+  </a>
+</div>
 
   {/* Категории */}
   <Categories />

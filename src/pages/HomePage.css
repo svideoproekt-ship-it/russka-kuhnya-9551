@@ -554,3 +554,103 @@ backdrop-filter: blur(10px);
 .hack-share-btn:active {
   transform: scale(0.95);
 }
+/* Промо "Блюда сезона" */
+.seasonal-promo {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.seasonal-promo-link {
+  text-decoration: none;
+  display: block;
+}
+
+.seasonal-promo-content {
+  background: linear-gradient(135deg, rgba(232, 93, 78, 0.2) 0%, rgba(255, 150, 50, 0.2) 100%);
+  border: 2px solid rgba(232, 93, 78, 0.5);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.seasonal-promo-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(232, 93, 78, 0.3);
+  border-color: #E85D4E;
+}
+
+.seasonal-promo-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.seasonal-promo-text {
+  flex-grow: 1;
+}
+
+.seasonal-promo-text h3 {
+  color: #E85D4E;
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.seasonal-promo-text p {
+  color: rgba(250, 247, 240, 0.8);
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.seasonal-promo-arrow {
+  font-size: 32px;
+  color: #E85D4E;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.seasonal-promo-content:hover .seasonal-promo-arrow {
+  transform: translateX(8px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .seasonal-promo-content {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .seasonal-promo-icon {
+    font-size: 36px;
+  }
+  
+  .seasonal-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .seasonal-promo-text p {
+    font-size: 14px;
+  }
+  
+  .seasonal-promo-arrow {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seasonal-promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .seasonal-promo-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .seasonal-promo-content:hover .seasonal-promo-arrow {
+    transform: rotate(90deg) translateX(8px);
+  }
+}
