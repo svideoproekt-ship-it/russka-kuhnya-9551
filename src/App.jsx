@@ -1,3 +1,4 @@
+import WorldCuisines from './pages/WorldCuisines';
 import SeasonalDishes from './pages/SeasonalDishes';
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -54,6 +55,7 @@ function App() {
         <Route path="/category/drinks" element={<DrinksCategory />} />
         <Route path="/category/dough" element={<DoughCategory />} />
         <Route path="/category/porridge" element={<Porridge />} />
+        <Route path="/world-cuisines" element={<WorldCuisines />} />
         <Route path="/seasonal-dishes" element={<SeasonalDishes />} />
         <Route path="/kitchen-hacks" element={<KitchenHacks />} />
         <Route path="/recipe/:id" element={<RecipePage />} />

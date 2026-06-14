@@ -74,7 +74,19 @@ function HomePage() {
     </div>
   </a>
 </div>
-
+{/* Вкусы мира - специальная секция */}
+<div className="world-promo">
+  <a href="/world-cuisines" className="world-promo-link">
+    <div className="world-promo-content">
+      <div className="world-promo-icon">🌍</div>
+      <div className="world-promo-text">
+        <h3>Вкусы мира</h3>
+        <p>Народные рецепты из разных стран. Новый рецепт каждую неделю!</p>
+      </div>
+      <div className="world-promo-arrow">→</div>
+    </div>
+  </a>
+</div>
   {/* Категории */}
   <Categories />
 </main>

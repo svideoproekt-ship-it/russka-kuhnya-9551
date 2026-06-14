@@ -18,8 +18,7 @@
   background: rgba(255, 255, 255, 0.06);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(12px);
-  padding: 80px 20px 50px;
+    padding: 80px 20px 50px;
   text-align: center;
   border-bottom: 2px solid rgba(76, 175, 80, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
@@ -651,6 +650,105 @@ backdrop-filter: blur(10px);
   }
   
   .seasonal-promo-content:hover .seasonal-promo-arrow {
+    transform: rotate(90deg) translateX(8px);
+  }
+}
+/* Промо "Вкусы мира" */
+.world-promo {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.world-promo-link {
+  text-decoration: none;
+  display: block;
+}
+
+.world-promo-content {
+  background: linear-gradient(135deg, rgba(100, 100, 255, 0.2) 0%, rgba(232, 93, 78, 0.2) 100%);
+  border: 2px solid rgba(100, 100, 255, 0.5);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.world-promo-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(100, 100, 255, 0.3);
+  border-color: #6464FF;
+}
+
+.world-promo-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.world-promo-text {
+  flex-grow: 1;
+}
+
+.world-promo-text h3 {
+  color: #6464FF;
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.world-promo-text p {
+  color: rgba(250, 247, 240, 0.8);
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.world-promo-arrow {
+  font-size: 32px;
+  color: #6464FF;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.world-promo-content:hover .world-promo-arrow {
+  transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+  .world-promo-content {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .world-promo-icon {
+    font-size: 36px;
+  }
+  
+  .world-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .world-promo-text p {
+    font-size: 14px;
+  }
+  
+  .world-promo-arrow {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .world-promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .world-promo-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .world-promo-content:hover .world-promo-arrow {
     transform: rotate(90deg) translateX(8px);
   }
 }
