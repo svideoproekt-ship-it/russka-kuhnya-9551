@@ -227,6 +227,12 @@ const SeasonalDishes = () => {
   const filteredDishes = activeCategory === 'all' 
     ? dishes 
     : dishes.filter(dish => dish.category === activeCategory);
+<SEO 
+  title="Блюда сезона - Летние рецепты из свежих овощей | Русская Кухня"
+  description="10 лучших летних рецептов: окрошка, свекольник, салаты из свежих овощей, шашлык, компоты и морсы. Готовьте из сезонных продуктов!"
+  keywords="летние рецепты, блюда сезона, окрошка, свекольник, летние салаты, рецепты из овощей"
+  url="https://russka-kuhnya-9551.vercel.app/seasonal-dishes"
+/>
 
   return (
     <div className="seasonal-page">

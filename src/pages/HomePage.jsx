@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import Categories from '../components/Categories';
 import SubscribeButton from '../components/SubscribeButton';
 import './HomePage.css';
+import SEO from '../components/SEO';
 
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -17,6 +18,12 @@ function HomePage() {
     }
   };
 
+  <SEO 
+  title="Русская Кухня - Традиционные рецепты с душой"
+  description="Лучшие рецепты русской кухни: от бабушкиных пирогов до современных блюд. Кухонные хитрости, блюда сезона, рецепты мира. Пошаговые инструкции для каждого."
+  keywords="русская кухня, рецепты, кулинария, традиционные блюда, русские рецепты, кухонные хитрости, блюда сезона"
+  url="https://russka-kuhnya-9551.vercel.app"
+/>
   return (
     <div className="home-page">
       {/* Шапка */}

@@ -1,8 +1,18 @@
-# robots.txt для Русская Кухня
+# Robots.txt для Русской Кухни
 User-agent: *
 Allow: /
-Sitemap: https://russka-kuhnya-9551.vercel.app/sitemap.xml
-
-# Запрет индексации служебных страниц
 Disallow: /admin/
-Disallow: /private/
+Disallow: /api/
+
+# Яндекс
+User-agent: Yandex
+Allow: /
+Clean-param: utm_source&utm_medium&utm_campaign
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Карта сайта
+Sitemap: https://russka-kuhnya-9551.vercel.app/sitemap.xml
+Host: russka-kuhnya-9551.vercel.app
