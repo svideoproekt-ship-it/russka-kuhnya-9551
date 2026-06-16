@@ -81,6 +81,19 @@ function HomePage() {
     </div>
   </a>
 </div>
+{/* Рецепты супов */}
+<div className="soups-promo">
+  <a href="/soups" className="soups-promo-link">
+    <div className="soups-promo-content">
+      <div className="soups-promo-icon">🍲</div>
+      <div className="soups-promo-text">
+        <h3>Рецепты супов</h3>
+        <p>10 самых популярных супов с историей блюд</p>
+      </div>
+      <div className="soups-promo-arrow">→</div>
+    </div>
+  </a>
+</div>
 {/* Вкусы мира - специальная секция */}
 <div className="world-promo">
   <a href="/world-cuisines" className="world-promo-link">

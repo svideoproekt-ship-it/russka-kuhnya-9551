@@ -1,0 +1,380 @@
+/* Рецепты супов - страница */
+.soups-page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0B2118 0%, #1a3a2a 100%);
+  color: #FAF7F0;
+  padding: 40px 20px;
+}
+
+/* Шапка */
+.soups-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.soups-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.soups-header-icon {
+  font-size: 72px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.soups-header h1 {
+  font-family: 'Ruslan Display', cursive;
+  font-size: 52px;
+  color: #E85D4E;
+  margin: 0 0 16px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.soups-header p {
+  font-size: 18px;
+  color: rgba(250, 247, 240, 0.8);
+  margin: 0 0 8px 0;
+  line-height: 1.6;
+}
+
+.soups-subtitle {
+  color: #E85D4E !important;
+  font-weight: 600;
+  font-size: 16px !important;
+  margin-top: 12px !important;
+}
+
+/* Фильтр */
+.soups-filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-btn {
+  padding: 12px 24px;
+  border: 2px solid rgba(232, 93, 78, 0.3);
+  background: rgba(232, 93, 78, 0.1);
+  color: #FAF7F0;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+}
+
+.filter-btn:hover {
+  background: rgba(232, 93, 78, 0.3);
+  border-color: #E85D4E;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #E85D4E;
+  border-color: #E85D4E;
+  color: white;
+  font-weight: 700;
+}
+
+/* Счётчик */
+.soups-counter {
+  text-align: center;
+  margin-bottom: 32px;
+  color: rgba(250, 247, 240, 0.7);
+  font-size: 16px;
+}
+
+.soups-counter strong {
+  color: #E85D4E;
+  font-size: 20px;
+}
+
+/* Сетка */
+.soups-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Карточка */
+.soup-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.soup-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(232, 93, 78, 0.2);
+  border-color: rgba(232, 93, 78, 0.3);
+}
+
+.soup-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 0 20px;
+}
+
+.soup-icon {
+  font-size: 48px;
+  background: rgba(232, 93, 78, 0.2);
+  border-radius: 12px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soup-category-badge {
+  background: rgba(232, 93, 78, 0.3);
+  color: #E85D4E;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.soup-card-body {
+  padding: 20px;
+}
+
+.soup-card-body h3 {
+  font-size: 24px;
+  color: #FAF7F0;
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.soup-description {
+  color: rgba(250, 247, 240, 0.7);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  font-style: italic;
+}
+
+/* История */
+.soup-history {
+  background: linear-gradient(135deg, rgba(232, 93, 78, 0.15) 0%, rgba(232, 93, 78, 0.05) 100%);
+  border-left: 4px solid #E85D4E;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.soup-history h4 {
+  color: #E85D4E;
+  font-size: 14px;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.soup-history p {
+  color: rgba(250, 247, 240, 0.85);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Ингредиенты */
+.soup-ingredients {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.soup-ingredients h4 {
+  color: #E85D4E;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.soup-ingredients ul {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(250, 247, 240, 0.8);
+  font-size: 14px;
+  line-height: 1.8;
+  list-style-type: disc;
+}
+
+.soup-ingredients li {
+  margin-bottom: 4px;
+}
+
+/* Шаги */
+.soup-steps {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.soup-steps h4 {
+  color: #E85D4E;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.soup-steps ol {
+  margin: 0;
+  padding-left: 20px;
+  color: rgba(250, 247, 240, 0.8);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.soup-steps li {
+  margin-bottom: 4px;
+}
+
+/* Футер карточки */
+.soup-card-footer {
+  display: flex;
+  gap: 16px;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.soup-meta {
+  font-size: 14px;
+  color: rgba(250, 247, 240, 0.6);
+}
+
+/* Кнопка поделиться */
+.soup-share-btn {
+  background: rgba(232, 93, 78, 0.3) !important;
+  border: 2px solid rgba(232, 93, 78, 0.5) !important;
+  border-radius: 8px !important;
+  padding: 8px 14px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  cursor: pointer !important;
+  font-size: 13px !important;
+  color: #FAF7F0 !important;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+  transition: all 0.3s ease !important;
+  margin-left: auto !important;
+  box-shadow: 0 2px 8px rgba(232, 93, 78, 0.2) !important;
+  flex-shrink: 0 !important;
+}
+
+.soup-share-btn .share-icon {
+  font-size: 16px !important;
+  line-height: 1 !important;
+}
+
+.soup-share-btn .share-text {
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  color: #FAF7F0 !important;
+}
+
+.soup-share-btn:hover {
+  background: rgba(232, 93, 78, 0.5) !important;
+  border-color: #E85D4E !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 12px rgba(232, 93, 78, 0.4) !important;
+}
+
+/* Подвал */
+.soups-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.soups-footer p {
+  font-size: 18px;
+  color: rgba(250, 247, 240, 0.8);
+  margin: 0 0 20px 0;
+}
+
+.soups-back-link {
+  color: #E85D4E;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.soups-back-link:hover {
+  color: #ff7a6a;
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .soups-header h1 {
+    font-size: 36px;
+  }
+  
+  .soups-header p {
+    font-size: 16px;
+  }
+  
+  .soups-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .filter-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  
+  .soup-card-body h3 {
+    font-size: 20px;
+  }
+  
+  .soup-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .soup-share-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .soups-page {
+    padding: 20px 12px;
+  }
+  
+  .soups-header h1 {
+    font-size: 28px;
+  }
+  
+  .soups-header-icon {
+    font-size: 56px;
+  }
+}

@@ -653,6 +653,105 @@ backdrop-filter: blur(10px);
     transform: rotate(90deg) translateX(8px);
   }
 }
+/* Промо "Рецепты супов" */
+.soups-promo {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.soups-promo-link {
+  text-decoration: none;
+  display: block;
+}
+
+.soups-promo-content {
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.2) 0%, rgba(232, 93, 78, 0.2) 100%);
+  border: 2px solid rgba(255, 140, 0, 0.5);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.soups-promo-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 140, 0, 0.3);
+  border-color: #FF8C00;
+}
+
+.soups-promo-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.soups-promo-text {
+  flex-grow: 1;
+}
+
+.soups-promo-text h3 {
+  color: #FF8C00;
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.soups-promo-text p {
+  color: rgba(250, 247, 240, 0.8);
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.soups-promo-arrow {
+  font-size: 32px;
+  color: #FF8C00;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.soups-promo-content:hover .soups-promo-arrow {
+  transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+  .soups-promo-content {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .soups-promo-icon {
+    font-size: 36px;
+  }
+  
+  .soups-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .soups-promo-text p {
+    font-size: 14px;
+  }
+  
+  .soups-promo-arrow {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .soups-promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .soups-promo-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .soups-promo-content:hover .soups-promo-arrow {
+    transform: rotate(90deg) translateX(8px);
+  }
+}
 /* Промо "Вкусы мира" */
 .world-promo {
   max-width: 800px;
