@@ -5,7 +5,7 @@ import './Categories.css';
 
 const Categories = () => {
   const categories = [
-    { id: 1, name: 'Супы', icon: '🍲', link: '/category/soups' },
+    { id: 1, name: 'Супы', icon: '🍲', link: '/soups' },
     { id: 2, name: 'Выпечка', icon: '🥟', link: '/category/baking' },
     { id: 3, name: 'Мясные блюда', icon: '🥩', link: '/category/meat' },
     { id: 4, name: 'Рыбные блюда', icon: '🐟', link: '/category/fish' },

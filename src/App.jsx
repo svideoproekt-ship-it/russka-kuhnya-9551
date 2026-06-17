@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import OneSignal from 'react-onesignal';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
-import SoupCategory from './pages/SoupCategory';
 import BakingCategory from './pages/BakingCategory';
 import MeatCategory from './pages/MeatCategory';
 import FishCategory from './pages/FishCategory';
@@ -47,7 +46,6 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/search" element={<SearchPage />} />
-        <Route path="/category/soups" element={<SoupCategory />} />
         <Route path="/category/baking" element={<BakingCategory />} />
         <Route path="/category/meat" element={<MeatCategory />} />
         <Route path="/category/fish" element={<FishCategory />} />
