@@ -383,8 +383,7 @@ const Soups = () => {
   keywords="популярные супы, рецепты супов, гороховый суп, куриный суп, сырный суп, харчо, грибной суп, рассольник, солянка"
   url="https://russka-kuhnya-9551.vercel.app/soups"
 /> 
-       
-      
+          
       {/* Шапка */}
       <header className="soups-header">
   <div className="soups-header-content">
