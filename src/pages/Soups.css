@@ -552,4 +552,23 @@
     font-size: 20px;
   }
 }
+/* Картинка в карточке */
+.soup-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 16px;
+}
+
+/* Эпоха для традиционных супов */
+.soup-epoch {
+  background: rgba(232, 93, 78, 0.1);
+  border-left: 3px solid #E85D4E;
+  padding: 8px 12px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: rgba(250, 247, 240, 0.8);
+}
 }

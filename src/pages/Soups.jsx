@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
+import { soupsData } from '../data/soupsData';
 import './Soups.css';
 
 const Soups = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
-  const soups = [
+  // 10 рецептов с историей (из твоего кода)
+  const modernSoups = [
     {
-      id: 1,
+      id: 101,
       title: 'Гороховый суп с копчёными рёбрышками',
       category: 'Классические',
       time: '2 часа',
@@ -40,7 +42,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 2,
+      id: 102,
       title: 'Куриный суп с домашней лапшой',
       category: 'Классические',
       time: '1.5 часа',
@@ -73,7 +75,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 3,
+      id: 103,
       title: 'Сырный суп с плавленым сыром',
       category: 'Сырные',
       time: '40 минут',
@@ -106,7 +108,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 4,
+      id: 104,
       title: 'Суп с фрикадельками',
       category: 'Мясные',
       time: '45 минут',
@@ -140,7 +142,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 5,
+      id: 105,
       title: 'Грибной суп из шампиньонов',
       category: 'Грибные',
       time: '50 минут',
@@ -173,7 +175,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 6,
+      id: 106,
       title: 'Суп Харчо',
       category: 'Кавказские',
       time: '2 часа',
@@ -208,7 +210,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 7,
+      id: 107,
       title: 'Щавелевый суп с яйцом',
       category: 'Летние',
       time: '35 минут',
@@ -240,7 +242,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 8,
+      id: 108,
       title: 'Рассольник классический',
       category: 'Классические',
       time: '1.5 часа',
@@ -274,7 +276,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 9,
+      id: 109,
       title: 'Солянка мясная сборная',
       category: 'Классические',
       time: '1 час',
@@ -310,7 +312,7 @@ const Soups = () => {
       ],
     },
     {
-      id: 10,
+      id: 110,
       title: 'Рыбный суп из консервов (сайра)',
       category: 'Рыбные',
       time: '30 минут',
@@ -344,11 +346,30 @@ const Soups = () => {
     },
   ];
 
-  const categories = ['all', 'Классические', 'Мясные', 'Рыбные', 'Грибные', 'Сырные', 'Кавказские', 'Летние'];
+  // Преобразуем soupsData в тот же формат
+  const traditionalSoups = soupsData.map(soup => ({
+    id: soup.id,
+    title: soup.name,
+    category: 'Традиционные',
+    time: soup.time,
+    difficulty: 'Средне',
+    icon: '🍲',
+    image: soup.image,
+    description: soup.history.substring(0, 150) + '...',
+    history: soup.history,
+    ingredients: soup.ingredients,
+    steps: soup.preparation,
+    epoch: soup.epoch,
+  }));
+
+  // Объединяем все супы
+  const allSoups = [...traditionalSoups, ...modernSoups];
+
+  const categories = ['all', 'Традиционные', 'Классические', 'Мясные', 'Рыбные', 'Грибные', 'Сырные', 'Кавказские', 'Летние'];
 
   const filteredSoups = activeCategory === 'all' 
-    ? soups 
-    : soups.filter(soup => soup.category === activeCategory);
+    ? allSoups 
+    : allSoups.filter(soup => soup.category === activeCategory);
 
   // Функция поделиться
   const handleShare = async (soup) => {
@@ -378,21 +399,21 @@ const Soups = () => {
   return (
     <div className="soups-page">
       <SEO 
-  title="Самые популярные супы - рецепты с историей | Русская Кухня"
-  description="Топ-10 популярных супов: гороховый с копчёностями, куриный с лапшой, сырный, харчо, грибной, рассольник, солянка. Пошаговые рецепты с историей каждого блюда!"
-  keywords="популярные супы, рецепты супов, гороховый суп, куриный суп, сырный суп, харчо, грибной суп, рассольник, солянка"
-  url="https://russka-kuhnya-9551.vercel.app/soups"
-/> 
+        title="Самые популярные супы - 25 рецептов с историей | Русская Кухня"
+        description="25 лучших рецептов супов: традиционные русские (щи, борщ, солянка) и популярные (гороховый, куриный, сырный, харчо). Пошаговые рецепты с историей каждого блюда!"
+        keywords="рецепты супов, щи, борщ, солянка, рассольник, уха, гороховый суп, куриный суп, сырный суп, харчо, грибной суп, русская кухня"
+        url="https://russka-kuhnya-9551.vercel.app/soups"
+      />
           
       {/* Шапка */}
       <header className="soups-header">
-  <div className="soups-header-content">
-    <span className="soups-header-icon">🍲</span>
-    <h1>Самые популярные супы</h1>
-    <p>Проверенные рецепты с пошаговыми инструкциями</p>
-    <p className="soups-subtitle">📖 С историей каждого блюда</p>
-  </div>
-</header>
+        <div className="soups-header-content">
+          <span className="soups-header-icon">🍲</span>
+          <h1>Самые популярные супы</h1>
+          <p>25 проверенных рецептов с пошаговыми инструкциями</p>
+          <p className="soups-subtitle">📖 С историей каждого блюда</p>
+        </div>
+      </header>
 
       {/* Фильтр категорий */}
       <div className="soups-filter">
@@ -417,13 +438,24 @@ const Soups = () => {
         {filteredSoups.map((soup) => (
           <div key={soup.id} className="soup-card">
             <div className="soup-card-header">
-              <span className="soup-icon">{soup.icon}</span>
+              {soup.image ? (
+                <img src={soup.image} alt={soup.title} className="soup-card-image" />
+              ) : (
+                <span className="soup-icon">{soup.icon}</span>
+              )}
               <span className="soup-category-badge">{soup.category}</span>
             </div>
             
             <div className="soup-card-body">
               <h3>{soup.title}</h3>
               <p className="soup-description">{soup.description}</p>
+              
+              {/* Эпоха для традиционных супов */}
+              {soup.epoch && (
+                <div className="soup-epoch">
+                  <span>🕰️ {soup.epoch}</span>
+                </div>
+              )}
               
               {/* История блюда */}
               <div className="soup-history">
@@ -470,7 +502,7 @@ const Soups = () => {
 
       {/* Подвал */}
       <footer className="soups-footer">
-        <p> Приятного аппетита! Варите супы с любовью и делитесь с близкими!</p>
+        <p>🍲 Приятного аппетита! Варите супы с любовью и делитесь с близкими!</p>
         <a href="/" className="soups-back-link">← Вернуться на главную</a>
       </footer>
     </div>
