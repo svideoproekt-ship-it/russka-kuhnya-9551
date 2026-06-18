@@ -1,15 +1,20 @@
-/* Страница супов - единый стиль с мясными блюдами */
+/* Страница супов - яркий стиль как мясные блюда */
 .soups-page {
   min-height: 100vh;
-  background: linear-gradient(180deg, #FF6B35 0%, #F7931E 50%, #FFD23F 100%);
-  color: #2C1810;
+  background: linear-gradient(180deg, #C41E3A 0%, #8B0000 100%);
+  color: #FFD700;
   padding: 40px 20px;
 }
 
-/* Шапка */
+/* Заголовок на отдельной плашке */
 .soups-header {
+  background: linear-gradient(135deg, #8B0000 0%, #600000 100%);
+  border: 3px solid #FFD700;
+  border-radius: 16px;
+  padding: 30px 40px;
   text-align: center;
   margin-bottom: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .soups-header-content {
@@ -21,20 +26,21 @@
   font-size: 80px;
   display: block;
   margin-bottom: 20px;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
 }
 
 .soups-header h1 {
   font-family: 'Ruslan Display', cursive;
-  font-size: 56px;
+  font-size: 64px;
   color: #FFD700;
-  margin: 0 0 20px 0;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
-  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+  font-weight: 700;
 }
 
 .soups-header p {
-  font-size: 20px;
+  font-size: 22px;
   color: #FFF8DC;
   margin: 0 0 10px 0;
   line-height: 1.6;
@@ -42,9 +48,9 @@
 }
 
 .soups-subtitle {
-  color: #FFD700 !important;
-  font-weight: 600;
-  font-size: 18px !important;
+  color: #FFA500 !important;
+  font-weight: 600 !important;
+  font-size: 20px !important;
   margin-top: 15px !important;
 }
 
@@ -52,107 +58,105 @@
 .soups-counter {
   text-align: center;
   margin-bottom: 40px;
-  color: #FFF8DC;
-  font-size: 18px;
-  font-weight: 500;
+  color: #FFD700;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .soups-counter strong {
-  color: #FFD700;
-  font-size: 28px;
-  font-weight: 700;
+  color: #FFA500;
+  font-size: 32px;
+  font-weight: 900;
 }
 
 /* Сетка */
 .soups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
   gap: 30px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
 /* Карточка */
 .soup-card {
-  background: linear-gradient(180deg, #FF8C42 0%, #FF6B35 100%);
+  background: linear-gradient(180deg, #DC143C 0%, #A52A2A 100%);
   border: 3px solid #FFD700;
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
 .soup-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(255, 215, 0, 0.3);
   border-color: #FFA500;
 }
 
 .soup-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  gap: 16px;
   position: relative;
+  padding: 0;
+  background: #8B0000;
 }
 
 .soup-card-image {
   width: 100%;
-  height: 220px;
+  height: 280px;
   object-fit: cover;
-  border-radius: 12px;
-  border: 2px solid #FFD700;
+  display: block;
 }
 
+/* Placeholder для отсутствующих картинок */
 .soup-icon {
-  font-size: 60px;
-  background: rgba(255, 215, 0, 0.2);
-  border-radius: 12px;
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(135deg, #A52A2A 0%, #8B4513 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  border: 2px solid #FFD700;
+  font-size: 120px;
+  border-bottom: 3px solid #FFD700;
 }
 
 .soup-category-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: #8B4513;
+  color: #8B0000;
   padding: 8px 16px;
   border-radius: 20px;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .soup-card-body {
-  padding: 20px;
+  padding: 25px;
   flex-grow: 1;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(139, 0, 0, 0.3);
 }
 
 .soup-card-body h3 {
-  font-size: 22px;
+  font-size: 28px;
   color: #FFD700;
   margin: 0 0 15px 0;
   font-weight: 700;
   line-height: 1.3;
   font-family: 'Ruslan Display', cursive;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .soup-description {
   color: #FFF8DC;
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.6;
   margin: 0 0 20px 0;
   font-style: italic;
@@ -163,7 +167,7 @@
   gap: 20px;
   flex-wrap: wrap;
   color: #FFD700;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -171,38 +175,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 20px 25px;
   border-top: 2px solid rgba(255, 215, 0, 0.3);
   gap: 12px;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .read-more-btn {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: #8B4513;
+  color: #8B0000;
   border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   transition: all 0.3s ease;
   flex-grow: 1;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .read-more-btn:hover {
   background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
 }
 
 .soup-share-btn {
-  background: rgba(255, 215, 0, 0.3);
+  background: rgba(255, 215, 0, 0.2);
   border: 2px solid #FFD700;
   border-radius: 8px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
@@ -211,17 +217,17 @@
 }
 
 .soup-share-btn:hover {
-  background: rgba(255, 215, 0, 0.5);
-  transform: translateY(-2px);
+  background: rgba(255, 215, 0, 0.4);
+  transform: translateY(-3px);
 }
 
 .share-icon {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 /* Детальный просмотр */
 .soup-detail {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -229,30 +235,30 @@
 .back-button {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
   border: none;
-  color: #8B4513;
-  padding: 12px 24px;
-  border-radius: 8px;
+  color: #8B0000;
+  padding: 14px 28px;
+  border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 30px;
   transition: all 0.3s ease;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .back-button:hover {
   background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
-  transform: translateX(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: translateX(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 .recipe-card {
-  background: linear-gradient(180deg, #FF8C42 0%, #FF6B35 100%);
+  background: linear-gradient(180deg, #DC143C 0%, #A52A2A 100%);
   border: 3px solid #FFD700;
   border-radius: 16px;
   padding: 40px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .recipe-header {
@@ -261,30 +267,30 @@
 }
 
 .recipe-header h1 {
-  font-size: 36px;
+  font-size: 42px;
   color: #FFD700;
   margin: 0 0 20px 0;
   font-weight: 700;
   font-family: 'Ruslan Display', cursive;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 .recipe-meta {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   margin-bottom: 30px;
   flex-wrap: wrap;
 }
 
 .epoch, .time {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 25px;
-  font-size: 15px;
-  color: #8B4513;
+  font-size: 18px;
+  color: #8B0000;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .recipe-image-container {
@@ -303,10 +309,16 @@
 }
 
 .recipe-icon-large {
-  font-size: 120px;
-  text-align: center;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(135deg, #A52A2A 0%, #8B4513 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 180px;
   margin: 30px 0;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+  border-radius: 12px;
+  border: 3px solid #FFD700;
 }
 
 .recipe-content {
@@ -319,11 +331,11 @@
 
 .recipe-section h2 {
   color: #FFD700;
-  font-size: 26px;
+  font-size: 32px;
   margin: 0 0 20px 0;
   font-weight: 700;
   font-family: 'Ruslan Display', cursive;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   border-bottom: 3px solid #FFD700;
   padding-bottom: 10px;
 }
@@ -331,16 +343,16 @@
 .ingredients-list {
   list-style: none;
   padding: 25px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   margin: 0;
   border: 2px solid rgba(255, 215, 0, 0.3);
 }
 
 .ingredients-list li {
-  padding: 10px 0;
+  padding: 12px 0;
   color: #FFF8DC;
-  font-size: 17px;
+  font-size: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-weight: 500;
 }
@@ -353,23 +365,23 @@
   content: "• ";
   color: #FFD700;
   font-weight: bold;
-  margin-right: 10px;
-  font-size: 20px;
+  margin-right: 12px;
+  font-size: 24px;
 }
 
 .preparation-list {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 25px;
-  padding-left: 45px;
+  padding-left: 50px;
   margin: 0;
   border: 2px solid rgba(255, 215, 0, 0.3);
 }
 
 .preparation-list li {
-  padding: 12px 0;
+  padding: 14px 0;
   color: #FFF8DC;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.7;
   font-weight: 500;
 }
@@ -378,13 +390,13 @@
   background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.1) 100%);
   border-left: 5px solid #FFD700;
   border-radius: 12px;
-  padding: 25px;
+  padding: 30px;
   border: 2px solid rgba(255, 215, 0, 0.3);
 }
 
 .history-text {
   color: #FFF8DC;
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1.8;
   margin: 0;
   font-style: italic;
@@ -398,25 +410,27 @@
 
 .share-btn-detail {
   background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-  color: #8B4513;
+  color: #8B0000;
   border: none;
-  padding: 16px 40px;
-  border-radius: 10px;
+  padding: 18px 45px;
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .share-btn-detail:hover {
   background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(255, 215, 0, 0.4);
 }
 
 /* Подвал */
@@ -428,7 +442,7 @@
 }
 
 .soups-footer p {
-  font-size: 20px;
+  font-size: 22px;
   color: #FFF8DC;
   margin: 0 0 20px 0;
   font-weight: 500;
@@ -437,19 +451,19 @@
 .soups-back-link {
   color: #FFD700;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   transition: all 0.3s ease;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: 2px solid #FFD700;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .soups-back-link:hover {
   background: #FFD700;
-  color: #8B4513;
-  transform: translateY(-2px);
+  color: #8B0000;
+  transform: translateY(-3px);
 }
 
 /* Адаптивность */
@@ -458,12 +472,16 @@
     padding: 20px 12px;
   }
 
+  .soups-header {
+    padding: 25px 20px;
+  }
+
   .soups-header h1 {
-    font-size: 36px;
+    font-size: 42px;
   }
   
   .soups-header p {
-    font-size: 16px;
+    font-size: 18px;
   }
   
   .soups-grid {
@@ -471,7 +489,7 @@
   }
   
   .soup-card-body h3 {
-    font-size: 20px;
+    font-size: 24px;
   }
   
   .recipe-card {
@@ -479,46 +497,49 @@
   }
   
   .recipe-header h1 {
-    font-size: 28px;
+    font-size: 32px;
   }
   
   .recipe-section h2 {
-    font-size: 22px;
+    font-size: 26px;
   }
   
   .recipe-meta {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
   }
   
   .soup-card-image {
-    height: 180px;
+    height: 220px;
+  }
+  
+  .soup-icon {
+    height: 220px;
+    font-size: 100px;
   }
 }
 
 @media (max-width: 480px) {
   .soups-header h1 {
-    font-size: 28px;
+    font-size: 32px;
   }
   
   .soups-header-icon {
     font-size: 60px;
   }
   
-  .soup-card-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .soup-card-image {
-    width: 100%;
-    height: 200px;
+  .soup-card-body h3 {
+    font-size: 22px;
   }
   
   .read-more-btn {
-    font-size: 14px;
-    padding: 10px 16px;
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+  
+  .recipe-icon-large {
+    height: 300px;
+    font-size: 140px;
   }
 }
