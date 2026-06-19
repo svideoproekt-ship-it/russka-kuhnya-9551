@@ -449,12 +449,7 @@ const Soups = () => {
             </div>
 
             <div className="recipe-actions">
-              <button 
-                className="share-btn-detail"
-                onClick={() => handleShare(selectedRecipe)}
-              >
-                 <span>📤</span> Поделиться рецептом
-              </button>
+              
             </div>
           </div>
         </div>
@@ -480,10 +475,7 @@ const Soups = () => {
         </div>
       </header>
 
-      <div className="soups-counter">
-        Всего рецептов: <strong>{allSoups.length}</strong>
-      </div>
-
+      
       <div className="soups-grid">
         {allSoups.map((soup) => (
           <div 
@@ -513,16 +505,7 @@ const Soups = () => {
               <button className="read-more-btn">
                 Смотреть рецепт →
               </button>
-              <button 
-                className="soup-share-btn"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleShare(soup);
-                }}
-                title="Поделиться"
-              >
-                <span className="share-icon">📤</span>
-              </button>
+              
             </div>
           </div>
         ))}
