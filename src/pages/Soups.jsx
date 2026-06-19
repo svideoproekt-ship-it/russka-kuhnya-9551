@@ -497,7 +497,6 @@ const Soups = () => {
             
             <div className="soup-card-body">
               <h3>{soup.name}</h3>
-              <p className="soup-description">{soup.history.substring(0, 120)}...</p>
               
               <div className="soup-meta-inline">
                 <span>⏱ {soup.time}</span>

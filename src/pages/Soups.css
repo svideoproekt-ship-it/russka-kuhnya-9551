@@ -1,4 +1,4 @@
-/* Страница супов - синий контрастный фон */
+/* Страница супов - Синий контрастный фон */
 .soups-page {
   min-height: 100vh;
   background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
@@ -40,7 +40,7 @@
 }
 
 .soups-header p {
-  font-size: 22px;
+  font-size: 24px;
   color: #e2e8f0;
   margin: 0 0 10px 0;
   line-height: 1.6;
@@ -50,7 +50,7 @@
 .soups-subtitle {
   color: #f59e0b !important;
   font-weight: 600 !important;
-  font-size: 20px !important;
+  font-size: 22px !important;
   margin-top: 15px !important;
 }
 
@@ -59,21 +59,21 @@
   text-align: center;
   margin-bottom: 40px;
   color: #fbbf24;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .soups-counter strong {
   color: #f59e0b;
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 900;
 }
 
 /* Сетка */
 .soups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
@@ -145,7 +145,7 @@
 }
 
 .soup-card-body h3 {
-  font-size: 28px;
+  font-size: 30px;
   color: #fbbf24;
   margin: 0 0 15px 0;
   font-weight: 700;
@@ -154,20 +154,12 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
-.soup-description {
-  color: #e2e8f0;
-  font-size: 18px;
-  line-height: 1.6;
-  margin: 0 0 20px 0;
-  font-style: italic;
-}
-
 .soup-meta-inline {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   color: #fbbf24;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
 }
 
@@ -188,7 +180,7 @@
   padding: 14px 28px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   transition: all 0.3s ease;
   flex-grow: 1;
@@ -222,7 +214,7 @@
 }
 
 .share-icon {
-  font-size: 22px;
+  font-size: 24px;
 }
 
 /* Детальный просмотр */
@@ -239,7 +231,7 @@
   padding: 14px 28px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-bottom: 30px;
   transition: all 0.3s ease;
@@ -263,11 +255,11 @@
 
 .recipe-header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .recipe-header h1 {
-  font-size: 42px;
+  font-size: 46px;
   color: #fbbf24;
   margin: 0 0 20px 0;
   font-weight: 700;
@@ -287,10 +279,41 @@
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
   padding: 12px 24px;
   border-radius: 25px;
-  font-size: 18px;
+  font-size: 20px;
   color: #0f172a;
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопка Поделиться в начале рецепта */
+.recipe-top-actions {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.share-btn-top {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: #0f172a;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Roboto', sans-serif;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.share-btn-top:hover {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(251, 191, 36, 0.4);
 }
 
 .recipe-image-container {
@@ -331,7 +354,7 @@
 
 .recipe-section h2 {
   color: #fbbf24;
-  font-size: 32px;
+  font-size: 34px;
   margin: 0 0 20px 0;
   font-weight: 700;
   font-family: 'Ruslan Display', cursive;
@@ -352,7 +375,7 @@
 .ingredients-list li {
   padding: 12px 0;
   color: #e2e8f0;
-  font-size: 20px;
+  font-size: 22px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-weight: 500;
 }
@@ -366,7 +389,7 @@
   color: #fbbf24;
   font-weight: bold;
   margin-right: 12px;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .preparation-list {
@@ -381,7 +404,7 @@
 .preparation-list li {
   padding: 14px 0;
   color: #e2e8f0;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.7;
   font-weight: 500;
 }
@@ -396,41 +419,11 @@
 
 .history-text {
   color: #e2e8f0;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.8;
   margin: 0;
   font-style: italic;
   font-weight: 500;
-}
-
-.recipe-actions {
-  margin-top: 40px;
-  text-align: center;
-}
-
-.share-btn-detail {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #0f172a;
-  border: none;
-  padding: 18px 45px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.share-btn-detail:hover {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(251, 191, 36, 0.4);
 }
 
 /* Подвал */
@@ -442,7 +435,7 @@
 }
 
 .soups-footer p {
-  font-size: 22px;
+  font-size: 24px;
   color: #e2e8f0;
   margin: 0 0 20px 0;
   font-weight: 500;
@@ -451,7 +444,7 @@
 .soups-back-link {
   color: #fbbf24;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
   transition: all 0.3s ease;
   display: inline-block;
@@ -468,78 +461,26 @@
 
 /* Адаптивность */
 @media (max-width: 768px) {
-  .soups-page {
-    padding: 20px 12px;
-  }
-
-  .soups-header {
-    padding: 25px 20px;
-  }
-
-  .soups-header h1 {
-    font-size: 42px;
-  }
-  
-  .soups-header p {
-    font-size: 18px;
-  }
-  
-  .soups-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .soup-card-body h3 {
-    font-size: 24px;
-  }
-  
-  .recipe-card {
-    padding: 25px;
-  }
-  
-  .recipe-header h1 {
-    font-size: 32px;
-  }
-  
-  .recipe-section h2 {
-    font-size: 26px;
-  }
-  
-  .recipe-meta {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-  
-  .soup-card-image {
-    height: 220px;
-  }
-  
-  .soup-icon {
-    height: 220px;
-    font-size: 100px;
-  }
+  .soups-page { padding: 20px 12px; }
+  .soups-header { padding: 25px 20px; }
+  .soups-header h1 { font-size: 42px; }
+  .soups-header p { font-size: 20px; }
+  .soups-grid { grid-template-columns: 1fr; }
+  .soup-card-body h3 { font-size: 26px; }
+  .recipe-card { padding: 25px; }
+  .recipe-header h1 { font-size: 32px; }
+  .recipe-section h2 { font-size: 28px; }
+  .recipe-meta { flex-direction: column; align-items: center; gap: 15px; }
+  .soup-card-image { height: 220px; }
+  .soup-icon { height: 220px; font-size: 100px; }
+  .share-btn-top { font-size: 18px; padding: 14px 28px; }
+  .ingredients-list li, .preparation-list li, .history-text { font-size: 18px; }
 }
 
 @media (max-width: 480px) {
-  .soups-header h1 {
-    font-size: 32px;
-  }
-  
-  .soups-header-icon {
-    font-size: 60px;
-  }
-  
-  .soup-card-body h3 {
-    font-size: 22px;
-  }
-  
-  .read-more-btn {
-    font-size: 16px;
-    padding: 12px 20px;
-  }
-  
-  .recipe-icon-large {
-    height: 300px;
-    font-size: 140px;
-  }
+  .soups-header h1 { font-size: 32px; }
+  .soups-header-icon { font-size: 60px; }
+  .soup-card-body h3 { font-size: 22px; }
+  .read-more-btn { font-size: 16px; padding: 12px 20px; }
+  .recipe-icon-large { height: 300px; font-size: 140px; }
 }
