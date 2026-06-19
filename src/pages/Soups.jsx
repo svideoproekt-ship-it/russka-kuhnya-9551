@@ -399,6 +399,12 @@ const Soups = () => {
                 <span className="time">⏱ {selectedRecipe.time}</span>
               </div>
             </div>
+            {/* Кнопка Поделиться в начале рецепта */}
+            <div className="recipe-top-actions">
+              <button className="share-btn-top" onClick={() => handleShare(selectedRecipe)}>
+                <span>📤</span> Поделиться рецептом
+              </button>
+            </div>
 
             {selectedRecipe.image && (
               <div className="recipe-image-container">
@@ -447,7 +453,7 @@ const Soups = () => {
                 className="share-btn-detail"
                 onClick={() => handleShare(selectedRecipe)}
               >
-                <span>📤</span> Поделиться рецептом
+                 <span>📤</span> Поделиться рецептом
               </button>
             </div>
           </div>
@@ -470,7 +476,6 @@ const Soups = () => {
         <div className="soups-header-content">
           <span className="soups-header-icon">🍲</span>
           <h1>Самые популярные супы</h1>
-          <p>25 проверенных рецептов с пошаговыми инструкциями</p>
           <p className="soups-subtitle">📖 С историей каждого блюда</p>
         </div>
       </header>
