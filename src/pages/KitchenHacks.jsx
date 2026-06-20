@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import SEO from '../components/SEO';
 import './KitchenHacks.css';
 
 const KitchenHacks = () => {
