@@ -1,7 +1,7 @@
 /* Страница супов - Синий контрастный фон */
 .soups-page {
   min-height: 100vh;
-  background: linear-gradient(180deg, #1e3a8a 0%, #0f172a 100%);
+  background: linear-gradient(180deg, #24418f 0%, #1d2d53 100%);
   color: #fbbf24;
   padding: 40px 20px;
 }
@@ -54,21 +54,6 @@
   margin-top: 15px !important;
 }
 
-/* Счётчик */
-.soups-counter {
-  text-align: center;
-  margin-bottom: 40px;
-  color: #fbbf24;
-  font-size: 26px;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-.soups-counter strong {
-  color: #f59e0b;
-  font-size: 36px;
-  font-weight: 900;
-}
 
 /* Сетка */
 .soups-grid {
@@ -196,26 +181,7 @@
   box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
 }
 
-.soup-share-btn {
-  background: rgba(251, 191, 36, 0.2);
-  border: 2px solid #fbbf24;
-  border-radius: 8px;
-  padding: 12px 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.soup-share-btn:hover {
-  background: rgba(251, 191, 36, 0.4);
-  transform: translateY(-3px);
-}
-
-.share-icon {
-  font-size: 24px;
-}
 
 /* Детальный просмотр */
 .soup-detail {
