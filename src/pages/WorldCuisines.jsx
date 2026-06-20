@@ -1,4 +1,4 @@
-import SEO from '../components/SEO';
+import SEO from '../components/SEO'; 
 import React, { useState } from 'react';
 import './WorldCuisines.css';
 
@@ -38,7 +38,7 @@ const WorldCuisines = () => {
         'Если слишком густо — добавь ложку воды от пасты',
         'Подавай сразу с дополнительным пармезаном и перцем',
       ],
-      addedDate: 'Июнь 2025',
+      
     },
   ];
 
