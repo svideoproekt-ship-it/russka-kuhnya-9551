@@ -7,7 +7,7 @@ import './Soups.css';
 const Soups = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  // 10 современных популярных рецептов
+  // 5 современных популярных рецептов
   const modernSoups = [
   {
     id: 103,
