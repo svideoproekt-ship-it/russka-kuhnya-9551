@@ -81,28 +81,29 @@ const Soups = () => {
 
   // Кнопка "Поделиться"
   const handleShare = async (recipe) => {
-    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/soups';
-    const shareText = `${recipe.name} - Рецепты супов`;
-    
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: shareText,
-          text: recipe.history.substring(0, 100) + '...',
-          url: shareUrl,
-        });
-      } catch (error) {
-        console.log('Отменено пользователем');
-      }
-    } else {
-      try {
-        await navigator.clipboard.writeText(shareUrl);
-        alert('✅ Ссылка скопирована в буфер обмена!');
-      } catch (error) {
-        alert('❌ Не удалось скопировать ссылку');
-      }
+  // Общий URL для всех рецептов (одно превью)
+  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/soups';
+  const shareText = `🍲 ${recipe.name}\n\n${recipe.history.substring(0, 150)}...`;
+  
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: recipe.name,
+        text: shareText,
+        url: shareUrl,
+      });
+    } catch (error) { 
+      console.log('Отменено пользователем'); 
     }
-  };
+  } else {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert(`✅ Ссылка скопирована!\n\n🍲 ${recipe.name}\n\n${recipe.history.substring(0, 100)}...`);
+    } catch (error) { 
+      alert('❌ Не удалось скопировать'); 
+    }
+  }
+};
 
   // Детальный просмотр
   if (selectedRecipe) {

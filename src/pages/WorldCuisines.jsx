@@ -49,9 +49,25 @@ const WorldCuisines = () => {
     : dishes.filter(dish => dish.region === activeRegion);
 
   // Функция поделиться
-  const handleShare = async (dish) => {
-    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/world-cuisines';
-    const shareText = `${dish.title} (${dish.country}) - Вкусы мира`;
+  const handleShare = async (cuisine) => {
+  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/world-cuisines';
+  const shareText = `🌍 ${cuisine.title}\n\n${cuisine.description.substring(0, 150)}...`;
+  
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: cuisine.title,
+        text: shareText,
+        url: shareUrl,
+      });
+    } catch (error) { console.log('Отменено'); }
+  } else {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert(`✅ Ссылка скопирована!\n\n🌍 ${cuisine.title}`);
+    } catch (error) { alert('❌ Ошибка'); }
+  }
+};
     
     if (navigator.share) {
       try {
@@ -174,6 +190,6 @@ const WorldCuisines = () => {
       </footer>
     </div>
   );
-};
+;
 
 export default WorldCuisines;

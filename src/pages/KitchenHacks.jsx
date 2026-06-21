@@ -374,9 +374,24 @@ const KitchenHacks = () => {
 
   // Функция поделиться
   const handleShare = async (hack) => {
-    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/kitchen-hacks';
-    const shareText = `${hack.title} - Кухонные хитрости`;
-    
+  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/kitchen-hacks';
+  const shareText = `🔪 ${hack.title}\n\n${hack.description.substring(0, 150)}...`;
+  
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: hack.title,
+        text: shareText,
+        url: shareUrl,
+      });
+    } catch (error) { console.log('Отменено'); }
+  } else {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert(`✅ Ссылка скопирована!\n\n🔪 ${hack.title}`);
+    } catch (error) { alert('❌ Ошибка'); }
+  }
+};
     // Проверяем поддержку Web Share API
     if (navigator.share) {
       try {
@@ -477,6 +492,6 @@ const KitchenHacks = () => {
       </footer>
     </div>
   );
-};
+;
 
 export default KitchenHacks;

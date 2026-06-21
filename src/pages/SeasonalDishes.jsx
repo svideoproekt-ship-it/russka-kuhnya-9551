@@ -198,8 +198,24 @@ const SeasonalDishes = () => {
   const categories = ['all', 'Супы', 'Салаты', 'Горячее', 'Напитки', 'Десерты'];
   // Функция поделиться
   const handleShare = async (dish) => {
-    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
-    const shareText = `${dish.title} - Блюда сезона`;
+  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
+  const shareText = `🌿 ${dish.title}\n\n${dish.description.substring(0, 150)}...`;
+  
+  if (navigator.share) {
+    try {
+      await navigator.share({
+        title: dish.title,
+        text: shareText,
+        url: shareUrl,
+      });
+    } catch (error) { console.log('Отменено'); }
+  } else {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert(`✅ Ссылка скопирована!\n\n🌿 ${dish.title}`);
+    } catch (error) { alert('❌ Ошибка'); }
+  }
+};
     
     // Проверяем поддержку Web Share API
     if (navigator.share) {
@@ -314,6 +330,6 @@ const SeasonalDishes = () => {
       </footer>
     </div>
   );
-};
+;
 
 export default SeasonalDishes;
