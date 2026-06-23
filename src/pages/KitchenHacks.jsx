@@ -373,23 +373,19 @@ const KitchenHacks = () => {
     : hacks.filter(hack => hack.category === activeCategory);
 
   // Функция поделиться
-  const handleShare = async (hack) => {
-  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/kitchen-hacks';
-  const shareText = `🔪 ${hack.title}\n\n${hack.description.substring(0, 150)}...`;
+  const handleShare = (dish) => {
+  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
   
   if (navigator.share) {
-    try {
-      await navigator.share({
-        title: hack.title,
-        text: shareText,
-        url: shareUrl,
-      });
-    } catch (error) { console.log('Отменено'); }
+    navigator.share({
+      title: dish.title,
+      text: dish.description.substring(0, 150) + '...',
+      url: shareUrl,
+    }).catch(() => console.log('Отменено'));
   } else {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      alert(`✅ Ссылка скопирована!\n\n🔪 ${hack.title}`);
-    } catch (error) { alert('❌ Ошибка'); }
+    navigator.clipboard.writeText(shareUrl)
+      .then(() => alert('✅ Ссылка скопирована!'))
+      .catch(() => alert('❌ Ошибка'));
   }
 };
     // Проверяем поддержку Web Share API
