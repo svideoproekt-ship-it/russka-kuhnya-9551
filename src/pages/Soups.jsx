@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';  // ← Добавь useEffect
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -6,6 +7,23 @@ import './Soups.css';
 
 const Soups = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const allSoups = [...soupsData, ...modernSoups];
+  
+  // ← ДОБАВЬ ЭТОТ КОД:
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const recipeId = urlParams.get('recipe');
+    
+    if (recipeId) {
+      const recipe = allSoups.find(r => r.id === parseInt(recipeId));
+      if (recipe) {
+        setSelectedRecipe(recipe);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  }, [allSoups]);
+  
+  // ... остальной код
 
   // 5 современных популярных рецептов
   const modernSoups = [
