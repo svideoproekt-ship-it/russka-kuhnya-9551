@@ -15,14 +15,23 @@ const Soups = () => {
   const urlParams = new URLSearchParams(window.location.search);
   const recipeId = urlParams.get('recipe');
   
+  console.log('🔍 Recipe ID from URL:', recipeId);
+  
   if (recipeId) {
-    const recipe = [...soupsData, ...modernSoups].find(r => r.id === parseInt(recipeId));
+    const allSoups = [...soupsData, ...modernSoups];
+    const recipe = allSoups.find(r => {
+      console.log(`📋 Comparing: ${r.id} === ${parseInt(recipeId)}`);
+      return r.id === parseInt(recipeId);
+    });
+    
+    console.log('🍲 Found recipe:', recipe);
+    
     if (recipe) {
       setSelectedRecipe(recipe);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
-}, []); 
+}, []);
   
   // ... остальной код
 
