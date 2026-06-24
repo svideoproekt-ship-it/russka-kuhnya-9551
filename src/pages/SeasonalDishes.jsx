@@ -196,59 +196,37 @@ const SeasonalDishes = () => {
   ];
 
   const categories = ['all', 'Супы', 'Салаты', 'Горячее', 'Напитки', 'Десерты'];
+
   // Функция поделиться
   const handleShare = (dish) => {
-  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
-  
-  if (navigator.share) {
-    navigator.share({
-      title: dish.title,
-      text: dish.description.substring(0, 150) + '...',
-      url: shareUrl,
-    }).catch(() => console.log('Отменено'));
-  } else {
-    navigator.clipboard.writeText(shareUrl)
-      .then(() => alert('✅ Ссылка скопирована!'))
-      .catch(() => alert('❌ Ошибка'));
-  }
-};
+    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
     
-    // Проверяем поддержку Web Share API
     if (navigator.share) {
-      try {
-        await navigator.share({
-          title: shareText,
-          text: dish.description,
-          url: shareUrl,
-        });
-        console.log('✅ Успешно поделились!');
-      } catch (error) {
-        console.log('Отменено пользователем');
-      }
+      navigator.share({
+        title: dish.title,
+        text: dish.description.substring(0, 150) + '...',
+        url: shareUrl,
+      }).catch(() => console.log('Отменено'));
     } else {
-      // Fallback: копируем ссылку
-      try {
-        await navigator.clipboard.writeText(shareUrl);
-        alert('✅ Ссылка скопирована в буфер обмена!');
-      } catch (error) {
-        console.error('Ошибка копирования:', error);
-        alert('❌ Не удалось скопировать ссылку');
-      }
+      navigator.clipboard.writeText(shareUrl)
+        .then(() => alert('✅ Ссылка скопирована!'))
+        .catch(() => alert('❌ Ошибка'));
     }
   };
 
   const filteredDishes = activeCategory === 'all' 
     ? dishes 
     : dishes.filter(dish => dish.category === activeCategory);
-<SEO 
-  title="Блюда сезона - Летние рецепты из свежих овощей | Русская Кухня"
-  description="10 лучших летних рецептов: окрошка, свекольник, салаты из свежих овощей, шашлык, компоты и морсы. Готовьте из сезонных продуктов!"
-  keywords="летние рецепты, блюда сезона, окрошка, свекольник, летние салаты, рецепты из овощей"
-  url="https://russka-kuhnya-9551.vercel.app/seasonal-dishes"
-/>
 
   return (
     <div className="seasonal-page">
+      <SEO 
+        title="Блюда сезона - Летние рецепты из свежих овощей | Русская Кухня"
+        description="10 лучших летних рецептов: окрошка, свекольник, салаты из свежих овощей, шашлык, компоты и морсы. Готовьте из сезонных продуктов!"
+        keywords="летние рецепты, блюда сезона, окрошка, свекольник, летние салаты, рецепты из овощей"
+        url="https://russka-kuhnya-9551.vercel.app/seasonal-dishes"
+      />
+
       {/* Шапка */}
       <header className="seasonal-header">
         <div className="seasonal-header-content">
@@ -304,17 +282,17 @@ const SeasonalDishes = () => {
             </div>
 
             <div className="dish-card-footer">
-  <span className="dish-meta">⏱️ {dish.time}</span>
-  <span className="dish-meta">📊 {dish.difficulty}</span>
-  <button 
-    className="dish-share-btn"
-    onClick={() => handleShare(dish)}
-    title="Поделиться"
-  >
-    <span className="share-icon">📤</span>
-    <span className="share-text">Поделиться</span>
-  </button>
-</div>
+              <span className="dish-meta">⏱️ {dish.time}</span>
+              <span className="dish-meta">📊 {dish.difficulty}</span>
+              <button 
+                className="dish-share-btn"
+                onClick={() => handleShare(dish)}
+                title="Поделиться"
+              >
+                <span className="share-icon">📤</span>
+                <span className="share-text">Поделиться</span>
+              </button>
+            </div>
           </div>
         ))}
       </div>
@@ -326,6 +304,6 @@ const SeasonalDishes = () => {
       </footer>
     </div>
   );
-;
+};
 
 export default SeasonalDishes;

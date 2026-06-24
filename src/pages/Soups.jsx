@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';  // ← Добавь useEffect
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { soupsData } from '../data/soupsData';
