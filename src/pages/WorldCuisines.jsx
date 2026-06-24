@@ -1,4 +1,4 @@
-import SEO from '../components/SEO'; 
+import SEO from '../components/SEO';
 import React, { useState } from 'react';
 import './WorldCuisines.css';
 
@@ -10,14 +10,14 @@ const WorldCuisines = () => {
       id: 1,
       title: 'Паста Карбонара',
       country: 'Италия',
-      flag: '🇹',
+      flag: '🇮🇹',
       region: 'Европа',
       time: '25 минут',
       difficulty: 'Средне',
       icon: '🍝',
       description: 'Классическая римская паста с гуанчиале, яйцами и пармезаном. Главный секрет — НИКАКИХ сливок!',
       history: 'Карбонара появилась в Риме после Второй мировой войны. Название происходит от "carbonaro" — угольщик. По одной версии, блюдо придумали для рабочих-угольщиков, по другой — для американских солдат, которые просили бекон с яйцами.',
-      funFact: 'В настоящей итальянской карбоне НИКОГДА не добавляют сливки! Это нарушение традиций. Итальянцы считают это преступлением против кулинарии.',
+      funFact: 'В настоящей итальянской карбонаре НИКОГДА не добавляют сливки! Это нарушение традиций. Итальянцы считают это преступлением против кулинарии.',
       ingredients: [
         'Спагетти 400г',
         'Гуанчиале (или панчетта/бекон) 200г',
@@ -38,7 +38,6 @@ const WorldCuisines = () => {
         'Если слишком густо — добавь ложку воды от пасты',
         'Подавай сразу с дополнительным пармезаном и перцем',
       ],
-      
     },
   ];
 
@@ -50,49 +49,30 @@ const WorldCuisines = () => {
 
   // Функция поделиться
   const handleShare = (dish) => {
-  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
-  
-  if (navigator.share) {
-    navigator.share({
-      title: dish.title,
-      text: dish.description.substring(0, 150) + '...',
-      url: shareUrl,
-    }).catch(() => console.log('Отменено'));
-  } else {
-    navigator.clipboard.writeText(shareUrl)
-      .then(() => alert('✅ Ссылка скопирована!'))
-      .catch(() => alert('❌ Ошибка'));
-  }
-};
+    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/world-cuisines';
     
     if (navigator.share) {
-      try {
-        await navigator.share({
-          title: shareText,
-          text: dish.description,
-          url: shareUrl,
-        });
-      } catch (error) {
-        console.log('Отменено пользователем');
-      }
+      navigator.share({
+        title: dish.title,
+        text: dish.description.substring(0, 150) + '...',
+        url: shareUrl,
+      }).catch(() => console.log('Отменено'));
     } else {
-      try {
-        await navigator.clipboard.writeText(shareUrl);
-        alert('✅ Ссылка скопирована в буфер обмена!');
-      } catch (error) {
-        alert('❌ Не удалось скопировать ссылку');
-      }
+      navigator.clipboard.writeText(shareUrl)
+        .then(() => alert('✅ Ссылка скопирована!'))
+        .catch(() => alert('❌ Ошибка'));
     }
   };
-<SEO 
-  title="Вкусы мира - Рецепты из разных стран | Русская Кухня"
-  description="Путешествуйте по миру через вкус! Народные рецепты из разных стран: итальянская карбонара, мексиканские тако, японский рамен. Новый рецепт каждую неделю."
-  keywords="рецепты мира, кухни мира, карбонара рецепт, международная кухня, народные рецепты"
-  url="https://russka-kuhnya-9551.vercel.app/world-cuisines"
-/>
 
   return (
     <div className="world-page">
+      <SEO 
+        title="Вкусы мира - Рецепты из разных стран | Русская Кухня"
+        description="Путешествуйте по миру через вкус! Народные рецепты из разных стран: итальянская карбонара, мексиканские тако, японский рамен. Новый рецепт каждую неделю."
+        keywords="рецепты мира, кухни мира, карбонара рецепт, международная кухня, народные рецепты"
+        url="https://russka-kuhnya-9551.vercel.app/world-cuisines"
+      />
+
       {/* Шапка */}
       <header className="world-header">
         <div className="world-header-content">
@@ -131,7 +111,7 @@ const WorldCuisines = () => {
               
               {/* История блюда */}
               <div className="dish-history">
-                <h4> История блюда</h4>
+                <h4>📖 История блюда</h4>
                 <p>{dish.history}</p>
               </div>
 
@@ -153,7 +133,7 @@ const WorldCuisines = () => {
 
               {/* Шаги приготовления */}
               <div className="dish-steps">
-                <h4>‍🍳 Как приготовить</h4>
+                <h4>👨‍🍳 Как приготовить</h4>
                 <ol>
                   {dish.steps.map((step, index) => (
                     <li key={index}>{step}</li>
@@ -165,7 +145,6 @@ const WorldCuisines = () => {
             <div className="dish-card-footer">
               <span className="dish-meta">⏱️ {dish.time}</span>
               <span className="dish-meta">📊 {dish.difficulty}</span>
-              <span className="dish-date"> {dish.addedDate}</span>
               <button 
                 className="dish-share-btn"
                 onClick={() => handleShare(dish)}
@@ -186,6 +165,6 @@ const WorldCuisines = () => {
       </footer>
     </div>
   );
-;
+};
 
 export default WorldCuisines;
