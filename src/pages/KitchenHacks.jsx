@@ -75,7 +75,7 @@ const KitchenHacks = () => {
       category: 'Приготовление',
       time: '10 секунд',
       difficulty: 'Легко',
-      icon: '',
+      icon: '🧄',
       description: 'Положите зубчик в банку, закройте крышкой и потрясите 10 секунд!',
       steps: [
         'Отделите зубчики от головки',
@@ -149,7 +149,7 @@ const KitchenHacks = () => {
         'Для долгого хранения - заморозьте',
       ],
     },
-        {
+    {
       id: 10,
       title: 'Как быстро охладить напиток',
       category: 'Приготовление',
@@ -183,7 +183,7 @@ const KitchenHacks = () => {
         'Не торопитесь - скорость придёт с практикой!',
       ],
     },
-      {
+    {
       id: 12,
       title: 'Как отмыть микроволновку за 5 минут',
       category: 'Организация',
@@ -365,7 +365,7 @@ const KitchenHacks = () => {
       ],
     },
   ];
-    
+
   const categories = ['all', 'Хранение', 'Приготовление', 'Инструменты', 'Организация'];
 
   const filteredHacks = activeCategory === 'all' 
@@ -373,30 +373,31 @@ const KitchenHacks = () => {
     : hacks.filter(hack => hack.category === activeCategory);
 
   // Функция поделиться
-  const handleShare = (dish) => {
-  const shareUrl = 'https://russka-kuhnya-9551.vercel.app/seasonal-dishes';
-  
-  if (navigator.share) {
-    navigator.share({
-      title: dish.title,
-      text: dish.description.substring(0, 150) + '...',
-      url: shareUrl,
-    }).catch(() => console.log('Отменено'));
-  } else {
-    navigator.clipboard.writeText(shareUrl)
-      .then(() => alert('✅ Ссылка скопирована!'))
-      .catch(() => alert('❌ Ошибка'));
-  }
-};
-     
-return (
+  const handleShare = (hack) => {
+    const shareUrl = 'https://russka-kuhnya-9551.vercel.app/kitchen-hacks';
+    
+    if (navigator.share) {
+      navigator.share({
+        title: hack.title,
+        text: hack.description.substring(0, 150) + '...',
+        url: shareUrl,
+      }).catch(() => console.log('Отменено'));
+    } else {
+      navigator.clipboard.writeText(shareUrl)
+        .then(() => alert('✅ Ссылка скопирована!'))
+        .catch(() => alert('❌ Ошибка'));
+    }
+  };
+
+  return (
     <div className="kitchen-hacks-page">
-     <SEO 
-  title="Кухонные хитрости - 21 лайфхак для кухни | Русская Кухня"
-  description="Полезные кухонные хитрости и лайфхаки: как сохранить продукты свежими, как быстро приготовить, секреты нарезки и хранения. Проверенные советы от шеф-поваров."
-  keywords="кухонные хитрости, лайфхаки на кухне, советы поварам, как сохранить продукты, секреты кухни"
-  url="https://russka-kuhnya-9551.vercel.app/kitchen-hacks"
-/>
+      <SEO 
+        title="Кухонные хитрости - 21 лайфхак для кухни | Русская Кухня"
+        description="Полезные кухонные хитрости и лайфхаки: как сохранить продукты свежими, как быстро приготовить, секреты нарезки и хранения. Проверенные советы от шеф-поваров."
+        keywords="кухонные хитрости, лайфхаки на кухне, советы поварам, как сохранить продукты, секреты кухни"
+        url="https://russka-kuhnya-9551.vercel.app/kitchen-hacks"
+      />
+
       {/* Шапка */}
       <header className="hacks-header">
         <div className="hacks-header-content">
@@ -446,13 +447,13 @@ return (
               <span className="hack-meta">⏱️ {hack.time}</span>
               <span className="hack-meta">📊 {hack.difficulty}</span>
               <button 
-  className="hack-share-btn"
-  onClick={() => handleShare(hack)}
-  title="Поделиться"
->
-  <span className="share-icon">📤</span>
-  <span className="share-text">Поделиться</span>
-</button>
+                className="hack-share-btn"
+                onClick={() => handleShare(hack)}
+                title="Поделиться"
+              >
+                <span className="share-icon">📤</span>
+                <span className="share-text">Поделиться</span>
+              </button>
             </div>
           </div>
         ))}
@@ -465,6 +466,6 @@ return (
       </footer>
     </div>
   );
-;
+};
 
 export default KitchenHacks;
