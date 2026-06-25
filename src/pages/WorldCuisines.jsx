@@ -66,12 +66,13 @@ const WorldCuisines = () => {
 
   return (
     <div className="world-page">
-      <SEO 
-        title="Вкусы мира - Рецепты из разных стран | Русская Кухня"
-        description="Путешествуйте по миру через вкус! Народные рецепты из разных стран: итальянская карбонара, мексиканские тако, японский рамен. Новый рецепт каждую неделю."
-        keywords="рецепты мира, кухни мира, карбонара рецепт, международная кухня, народные рецепты"
-        url="https://russka-kuhnya-9551.vercel.app/world-cuisines"
-      />
+     <SEO 
+  title="Вкусы мира - Рецепты из разных стран | Русская Кухня"
+  description="Путешествуйте по миру через вкус..."
+  keywords="рецепты мира, кухни мира..."
+  url="https://russka-kuhnya-9551.vercel.app/world-cuisines"
+  image="https://russka-kuhnya-9551.vercel.app/og-fallback.jpg"
+/>
 
       {/* Шапка */}
       <header className="world-header">

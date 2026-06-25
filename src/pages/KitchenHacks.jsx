@@ -391,12 +391,14 @@ const KitchenHacks = () => {
 
   return (
     <div className="kitchen-hacks-page">
-      <SEO 
-        title="Кухонные хитрости - 21 лайфхак для кухни | Русская Кухня"
-        description="Полезные кухонные хитрости и лайфхаки: как сохранить продукты свежими, как быстро приготовить, секреты нарезки и хранения. Проверенные советы от шеф-поваров."
-        keywords="кухонные хитрости, лайфхаки на кухне, советы поварам, как сохранить продукты, секреты кухни"
-        url="https://russka-kuhnya-9551.vercel.app/kitchen-hacks"
-      />
+       
+       <SEO 
+  title="Кухонные хитрости - 21 лайфхак для кухни | Русская Кухня"
+  description="Полезные кухонные хитрости и лайфхаки..."
+  keywords="кухонные хитрости, лайфхаки на кухне..."
+  url="https://russka-kuhnya-9551.vercel.app/kitchen-hacks"
+  image="https://russka-kuhnya-9551.vercel.app/og-fallback.jpg"
+/>
 
       {/* Шапка */}
       <header className="hacks-header">
