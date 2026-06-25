@@ -1,4 +1,8 @@
 {
+  "rewrites": [
+    { "source": "/og-fallback.jpg", "destination": "/og-fallback.jpg" },
+    { "source": "/((?!.*\\..*).*)", "destination": "/" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
