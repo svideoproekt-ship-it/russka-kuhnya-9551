@@ -116,11 +116,7 @@ const WorldCuisines = () => {
       <span className="dish-category-badge">{dish.country}</span>
     </div>
   
-  <div className="dish-card-body">
-    <h3>{dish.title}</h3>
-              <span className="dish-icon flag-icon">{dish.flag}</span>
-              <span className="dish-category-badge">{dish.country}</span>
-            </div>
+  
             
             <div className="dish-card-body">
               <h3>{dish.title}</h3>
