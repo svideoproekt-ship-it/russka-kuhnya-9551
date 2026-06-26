@@ -9,6 +9,7 @@ const WorldCuisines = () => {
     {
       id: 1,
       title: 'Паста Карбонара',
+      image: '/publicimagesworld/carbonara.jpg',
       country: 'Италия',
       flag: '🇮🇹',
       region: 'Европа',

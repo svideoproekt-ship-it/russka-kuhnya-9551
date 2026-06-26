@@ -9,6 +9,7 @@ const SeasonalDishes = () => {
     {
       id: 1,
       title: 'Окрошка на квасе',
+     image: '/publicimagesseasonal/okroshka.jpg',  
       category: 'Супы',
       time: '30 минут',
       difficulty: 'Легко',
@@ -27,6 +28,7 @@ const SeasonalDishes = () => {
     {
       id: 2,
       title: 'Свекольник с яйцом',
+      image: '/publicimagesseasonal/svekolnik.jpg',
       category: 'Супы',
       time: '40 минут',
       difficulty: 'Легко',
@@ -46,6 +48,7 @@ const SeasonalDishes = () => {
     {
       id: 3,
       title: 'Салат из свежих овощей',
+     image: '/publicimagesseasonal/vegetable-salad.jpg',
       category: 'Салаты',
       time: '15 минут',
       difficulty: 'Легко',
@@ -65,6 +68,7 @@ const SeasonalDishes = () => {
     {
       id: 4,
       title: 'Кабачковые оладьи',
+      image: '/publicimagesseasonal/zucchini-fritters.jpg',
       category: 'Горячее',
       time: '25 минут',
       difficulty: 'Средне',
@@ -83,6 +87,7 @@ const SeasonalDishes = () => {
     {
       id: 5,
       title: 'Фаршированные перцы',
+      image: '/publicimagesseasonal/stuffed-peppers.jpg',
       category: 'Горячее',
       time: '60 минут',
       difficulty: 'Средне',
@@ -103,6 +108,7 @@ const SeasonalDishes = () => {
     {
       id: 6,
       title: 'Компот из свежих ягод',
+      image: '/publicimagesseasonal/berry-compote.jpg',
       category: 'Напитки',
       time: '20 минут',
       difficulty: 'Легко',
@@ -121,6 +127,7 @@ const SeasonalDishes = () => {
     {
       id: 7,
       title: 'Морс из клюквы',
+      image: '/publicimagesseasonal/cranberry-mors.jpg',
       category: 'Напитки',
       time: '15 минут',
       difficulty: 'Легко',
@@ -140,6 +147,7 @@ const SeasonalDishes = () => {
     {
       id: 8,
       title: 'Вареники с вишней',
+      image: '/publicimagesseasonal/cherry-vareniki.jpg',
       category: 'Десерты',
       time: '45 минут',
       difficulty: 'Средне',
@@ -159,6 +167,7 @@ const SeasonalDishes = () => {
     {
       id: 9,
       title: 'Шашлык из свинины',
+      image: '/publicimagesseasonal/shashlik.jpg',
       category: 'Горячее',
       time: '4 часа',
       difficulty: 'Средне',
@@ -178,6 +187,7 @@ const SeasonalDishes = () => {
     {
       id: 10,
       title: 'Салат с клубникой и моцареллой',
+      image: '/publicimagesseasonal/strawberry-salad.jpg',
       category: 'Салаты',
       time: '10 минут',
       difficulty: 'Легко',
