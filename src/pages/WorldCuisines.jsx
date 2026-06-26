@@ -101,15 +101,20 @@ const WorldCuisines = () => {
       {/* Сетка рецептов */}
       <div className="dishes-grid">
         {filteredDishes.map((dish) => (
-          <div key={dish.id} className="dish-card world-card">
-            <div className="dish-card-header">
-             {dish.image ? (
-      <img src={dish.image} alt={dish.title} className="dish-image" />
-    ) : (
-      <span className="dish-icon flag-icon">{dish.flag}</span>
-    )}
-    <span className="dish-category-badge">{dish.country}</span>
-  </div>
+  <div key={dish.id} className="dish-card world-card">
+    <div className="dish-card-header">
+      {dish.image ? (
+        <img 
+          src={dish.image} 
+          alt={dish.title}
+          className="dish-image"
+          style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px 8px 0 0' }}
+        />
+      ) : (
+        <span className="dish-icon flag-icon">{dish.flag}</span>
+      )}
+      <span className="dish-category-badge">{dish.country}</span>
+    </div>
   
   <div className="dish-card-body">
     <h3>{dish.title}</h3>
