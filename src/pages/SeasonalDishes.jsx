@@ -270,6 +270,19 @@ const SeasonalDishes = () => {
             </div>
             
             <div className="dish-card-body">
+              {dish.image && (
+      <div className="dish-image-container">
+        <img 
+          src={dish.image} 
+          alt={dish.title}
+          className="dish-image"
+          onError={(e) => {
+            e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
+          }}
+        />
+      </div>
+    )}
+    
               <h3>{dish.title}</h3>
               <p className="dish-description">{dish.description}</p>
               

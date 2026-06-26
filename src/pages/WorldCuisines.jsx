@@ -103,6 +103,16 @@ const WorldCuisines = () => {
         {filteredDishes.map((dish) => (
           <div key={dish.id} className="dish-card world-card">
             <div className="dish-card-header">
+             {dish.image ? (
+      <img src={dish.image} alt={dish.title} className="dish-image" />
+    ) : (
+      <span className="dish-icon flag-icon">{dish.flag}</span>
+    )}
+    <span className="dish-category-badge">{dish.country}</span>
+  </div>
+  
+  <div className="dish-card-body">
+    <h3>{dish.title}</h3>
               <span className="dish-icon flag-icon">{dish.flag}</span>
               <span className="dish-category-badge">{dish.country}</span>
             </div>
