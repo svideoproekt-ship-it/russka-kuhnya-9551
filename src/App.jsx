@@ -17,7 +17,7 @@ import RecipePage from './pages/RecipePage';
 import Soups from './pages/Soups';
 import KitchenHacks from './pages/KitchenHacks';
 import { Analytics } from "@vercel/analytics/react";
-
+import YandexMetrika from './components/YandexMetrika';
 function App() {
   // Инициализация OneSignal
   useEffect(() => {
