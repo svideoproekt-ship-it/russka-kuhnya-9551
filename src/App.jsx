@@ -18,7 +18,8 @@ import Soups from './pages/Soups';
 import KitchenHacks from './pages/KitchenHacks';
 import { Analytics } from "@vercel/analytics/react";
 import YandexMetrika from './components/YandexMetrika';
-function App() {
+
+  function App() {
   // Инициализация OneSignal
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -41,27 +42,28 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <Analytics />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/category/baking" element={<BakingCategory />} />
-        <Route path="/category/meat" element={<MeatCategory />} />
-        <Route path="/category/fish" element={<FishCategory />} />
-        <Route path="/category/snacks" element={<SnacksCategory />} />
-        <Route path="/category/desserts" element={<DessertsCategory />} />
-        <Route path="/category/drinks" element={<DrinksCategory />} />
-        <Route path="/category/dough" element={<DoughCategory />} />
-        <Route path="/category/porridge" element={<Porridge />} />
-        <Route path="/world-cuisines" element={<WorldCuisines />} />
-        <Route path="/soups" element={<Soups />} />
-        <Route path="/seasonal-dishes" element={<SeasonalDishes />} />
-        <Route path="/kitchen-hacks" element={<KitchenHacks />} />
-        <Route path="/recipe/:id" element={<RecipePage />} />
-      </Routes>
-    </Router>
+    <>
+      <YandexMetrika />
+      <Router>
+        <Analytics />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/category/baking" element={<BakingCategory />} />
+          <Route path="/category/meat" element={<MeatCategory />} />
+          <Route path="/category/fish" element={<FishCategory />} />
+          <Route path="/category/snacks" element={<SnacksCategory />} />
+          <Route path="/category/desserts" element={<DessertsCategory />} />
+          <Route path="/category/drinks" element={<DrinksCategory />} />
+          <Route path="/category/dough" element={<DoughCategory />} />
+          <Route path="/category/porridge" element={<Porridge />} />
+          <Route path="/world-cuisines" element={<WorldCuisines />} />
+          <Route path="/soups" element={<Soups />} />
+          <Route path="/seasonal-dishes" element={<SeasonalDishes />} />
+          <Route path="/kitchen-hacks" element={<KitchenHacks />} />
+          <Route path="/recipe/:id" element={<RecipePage />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
-
-export default App;
