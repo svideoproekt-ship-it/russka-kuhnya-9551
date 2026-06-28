@@ -1,5 +1,6 @@
-import SEO from '../components/SEO';
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import './WorldCuisines.css';
 
 const WorldCuisines = () => {
@@ -100,8 +101,33 @@ const WorldCuisines = () => {
 
       {/* Сетка рецептов */}
       <div className="dishes-grid">
-        {filteredDishes.map((dish) => (
-  <div key={dish.id} className="dish-card world-card">
+       {filteredDishes.map((dish) => (
+  <React.Fragment key={dish.id}>
+    {/* ← ВСТАВЬ ВОТ ЭТОТ БЛОК */}
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Recipe",
+          "name": dish.title,
+          "image": dish.image ? 
+            `https://russka-kuhnya-9551.vercel.app${dish.image}` : 
+            'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg',
+          "description": dish.description || '',
+          "prepTime": dish.time || 'PT30M',
+          "recipeIngredient": dish.ingredients || [],
+          "recipeInstructions": (dish.steps || []).map((step, index) => ({
+            "@type": "HowToStep",
+            "position": index + 1,
+            "text": step
+          })),
+          "author": { "@type": "Organization", "name": "Русская Кухня" },
+          "recipeCategory": dish.country || "Блюдо",
+          "cuisine": dish.country || "Международная кухня"
+        })}
+      </script>
+    </Helmet>
+    <div className="dish-card world-card">
     <div className="dish-card-header">
       {dish.image ? (
         <img 
@@ -166,18 +192,20 @@ const WorldCuisines = () => {
                 <span className="share-icon">📤</span>
                 <span className="share-text">Поделиться</span>
               </button>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Подвал */}
+                  </div>
+    </div>
+    </React.Fragment>  
+  ))}
+</div>
+       
+    
+    {/* Подвал */}
       <footer className="world-footer">
         <p>🌍 Следите за обновлениями! Каждую неделю — новый рецепт из другой страны</p>
         <a href="/" className="world-back-link">← Вернуться на главную</a>
       </footer>
-    </div>
-  );
-};
+    </div>   
+     );   
+};   
 
 export default WorldCuisines;

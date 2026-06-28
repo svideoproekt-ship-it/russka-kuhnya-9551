@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -110,9 +111,37 @@ const Soups = () => {
     }
   };
 
-  // Детальный просмотр
-  if (selectedRecipe) {
-    return (
+// Детальный просмотр
+if (selectedRecipe) {
+  return (
+    <>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Recipe",
+            "name": selectedRecipe.name || selectedRecipe.title,
+            "image": selectedRecipe.image ? 
+              `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : 
+              'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg',
+            "description": selectedRecipe.description || selectedRecipe.history || '',
+            "prepTime": selectedRecipe.time || 'PT30M',
+            "recipeIngredient": selectedRecipe.ingredients || [],
+            "recipeInstructions": (selectedRecipe.preparation || []).map((step, index) => ({
+              "@type": "HowToStep",
+              "position": index + 1,
+              "text": step
+            })),
+            "author": {
+              "@type": "Organization",
+              "name": "Русская Кухня"
+            },
+            "recipeCategory": selectedRecipe.category || selectedRecipe.epoch || "Суп",
+            "cuisine": "Русская кухня"
+          })}
+        </script>
+      </Helmet>
+      
       <div className="soups-page">
         <SEO 
           title={`${selectedRecipe.name} - Рецепт с историей | Русская Кухня`}
@@ -135,7 +164,6 @@ const Soups = () => {
               </div>
             </div>
 
-            {/* Кнопка Поделиться в начале рецепта */}
             <div className="recipe-top-actions">
               <button className="share-btn-top" onClick={() => handleShare(selectedRecipe)}>
                 <span>📤</span> Поделиться рецептом
@@ -186,67 +214,9 @@ const Soups = () => {
           </div>
         </div>
       </div>
+    </>  
     );
   }
-
-  // Список всех супов
-  return (
-    <div className="soups-page">
-      <SEO 
-        title="Самые популярные супы - рецепты с историей | Русская Кухня"
-        description="Лучшие рецепты супов: традиционные русские (щи, борщ, солянка) и популярные (гороховый, куриный, сырный, харчо). Пошаговые рецепты с историей каждого блюда!"
-        keywords="рецепты супов, щи, борщ, солянка, рассольник, уха, гороховый суп, куриный суп, сырный суп, харчо, грибной суп, русская кухня"
-        url="https://russka-kuhnya-9551.vercel.app/soups"
-      />
-
-      <header className="soups-header">
-        <div className="soups-header-content">
-          <span className="soups-header-icon">🍲</span>
-          <h1>Самые популярные супы</h1>
-          <p className="soups-subtitle">📖 С историей каждого блюда</p>
-        </div>
-      </header>
-
-      <div className="soups-grid">
-        {allSoups.map((soup) => (
-          <div 
-            key={soup.id} 
-            className="soup-card"
-            onClick={() => handleRecipeClick(soup)}
-          >
-            <div className="soup-card-header">
-              {soup.image ? (
-                <img src={soup.image} alt={soup.name} className="soup-card-image" />
-              ) : (
-                <span className="soup-icon">{soup.icon || '🍲'}</span>
-              )}
-              <span className="soup-category-badge">{soup.epoch.split(' ')[0]}</span>
-            </div>
-            
-            <div className="soup-card-body">
-              <h3>{soup.name}</h3>
-              
-              <div className="soup-meta-inline">
-                <span>⏱ {soup.time}</span>
-                <span>🕰 {soup.epoch}</span>
-              </div>
-            </div>
-
-            <div className="soup-card-footer">
-              <button className="read-more-btn">
-                Смотреть рецепт →
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <footer className="soups-footer">
-        <p>🍲 Приятного аппетита! Готовьте с любовью и делитесь с близкими!</p>
-        <Link to="/" className="soups-back-link">← Вернуться на главную</Link>
-      </footer>
-    </div>
-  );
-};
+  };
 
 export default Soups;

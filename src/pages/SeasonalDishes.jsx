@@ -1,3 +1,5 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import React, { useState } from 'react';
 import './SeasonalDishes.css';
@@ -260,28 +262,55 @@ const SeasonalDishes = () => {
         ))}
       </div>
 
-      {/* Сетка рецептов */}
-      <div className="dishes-grid">
-        {filteredDishes.map((dish) => (
-          <div key={dish.id} className="dish-card">
-            <div className="dish-card-header">
-              <span className="dish-icon">{dish.icon}</span>
-              <span className="dish-category-badge">{dish.category}</span>
+     {/* Сетка рецептов */}
+<div className="dishes-grid">
+  {filteredDishes.map((dish) => (
+    <React.Fragment key={dish.id}>
+      {/* ← ВСТАВЬ ЭТОТ БЛОК С Schema.org */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Recipe",
+            "name": dish.title,
+            "image": dish.image ? 
+              `https://russka-kuhnya-9551.vercel.app${dish.image}` : 
+              'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg',
+            "description": dish.description || '',
+            "prepTime": dish.time || 'PT30M',
+            "recipeIngredient": dish.ingredients || [],
+            "recipeInstructions": (dish.steps || dish.preparation || []).map((step, index) => ({
+              "@type": "HowToStep",
+              "position": index + 1,
+              "text": step
+            })),
+            "author": { "@type": "Organization", "name": "Русская Кухня" },
+            "recipeCategory": dish.category || "Блюдо",
+            "cuisine": "Русская кухня"
+          })}
+        </script>
+      </Helmet>
+
+      {/* ← ВОТ ТВОЯ СУЩЕСТВУЮЩАЯ КАРТОЧКА (без изменений!) */}
+      <div className="dish-card">
+        <div className="dish-card-header">
+          <span className="dish-icon">{dish.icon}</span>
+          <span className="dish-category-badge">{dish.category}</span>
+        </div>
+        
+        <div className="dish-card-body">
+          {dish.image && (
+            <div className="dish-image-container">
+              <img 
+                src={dish.image} 
+                alt={dish.title}
+                className="dish-image"
+                onError={(e) => {
+                  e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
+                }}
+              />
             </div>
-            
-            <div className="dish-card-body">
-              {dish.image && (
-      <div className="dish-image-container">
-        <img 
-          src={dish.image} 
-          alt={dish.title}
-          className="dish-image"
-          onError={(e) => {
-            e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
-          }}
-        />
-      </div>
-    )}
+          )}
     
               <h3>{dish.title}</h3>
               <p className="dish-description">{dish.description}</p>
@@ -316,10 +345,11 @@ const SeasonalDishes = () => {
                 <span className="share-icon">📤</span>
                 <span className="share-text">Поделиться</span>
               </button>
-            </div>
-          </div>
-        ))}
-      </div>
+                  </div>
+    </div>
+    </React.Fragment>  
+    ))}
+</div>
 
       {/* Подвал */}
       <footer className="seasonal-footer">

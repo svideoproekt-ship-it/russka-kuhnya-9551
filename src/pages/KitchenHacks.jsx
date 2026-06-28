@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import './KitchenHacks.css';
 
@@ -422,52 +423,75 @@ const KitchenHacks = () => {
         ))}
       </div>
 
-      {/* Сетка лайфхаков */}
-      <div className="hacks-grid">
-        {filteredHacks.map((hack) => (
-          <div key={hack.id} className="hack-card">
-            <div className="hack-card-header">
-              <span className="hack-icon">{hack.icon}</span>
-              <span className="hack-category-badge">{hack.category}</span>
-            </div>
-            
-            <div className="hack-card-body">
-              <h3>{hack.title}</h3>
-              <p className="hack-description">{hack.description}</p>
-              
-              <div className="hack-steps">
-                <h4>Как сделать:</h4>
-                <ol>
-                  {hack.steps.map((step, index) => (
-                    <li key={index}>{step}</li>
-                  ))}
-                </ol>
-              </div>
-            </div>
+    {/* Сетка лайфхаков */}
+<div className="hacks-grid">
+  {filteredHacks.map((hack) => (
+    <React.Fragment key={hack.id}>
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": hack.title,
+            "description": hack.description || '',
+            "totalTime": hack.time || "PT10M",
+            "step": (hack.steps || []).map((step, index) => ({
+              "@type": "HowToStep",
+              "position": index + 1,
+              "text": step
+            })),
+            "author": {
+              "@type": "Organization",
+              "name": "Русская Кухня"
+            }
+          })}
+        </script>
+      </Helmet>
 
-            <div className="hack-card-footer">
-              <span className="hack-meta">⏱️ {hack.time}</span>
-              <span className="hack-meta">📊 {hack.difficulty}</span>
-              <button 
-                className="hack-share-btn"
-                onClick={() => handleShare(hack)}
-                title="Поделиться"
-              >
-                <span className="share-icon">📤</span>
-                <span className="share-text">Поделиться</span>
-              </button>
-            </div>
+      <div className="hack-card">
+        <div className="hack-card-header">
+          <span className="hack-icon">{hack.icon}</span>
+          <span className="hack-category-badge">{hack.category}</span>
+        </div>
+        
+        <div className="hack-card-body">
+          <h3>{hack.title}</h3>
+          <p className="hack-description">{hack.description}</p>
+          
+          <div className="hack-steps">
+            <h4>Как сделать:</h4>
+            <ol>
+              {hack.steps.map((step, index) => (
+                <li key={index}>{step}</li>
+              ))}
+            </ol>
           </div>
-        ))}
-      </div>
+        </div>
 
-      {/* Подвал */}
-      <footer className="hacks-footer">
-        <p>💡 Хотите больше хитростей? Подпишитесь на уведомления!</p>
-        <a href="/" className="hacks-back-link">← Вернуться на главную</a>
-      </footer>
-    </div>
-  );
+        <div className="hack-card-footer">
+          <span className="hack-meta">⏱️ {hack.time}</span>
+          <span className="hack-meta">📊 {hack.difficulty}</span>
+          <button 
+            className="hack-share-btn"
+            onClick={() => handleShare(hack)}
+            title="Поделиться"
+          >
+            <span className="share-icon">📤</span>
+            <span className="share-text">Поделиться</span>
+          </button>
+        </div>
+      </div>
+    </React.Fragment>
+  ))}
+</div>
+
+{/* Подвал */}
+<footer className="hacks-footer">
+  <p>💡 Хотите больше хитростей? Подпишитесь на уведомления!</p>
+  <a href="/" className="hacks-back-link">← Вернуться на главную</a>
+</footer>
+</div>
+);
 };
 
 export default KitchenHacks;
