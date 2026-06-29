@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
-import React, { useState } from 'react';
 import './SeasonalDishes.css';
 
 const SeasonalDishes = () => {
