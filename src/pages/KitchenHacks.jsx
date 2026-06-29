@@ -426,29 +426,30 @@ const KitchenHacks = () => {
     {/* Сетка лайфхаков */}
 <div className="hacks-grid">
   {filteredHacks.map((hack) => (
-    <React.Fragment key={hack.id}>
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            "name": hack.title,
-            "description": hack.description || '',
-            "totalTime": hack.time || "PT10M",
-            "step": (hack.steps || []).map((step, index) => ({
-              "@type": "HowToStep",
-              "position": index + 1,
-              "text": step
-            })),
-            "author": {
-              "@type": "Organization",
-              "name": "Русская Кухня"
-            }
-          })}
-        </script>
-      </Helmet>
+  <React.Fragment key={hack.id}>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          "name": hack.title,
+          "description": hack.description || '',
+          "totalTime": hack.time || "PT10M",
+          "step": (hack.steps || []).map((step, index) => ({
+            "@type": "HowToStep",
+            "position": index + 1,
+            "text": step
+          })),
+          "author": {
+            "@type": "Organization",
+            "name": "Русская Кухня"
+          }
+        })
+      }}
+    />
 
-      <div className="hack-card">
+    <div className="hack-card">
         <div className="hack-card-header">
           <span className="hack-icon">{hack.icon}</span>
           <span className="hack-category-badge">{hack.category}</span>
