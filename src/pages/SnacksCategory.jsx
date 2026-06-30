@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { snacksData } from '../data/snacksData';
 import './SnacksCategory.css';
 import ShareButtons from '../components/ShareButtons';
+
 function SnacksCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -33,11 +34,10 @@ function SnacksCategory() {
             </div>
           </div>
 
-          {/* ← КНОПКА "ПОДЕЛИТЬСЯ" ЗДЕСЬ */}
-
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img 
+                loading="lazy"
                 src={selectedRecipe.image} 
                 alt={selectedRecipe.name}
                 className="recipe-image"
@@ -97,6 +97,7 @@ function SnacksCategory() {
             <div className="recipe-card-image">
               {recipe.image ? (
                 <img 
+                  loading="lazy"
                   src={recipe.image} 
                   alt={recipe.name}
                   onError={(e) => {

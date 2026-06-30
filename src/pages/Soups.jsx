@@ -173,6 +173,7 @@ if (selectedRecipe) {
             {selectedRecipe.image && (
               <div className="recipe-image-container">
                 <img 
+                  loading="lazy"
                   src={selectedRecipe.image} 
                   alt={selectedRecipe.name}
                   className="recipe-image"

@@ -103,7 +103,7 @@ const WorldCuisines = () => {
       <div className="dishes-grid">
        {filteredDishes.map((dish) => (
   <React.Fragment key={dish.id}>
-    {/* ← ВСТАВЬ ВОТ ЭТОТ БЛОК */}
+    {/* Schema.org разметка */}
     <Helmet>
       <script type="application/ld+json">
         {JSON.stringify({
@@ -131,6 +131,7 @@ const WorldCuisines = () => {
     <div className="dish-card-header">
       {dish.image ? (
         <img 
+          loading="lazy"
           src={dish.image} 
           alt={dish.title}
           className="dish-image"
@@ -142,8 +143,6 @@ const WorldCuisines = () => {
       <span className="dish-category-badge">{dish.country}</span>
     </div>
   
-  
-            
             <div className="dish-card-body">
               <h3>{dish.title}</h3>
               <p className="dish-description">{dish.description}</p>
