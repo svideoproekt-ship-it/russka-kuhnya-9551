@@ -31,7 +31,7 @@ function FishCategory() {
           </div>
           {selectedRecipe.image && (
             <div className="recipe-image-container">
-              <img src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />
+              <img loading="lazy" src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" / loading="lazy" />
             </div>
           )}
           <div className="recipe-content">
@@ -74,7 +74,7 @@ function FishCategory() {
         {fishData.map((recipe) => (
           <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
             <div className="recipe-card-image">
-              <img src={recipe.image} alt={recipe.name} />
+              <img loading="lazy" src={recipe.image} alt={recipe.name} / loading="lazy" />
             </div>
             <div className="recipe-card-content">
               <h3>{recipe.name}</h3>

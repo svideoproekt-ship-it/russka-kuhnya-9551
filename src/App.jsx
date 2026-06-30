@@ -41,6 +41,29 @@ function App() {
     }
   }, []);
 
+  // 🚀 ГЛОБАЛЬНОЕ LAZY LOADING ДЛЯ ВСЕХ ИЗОБРАЖЕНИЙ
+  useEffect(() => {
+    // Функция добавления lazy loading
+    const addLazyLoading = () => {
+      document.querySelectorAll('img:not([loading])').forEach(img => {
+        img.setAttribute('loading', 'lazy');
+      });
+    };
+    
+    // Запускаем сразу при загрузке
+    addLazyLoading();
+    
+    // Наблюдаем за изменениями DOM (для SPA - при переходах между страницами)
+    const observer = new MutationObserver(addLazyLoading);
+    observer.observe(document.body, { 
+      childList: true, 
+      subtree: true 
+    });
+    
+    // Очистка при размонтировании
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <Router>
       <Analytics />
@@ -65,4 +88,4 @@ function App() {
   );
 }
 
-export default App;  // ← ЭТА СТРОКА ОБЯЗАТЕЛЬНА!
+export default App;
