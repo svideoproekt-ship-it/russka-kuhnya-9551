@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { drinksData } from '../data/drinksData';
 import './DrinksCategory.css';
 import ShareButtons from '../components/ShareButtons';
+
 function DrinksCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -33,11 +34,10 @@ function DrinksCategory() {
             </div>
           </div>
 
-          {/* ← КНОПКА ЗДЕСЬ ПРАВИЛЬНО! */}
-
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img 
+                loading="lazy"
                 src={selectedRecipe.image} 
                 alt={selectedRecipe.name}
                 className="recipe-image"
@@ -77,7 +77,6 @@ function DrinksCategory() {
     );
   }
 
-  // СПИСОК РЕЦЕПТОВ — БЕЗ КНОПКИ!
   return (
     <div className="drinks-category">
       <div className="category-header">
@@ -98,6 +97,7 @@ function DrinksCategory() {
             <div className="recipe-card-image">
               {recipe.image ? (
                 <img 
+                  loading="lazy"
                   src={recipe.image} 
                   alt={recipe.name}
                   onError={(e) => {

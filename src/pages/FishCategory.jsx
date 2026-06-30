@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { fishData } from '../data/fishData';
 import './FishCategory.css';
 import ShareButtons from '../components/ShareButtons';
+
 function FishCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -31,7 +32,7 @@ function FishCategory() {
           </div>
           {selectedRecipe.image && (
             <div className="recipe-image-container">
-              <img loading="lazy" src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" / loading="lazy" />
+              <img loading="lazy" src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />
             </div>
           )}
           <div className="recipe-content">
@@ -74,7 +75,7 @@ function FishCategory() {
         {fishData.map((recipe) => (
           <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
             <div className="recipe-card-image">
-              <img loading="lazy" src={recipe.image} alt={recipe.name} / loading="lazy" />
+              <img loading="lazy" src={recipe.image} alt={recipe.name} />
             </div>
             <div className="recipe-card-content">
               <h3>{recipe.name}</h3>

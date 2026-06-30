@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { bakingData } from '../data/bakingData';
 import './BakingCategory.css';
 import ShareButtons from '../components/ShareButtons';
+
 function BakingCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -31,7 +32,7 @@ function BakingCategory() {
           </div>
           {selectedRecipe.image && (
             <div className="recipe-image-container">
-              <img src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />
+              <img loading="lazy" src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />
             </div>
           )}
           <div className="recipe-content">
@@ -74,7 +75,7 @@ function BakingCategory() {
         {bakingData.map((recipe) => (
           <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
             <div className="recipe-card-image">
-              <img src={recipe.image} alt={recipe.name} />
+              <img loading="lazy" src={recipe.image} alt={recipe.name} />
             </div>
             <div className="recipe-card-content">
               <h3>{recipe.name}</h3>

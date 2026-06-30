@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { dessertsData } from '../data/dessertsData';
 import './DessertsCategory.css';
 import ShareButtons from '../components/ShareButtons';
+
 function DessertsCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -32,11 +33,11 @@ function DessertsCategory() {
             </div>
           </div>
 
-          {/* КНОПКА "ПОДЕЛИТЬСЯ" — ЗДЕСЬ ПРАВИЛЬНО! */}
           <ShareButtons title={selectedRecipe.name} />
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img 
+                loading="lazy"
                 src={selectedRecipe.image} 
                 alt={selectedRecipe.name}
                 className="recipe-image"
@@ -76,7 +77,6 @@ function DessertsCategory() {
     );
   }
 
-  // СПИСОК РЕЦЕПТОВ — БЕЗ КНОПКИ!
   return (
     <div className="desserts-category">
       <div className="category-header">
@@ -97,6 +97,7 @@ function DessertsCategory() {
             <div className="recipe-card-image">
               {recipe.image ? (
                 <img 
+                  loading="lazy"
                   src={recipe.image} 
                   alt={recipe.name}
                   onError={(e) => {
