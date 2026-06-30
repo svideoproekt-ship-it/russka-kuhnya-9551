@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { porridgeData } from '../data/porridgeData';
 import './Porridge.css';
 import ShareButtons from '../components/ShareButtons';
+
 function Porridge() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -33,10 +34,10 @@ function Porridge() {
             </div>
           </div>
 
-
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img 
+                loading="lazy"
                 src={selectedRecipe.image} 
                 alt={selectedRecipe.name}
                 className="recipe-image"
@@ -67,7 +68,7 @@ function Porridge() {
             </div>
 
             <div className="recipe-section history-section">
-              <h2> Историческая справка</h2>
+              <h2>📚 Историческая справка</h2>
               <p className="history-text">{selectedRecipe.history}</p>
             </div>
           </div>
@@ -96,6 +97,7 @@ function Porridge() {
             <div className="recipe-card-image">
               {recipe.image ? (
                 <img 
+                  loading="lazy"
                   src={recipe.image} 
                   alt={recipe.name}
                   onError={(e) => {

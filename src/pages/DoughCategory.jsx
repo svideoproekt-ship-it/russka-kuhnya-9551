@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { doughData } from '../data/doughData'; 
 import './DoughCategory.css';
 import ShareButtons from '../components/ShareButtons';
+
 function DoughCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
@@ -33,11 +34,10 @@ function DoughCategory() {
             </div>
           </div>
 
-          {/* ← КНОПКА "ПОДЕЛИТЬСЯ" ЗДЕСЬ */}
-
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img 
+                loading="lazy"
                 src={selectedRecipe.image} 
                 alt={selectedRecipe.name}
                 className="recipe-image"
@@ -104,6 +104,7 @@ function DoughCategory() {
             <div className="recipe-card-image">
               {recipe.image ? (
                 <img 
+                  loading="lazy"
                   src={recipe.image} 
                   alt={recipe.name}
                   onError={(e) => {
