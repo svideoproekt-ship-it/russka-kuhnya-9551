@@ -265,7 +265,6 @@ const SeasonalDishes = () => {
 <div className="dishes-grid">
   {filteredDishes.map((dish) => (
     <React.Fragment key={dish.id}>
-      {/* ← ВСТАВЬ ЭТОТ БЛОК С Schema.org */}
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify({
@@ -290,7 +289,6 @@ const SeasonalDishes = () => {
         </script>
       </Helmet>
 
-      {/* ← ВОТ ТВОЯ СУЩЕСТВУЮЩАЯ КАРТОЧКА (без изменений!) */}
       <div className="dish-card">
         <div className="dish-card-header">
           <span className="dish-icon">{dish.icon}</span>
@@ -301,6 +299,7 @@ const SeasonalDishes = () => {
           {dish.image && (
             <div className="dish-image-container">
               <img 
+                loading="lazy"
                 src={dish.image} 
                 alt={dish.title}
                 className="dish-image"
