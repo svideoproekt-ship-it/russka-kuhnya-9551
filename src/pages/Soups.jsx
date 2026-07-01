@@ -8,7 +8,6 @@ import './Soups.css';
 const Soups = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  // 5 современных популярных рецептов
   const modernSoups = [
     {
       id: 103,
@@ -67,10 +66,8 @@ const Soups = () => {
     }
   ];
 
-  // Объединяем традиционные (15) и современные (5)
   const allSoups = [...soupsData, ...modernSoups];
 
-  // Обработка URL параметра для открытия конкретного рецепта
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const recipeId = urlParams.get('recipe');
@@ -94,7 +91,6 @@ const Soups = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Кнопка "Поделиться" для супов
   const handleShare = (recipe) => {
     const shareUrl = `https://russka-kuhnya-9551.vercel.app/soups?recipe=${recipe.id}`;
     
@@ -142,7 +138,7 @@ const Soups = () => {
           </script>
         </Helmet>
         
-        <div className="category-page">
+        <div className="soups-category">
           <SEO 
             title={`${selectedRecipe.name} - Рецепт с историей | Русская Кухня`}
             description={`${selectedRecipe.name}. Время: ${selectedRecipe.time}. Эпоха: ${selectedRecipe.epoch}. ${selectedRecipe.history}`}
@@ -219,9 +215,9 @@ const Soups = () => {
     );
   }
 
-  // СПИСОК ВСЕХ СУПОВ — СТАНДАРТНЫЙ СТИЛЬ
+  // СПИСОК ВСЕХ СУПОВ — СТАНДАРТНЫЙ СТИЛЬ КАК В ВЫПЕЧКЕ
   return (
-    <div className="category-page">
+    <div className="soups-category">
       <SEO 
         title="Супы - Традиционные русские рецепты | Русская Кухня"
         description="20 лучших рецептов русских супов от древности до наших дней. Щи, борщ, солянка, уха и другие традиционные блюда."
@@ -262,7 +258,7 @@ const Soups = () => {
               <h3>{recipe.name}</h3>
               <div className="recipe-card-meta">
                 <span>🕰 {recipe.epoch}</span>
-                <span>⏱ {recipe.time}</span>
+                <span> {recipe.time}</span>
               </div>
               <button className="view-recipe-btn">
                 Смотреть рецепт
