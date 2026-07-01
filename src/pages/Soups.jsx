@@ -111,113 +111,168 @@ const Soups = () => {
     }
   };
 
-// Детальный просмотр
-if (selectedRecipe) {
-  return (
-    <>
-      <Helmet>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Recipe",
-            "name": selectedRecipe.name || selectedRecipe.title,
-            "image": selectedRecipe.image ? 
-              `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : 
-              'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg',
-            "description": selectedRecipe.description || selectedRecipe.history || '',
-            "prepTime": selectedRecipe.time || 'PT30M',
-            "recipeIngredient": selectedRecipe.ingredients || [],
-            "recipeInstructions": (selectedRecipe.preparation || []).map((step, index) => ({
-              "@type": "HowToStep",
-              "position": index + 1,
-              "text": step
-            })),
-            "author": {
-              "@type": "Organization",
-              "name": "Русская Кухня"
-            },
-            "recipeCategory": selectedRecipe.category || selectedRecipe.epoch || "Суп",
-            "cuisine": "Русская кухня"
-          })}
-        </script>
-      </Helmet>
-      
-      <div className="soups-page">
-        <SEO 
-          title={`${selectedRecipe.name} - Рецепт с историей | Русская Кухня`}
-          description={`${selectedRecipe.name}. Время: ${selectedRecipe.time}. Эпоха: ${selectedRecipe.epoch}. ${selectedRecipe.history}`}
-          keywords={`${selectedRecipe.name}, рецепт, русская кухня, ${selectedRecipe.epoch}`}
-          url={`https://russka-kuhnya-9551.vercel.app/soups?recipe=${selectedRecipe.id}`}
-        />
+  // Детальный просмотр
+  if (selectedRecipe) {
+    return (
+      <>
+        <Helmet>
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Recipe",
+              "name": selectedRecipe.name || selectedRecipe.title,
+              "image": selectedRecipe.image ? 
+                `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : 
+                'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg',
+              "description": selectedRecipe.description || selectedRecipe.history || '',
+              "prepTime": selectedRecipe.time || 'PT30M',
+              "recipeIngredient": selectedRecipe.ingredients || [],
+              "recipeInstructions": (selectedRecipe.preparation || []).map((step, index) => ({
+                "@type": "HowToStep",
+                "position": index + 1,
+                "text": step
+              })),
+              "author": {
+                "@type": "Organization",
+                "name": "Русская Кухня"
+              },
+              "recipeCategory": selectedRecipe.category || selectedRecipe.epoch || "Суп",
+              "cuisine": "Русская кухня"
+            })}
+          </script>
+        </Helmet>
+        
+        <div className="soups-page">
+          <SEO 
+            title={`${selectedRecipe.name} - Рецепт с историей | Русская Кухня`}
+            description={`${selectedRecipe.name}. Время: ${selectedRecipe.time}. Эпоха: ${selectedRecipe.epoch}. ${selectedRecipe.history}`}
+            keywords={`${selectedRecipe.name}, рецепт, русская кухня, ${selectedRecipe.epoch}`}
+            url={`https://russka-kuhnya-9551.vercel.app/soups?recipe=${selectedRecipe.id}`}
+          />
 
-        <div className="soup-detail">
-          <button className="back-button" onClick={handleBack}>
-            ← Назад к списку
-          </button>
-          
-          <div className="recipe-card">
-            <div className="recipe-header">
-              <h1>{selectedRecipe.name}</h1>
-              <div className="recipe-meta">
-                <span className="epoch">🕰 {selectedRecipe.epoch}</span>
-                <span className="time">⏱ {selectedRecipe.time}</span>
-              </div>
-            </div>
-
-            <div className="recipe-top-actions">
-              <button className="share-btn-top" onClick={() => handleShare(selectedRecipe)}>
-                <span>📤</span> Поделиться рецептом
-              </button>
-            </div>
-
-            {selectedRecipe.image && (
-              <div className="recipe-image-container">
-                <img 
-                  loading="lazy"
-                  src={selectedRecipe.image} 
-                  alt={selectedRecipe.name}
-                  className="recipe-image"
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
-                  }}
-                />
-              </div>
-            )}
-
-            {selectedRecipe.icon && !selectedRecipe.image && (
-              <div className="recipe-icon-large">{selectedRecipe.icon}</div>
-            )}
-
-            <div className="recipe-content">
-              <div className="recipe-section">
-                <h2>📝 Ингредиенты</h2>
-                <ul className="ingredients-list">
-                  {selectedRecipe.ingredients.map((item, index) => (
-                    <li key={index}>{item}</li>
-                  ))}
-                </ul>
+          <div className="soup-detail">
+            <button className="back-button" onClick={handleBack}>
+              ← Назад к списку
+            </button>
+            
+            <div className="recipe-card">
+              <div className="recipe-header">
+                <h1>{selectedRecipe.name}</h1>
+                <div className="recipe-meta">
+                  <span className="epoch">🕰 {selectedRecipe.epoch}</span>
+                  <span className="time">⏱ {selectedRecipe.time}</span>
+                </div>
               </div>
 
-              <div className="recipe-section">
-                <h2>👨‍🍳 Приготовление</h2>
-                <ol className="preparation-list">
-                  {selectedRecipe.preparation.map((step, index) => (
-                    <li key={index}>{step}</li>
-                  ))}
-                </ol>
+              <div className="recipe-top-actions">
+                <button className="share-btn-top" onClick={() => handleShare(selectedRecipe)}>
+                  <span>📤</span> Поделиться рецептом
+                </button>
               </div>
 
-              <div className="recipe-section history-section">
-                <h2>📚 Историческая справка</h2>
-                <p className="history-text">{selectedRecipe.history}</p>
+              {selectedRecipe.image && (
+                <div className="recipe-image-container">
+                  <img 
+                    loading="lazy"
+                    src={selectedRecipe.image} 
+                    alt={selectedRecipe.name}
+                    className="recipe-image"
+                    onError={(e) => {
+                      e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
+                    }}
+                  />
+                </div>
+              )}
+
+              {selectedRecipe.icon && !selectedRecipe.image && (
+                <div className="recipe-icon-large">{selectedRecipe.icon}</div>
+              )}
+
+              <div className="recipe-content">
+                <div className="recipe-section">
+                  <h2>📝 Ингредиенты</h2>
+                  <ul className="ingredients-list">
+                    {selectedRecipe.ingredients.map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="recipe-section">
+                  <h2>👨‍🍳 Приготовление</h2>
+                  <ol className="preparation-list">
+                    {selectedRecipe.preparation.map((step, index) => (
+                      <li key={index}>{step}</li>
+                    ))}
+                  </ol>
+                </div>
+
+                <div className="recipe-section history-section">
+                  <h2>📚 Историческая справка</h2>
+                  <p className="history-text">{selectedRecipe.history}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </>  
+      </>  
     );
   }
-  };
+
+  // СПИСОК ВСЕХ СУПОВ (ЭТОЙ ЧАСТИ НЕ БЫЛО!)
+  return (
+    <div className="soups-page">
+      <SEO 
+        title="Супы - Традиционные русские рецепты | Русская Кухня"
+        description="20 лучших рецептов русских супов от древности до наших дней. Щи, борщ, солянка, уха и другие традиционные блюда."
+        keywords="супы, русские супы, щи, борщ, солянка, рецепты супов"
+        url="https://russka-kuhnya-9551.vercel.app/soups"
+      />
+
+      <div className="soups-header">
+        <Link to="/" className="back-home">← На главную</Link>
+        <h1>🍲 Супы</h1>
+        <p className="soups-description">
+          Традиционные русские супы — от древних щей до современных крем-супов
+        </p>
+      </div>
+
+      <div className="soups-grid">
+        {allSoups.map((recipe) => (
+          <div 
+            key={recipe.id} 
+            className="soup-card"
+            onClick={() => handleRecipeClick(recipe)}
+          >
+            <div className="soup-card-image">
+              {recipe.image ? (
+                <img 
+                  loading="lazy"
+                  src={recipe.image} 
+                  alt={recipe.name}
+                  onError={(e) => {
+                    e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
+                  }}
+                />
+              ) : (
+                <div className="no-image">{recipe.icon || '🍲'}</div>
+              )}
+            </div>
+            <div className="soup-card-content">
+              <h3>{recipe.name}</h3>
+              <div className="soup-card-meta">
+                <span>🕰 {recipe.epoch}</span>
+                <span>⏱ {recipe.time}</span>
+              </div>
+              <button className="view-recipe-btn">
+                Смотреть рецепт
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 export default Soups;
