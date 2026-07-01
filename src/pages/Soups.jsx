@@ -142,7 +142,7 @@ const Soups = () => {
           </script>
         </Helmet>
         
-        <div className="soups-page">
+        <div className="category-page">
           <SEO 
             title={`${selectedRecipe.name} - Рецепт с историей | Русская Кухня`}
             description={`${selectedRecipe.name}. Время: ${selectedRecipe.time}. Эпоха: ${selectedRecipe.epoch}. ${selectedRecipe.history}`}
@@ -150,7 +150,7 @@ const Soups = () => {
             url={`https://russka-kuhnya-9551.vercel.app/soups?recipe=${selectedRecipe.id}`}
           />
 
-          <div className="soup-detail">
+          <div className="recipe-detail">
             <button className="back-button" onClick={handleBack}>
               ← Назад к списку
             </button>
@@ -199,7 +199,7 @@ const Soups = () => {
                 </div>
 
                 <div className="recipe-section">
-                  <h2>👨‍🍳 Приготовление</h2>
+                  <h2>👨‍ Приготовление</h2>
                   <ol className="preparation-list">
                     {selectedRecipe.preparation.map((step, index) => (
                       <li key={index}>{step}</li>
@@ -219,9 +219,9 @@ const Soups = () => {
     );
   }
 
-  // СПИСОК ВСЕХ СУПОВ (ЭТОЙ ЧАСТИ НЕ БЫЛО!)
+  // СПИСОК ВСЕХ СУПОВ — СТАНДАРТНЫЙ СТИЛЬ
   return (
-    <div className="soups-page">
+    <div className="category-page">
       <SEO 
         title="Супы - Традиционные русские рецепты | Русская Кухня"
         description="20 лучших рецептов русских супов от древности до наших дней. Щи, борщ, солянка, уха и другие традиционные блюда."
@@ -229,22 +229,22 @@ const Soups = () => {
         url="https://russka-kuhnya-9551.vercel.app/soups"
       />
 
-      <div className="soups-header">
+      <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🍲 Супы</h1>
-        <p className="soups-description">
+        <p className="category-description">
           Традиционные русские супы — от древних щей до современных крем-супов
         </p>
       </div>
 
-      <div className="soups-grid">
+      <div className="recipes-grid">
         {allSoups.map((recipe) => (
           <div 
             key={recipe.id} 
-            className="soup-card"
+            className="recipe-card"
             onClick={() => handleRecipeClick(recipe)}
           >
-            <div className="soup-card-image">
+            <div className="recipe-card-image">
               {recipe.image ? (
                 <img 
                   loading="lazy"
@@ -258,9 +258,9 @@ const Soups = () => {
                 <div className="no-image">{recipe.icon || '🍲'}</div>
               )}
             </div>
-            <div className="soup-card-content">
+            <div className="recipe-card-content">
               <h3>{recipe.name}</h3>
-              <div className="soup-card-meta">
+              <div className="recipe-card-meta">
                 <span>🕰 {recipe.epoch}</span>
                 <span>⏱ {recipe.time}</span>
               </div>
