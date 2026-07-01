@@ -1,482 +1,298 @@
-/* Страница супов - Синий контрастный фон */
-.soups-page {
+/* BakingCategory.css - Выпечка */
+.baking-category {
   min-height: 100vh;
-  background: linear-gradient(180deg, #24418f 0%, #1d2d53 100%);
-  color: #fbbf24;
-  padding: 40px 20px;
+  background: linear-gradient(160deg, #0a0a2a 0%, #1a0a00 100%);
+  padding: 20px;
+  font-family: 'Times New Roman', serif;
 }
 
-/* Заголовок на отдельной плашке */
-.soups-header {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  border: 3px solid #fbbf24;
-  border-radius: 16px;
-  padding: 30px 40px;
-  text-align: center;
-  margin-bottom: 50px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-.soups-header-content {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.soups-header-icon {
-  font-size: 80px;
-  display: block;
+.baking-category .back-button,
+.baking-category .back-home {
+  display: inline-block;
   margin-bottom: 20px;
-  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #FFD700, #FF8C00);
+  color: #2c1810;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
-.soups-header h1 {
-  font-family: 'Ruslan Display', cursive;
-  font-size: 64px;
-  color: #fbbf24;
-  margin: 0 0 15px 0;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
-  letter-spacing: 3px;
-  font-weight: 700;
+.baking-category .back-button:hover,
+.baking-category .back-home:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.6);
 }
 
-.soups-header p {
-  font-size: 24px;
-  color: #e2e8f0;
-  margin: 0 0 10px 0;
-  line-height: 1.6;
-  font-weight: 500;
+.baking-category .category-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 3px solid #FF8C00;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(255, 165, 0, 0.4);
 }
 
-.soups-subtitle {
-  color: #f59e0b !important;
-  font-weight: 600 !important;
-  font-size: 22px !important;
-  margin-top: 15px !important;
+.baking-category .category-header h1 {
+  color: #2c1810;
+  font-size: 3rem;
+  margin: 10px 0;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
 }
 
+.baking-category .category-description {
+  color: #4a2c17;
+  font-size: 1.2rem;
+  font-style: italic;
+}
 
-/* Сетка */
-.soups-grid {
+.baking-category .recipes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 30px;
   max-width: 1400px;
   margin: 0 auto;
 }
 
-/* Карточка */
-.soup-card {
-  background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%);
-  border: 3px solid #fbbf24;
-  border-radius: 16px;
+.baking-category .recipe-card {
+  background: linear-gradient(135deg, #FFB347, #FF8C00);
+  border: 2px solid #FFD700;
+  border-radius: 15px;
   overflow: hidden;
-  transition: all 0.3s ease;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-.soup-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 16px 40px rgba(251, 191, 36, 0.3);
-  border-color: #f59e0b;
+.baking-category .recipe-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 179, 71, 0.7);
+  border-color: #8B4513;
 }
 
-.soup-card-header {
-  position: relative;
-  padding: 0;
-  background: #1e3a8a;
-}
-
-.soup-card-image {
+.baking-category .recipe-card-image {
   width: 100%;
-  height: 280px;
+  height: 220px;
+  overflow: hidden;
+  background: #8B4513;
+}
+
+.baking-category .recipe-card-image img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.4s ease;
 }
 
-/* Placeholder для отсутствующих картинок */
-.soup-icon {
-  width: 100%;
-  height: 280px;
-  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 120px;
-  border-bottom: 3px solid #fbbf24;
+.baking-category .recipe-card:hover .recipe-card-image img {
+  transform: scale(1.1);
 }
 
-.soup-category-badge {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #0f172a;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.soup-card-body {
-  padding: 25px;
-  flex-grow: 1;
-  background: rgba(30, 58, 138, 0.3);
-}
-
-.soup-card-body h3 {
-  font-size: 30px;
-  color: #fbbf24;
-  margin: 0 0 15px 0;
-  font-weight: 700;
-  line-height: 1.3;
-  font-family: 'Ruslan Display', cursive;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-}
-
-.soup-meta-inline {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  color: #fbbf24;
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.soup-card-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 25px;
-  border-top: 2px solid rgba(251, 191, 36, 0.3);
-  gap: 12px;
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.read-more-btn {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #0f172a;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  flex-grow: 1;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.read-more-btn:hover {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
-}
-
-
-
-/* Детальный просмотр */
-.soup-detail {
-  max-width: 1000px;
-  margin: 0 auto;
+.baking-category .recipe-card-content {
   padding: 20px;
 }
 
-.back-button {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  border: none;
-  color: #0f172a;
-  padding: 14px 28px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  transition: all 0.3s ease;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.back-button:hover {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  transform: translateX(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-}
-
-.recipe-card {
-  background: linear-gradient(180deg, #2563eb 0%, #1e40af 100%);
-  border: 3px solid #fbbf24;
-  border-radius: 16px;
-  padding: 40px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-}
-
-.recipe-header {
+.baking-category .recipe-card-content h3 {
+  color: #2c1810;
+  font-size: 1.5rem;
+  margin: 0 0 15px 0;
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.recipe-header h1 {
-  font-size: 46px;
-  color: #fbbf24;
-  margin: 0 0 20px 0;
-  font-weight: 700;
-  font-family: 'Ruslan Display', cursive;
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+.baking-category .recipe-card-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #4a2c17;
+  font-size: 0.9rem;
 }
 
-.recipe-meta {
+.baking-category .view-recipe-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #8B4513, #A0522D);
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  color: #FFD700;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.baking-category .view-recipe-btn:hover {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #2c1810;
+  transform: scale(1.05);
+}
+
+/* Детальная страница выпечки */
+.baking-category .recipe-detail {
+  max-width: 900px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  border: 3px solid #FF8C00;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+}
+
+.baking-category .recipe-header h1 {
+  color: #2c1810;
+  font-size: 2.5rem;
+  margin: 0 0 15px 0;
+}
+
+.baking-category .recipe-meta {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
+  font-size: 1.1rem;
+  color: #4a2c17;
+}
+
+.baking-category .recipe-meta span {
+  background: rgba(255, 215, 0, 0.4);
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #FF8C00;
+}
+
+.baking-category .recipe-image-container {
+  width: 100%;
   margin-bottom: 30px;
-  flex-wrap: wrap;
-}
-
-.epoch, .time {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 20px;
-  color: #0f172a;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Кнопка Поделиться в начале рецепта */
-.recipe-top-actions {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.share-btn-top {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #0f172a;
-  border: none;
-  padding: 16px 40px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.share-btn-top:hover {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(251, 191, 36, 0.4);
-}
-/* Кнопка Поделиться в начале рецепта */
-.recipe-top-actions {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.share-btn-top {
-  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  color: #0f172a;
-  border: none;
-  padding: 16px 40px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-family: 'Roboto', sans-serif;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.share-btn-top:hover {
-  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(251, 191, 36, 0.4);
-}
-
-.recipe-image-container {
-  margin: 30px auto;
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
-  max-width: 100%;
-  border: 3px solid #fbbf24;
+  border: 3px solid #FF8C00;
 }
 
-.recipe-image {
+.baking-category .recipe-image {
   width: 100%;
   height: auto;
-  object-fit: cover;
-  border-radius: 12px;
+  display: block;
 }
 
-.recipe-icon-large {
-  width: 100%;
-  height: 400px;
-  background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 180px;
-  margin: 30px 0;
-  border-radius: 12px;
-  border: 3px solid #fbbf24;
+.baking-category .recipe-content {
+  background: rgba(255, 248, 220, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  color: #2c1810;
 }
 
-.recipe-content {
-  margin-top: 40px;
-}
-
-.recipe-section {
-  margin-bottom: 35px;
-}
-
-.recipe-section h2 {
-  color: #fbbf24;
-  font-size: 34px;
-  margin: 0 0 20px 0;
-  font-weight: 700;
-  font-family: 'Ruslan Display', cursive;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  border-bottom: 3px solid #fbbf24;
+.baking-category .recipe-section h2 {
+  color: #8B4513;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #FFD700;
   padding-bottom: 10px;
 }
 
-.ingredients-list {
+.baking-category .ingredients-list li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, #FFB347, #FF8C00);
+  border-radius: 8px;
+  color: #2c1810;
+  font-weight: 500;
+  position: relative;
+  padding-left: 35px;
   list-style: none;
-  padding: 25px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  margin: 0;
-  border: 2px solid rgba(251, 191, 36, 0.3);
 }
 
-.ingredients-list li {
-  padding: 12px 0;
-  color: #e2e8f0;
-  font-size: 22px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  font-weight: 500;
-}
-
-.ingredients-list li:last-child {
-  border-bottom: none;
-}
-
-.ingredients-list li::before {
-  content: "• ";
-  color: #fbbf24;
+.baking-category .ingredients-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 15px;
+  color: #2c1810;
   font-weight: bold;
-  margin-right: 12px;
-  font-size: 26px;
 }
 
-.preparation-list {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 25px;
+.baking-category .preparation-list {
+  counter-reset: step-counter;
+  list-style: none;
+  padding: 0;
+}
+
+.baking-category .preparation-list li {
+  padding: 15px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #ffe4b5, #ffd27f);
+  border-radius: 8px;
+  color: #4a2c17;
+  position: relative;
   padding-left: 50px;
-  margin: 0;
-  border: 2px solid rgba(251, 191, 36, 0.3);
+  counter-increment: step-counter;
 }
 
-.preparation-list li {
-  padding: 14px 0;
-  color: #e2e8f0;
-  font-size: 22px;
-  line-height: 1.7;
-  font-weight: 500;
+.baking-category .preparation-list li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #8B4513;
+  color: #FFD700;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
 }
 
-.history-section {
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.1) 100%);
-  border-left: 5px solid #fbbf24;
-  border-radius: 12px;
-  padding: 30px;
-  border: 2px solid rgba(251, 191, 36, 0.3);
+.baking-category .history-section {
+  background: linear-gradient(135deg, #ffe4b5, #ffd27f);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #8B4513;
 }
 
-.history-text {
-  color: #e2e8f0;
-  font-size: 22px;
-  line-height: 1.8;
-  margin: 0;
+.baking-category .history-text {
+  color: #4a2c17;
+  font-size: 1.1rem;
+  line-height: 1.6;
   font-style: italic;
-  font-weight: 500;
+  margin: 0;
 }
 
-/* Подвал */
-.soups-footer {
-  text-align: center;
-  margin-top: 60px;
-  padding: 40px 20px;
-  border-top: 3px solid rgba(251, 191, 36, 0.5);
-}
-
-.soups-footer p {
-  font-size: 24px;
-  color: #e2e8f0;
-  margin: 0 0 20px 0;
-  font-weight: 500;
-}
-
-.soups-back-link {
-  color: #fbbf24;
-  text-decoration: none;
-  font-size: 22px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-  display: inline-block;
-  padding: 12px 24px;
-  border: 2px solid #fbbf24;
-  border-radius: 10px;
-}
-
-.soups-back-link:hover {
-  background: #fbbf24;
-  color: #0f172a;
-  transform: translateY(-3px);
-}
-
-/* Адаптивность */
 @media (max-width: 768px) {
-  .soups-page { padding: 20px 12px; }
-  .soups-header { padding: 25px 20px; }
-  .soups-header h1 { font-size: 42px; }
-  .soups-header p { font-size: 20px; }
-  .soups-grid { grid-template-columns: 1fr; }
-  .soup-card-body h3 { font-size: 26px; }
-  .recipe-card { padding: 25px; }
-  .recipe-header h1 { font-size: 32px; }
-  .recipe-section h2 { font-size: 28px; }
-  .recipe-meta { flex-direction: column; align-items: center; gap: 15px; }
-  .soup-card-image { height: 220px; }
-  .soup-icon { height: 220px; font-size: 100px; }
-  .share-btn-top { font-size: 18px; padding: 14px 28px; }
-  .ingredients-list li, .preparation-list li, .history-text { font-size: 18px; }
+  .baking-category .category-header h1 { font-size: 2rem; }
+  .baking-category .recipes-grid { grid-template-columns: 1fr; }
+  .baking-category .recipe-header h1 { font-size: 1.8rem; }
+  .baking-category .recipe-meta { flex-direction: column; gap: 10px; }
+  .baking-category .recipe-detail { padding: 20px; }
+}/* АДАПТИВНОСТЬ ВЫПЕЧКИ */
+@media screen and (max-width: 768px) {
+  .baking-category .category-header h1 { font-size: 2.1rem !important; }
+  .baking-category .category-description { font-size: 1.1rem !important; }
+  .baking-category .recipe-card-content h3 { font-size: 1.35rem !important; }
+  .baking-category .recipe-card-meta { font-size: 0.95rem !important; }
+  .baking-category .view-recipe-btn { font-size: 1.05rem !important; padding: 13px; }
+  .baking-category .recipe-section h2 { font-size: 1.6rem !important; }
+  .baking-category .ingredients-list li, .baking-category .preparation-list li { font-size: 1.05rem !important; line-height: 1.55; padding: 12px 15px 12px 40px; }
+  .baking-category .history-text { font-size: 1.05rem !important; line-height: 1.7; }
 }
-
-@media (max-width: 480px) {
-  .soups-header h1 { font-size: 32px; }
-  .soups-header-icon { font-size: 60px; }
-  .soup-card-body h3 { font-size: 22px; }
-  .read-more-btn { font-size: 16px; padding: 12px 20px; }
-  .recipe-icon-large { height: 300px; font-size: 140px; }
+@media screen and (max-width: 480px) {
+  .baking-category .category-header h1 { font-size: 1.7rem !important; }
+  .baking-category .category-description { font-size: 1rem !important; }
+  .baking-category .recipe-card-image { height: 170px; }
+  .baking-category .recipe-card-content { padding: 16px 14px; }
+  .baking-category .recipe-card-content h3 { font-size: 1.2rem !important; }
+  .baking-category .recipe-card-meta { font-size: 0.9rem !important; flex-direction: column; gap: 4px; }
+  .baking-category .view-recipe-btn { font-size: 1rem !important; padding: 12px; }
+  .baking-category .recipe-detail { padding: 18px 14px; }
+  .baking-category .recipe-header h1 { font-size: 1.5rem !important; }
+  .baking-category .recipe-meta { flex-direction: column; gap: 6px; font-size: 0.95rem !important; }
+  .baking-category .recipe-section h2 { font-size: 1.35rem !important; }
+  .baking-category .ingredients-list li, .baking-category .preparation-list li { font-size: 1rem !important; padding: 11px 12px 11px 38px; }
+  .baking-category .history-section { padding: 16px 14px; }
+  .baking-category .history-text { font-size: 1rem !important; }
+  .baking-category .back-button, .baking-category .back-home { font-size: 1rem !important; padding: 11px 16px; }
 }
