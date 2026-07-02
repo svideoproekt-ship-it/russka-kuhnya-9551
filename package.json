@@ -7,10 +7,10 @@
     "node": "24.x"
   },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
+  "dev": "vite",
+  "build": "vite build && copy public\\sitemap.xml dist\\sitemap.xml",
+  "preview": "vite preview"
+},
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
     "lucide-react": "^1.14.0",
