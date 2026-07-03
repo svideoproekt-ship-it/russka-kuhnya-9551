@@ -18,14 +18,16 @@ function HomePage() {
     }
   };
 
-  <SEO 
-  title="Русская Кухня - Традиционные рецепты с душой"
-  description="Лучшие рецепты русской кухни: от бабушкиных пирогов до современных блюд. Кухонные хитрости, блюда сезона, рецепты мира. Пошаговые инструкции для каждого."
-  keywords="русская кухня, рецепты, кулинария, традиционные блюда, русские рецепты, кухонные хитрости, блюда сезона"
-  url="https://russka-kuhnya-9551.vercel.app"
-/>
   return (
     <div className="home-page">
+      {/* SEO - ИСПРАВЛЕНО: теперь внутри return */}
+      <SEO 
+        title="Русская Кухня - Традиционные рецепты с душой"
+        description="Лучшие рецепты русской кухни: от бабушкиных пирогов до современных блюд. Кухонные хитрости, блюда сезона, рецепты мира. Пошаговые инструкции для каждого."
+        keywords="русская кухня, рецепты, кулинария, традиционные блюда, русские рецепты, кухонные хитрости, блюда сезона"
+        url="https://russka-kuhnya-9551.vercel.app"
+      />
+
       {/* Шапка */}
       <header className="header">
         <div className="logo">
@@ -49,60 +51,61 @@ function HomePage() {
         </form>
       </div>
 
-      {/* Категории */}
-            {/* Кнопка подписки */}
+      {/* Кнопка подписки */}
       <SubscribeButton />
 
-      {/* Категории */}
-<main className="main-content">
-  {/* Кухонные хитрости - специальная секция */}
-  <div className="hacks-promo">
-    <a href="/kitchen-hacks" className="hacks-promo-link">
-      <div className="hacks-promo-content">
-        <div className="hacks-promo-icon">💡</div>
-        <div className="hacks-promo-text">
-          <h3>Кухонные хитрости</h3>
-          <p>Полезные советы для приготовления, хранения и организации кухни</p>
+      {/* Основной контент */}
+      <main className="main-content">
+        {/* Кухонные хитрости - специальная секция */}
+        <div className="hacks-promo">
+          <a href="/kitchen-hacks" className="hacks-promo-link">
+            <div className="hacks-promo-content">
+              <div className="hacks-promo-icon">💡</div>
+              <div className="hacks-promo-text">
+                <h3>Кухонные хитрости</h3>
+                <p>Полезные советы для приготовления, хранения и организации кухни</p>
+              </div>
+              <div className="hacks-promo-arrow">→</div>
+            </div>
+          </a>
         </div>
-        <div className="hacks-promo-arrow">→</div>
-      </div>
-    </a>
-  </div>
-{/* Блюда сезона - специальная секция */}
-<div className="seasonal-promo">
-  <a href="/seasonal-dishes" className="seasonal-promo-link">
-    <div className="seasonal-promo-content">
-      <div className="seasonal-promo-icon">☀️</div>
-      <div className="seasonal-promo-text">
-        <h3>Блюда сезона</h3>
-        <p>Летние рецепты из свежих овощей, фруктов и ягод</p>
-      </div>
-      <div className="seasonal-promo-arrow">→</div>
-    </div>
-  </a>
-</div>
 
-{/* Вкусы мира - специальная секция */}
-<div className="world-promo">
-  <a href="/world-cuisines" className="world-promo-link">
-    <div className="world-promo-content">
-      <div className="world-promo-icon">🌍</div>
-      <div className="world-promo-text">
-        <h3>Вкусы мира</h3>
-        <p>Народные рецепты из разных стран. Новый рецепт каждую неделю!</p>
-      </div>
-      <div className="world-promo-arrow">→</div>
-    </div>
-  </a>
-</div>
-  {/* Категории */}
-  <Categories />
-</main>
+        {/* Блюда сезона - специальная секция */}
+        <div className="seasonal-promo">
+          <a href="/seasonal-dishes" className="seasonal-promo-link">
+            <div className="seasonal-promo-content">
+              <div className="seasonal-promo-icon">☀️</div>
+              <div className="seasonal-promo-text">
+                <h3>Блюда сезона</h3>
+                <p>Летние рецепты из свежих овощей, фруктов и ягод</p>
+              </div>
+              <div className="seasonal-promo-arrow">→</div>
+            </div>
+          </a>
+        </div>
+
+        {/* Вкусы мира - специальная секция */}
+        <div className="world-promo">
+          <a href="/world-cuisines" className="world-promo-link">
+            <div className="world-promo-content">
+              <div className="world-promo-icon">🌍</div>
+              <div className="world-promo-text">
+                <h3>Вкусы мира</h3>
+                <p>Народные рецепты из разных стран. Новый рецепт каждую неделю!</p>
+              </div>
+              <div className="world-promo-arrow">→</div>
+            </div>
+          </a>
+        </div>
+
+        {/* Категории */}
+        <Categories />
+      </main>
 
       <footer className="footer">
-  <FeedbackForm />
-  <p>© 2026 Русская Кухня. Сохраняем традиции.</p>
-</footer>
+        <FeedbackForm />
+        <p>© 2026 Русская Кухня. Сохраняем традиции.</p>
+      </footer>
     </div>
   );
 }
