@@ -1,66 +1,129 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import OneSignal from 'react-onesignal';
 import { Analytics } from "@vercel/analytics/react";
 
+// HomePage загружается сразу (это главная страница - LCP)
 import HomePage from './pages/HomePage';
-import SearchPage from './pages/SearchPage';
-import BakingCategory from './pages/BakingCategory';
-import MeatCategory from './pages/MeatCategory';
-import FishCategory from './pages/FishCategory';
-import SnacksCategory from './pages/SnacksCategory';
-import DessertsCategory from './pages/DessertsCategory';
-import DrinksCategory from './pages/DrinksCategory';
-import DoughCategory from './pages/DoughCategory';
-import Porridge from './pages/Porridge';
-import RecipePage from './pages/RecipePage';
-import Soups from './pages/Soups';
-import KitchenHacks from './pages/KitchenHacks';
-import WorldCuisines from './pages/WorldCuisines';
-import SeasonalDishes from './pages/SeasonalDishes';
+
+// Остальные страницы загружаются по требованию (code splitting)
+const SearchPage = lazy(() => import('./pages/SearchPage'));
+const BakingCategory = lazy(() => import('./pages/BakingCategory'));
+const MeatCategory = lazy(() => import('./pages/MeatCategory'));
+const FishCategory = lazy(() => import('./pages/FishCategory'));
+const SnacksCategory = lazy(() => import('./pages/SnacksCategory'));
+const DessertsCategory = lazy(() => import('./pages/DessertsCategory'));
+const DrinksCategory = lazy(() => import('./pages/DrinksCategory'));
+const DoughCategory = lazy(() => import('./pages/DoughCategory'));
+const Porridge = lazy(() => import('./pages/Porridge'));
+const RecipePage = lazy(() => import('./pages/RecipePage'));
+const Soups = lazy(() => import('./pages/Soups'));
+const KitchenHacks = lazy(() => import('./pages/KitchenHacks'));
+const WorldCuisines = lazy(() => import('./pages/WorldCuisines'));
+const SeasonalDishes = lazy(() => import('./pages/SeasonalDishes'));
+
+// Loader компонент (красивая загрузка)
+function Loader() {
+  return (
+    <div style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+      color: 'white',
+      fontSize: '1.5rem',
+      fontWeight: 'bold'
+    }}>
+      <div style={{ textAlign: 'center' }}>
+        <div style={{
+          width: '50px',
+          height: '50px',
+          border: '5px solid rgba(255,255,255,0.3)',
+          borderTop: '5px solid white',
+          borderRadius: '50%',
+          animation: 'spin 1s linear infinite',
+          margin: '0 auto 20px'
+        }}></div>
+        <p>Загружаем рецепт...</p>
+      </div>
+      <style>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
+    </div>
+  );
+}
 
 function App() {
-  // Инициализация OneSignal
+  // Инициализация OneSignal - отложена до взаимодействия пользователя
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const initializeOneSignal = async () => {
-        try {
-          await OneSignal.init({
-            appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
-            allowLocalhostAsSecureOrigin: true,
-            serviceWorkerParam: { scope: '/' },
-            serviceWorkerPath: '/OneSignalSDKWorker.js',
-          });
-          console.log('✅ OneSignal инициализирован!');
-        } catch (error) {
-          console.error('❌ Ошибка инициализации OneSignal:', error);
-        }
+      // Ждём 3 секунды или первого взаимодействия пользователя
+      const initOneSignal = () => {
+        const initializeOneSignal = async () => {
+          try {
+            await OneSignal.init({
+              appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
+              allowLocalhostAsSecureOrigin: true,
+              serviceWorkerParam: { scope: '/' },
+              serviceWorkerPath: '/OneSignalSDKWorker.js',
+            });
+            console.log('✅ OneSignal инициализирован!');
+          } catch (error) {
+            console.error('❌ Ошибка инициализации OneSignal:', error);
+          }
+        };
+        
+        initializeOneSignal();
       };
+
+      // Инициализируем через 3 секунды ИЛИ при первом взаимодействии
+      const timeout = setTimeout(initOneSignal, 3000);
       
-      initializeOneSignal();
+      const handleInteraction = () => {
+        clearTimeout(timeout);
+        initOneSignal();
+        // Убираем слушатели после инициализации
+        window.removeEventListener('scroll', handleInteraction);
+        window.removeEventListener('click', handleInteraction);
+      };
+
+      window.addEventListener('scroll', handleInteraction, { once: true });
+      window.addEventListener('click', handleInteraction, { once: true });
+
+      return () => {
+        clearTimeout(timeout);
+        window.removeEventListener('scroll', handleInteraction);
+        window.removeEventListener('click', handleInteraction);
+      };
     }
   }, []);
 
   return (
     <Router>
       <Analytics />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/search" element={<SearchPage />} />
-        <Route path="/category/baking" element={<BakingCategory />} />
-        <Route path="/category/meat" element={<MeatCategory />} />
-        <Route path="/category/fish" element={<FishCategory />} />
-        <Route path="/category/snacks" element={<SnacksCategory />} />
-        <Route path="/category/desserts" element={<DessertsCategory />} />
-        <Route path="/category/drinks" element={<DrinksCategory />} />
-        <Route path="/category/dough" element={<DoughCategory />} />
-        <Route path="/category/porridge" element={<Porridge />} />
-        <Route path="/world-cuisines" element={<WorldCuisines />} />
-        <Route path="/soups" element={<Soups />} />
-        <Route path="/seasonal-dishes" element={<SeasonalDishes />} />
-        <Route path="/kitchen-hacks" element={<KitchenHacks />} />
-        <Route path="/recipe/:id" element={<RecipePage />} />
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/category/baking" element={<BakingCategory />} />
+          <Route path="/category/meat" element={<MeatCategory />} />
+          <Route path="/category/fish" element={<FishCategory />} />
+          <Route path="/category/snacks" element={<SnacksCategory />} />
+          <Route path="/category/desserts" element={<DessertsCategory />} />
+          <Route path="/category/drinks" element={<DrinksCategory />} />
+          <Route path="/category/dough" element={<DoughCategory />} />
+          <Route path="/category/porridge" element={<Porridge />} />
+          <Route path="/world-cuisines" element={<WorldCuisines />} />
+          <Route path="/soups" element={<Soups />} />
+          <Route path="/seasonal-dishes" element={<SeasonalDishes />} />
+          <Route path="/kitchen-hacks" element={<KitchenHacks />} />
+          <Route path="/recipe/:id" element={<RecipePage />} />
+        </Routes>
+      </Suspense>
     </Router>
   );
 }
