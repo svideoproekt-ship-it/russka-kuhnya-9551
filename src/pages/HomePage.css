@@ -18,7 +18,7 @@
   background: rgba(255, 255, 255, 0.06);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  padding: 80px 20px 50px;
+    padding: 80px 20px 50px;
   text-align: center;
   border-bottom: 2px solid rgba(76, 175, 80, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
@@ -154,7 +154,7 @@
   text-align: center;
   color: #B8D4B8;
   -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
 }
 
 .footer p {
@@ -163,6 +163,285 @@
   letter-spacing: 0.5px;
 }
 
+/* Адаптивность */
+/* =================================== */
+/* УЛУЧШЕННАЯ МОБИЛЬНАЯ АДАПТИВНОСТЬ   */
+/* =================================== */
+
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 2.2rem;
+  }
+  
+  .logo-icon {
+    font-size: 2.5rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .search-input {
+    padding: 18px 55px 18px 22px;
+    font-size: 1rem;
+  }
+  
+  .category-text {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 30px 15px 25px;
+  }
+  
+  .logo h1 {
+    font-size: 1.8rem;
+  }
+  
+  .logo-icon {
+    font-size: 2.2rem;
+  }
+  
+  .tagline {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+  
+  .search-section {
+    padding: 20px 15px;
+  }
+  
+  .search-input {
+    padding: 16px 50px 16px 20px;
+    font-size: 1rem;
+  }
+  
+  .main-content {
+    padding: 15px 10px 40px;
+  }
+  
+  .category-oval {
+    padding: 35px 20px;
+    min-height: 160px;
+  }
+  
+  .category-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+  }
+  
+  .category-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .footer {
+    padding: 25px 15px;
+  }
+  
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo h1 {
+    font-size: 1.6rem;
+  }
+  
+  .category-text {
+    font-size: 1.1rem;
+  }
+  
+  .category-icon {
+    font-size: 2.5rem;
+  }
+}/* ========================================= */
+/* АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ      */
+/* ========================================= */
+
+@media screen and (max-width: 768px) {
+  .logo h1 {
+    font-size: 2rem !important;
+  }
+  
+  .logo-icon {
+    font-size: 2.5rem !important;
+  }
+  
+  .tagline {
+    font-size: 1rem !important;
+  }
+  
+  .search-input {
+    font-size: 1rem !important;
+    padding: 16px 55px 16px 22px;
+  }
+  
+  .category-text {
+    font-size: 1.3rem !important;
+    font-weight: 600;
+  }
+  
+  .category-icon {
+    font-size: 3rem !important;
+  }
+  
+  .category-oval {
+    min-height: 170px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 30px 15px 25px;
+  }
+  
+  .logo h1 {
+    font-size: 1.7rem !important;
+  }
+  
+  .logo-icon {
+    font-size: 2.2rem !important;
+  }
+  
+  .tagline {
+    font-size: 0.9rem !important;
+    letter-spacing: 1px;
+  }
+  
+  .search-section {
+    padding: 20px 15px;
+  }
+  
+  .search-input {
+    font-size: 1rem !important;
+    padding: 16px 50px 16px 20px;
+  }
+  
+  .main-content {
+    padding: 15px 10px 40px;
+  }
+  
+  .category-oval {
+    padding: 30px 15px;
+    min-height: 150px;
+    border-radius: 12px;
+  }
+  
+  .category-icon {
+    font-size: 2.8rem !important;
+    margin-bottom: 12px;
+  }
+  
+  .category-text {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+  }
+  
+  .footer {
+    padding: 25px 15px;
+  }
+  
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .logo h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  .category-text {
+    font-size: 1.1rem !important;
+  }
+  
+  .category-icon {
+    font-size: 2.5rem !important;
+  }
+  
+  .category-oval {
+    min-height: 140px;
+    padding: 25px 12px;
+  }
+}/* ========================================= */
+/* ФИНАЛЬНАЯ АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ      */
+/* ========================================= */
+
+@media screen and (max-width: 768px) {
+  .logo h1 {
+    font-size: 2.2rem !important;
+  }
+  .logo-icon {
+    font-size: 2.6rem !important;
+  }
+  .tagline {
+    font-size: 1.05rem !important;
+  }
+  .search-input {
+    font-size: 1.05rem !important;
+    padding: 16px 50px 16px 20px;
+  }
+  .category-text {
+    font-size: 1.35rem !important;
+    font-weight: 600;
+  }
+  .category-icon {
+    font-size: 3.2rem !important;
+  }
+  .category-oval {
+    min-height: 170px;
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 25px 15px 20px;
+  }
+  .logo h1 {
+    font-size: 1.8rem !important;
+  }
+  .logo-icon {
+    font-size: 2.3rem !important;
+  }
+  .tagline {
+    font-size: 0.95rem !important;
+    letter-spacing: 0.5px;
+  }
+  .search-section {
+    padding: 20px 15px;
+  }
+  .search-input {
+    font-size: 1rem !important;
+    padding: 15px 45px 15px 18px;
+  }
+  .main-content {
+    padding: 15px 10px 40px;
+  }
+  .category-oval {
+    padding: 28px 15px;
+    min-height: 155px;
+    border-radius: 14px;
+  }
+  .category-icon {
+    font-size: 3rem !important;
+    margin-bottom: 10px;
+  }
+  .category-text {
+    font-size: 1.25rem !important;
+    font-weight: 600;
+  }
+  .footer {
+    padding: 20px 15px;
+  }
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
 /* Кухонные хитрости - промо секция */
 .hacks-promo {
   padding: 20px;
@@ -234,6 +513,46 @@
   transform: translateX(8px);
 }
 
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hacks-promo-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hacks-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .hacks-promo-text p {
+    font-size: 14px;
+  }
+}
+/* Кнопка поделиться */
+.hack-share-btn {
+  background: rgba(232, 93, 78, 0.2);
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  margin-left: auto;
+}
+
+.hack-share-btn:hover {
+  background: rgba(232, 93, 78, 0.4);
+  transform: scale(1.1);
+}
+
+.hack-share-btn:active {
+  transform: scale(0.95);
+}
 /* Промо "Блюда сезона" */
 .seasonal-promo {
   max-width: 800px;
@@ -296,6 +615,143 @@
   transform: translateX(8px);
 }
 
+/* Адаптивность */
+@media (max-width: 768px) {
+  .seasonal-promo-content {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .seasonal-promo-icon {
+    font-size: 36px;
+  }
+  
+  .seasonal-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .seasonal-promo-text p {
+    font-size: 14px;
+  }
+  
+  .seasonal-promo-arrow {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .seasonal-promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .seasonal-promo-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .seasonal-promo-content:hover .seasonal-promo-arrow {
+    transform: rotate(90deg) translateX(8px);
+  }
+}
+/* Промо "Рецепты супов" */
+.soups-promo {
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+.soups-promo-link {
+  text-decoration: none;
+  display: block;
+}
+
+.soups-promo-content {
+  background: linear-gradient(135deg, rgba(255, 140, 0, 0.2) 0%, rgba(232, 93, 78, 0.2) 100%);
+  border: 2px solid rgba(255, 140, 0, 0.5);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.soups-promo-content:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(255, 140, 0, 0.3);
+  border-color: #FF8C00;
+}
+
+.soups-promo-icon {
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.soups-promo-text {
+  flex-grow: 1;
+}
+
+.soups-promo-text h3 {
+  color: #FF8C00;
+  font-size: 24px;
+  margin: 0 0 8px 0;
+  font-weight: 700;
+}
+
+.soups-promo-text p {
+  color: rgba(250, 247, 240, 0.8);
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.soups-promo-arrow {
+  font-size: 32px;
+  color: #FF8C00;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.soups-promo-content:hover .soups-promo-arrow {
+  transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+  .soups-promo-content {
+    padding: 20px;
+    gap: 16px;
+  }
+  
+  .soups-promo-icon {
+    font-size: 36px;
+  }
+  
+  .soups-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .soups-promo-text p {
+    font-size: 14px;
+  }
+  
+  .soups-promo-arrow {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .soups-promo-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .soups-promo-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .soups-promo-content:hover .soups-promo-arrow {
+    transform: rotate(90deg) translateX(8px);
+  }
+}
 /* Промо "Вкусы мира" */
 .world-promo {
   max-width: 800px;
@@ -358,158 +814,40 @@
   transform: translateX(8px);
 }
 
-/* ========================================= */
-/* АДАПТИВНОСТЬ (ОДИН БЛОК, БЕЗ ДУБЛЕЙ!)     */
-/* ========================================= */
-
 @media (max-width: 768px) {
-  .logo h1 {
-    font-size: 2.2rem;
-  }
-  
-  .logo-icon {
-    font-size: 2.6rem;
-  }
-  
-  .tagline {
-    font-size: 1.05rem;
-  }
-  
-  .search-input {
-    font-size: 1.05rem;
-    padding: 16px 50px 16px 20px;
-  }
-  
-  .category-text {
-    font-size: 1.35rem;
-    font-weight: 600;
-  }
-  
-  .category-icon {
-    font-size: 3.2rem;
-  }
-  
-  .category-oval {
-    min-height: 170px;
-    padding: 30px 20px;
-  }
-  
-  .hacks-promo-content,
-  .seasonal-promo-content,
   .world-promo-content {
-    flex-direction: column;
-    text-align: center;
     padding: 20px;
+    gap: 16px;
   }
   
-  .hacks-promo-text h3,
-  .seasonal-promo-text h3,
-  .world-promo-text h3 {
-    font-size: 20px;
-  }
-  
-  .hacks-promo-text p,
-  .seasonal-promo-text p,
-  .world-promo-text p {
-    font-size: 14px;
-  }
-  
-  .hacks-promo-icon,
-  .seasonal-promo-icon,
   .world-promo-icon {
     font-size: 36px;
   }
   
-  .hacks-promo-arrow,
-  .seasonal-promo-arrow,
+  .world-promo-text h3 {
+    font-size: 20px;
+  }
+  
+  .world-promo-text p {
+    font-size: 14px;
+  }
+  
   .world-promo-arrow {
     font-size: 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .header {
-    padding: 25px 15px 20px;
+  .world-promo-content {
+    flex-direction: column;
+    text-align: center;
   }
   
-  .logo h1 {
-    font-size: 1.8rem;
-  }
-  
-  .logo-icon {
-    font-size: 2.3rem;
-  }
-  
-  .tagline {
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-  }
-  
-  .search-section {
-    padding: 20px 15px;
-  }
-  
-  .search-input {
-    font-size: 1rem;
-    padding: 15px 45px 15px 18px;
-  }
-  
-  .main-content {
-    padding: 15px 10px 40px;
-  }
-  
-  .category-oval {
-    padding: 28px 15px;
-    min-height: 155px;
-    border-radius: 14px;
-  }
-  
-  .category-icon {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .category-text {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  
-  .footer {
-    padding: 20px 15px;
-  }
-  
-  .footer p {
-    font-size: 0.85rem;
-  }
-  
-  .hacks-promo-arrow,
-  .seasonal-promo-arrow,
   .world-promo-arrow {
     transform: rotate(90deg);
   }
   
-  .hacks-promo-content:hover .hacks-promo-arrow,
-  .seasonal-promo-content:hover .seasonal-promo-arrow,
   .world-promo-content:hover .world-promo-arrow {
     transform: rotate(90deg) translateX(8px);
-  }
-}
-
-@media (max-width: 360px) {
-  .logo h1 {
-    font-size: 1.5rem;
-  }
-  
-  .category-text {
-    font-size: 1.1rem;
-  }
-  
-  .category-icon {
-    font-size: 2.5rem;
-  }
-  
-  .category-oval {
-    min-height: 140px;
-    padding: 25px 12px;
   }
 }
