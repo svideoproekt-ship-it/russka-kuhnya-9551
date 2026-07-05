@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import './KitchenHacks.css';
-import SEO from '../components/SEO';
 
 const KitchenHacks = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -393,7 +392,7 @@ const KitchenHacks = () => {
 
   return (
     <div className="kitchen-hacks-page">
-       
+      
        <SEO 
   title="Кухонные хитрости — советы и секреты приготовления | Русская Кухня"
   description="Полезные кухонные хитрости: советы по приготовлению, хранению продуктов, организации кухни. Проверенные временем секреты!"

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { soupsData } from '../data/soupsData';
 import './Soups.css';
-import SEO from '../components/SEO';
 
 const Soups = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);

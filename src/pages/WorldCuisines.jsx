@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import './WorldCuisines.css';
-import SEO from '../components/SEO';
 
 const WorldCuisines = () => {
   const [activeRegion, setActiveRegion] = useState('all');
