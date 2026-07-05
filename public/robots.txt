@@ -14,5 +14,5 @@ User-agent: Googlebot
 Allow: /
 
 # Карта сайта
-   Sitemap: https://russka-kuhnya-9551.vercel.app/sitemap.xml
+Sitemap: https://russka-kuhnya-9551.vercel.app/sitemap.xml
 Host: russka-kuhnya-9551.vercel.app
