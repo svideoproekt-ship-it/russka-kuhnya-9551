@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import './WorldCuisines.css';
+import SEO from '../components/SEO';
 
 const WorldCuisines = () => {
   const [activeRegion, setActiveRegion] = useState('all');
@@ -156,13 +157,13 @@ const WorldCuisines = () => {
 
   return (
     <div className="world-page">
-     <SEO 
-  title="Вкусы мира - Рецепты из разных стран | Русская Кухня"
-  description="Путешествуйте по миру через вкус..."
-  keywords="рецепты мира, кухни мира..."
+    <SEO 
+  title="Вкусы мира — рецепты разных стран | Русская Кухня"
+  description="Путешествуйте со вкусом! Рецепты из разных стран: греческая мусака, японские онигири, мексиканские такос. Новый рецепт каждую неделю!"
+  keywords="мировая кухня, рецепты стран, греческая кухня, японская кухня, мексиканская кухня"
   url="https://russka-kuhnya-9551.vercel.app/world-cuisines"
-  image="https://russka-kuhnya-9551.vercel.app/og-fallback.jpg"
 />
+/
 
       {/* Шапка */}
       <header className="world-header">

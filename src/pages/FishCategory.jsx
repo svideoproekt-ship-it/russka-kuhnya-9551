@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { fishData } from '../data/fishData';
 import './FishCategory.css';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../components/SEO';
 
 function FishCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -63,9 +64,15 @@ function FishCategory() {
       </div>
     );
   }
-
+  
   return (
     <div className="fish-category">
+      <SEO 
+  title="Рыбные блюда — уха, запечённая рыба, котлеты | Русская Кухня"
+  description="Традиционные рецепты рыбных блюд: наваристая уха, запечённая рыба, рыбные котлеты. Пошаговые инструкции с фото!"
+  keywords="рыбные блюда, уха, запечённая рыба, рыбные котлеты, русская кухня"
+  url="https://russka-kuhnya-9551.vercel.app/category/fish"
+/>
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🐟 Рыбные блюда</h1>

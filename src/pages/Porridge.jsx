@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { porridgeData } from '../data/porridgeData';
 import './Porridge.css';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../components/SEO';
 
 function Porridge() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -76,9 +77,15 @@ function Porridge() {
       </div>
     );
   }
-
+  
   return (
     <div className="porridge-category">
+      <SEO 
+  title="Каши — гречка, овсянка, рис, пшёнка | Русская Кухня"
+  description="Лучшие рецепты русских каш: рассыпчатая гречка, нежная овсянка, ароматный рис. Пошаговые инструкции с фото!"
+  keywords="каши, гречка, овсянка, рис, пшёнка, русская кухня"
+  url="https://russka-kuhnya-9551.vercel.app/category/porridge"
+/>
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥣 Каши</h1>

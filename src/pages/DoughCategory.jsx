@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { doughData } from '../data/doughData'; 
 import './DoughCategory.css';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../components/SEO';
 
 function DoughCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -83,9 +84,15 @@ function DoughCategory() {
       </div>
     );
   }
-
+  
   return (
     <div className="dough-category">
+      <SEO 
+  title="Рецепты теста — дрожжевое, слоёное, заварное | Русская Кухня"
+  description="Традиционные рецепты теста: пышное дрожжевое, хрустящее слоёное, нежное заварное. Пошаговые инструкции с фото!"
+  keywords="тесто, дрожжевое тесто, слоёное тесто, заварное тесто, русская кухня"
+  url="https://russka-kuhnya-9551.vercel.app/category/dough"
+/>
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥖 Тесто</h1>

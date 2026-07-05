@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import './KitchenHacks.css';
+import SEO from '../components/SEO';
 
 const KitchenHacks = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -394,11 +395,10 @@ const KitchenHacks = () => {
     <div className="kitchen-hacks-page">
        
        <SEO 
-  title="Кухонные хитрости - 21 лайфхак для кухни | Русская Кухня"
-  description="Полезные кухонные хитрости и лайфхаки..."
-  keywords="кухонные хитрости, лайфхаки на кухне..."
+  title="Кухонные хитрости — советы и секреты приготовления | Русская Кухня"
+  description="Полезные кухонные хитрости: советы по приготовлению, хранению продуктов, организации кухни. Проверенные временем секреты!"
+  keywords="кухонные хитрости, советы, секреты, приготовление, хранение"
   url="https://russka-kuhnya-9551.vercel.app/kitchen-hacks"
-  image="https://russka-kuhnya-9551.vercel.app/og-fallback.jpg"
 />
 
       {/* Шапка */}

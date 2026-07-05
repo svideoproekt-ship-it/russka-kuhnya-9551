@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { snacksData } from '../data/snacksData';
 import './SnacksCategory.css';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../components/SEO';
 
 function SnacksCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -76,9 +77,15 @@ function SnacksCategory() {
       </div>
     );
   }
-
+  
   return (
     <div className="snacks-category">
+      <SEO 
+  title="Закуски — салаты, соленья, канапе | Русская Кухня"
+  description="Лучшие рецепты закусок русской кухни: свежие салаты, хрустящие соленья, аппетитные канапе. Пошаговые инструкции с фото!"
+  keywords="закуски, салаты, соленья, канапе, русская кухня"
+  url="https://russka-kuhnya-9551.vercel.app/category/snacks"
+/>
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥗 Закуски</h1>

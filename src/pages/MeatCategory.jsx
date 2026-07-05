@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { meatData } from '../data/meatData';
 import './MeatCategory.css';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../components/SEO';
 
 function MeatCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -76,9 +77,15 @@ function MeatCategory() {
       </div>
     );
   }
-
+    
   return (
     <div className="meat-category">
+      <SEO 
+  title="Мясные блюда — котлеты, гуляш, жаркое | Русская Кухня"
+  description="Лучшие рецепты мясных блюд русской кухни: сочные котлеты, ароматный гуляш, нежное жаркое. Пошаговые инструкции с фото!"
+  keywords="мясные блюда, котлеты, гуляш, жаркое, бефстроганов, русская кухня"
+  url="https://russka-kuhnya-9551.vercel.app/category/meat"
+/>
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥩 Мясные блюда</h1>

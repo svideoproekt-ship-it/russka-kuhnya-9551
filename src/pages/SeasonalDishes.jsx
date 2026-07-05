@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
 import './SeasonalDishes.css';
+import SEO from '../components/SEO';
 
 const SeasonalDishes = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -232,11 +233,10 @@ const SeasonalDishes = () => {
   return (
     <div className="seasonal-page">
      <SEO 
-  title="Блюда сезона - Летние рецепты из свежих овощей | Русская Кухня"
-  description="10 лучших летних рецептов..."
-  keywords="летние рецепты, блюда сезона..."
+  title="Блюда сезона — летние рецепты из свежих овощей | Русская Кухня"
+  description="Лучшие сезонные рецепты: летние салаты из свежих овощей, окрошка, холодные супы. Готовьте из сезонных продуктов!"
+  keywords="сезонные блюда, летние рецепты, овощи, окрошка, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/seasonal-dishes"
-  image="https://russka-kuhnya-9551.vercel.app/og-fallback.jpg"
 />
 
       {/* Шапка */}

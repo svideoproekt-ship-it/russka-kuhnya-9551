@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { soupsData } from '../data/soupsData';
 import './Soups.css';
+import SEO from '../components/SEO';
 
 const Soups = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -140,11 +141,11 @@ const Soups = () => {
         
         <div className="soups-category">
           <SEO 
-            title={`${selectedRecipe.name} - Рецепт с историей | Русская Кухня`}
-            description={`${selectedRecipe.name}. Время: ${selectedRecipe.time}. Эпоха: ${selectedRecipe.epoch}. ${selectedRecipe.history}`}
-            keywords={`${selectedRecipe.name}, рецепт, русская кухня, ${selectedRecipe.epoch}`}
-            url={`https://russka-kuhnya-9551.vercel.app/soups?recipe=${selectedRecipe.id}`}
-          />
+  title="Рецепты супов — щи, борщ, уха, солянка | Русская Кухня"
+  description="Лучшие рецепты русских супов с пошаговыми фото: классические щи, наваристый борщ, ароматная уха. Готовьте как в старину!"
+  keywords="супы, щи, борщ, уха, солянка, рецепты супов, русская кухня"
+  url="https://russka-kuhnya-9551.vercel.app/soups"
+/>
 
           <div className="recipe-detail">
             <button className="back-button" onClick={handleBack}>

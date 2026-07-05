@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { bakingData } from '../data/bakingData';
 import './BakingCategory.css';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../components/SEO';
 
 function BakingCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -66,6 +67,12 @@ function BakingCategory() {
 
   return (
     <div className="baking-category">
+      <SEO 
+  title="Рецепты выпечки — пироги, блины, пирожки | Русская Кухня"
+  description="Традиционные рецепты русской выпечки: пышные пироги, тонкие блины, румяные пирожки. Пошаговые инструкции с фото!"
+  keywords="выпечка, пироги, блины, пирожки, медовик, русская выпечка"
+  url="https://russka-kuhnya-9551.vercel.app/category/baking"
+/>
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥐 Выпечка</h1>

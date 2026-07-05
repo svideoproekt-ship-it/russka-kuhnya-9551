@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { dessertsData } from '../data/dessertsData';
 import './DessertsCategory.css';
 import ShareButtons from '../components/ShareButtons';
+import SEO from '../components/SEO';
 
 function DessertsCategory() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -76,9 +77,15 @@ function DessertsCategory() {
       </div>
     );
   }
-
+  
   return (
     <div className="desserts-category">
+      <SEO 
+  title="Десерты — медовик, тирамису, шарлотка | Русская Кухня"
+  description="Традиционные рецепты десертов: знаменитый медовик, нежный тирамису, ароматная шарлотка. Пошаговые инструкции с фото!"
+  keywords="десерты, медовик, тирамису, шарлотка, торты, русская кухня"
+  url="https://russka-kuhnya-9551.vercel.app/category/desserts"
+/>
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🍰 Десерты и сладости</h1>

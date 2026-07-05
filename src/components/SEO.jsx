@@ -28,7 +28,6 @@ const SEO = ({
     setMeta('author', 'Русская Кухня');
     setMeta('robots', 'index, follow');
     setMeta('language', 'Russian');
-    setMeta('viewport', 'width=device-width, initial-scale=1.0');
 
     // Open Graph (для соцсетей и мессенджеров)
     setMeta('og:title', title, 'property');
@@ -44,9 +43,6 @@ const SEO = ({
     setMeta('twitter:title', title);
     setMeta('twitter:description', description);
     setMeta('twitter:image', image);
-
-    // Яндекс-специфичные
-    setMeta('yandex-verification', 'ВАШ_КОД_ЯНДЕКС_ВЕБМАСТЕРА'); // Добавим позже
 
     // Canonical URL
     let canonical = document.querySelector('link[rel="canonical"]');
