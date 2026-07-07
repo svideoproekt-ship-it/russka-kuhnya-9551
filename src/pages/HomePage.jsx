@@ -103,9 +103,21 @@ function HomePage() {
       </main>
 
       <footer className="footer">
-        <FeedbackForm />
-        <p>© 2026 Русская Кухня. Сохраняем традиции.</p>
-      </footer>
+  <FeedbackForm />
+  <div style={{ 
+    marginTop: '20px', 
+    marginBottom: '20px',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '20px',
+    flexWrap: 'wrap'
+  }}>
+    <a href="/about" style={{ color: '#A8E6CF', textDecoration: 'none' }}>О проекте</a>
+    <a href="/contacts" style={{ color: '#A8E6CF', textDecoration: 'none' }}>Контакты</a>
+    <a href="/privacy" style={{ color: '#A8E6CF', textDecoration: 'none' }}>Политика конфиденциальности</a>
+  </div>
+  <p>© 2026 Русская Кухня. Сохраняем традиции.</p>
+</footer>
     </div>
   );
 }

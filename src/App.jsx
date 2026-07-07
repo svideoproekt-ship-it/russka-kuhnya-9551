@@ -22,6 +22,11 @@ const KitchenHacks = lazy(() => import('./pages/KitchenHacks'));
 const WorldCuisines = lazy(() => import('./pages/WorldCuisines'));
 const SeasonalDishes = lazy(() => import('./pages/SeasonalDishes'));
 
+// Новые страницы для SEO (E-E-A-T)
+const About = lazy(() => import('./pages/About'));
+const Contacts = lazy(() => import('./pages/Contacts'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+
 // Loader компонент (красивая загрузка)
 function Loader() {
   return (
@@ -122,6 +127,11 @@ function App() {
           <Route path="/seasonal-dishes" element={<SeasonalDishes />} />
           <Route path="/kitchen-hacks" element={<KitchenHacks />} />
           <Route path="/recipe/:id" element={<RecipePage />} />
+          
+          {/* Новые страницы для SEO (E-E-A-T) */}
+          <Route path="/about" element={<About />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
       </Suspense>
     </Router>
