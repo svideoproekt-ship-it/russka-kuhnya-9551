@@ -1,4 +1,4 @@
-
+import Breadcrumbs from '../components/Breadcrumbs';
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -137,6 +137,8 @@ const ogImage = image
         >
           ← Назад к списку
         </button>
+
+<Breadcrumbs />
 
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '30px', background: 'linear-gradient(135deg, #00BFFF, #4682B4)', border: '3px solid #20B2AA', borderRadius: '20px', boxShadow: '0 8px 25px rgba(0,0,0,0.4)' }}>
           

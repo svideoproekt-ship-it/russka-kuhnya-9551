@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import { Helmet } from 'react-helmet-async';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
@@ -224,7 +225,7 @@ const Soups = () => {
         keywords="супы, русские супы, щи, борщ, солянка, рецепты супов"
         url="https://russka-kuhnya-9551.vercel.app/soups"
       />
-
+<Breadcrumbs />
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🍲 Супы</h1>
