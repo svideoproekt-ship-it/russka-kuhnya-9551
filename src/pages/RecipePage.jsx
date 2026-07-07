@@ -138,7 +138,11 @@ const ogImage = image
           ← Назад к списку
         </button>
 
-<Breadcrumbs />
+<Breadcrumbs 
+  recipeTitle={title} 
+  categoryName="Напитки" // *См. примечание ниже*
+  categoryPath="/category/drinks" 
+/>
 
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '30px', background: 'linear-gradient(135deg, #00BFFF, #4682B4)', border: '3px solid #20B2AA', borderRadius: '20px', boxShadow: '0 8px 25px rgba(0,0,0,0.4)' }}>
           
