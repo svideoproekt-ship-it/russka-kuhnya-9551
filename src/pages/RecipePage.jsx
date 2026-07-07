@@ -86,18 +86,45 @@ const ogImage = image
   
   {/* Schema.org Recipe */}
   <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Recipe",
-      "name": title,
-      "image": ogImage,
-      "description": metaDesc,
-      "prepTime": time,
-      "recipeIngredient": ingredients.map(i => typeof i === 'string' ? i : `${i.name} ${i.amount}${i.unit}`),
-      "recipeInstructions": steps.map(s => ({ "@type": "HowToStep", "text": s })),
-      "author": { "@type": "Organization", "name": "Русская Кухня" }
-    })}
-  </script>
+  {JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    "name": title,
+    "image": ogImage,
+    "description": metaDesc,
+    "author": { 
+      "@type": "Organization", 
+      "name": "Русская Кухня",
+      "url": "https://russka-kuhnya-9551.vercel.app"
+    },
+    "datePublished": recipe.datePublished || "2026-07-07",
+    "prepTime": recipe.prepTime || time || "PT30M",
+    "cookTime": recipe.cookTime || "PT1H",
+    "totalTime": recipe.totalTime || "PT1H30M",
+    "recipeYield": recipe.yield || recipe.servings || "4 порции",
+    "recipeCategory": recipe.category || "Основное блюдо",
+    "recipeCuisine": recipe.cuisine || "Русская",
+    "keywords": recipe.keywords || `${title}, рецепт, русская кухня`,
+    "nutrition": {
+      "@type": "NutritionInformation",
+      "calories": recipe.calories || "300 ккал",
+      "fatContent": recipe.fat || "15 г",
+      "proteinContent": recipe.protein || "20 г",
+      "carbohydrateContent": recipe.carbs || "35 г"
+    },
+    "recipeIngredient": ingredients.map(i => typeof i === 'string' ? i : `${i.name} ${i.amount} ${i.unit}`),
+    "recipeInstructions": steps.map((s, idx) => ({ 
+      "@type": "HowToStep", 
+      "position": idx + 1,
+      "text": s 
+    })),
+    "aggregateRating": recipe.rating ? {
+      "@type": "AggregateRating",
+      "ratingValue": recipe.rating,
+      "ratingCount": recipe.ratingCount || 1
+    } : undefined
+  })}
+</script>
 </Helmet>
 
       {/* 🔹 Визуальный контент */}
