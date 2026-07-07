@@ -7,9 +7,8 @@ const Breadcrumbs = () => {
   // Не показывать на главной
   if (pathnames.length === 0) return null;
 
-  // Маппинг путей на названия
+  // Маппинг путей на названия (без "Категория -")
   const pathMap = {
-    'category': 'Категории',
     'baking': 'Выпечка',
     'meat': 'Мясо',
     'fish': 'Рыба',
@@ -28,14 +27,16 @@ const Breadcrumbs = () => {
     'privacy': 'Политика конфиденциальности'
   };
 
-  // Построить хлебные крошки
+  // Построить хлебные крошки (пропускаем 'category' в пути)
   const breadcrumbs = [
     { name: 'Главная', path: '/' },
-    ...pathnames.map((name, index) => {
-      const path = `/${pathnames.slice(0, index + 1).join('/')}`;
-      const displayName = pathMap[name] || name;
-      return { name: displayName, path };
-    })
+    ...pathnames
+      .filter(name => name !== 'category') // Убираем 'category' из пути
+      .map((name, index) => {
+        const path = `/${pathnames.slice(0, pathnames.indexOf(name) + 1).join('/')}`;
+        const displayName = pathMap[name] || name;
+        return { name: displayName, path };
+      })
   ];
 
   // Schema разметка BreadcrumbList
