@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
 import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
