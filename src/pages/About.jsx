@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
 
 function About() {
@@ -15,6 +16,7 @@ function About() {
         keywords="о нас, русская кухня, история проекта, миссия сайта, автор рецептов"
         url="https://russka-kuhnya-9551.vercel.app/about"
       />
+      <Breadcrumbs />
 
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '20px', color: '#A8E6CF' }}>О проекте "Русская Кухня"</h1>

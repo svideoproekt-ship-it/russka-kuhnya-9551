@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { bakingData } from '../data/bakingData';
@@ -73,6 +74,7 @@ function BakingCategory() {
   keywords="выпечка, пироги, блины, пирожки, медовик, русская выпечка"
   url="https://russka-kuhnya-9551.vercel.app/category/baking"
 />
+<Breadcrumbs />
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥐 Выпечка</h1>

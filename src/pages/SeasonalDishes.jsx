@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
@@ -237,6 +238,7 @@ const SeasonalDishes = () => {
   keywords="сезонные блюда, летние рецепты, овощи, окрошка, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/seasonal-dishes"
 />
+<Breadcrumbs />
 
       {/* Шапка */}
       <header className="seasonal-header">

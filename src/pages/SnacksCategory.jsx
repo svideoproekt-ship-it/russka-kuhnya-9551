@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { snacksData } from '../data/snacksData';
@@ -86,6 +87,8 @@ function SnacksCategory() {
   keywords="закуски, салаты, соленья, канапе, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/snacks"
 />
+<Breadcrumbs />
+
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥗 Закуски</h1>

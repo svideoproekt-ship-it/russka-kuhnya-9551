@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
 
 function Privacy() {
@@ -15,6 +16,7 @@ function Privacy() {
         keywords="политика конфиденциальности, cookies, персональные данные, защита данных"
         url="https://russka-kuhnya-9551.vercel.app/privacy"
       />
+      <Breadcrumbs />
 
       <div style={{ maxWidth: '800px', margin: '0 auto' }}>
         <h1 style={{ fontSize: '2.5rem', marginBottom: '20px', color: '#A8E6CF' }}>Политика конфиденциальности</h1>

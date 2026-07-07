@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { meatData } from '../data/meatData';
@@ -86,6 +87,7 @@ function MeatCategory() {
   keywords="мясные блюда, котлеты, гуляш, жаркое, бефстроганов, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/meat"
 />
+<Breadcrumbs />
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🥩 Мясные блюда</h1>

@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
@@ -399,6 +400,7 @@ const KitchenHacks = () => {
   keywords="кухонные хитрости, советы, секреты, приготовление, хранение"
   url="https://russka-kuhnya-9551.vercel.app/kitchen-hacks"
 />
+<Breadcrumbs />
 
       {/* Шапка */}
       <header className="hacks-header">

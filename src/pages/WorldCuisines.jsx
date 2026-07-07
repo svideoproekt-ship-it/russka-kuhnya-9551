@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import SEO from '../components/SEO';
@@ -162,6 +163,7 @@ const WorldCuisines = () => {
   keywords="мировая кухня, рецепты стран, греческая кухня, японская кухня, мексиканская кухня"
   url="https://russka-kuhnya-9551.vercel.app/world-cuisines"
 />
+<Breadcrumbs />
 /
 
       {/* Шапка */}

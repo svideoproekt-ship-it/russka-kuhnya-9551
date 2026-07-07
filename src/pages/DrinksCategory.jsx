@@ -1,3 +1,5 @@
+import SEO from '../components/SEO';
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { drinksData } from '../data/drinksData';
@@ -20,6 +22,13 @@ function DrinksCategory() {
   if (selectedRecipe) {
     return (
       <div className="drinks-category">
+        <SEO 
+  title="Напитки — морсы, компоты, кисели, сбитень, квас | Русская Кухня"
+  description="Традиционные русские напитки с пошаговыми рецептами: ягодные морсы, ароматные компоты, густые кисели, горячий сбитень и домашний квас. Готовьте как в старину!"
+  keywords="напитки, морс, компот, кисель, сбитень, квас, русские напитки, традиционные напитки"
+  url="https://russka-kuhnya-9551.vercel.app/category/drinks"
+/>
+<Breadcrumbs />
         <button className="back-button" onClick={handleBack}>
           ← Назад к списку
         </button>

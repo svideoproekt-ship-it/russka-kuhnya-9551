@@ -1,3 +1,4 @@
+import Breadcrumbs from '../components/Breadcrumbs';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { fishData } from '../data/fishData';
@@ -73,6 +74,7 @@ function FishCategory() {
   keywords="рыбные блюда, уха, запечённая рыба, рыбные котлеты, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/fish"
 />
+<Breadcrumbs />
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🐟 Рыбные блюда</h1>
