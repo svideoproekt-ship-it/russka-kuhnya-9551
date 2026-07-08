@@ -10,6 +10,8 @@ import { snacksData } from '../data/snacksData';
 import { dessertsData } from '../data/dessertsData';
 import { drinksData } from '../data/drinksData';
 import { doughData } from '../data/doughData';
+import { porridgeData } from '../data/porridgeData';
+import { seasonalDishesData } from '../data/seasonalDishesData';
 import ShareButtons from '../components/ShareButtons';
 
 const RecipePage = () => {
@@ -25,6 +27,8 @@ const RecipePage = () => {
     { data: dessertsData, name: 'Десерты', path: '/category/desserts' },
     { data: drinksData, name: 'Напитки', path: '/category/drinks' },
     { data: doughData, name: 'Тесто', path: '/category/dough' },
+    { data: porridgeData, name: 'Каши', path: '/category/porridge' },
+    { data: seasonalDishesData, name: 'Блюда сезона', path: '/seasonal-dishes' },
   ];
 
   // 2. Ищем рецепт и автоматически определяем его категорию
