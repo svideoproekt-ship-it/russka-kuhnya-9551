@@ -146,6 +146,11 @@ const Soups = () => {
   keywords="супы, щи, борщ, уха, солянка, рецепты супов, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/soups"
 />
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Название категории"
+  categoryPath="/путь-к-категории"
+/>
 
           <div className="recipe-detail">
             <button className="back-button" onClick={handleBack}>
