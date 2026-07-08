@@ -56,7 +56,13 @@ const RecipePage = () => {
       </div>
     );
   }
-
+ // 🔍 ОТЛАДКА: смотрим что нашли
+  console.log('🍲 RecipePage:', {
+    id,
+    recipe,
+    recipeCategory,
+    title: recipe?.title || recipe?.name
+  });
   // 4. Нормализация полей
   const title = recipe.title || recipe.name || 'Без названия';
   const ingredients = recipe.ingredients || [];
