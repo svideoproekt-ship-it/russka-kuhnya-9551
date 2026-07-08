@@ -15,16 +15,32 @@ import ShareButtons from '../components/ShareButtons';
 const RecipePage = () => {
   const { id } = useParams();
 
-  // 1. Объединяем все источники данных
-  const allRecipes = [
-    ...soupsData, ...bakingData, ...meatData, ...fishData,
-    ...snacksData, ...dessertsData, ...drinksData, ...doughData
+     // 1. Определяем категории и их пути
+  const categories = [
+    { data: soupsData, name: 'Супы', path: '/soups' },
+    { data: bakingData, name: 'Выпечка', path: '/category/baking' },
+    { data: meatData, name: 'Мясо', path: '/category/meat' },
+    { data: fishData, name: 'Рыба', path: '/category/fish' },
+    { data: snacksData, name: 'Закуски', path: '/category/snacks' },
+    { data: dessertsData, name: 'Десерты', path: '/category/desserts' },
+    { data: drinksData, name: 'Напитки', path: '/category/drinks' },
+    { data: doughData, name: 'Тесто', path: '/category/dough' },
   ];
 
-  // 2. Ищем рецепт
-  const recipe = allRecipes.find(r =>
-    r.id === id || r.id === parseInt(id) || String(r.id) === String(id)
-  );
+  // 2. Ищем рецепт и автоматически определяем его категорию
+  let recipe = null;
+  let recipeCategory = { name: 'Рецепты', path: '/' };
+
+  for (const cat of categories) {
+    const found = cat.data.find(r =>
+      r.id === id || r.id === parseInt(id) || String(r.id) === String(id)
+    );
+    if (found) {
+      recipe = found;
+      recipeCategory = { name: cat.name, path: cat.path };
+      break;
+    }
+  }
 
   // 3. Обработка "не найдено"
   if (!recipe) {
@@ -138,11 +154,11 @@ const ogImage = image
           ← Назад к списку
         </button>
 
-<Breadcrumbs 
-  recipeTitle={title} 
-  categoryName="Напитки" // *См. примечание ниже*
-  categoryPath="/category/drinks" 
-/>
+      <Breadcrumbs 
+        recipeTitle={title} 
+        categoryName={recipeCategory.name} 
+        categoryPath={recipeCategory.path} 
+      />
 
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '30px', background: 'linear-gradient(135deg, #00BFFF, #4682B4)', border: '3px solid #20B2AA', borderRadius: '20px', boxShadow: '0 8px 25px rgba(0,0,0,0.4)' }}>
           
