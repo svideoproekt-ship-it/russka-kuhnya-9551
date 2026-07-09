@@ -19,9 +19,24 @@ function DoughCategory() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // ✅ ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
   if (selectedRecipe) {
     return (
       <div className="dough-category">
+        <SEO 
+          title={`${selectedRecipe.name} — Русская Кухня`}
+          description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
+          keywords="тесто, русская кухня"
+          url={`https://russka-kuhnya-9551.vercel.app/category/dough?recipe=${selectedRecipe.id}`}
+        />
+        
+        {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ — ВНУТРИ if (selectedRecipe)! */}
+        <Breadcrumbs 
+          recipeTitle={selectedRecipe.name}
+          categoryName="Тесто"
+          categoryPath="/category/dough"
+        />
+        
         <button className="back-button" onClick={handleBack}>
           ← Назад к списку
         </button>
@@ -61,7 +76,7 @@ function DoughCategory() {
             </div>
 
             <div className="recipe-section">
-              <h2>👨‍🍳 Приготовление</h2>
+              <h2>👨🍳 Приготовление</h2>
               <ol className="preparation-list">
                 {selectedRecipe.preparation.map((step, index) => (
                   <li key={index}>{step}</li>
@@ -86,19 +101,26 @@ function DoughCategory() {
     );
   }
   
+  // ✅ СПИСОК РЕЦЕПТОВ
   return (
     <div className="dough-category">
       <SEO 
-  title="Рецепты теста — дрожжевое, слоёное, заварное | Русская Кухня"
-  description="Традиционные рецепты теста: пышное дрожжевое, хрустящее слоёное, нежное заварное. Пошаговые инструкции с фото!"
-  keywords="тесто, дрожжевое тесто, слоёное тесто, заварное тесто, русская кухня"
-  url="https://russka-kuhnya-9551.vercel.app/category/dough"
-/>
-<Breadcrumbs 
-  recipeTitle={selectedRecipe.name}
-  categoryName="Тесто"
-  categoryPath="/category/dough"
-/>
+        title="Рецепты теста — дрожжевое, слоёное, заварное | Русская Кухня"
+        description="Традиционные рецепты теста: пышное дрожжевое, хрустящее слоёное, нежное заварное. Пошаговые инструкции с фото!"
+        keywords="тесто, дрожжевое тесто, слоёное тесто, заварное тесто, русская кухня"
+        url="https://russka-kuhnya-9551.vercel.app/category/dough"
+      />
+      
+      {/* 🍞 ХЛЕБНЫЕ КРОШКИ БЕЗ ПРОПССОВ — в списке! */}
+      <Breadcrumbs />
+
+      <div className="category-header">
+        <Link to="/" className="back-home">← На главную</Link>
+        <h1>🥖 Тесто</h1>
+        <p className="category-description">
+          Традиционные рецепты теста: пышное дрожжевое, хрустящее слоёное, нежное заварное
+        </p>
+      </div>
 
       <div className="recipes-grid">
         {doughData.map((recipe) => (
