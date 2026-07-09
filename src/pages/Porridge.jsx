@@ -48,7 +48,7 @@ const Porridge = () => {
     }
   };
 
-  // ✅ ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА (внутри этот блок!)
+  // ✅ ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
   if (selectedRecipe) {
     return (
       <>
@@ -85,7 +85,7 @@ const Porridge = () => {
             url={`https://russka-kuhnya-9551.vercel.app/category/porridge?recipe=${selectedRecipe.id}`}
           />
           
-          {/* 🍞 ХЛЕБНЫЕ КРОШКИ — ВНУТРИ if (selectedRecipe)! */}
+          {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ */}
           <Breadcrumbs 
             recipeTitle={selectedRecipe.name}
             categoryName="Каши"
@@ -137,7 +137,7 @@ const Porridge = () => {
                 </div>
 
                 <div className="recipe-section">
-                  <h2>👨‍🍳 Приготовление</h2>
+                  <h2>👨🍳 Приготовление</h2>
                   <ol className="preparation-list">
                     {selectedRecipe.preparation.map((step, index) => (
                       <li key={index}>{step}</li>
@@ -152,7 +152,7 @@ const Porridge = () => {
     );
   }
 
-  // ✅ СПИСОК ВСЕХ КАШ (здесь Breadcrumbs БЕЗ пропсов!)
+  // ✅ СПИСОК ВСЕХ КАШ
   return (
     <div className="porridge-category">
       <SEO 
@@ -162,7 +162,8 @@ const Porridge = () => {
         url="https://russka-kuhnya-9551.vercel.app/category/porridge"
       />
       
-      <Breadcrumbs />  ← БЕЗ пропсов!
+      {/* 🍞 ХЛЕБНЫЕ КРОШКИ БЕЗ ПРОПССОВ */}
+      <Breadcrumbs />
 
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
