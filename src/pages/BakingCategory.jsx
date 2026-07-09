@@ -19,9 +19,24 @@ function BakingCategory() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // ✅ ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
   if (selectedRecipe) {
     return (
       <div className="baking-category">
+        <SEO 
+          title={`${selectedRecipe.name} — Русская Кухня`}
+          description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
+          keywords="выпечка, русская кухня"
+          url={`https://russka-kuhnya-9551.vercel.app/category/baking?recipe=${selectedRecipe.id}`}
+        />
+        
+        {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ — ВНУТРИ if (selectedRecipe)! */}
+        <Breadcrumbs 
+          recipeTitle={selectedRecipe.name}
+          categoryName="Выпечка"
+          categoryPath="/category/baking"
+        />
+        
         <button className="back-button" onClick={handleBack}>← Назад к списку</button>
         <div className="recipe-detail">
           <div className="recipe-header">
@@ -66,19 +81,27 @@ function BakingCategory() {
     );
   }
 
+  // ✅ СПИСОК РЕЦЕПТОВ
   return (
     <div className="baking-category">
       <SEO 
-  title="Рецепты выпечки — пироги, блины, пирожки | Русская Кухня"
-  description="Традиционные рецепты русской выпечки: пышные пироги, тонкие блины, румяные пирожки. Пошаговые инструкции с фото!"
-  keywords="выпечка, пироги, блины, пирожки, медовик, русская выпечка"
-  url="https://russka-kuhnya-9551.vercel.app/category/baking"
-/>
-<Breadcrumbs 
-  recipeTitle={selectedRecipe.name}
-  categoryName="Выпечка"
-  categoryPath="/category/baking"
-/>
+        title="Рецепты выпечки — пироги, блины, пирожки | Русская Кухня"
+        description="Традиционные рецепты русской выпечки: пышные пироги, тонкие блины, румяные пирожки. Пошаговые инструкции с фото!"
+        keywords="выпечка, пироги, блины, пирожки, медовик, русская выпечка"
+        url="https://russka-kuhnya-9551.vercel.app/category/baking"
+      />
+      
+      {/* 🍞 ХЛЕБНЫЕ КРОШКИ БЕЗ ПРОПССОВ — в списке! */}
+      <Breadcrumbs />
+      
+      <div className="category-header">
+        <Link to="/" className="back-home">← На главную</Link>
+        <h1>🥧 Выпечка</h1>
+        <p className="category-description">
+          Традиционные рецепты русской выпечки: пышные пироги, тонкие блины, румяные пирожки
+        </p>
+      </div>
+      
       <div className="recipes-grid">
         {bakingData.map((recipe) => (
           <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
