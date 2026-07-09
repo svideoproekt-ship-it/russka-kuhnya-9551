@@ -154,11 +154,21 @@ const Soups = () => {
 />
 
           <div className="recipe-detail">
-            <button className="back-button" onClick={() => navigate('/soups')}>
-  ← Вернуться к супам
-</button>
-            
-            <div className="recipe-card">
+  <button 
+    onClick={() => window.location.href = '/soups'}
+    className="back-button"
+    style={{ 
+      position: 'relative', 
+      zIndex: 1000,
+      cursor: 'pointer',
+      pointerEvents: 'auto'
+    }}
+  >
+    ← Вернуться к супам
+  </button>
+  
+  <div className="recipe-card">
+    
               <div className="recipe-header">
                 <h1>{selectedRecipe.name}</h1>
                 <div className="recipe-meta">
