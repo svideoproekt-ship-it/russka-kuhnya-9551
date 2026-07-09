@@ -37,9 +37,9 @@ function DessertsCategory() {
           categoryPath="/category/desserts"
         />
         
-        <button className="back-button" onClick={handleBack}>
-          ← Назад к списку
-        </button>
+        <Link to="/category/desserts" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+  ← Вернуться к десертам
+</Link>
         
         <div className="recipe-detail">
           <div className="recipe-header">

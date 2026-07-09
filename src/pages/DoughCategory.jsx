@@ -37,9 +37,9 @@ function DoughCategory() {
           categoryPath="/category/dough"
         />
         
-        <button className="back-button" onClick={handleBack}>
-          ← Назад к списку
-        </button>
+        <Link to="/category/dough" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+  ← Вернуться к тесту
+</Link>
         
         <div className="recipe-detail">
           <div className="recipe-header">

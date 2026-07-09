@@ -37,7 +37,9 @@ function FishCategory() {
           categoryPath="/category/fish"
         />
         
-        <button className="back-button" onClick={handleBack}>← Назад к списку</button>
+        <Link to="/category/fish" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+  ← Вернуться к рыбе
+</Link>
         <div className="recipe-detail">
           <div className="recipe-header">
             <ShareButtons title={selectedRecipe.name} />

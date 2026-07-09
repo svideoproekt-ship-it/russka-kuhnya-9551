@@ -93,9 +93,9 @@ const Porridge = () => {
           />
 
           <div className="recipe-detail">
-            <button className="back-button" onClick={handleBack}>
-              ← Назад к списку
-            </button>
+            <Link to="/category/porridge" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+  ← Вернуться к кашам
+</Link>
             
             <div className="recipe-card">
               <div className="recipe-header">
