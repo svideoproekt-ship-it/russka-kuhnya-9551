@@ -148,8 +148,8 @@ const Soups = () => {
 />
 <Breadcrumbs 
   recipeTitle={selectedRecipe.name}
-  categoryName="Название категории"
-  categoryPath="/путь-к-категории"
+  categoryName="Супы"  ПРАВИЛЬНО
+  categoryPath="/soups"
 />
 
           <div className="recipe-detail">
