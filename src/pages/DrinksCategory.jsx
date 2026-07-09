@@ -19,20 +19,27 @@ function DrinksCategory() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // ✅ ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
   if (selectedRecipe) {
     return (
       <div className="drinks-category">
         <SEO 
-  title="Напитки — морсы, компоты, кисели, сбитень, квас | Русская Кухня"
-  description="Традиционные русские напитки с пошаговыми рецептами: ягодные морсы, ароматные компоты, густые кисели, горячий сбитень и домашний квас. Готовьте как в старину!"
-  keywords="напитки, морс, компот, кисель, сбитень, квас, русские напитки, традиционные напитки"
-  url="https://russka-kuhnya-9551.vercel.app/category/drinks"
-/>
-<Breadcrumbs 
-  recipeTitle={selectedRecipe.name}
-  categoryName="Напитки"
-  categoryPath="/category/drinks"
-/>
+          title={`${selectedRecipe.name} — Русская Кухня`}
+          description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
+          keywords="напитки, русская кухня"
+          url={`https://russka-kuhnya-9551.vercel.app/category/drinks?recipe=${selectedRecipe.id}`}
+        />
+        
+        {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ — ВНУТРИ if (selectedRecipe)! */}
+        <Breadcrumbs 
+          recipeTitle={selectedRecipe.name}
+          categoryName="Напитки"
+          categoryPath="/category/drinks"
+        />
+        
+        <button className="back-button" onClick={handleBack}>
+          ← Назад к списку
+        </button>
         
         <div className="recipe-detail">
           <div className="recipe-header">
@@ -69,7 +76,7 @@ function DrinksCategory() {
             </div>
 
             <div className="recipe-section">
-              <h2>👨‍ Приготовление</h2>
+              <h2>👨🍳 Приготовление</h2>
               <ol className="preparation-list">
                 {selectedRecipe.preparation.map((step, index) => (
                   <li key={index}>{step}</li>
@@ -87,8 +94,19 @@ function DrinksCategory() {
     );
   }
 
+  // ✅ СПИСОК РЕЦЕПТОВ
   return (
     <div className="drinks-category">
+      <SEO 
+        title="Напитки — морсы, компоты, кисели, сбитень, квас | Русская Кухня"
+        description="Традиционные русские напитки с пошаговыми рецептами: ягодные морсы, ароматные компоты, густые кисели, горячий сбитень и домашний квас. Готовьте как в старину!"
+        keywords="напитки, морс, компот, кисель, сбитень, квас, русские напитки, традиционные напитки"
+        url="https://russka-kuhnya-9551.vercel.app/category/drinks"
+      />
+      
+      {/* 🍞 ХЛЕБНЫЕ КРОШКИ БЕЗ ПРОПССОВ — в списке! */}
+      <Breadcrumbs />
+
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🍺 Напитки</h1>
