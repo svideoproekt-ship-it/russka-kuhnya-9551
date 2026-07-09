@@ -1,13 +1,13 @@
 import Breadcrumbs from '../components/Breadcrumbs';
 import { Helmet } from 'react-helmet-async';
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { soupsData } from '../data/soupsData';
 import './Soups.css';
 
 const Soups = () => {
-  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);const navigate = useNavigate();
 
   const modernSoups = [
     {
@@ -153,9 +153,9 @@ const Soups = () => {
 />
 
           <div className="recipe-detail">
-            <Link to="/soups" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+            <button className="back-button" onClick={() => navigate('/soups')}>
   ← Вернуться к супам
-</Link>
+</button>
             
             <div className="recipe-card">
               <div className="recipe-header">
