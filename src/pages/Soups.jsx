@@ -7,7 +7,8 @@ import { soupsData } from '../data/soupsData';
 import './Soups.css';
 
 const Soups = () => {
-  const [selectedRecipe, setSelectedRecipe] = useState(null);const navigate = useNavigate();
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const navigate = useNavigate();
 
   const modernSoups = [
     {
