@@ -9,6 +9,8 @@ import { snacksData } from '../data/snacksData';
 import { dessertsData } from '../data/dessertsData';
 import { drinksData } from '../data/drinksData';
 import { doughData } from '../data/doughData';
+import Breadcrumbs from '../components/Breadcrumbs';
+import SEO from '../components/SEO';
 import './SearchPage.css';
 
 function SearchPage() {
@@ -24,10 +26,10 @@ function SearchPage() {
 
     const searchTerm = query.toLowerCase();
     const allRecipes = [
-      ...soupsData.map(r => ({ ...r, category: 'Супы', link: '/category/soups' })),
+      ...soupsData.map(r => ({ ...r, category: 'Супы', link: '/soups' })),
       ...bakingData.map(r => ({ ...r, category: 'Выпечка', link: '/category/baking' })),
-      ...meatData.map(r => ({ ...r, category: 'Мясные блюда', link: '/category/meat' })),
-      ...fishData.map(r => ({ ...r, category: 'Рыбные блюда', link: '/category/fish' })),
+      ...meatData.map(r => ({ ...r, category: 'Мясо', link: '/category/meat' })),
+      ...fishData.map(r => ({ ...r, category: 'Рыба', link: '/category/fish' })),
       ...snacksData.map(r => ({ ...r, category: 'Закуски', link: '/category/snacks' })),
       ...dessertsData.map(r => ({ ...r, category: 'Десерты', link: '/category/desserts' })),
       ...drinksData.map(r => ({ ...r, category: 'Напитки', link: '/category/drinks' })),
@@ -36,7 +38,11 @@ function SearchPage() {
 
     const filtered = allRecipes.filter(recipe =>
       recipe.name.toLowerCase().includes(searchTerm) ||
-      recipe.ingredients.some(ing => ing.toLowerCase().includes(searchTerm))
+      (recipe.ingredients && recipe.ingredients.some(ing => 
+        typeof ing === 'string' 
+          ? ing.toLowerCase().includes(searchTerm)
+          : (ing.name && ing.name.toLowerCase().includes(searchTerm))
+      ))
     );
 
     setResults(filtered);
@@ -44,6 +50,15 @@ function SearchPage() {
 
   return (
     <div className="search-page">
+      <SEO 
+        title={query ? `Поиск: ${query} — Русская Кухня` : 'Поиск рецептов — Русская Кухня'}
+        description={query ? `Результаты поиска по запросу "${query}". Найдено рецептов: ${results.length}.` : 'Поиск по всем рецептам русской кухни. Найдите любимое блюдо быстро!'}
+        keywords="поиск рецептов, найти рецепт, русская кухня"
+        url="https://russka-kuhnya-9551.vercel.app/search"
+      />
+      
+      <Breadcrumbs />
+
       <div className="search-header">
         <Link to="/" className="back-home">← На главную</Link>
         <h1>🔍 Поиск рецептов</h1>
