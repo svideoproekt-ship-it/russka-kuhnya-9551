@@ -87,15 +87,11 @@ function Porridge() {
   keywords="каши, гречка, овсянка, рис, пшёнка, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/porridge"
 />
-<Breadcrumbs />
-
-      <div className="category-header">
-        <Link to="/" className="back-home">← На главную</Link>
-        <h1>🥣 Каши</h1>
-        <p className="category-description">
-          Традиционные русские каши — основа здорового питания
-        </p>
-      </div>
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Каши"
+  categoryPath="/category/porridge"
+/>
 
       <div className="recipes-grid">
         {porridgeData.map((recipe) => (

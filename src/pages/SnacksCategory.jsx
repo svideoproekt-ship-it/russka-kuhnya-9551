@@ -87,15 +87,11 @@ function SnacksCategory() {
   keywords="закуски, салаты, соленья, канапе, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/snacks"
 />
-<Breadcrumbs />
-
-      <div className="category-header">
-        <Link to="/" className="back-home">← На главную</Link>
-        <h1>🥗 Закуски</h1>
-        <p className="category-description">
-          Традиционные русские закуски и салаты от древности до наших дней
-        </p>
-      </div>
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Закуски"
+  categoryPath="/category/snacks"
+/>
 
       <div className="recipes-grid">
         {snacksData.map((recipe) => (

@@ -87,14 +87,11 @@ function DessertsCategory() {
   keywords="десерты, медовик, тирамису, шарлотка, торты, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/desserts"
 />
-<Breadcrumbs />
-      <div className="category-header">
-        <Link to="/" className="back-home">← На главную</Link>
-        <h1>🍰 Десерты и сладости</h1>
-        <p className="category-description">
-          Традиционные русские десерты и сладости от древности до наших дней
-        </p>
-      </div>
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Десерты"
+  categoryPath="/category/desserts"
+/>
 
       <div className="recipes-grid">
         {dessertsData.map((recipe) => (

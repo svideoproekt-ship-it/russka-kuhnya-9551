@@ -28,10 +28,11 @@ function DrinksCategory() {
   keywords="напитки, морс, компот, кисель, сбитень, квас, русские напитки, традиционные напитки"
   url="https://russka-kuhnya-9551.vercel.app/category/drinks"
 />
-<Breadcrumbs />
-        <button className="back-button" onClick={handleBack}>
-          ← Назад к списку
-        </button>
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Напитки"
+  categoryPath="/category/drinks"
+/>
         
         <div className="recipe-detail">
           <div className="recipe-header">

@@ -94,14 +94,11 @@ function DoughCategory() {
   keywords="тесто, дрожжевое тесто, слоёное тесто, заварное тесто, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/dough"
 />
-<Breadcrumbs />
-      <div className="category-header">
-        <Link to="/" className="back-home">← На главную</Link>
-        <h1>🥖 Тесто</h1>
-        <p className="category-description">
-          Рецепты теста для любой выпечки: от дрожжевого до слоёного
-        </p>
-      </div>
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Тесто"
+  categoryPath="/category/dough"
+/>
 
       <div className="recipes-grid">
         {doughData.map((recipe) => (

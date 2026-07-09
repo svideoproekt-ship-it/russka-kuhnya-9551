@@ -74,12 +74,11 @@ function BakingCategory() {
   keywords="выпечка, пироги, блины, пирожки, медовик, русская выпечка"
   url="https://russka-kuhnya-9551.vercel.app/category/baking"
 />
-<Breadcrumbs />
-      <div className="category-header">
-        <Link to="/" className="back-home">← На главную</Link>
-        <h1>🥐 Выпечка</h1>
-        <p className="category-description">Традиционная русская выпечка от древности до наших дней</p>
-      </div>
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Выпечка"
+  categoryPath="/category/baking"
+/>
       <div className="recipes-grid">
         {bakingData.map((recipe) => (
           <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>

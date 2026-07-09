@@ -87,14 +87,11 @@ function MeatCategory() {
   keywords="мясные блюда, котлеты, гуляш, жаркое, бефстроганов, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/category/meat"
 />
-<Breadcrumbs />
-      <div className="category-header">
-        <Link to="/" className="back-home">← На главную</Link>
-        <h1>🥩 Мясные блюда</h1>
-        <p className="category-description">
-          Традиционные русские мясные блюда от древности до наших дней
-        </p>
-      </div>
+<Breadcrumbs 
+  recipeTitle={selectedRecipe.name}
+  categoryName="Мясо"
+  categoryPath="/category/meat"
+/>
 
       <div className="recipes-grid">
         {meatData.map((recipe) => (
