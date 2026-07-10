@@ -37,8 +37,8 @@ function DessertsCategory() {
           categoryPath="/category/desserts"
         />
         
-        <button 
-  onClick={() => window.location.href = '/category/desserts'}
+       <button 
+  onClick={() => window.location.href = '/category/drinks'}
   className="back-button"
   style={{ 
     position: 'relative', 
@@ -47,7 +47,7 @@ function DessertsCategory() {
     pointerEvents: 'auto'
   }}
 >
-  ← Вернуться к десертам
+  ← Вернуться к напиткам
 </button>
         
         <div className="recipe-detail">
