@@ -228,10 +228,13 @@ const Soups = () => {
 <div className="recipe-section" style={{ marginTop: '30px', paddingTop: '20px', borderTop: '3px solid #FFD700' }}>
   <h2 style={{ color: '#8B0000', fontSize: '1.8rem', marginBottom: '20px' }}>🍽️ Похожие рецепты</h2>
   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
-    {allSoups
-      .filter(r => r.id !== selectedRecipe.id)
-      .slice(0, 4)
-      .map(recipe => (
+    {(() => {
+      // Получаем все рецепты кроме текущего
+      const otherRecipes = allSoups.filter(r => r.id !== selectedRecipe.id);
+      // Перемешиваем и берём 4 случайных
+      const shuffled = otherRecipes.sort(() => 0.5 - Math.random()).slice(0, 4);
+      
+      return shuffled.map(recipe => (
         <div 
           key={recipe.id} 
           onClick={() => handleRecipeClick(recipe)}
@@ -265,8 +268,8 @@ const Soups = () => {
           <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>{recipe.name}</h4>
           <span style={{ fontSize: '0.9rem', color: '#666' }}>⏱ {recipe.time}</span>
         </div>
-      ))
-    }
+      ));
+    })()}
   </div>
 </div>
               </div>
