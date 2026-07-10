@@ -37,9 +37,18 @@ function MeatCategory() {
           categoryPath="/category/meat"
         />
         
-        <Link to="/category/meat" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+        <button 
+  onClick={() => window.location.href = '/category/meat'}
+  className="back-button"
+  style={{ 
+    position: 'relative', 
+    zIndex: 1000,
+    cursor: 'pointer',
+    pointerEvents: 'auto'
+  }}
+>
   ← Вернуться к мясу
-</Link>
+</button>
         
         <div className="recipe-detail">
           <div className="recipe-header">
