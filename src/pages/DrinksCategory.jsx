@@ -37,9 +37,18 @@ function DrinksCategory() {
           categoryPath="/category/drinks"
         />
         
-        <Link to="/category/drinks" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+       <button 
+  onClick={() => window.location.href = '/category/drinks'}
+  className="back-button"
+  style={{ 
+    position: 'relative', 
+    zIndex: 1000,
+    cursor: 'pointer',
+    pointerEvents: 'auto'
+  }}
+>
   ← Вернуться к напиткам
-</Link>
+</button>
         
         <div className="recipe-detail">
           <div className="recipe-header">

@@ -37,9 +37,18 @@ function DoughCategory() {
           categoryPath="/category/dough"
         />
         
-        <Link to="/category/dough" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+        <button 
+  onClick={() => window.location.href = '/category/dough'}
+  className="back-button"
+  style={{ 
+    position: 'relative', 
+    zIndex: 1000,
+    cursor: 'pointer',
+    pointerEvents: 'auto'
+  }}
+>
   ← Вернуться к тесту
-</Link>
+</button>
         
         <div className="recipe-detail">
           <div className="recipe-header">

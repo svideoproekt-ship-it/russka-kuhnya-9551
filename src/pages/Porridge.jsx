@@ -93,9 +93,18 @@ const Porridge = () => {
           />
 
           <div className="recipe-detail">
-            <Link to="/category/porridge" className="back-button" style={{ textDecoration: 'none', display: 'inline-block' }}>
+            <button 
+  onClick={() => window.location.href = '/category/porridge'}
+  className="back-button"
+  style={{ 
+    position: 'relative', 
+    zIndex: 1000,
+    cursor: 'pointer',
+    pointerEvents: 'auto'
+  }}
+>
   ← Вернуться к кашам
-</Link>
+</button>
             
             <div className="recipe-card">
               <div className="recipe-header">
