@@ -224,7 +224,7 @@ const Soups = () => {
                   <h2>📚 Историческая справка</h2>
                   <p className="history-text">{selectedRecipe.history}</p>
                 </div>
-              {/* ️ ПОХОЖИЕ РЕЦЕПТЫ */}
+              {/* ️ ДРУГИЕ РЕЦЕПТЫ */}
 <div className="recipe-section" style={{ marginTop: '30px', paddingTop: '20px', borderTop: '3px solid #FFD700' }}>
   <h2 style={{ color: '#8B0000', fontSize: '1.8rem', marginBottom: '20px' }}>🍽️ Похожие рецепты</h2>
   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
