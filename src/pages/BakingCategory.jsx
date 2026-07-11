@@ -28,7 +28,8 @@ function BakingCategory() {
           description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
           keywords="выпечка, русская кухня"
           url={`https://russka-kuhnya-9551.vercel.app/category/baking?recipe=${selectedRecipe.id}`}
-        />
+        image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
+/>
         
         {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ — ВНУТРИ if (selectedRecipe)! */}
         <Breadcrumbs 
@@ -60,7 +61,9 @@ function BakingCategory() {
           </div>
           {selectedRecipe.image && (
             <div className="recipe-image-container">
-              <img loading="lazy" src={selectedRecipe.image} alt={selectedRecipe.name} className="recipe-image" />
+              <img loading="lazy" src={selectedRecipe.image} 
+              alt={`${selectedRecipe.name} — традиционная русская выпечка, пошаговый рецепт с фото`}
+              className="recipe-image" />
             </div>
           )}
           <div className="recipe-content">
@@ -122,7 +125,7 @@ function BakingCategory() {
             <img 
               loading="lazy"
               src={recipe.image} 
-              alt={recipe.name}
+              alt={`${recipe.name} — русская выпечка, рецепт с фото`}
               style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px', marginBottom: '8px' }}
               onError={(e) => { e.target.style.display = 'none'; }}
             />

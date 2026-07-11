@@ -28,8 +28,9 @@ function SnacksCategory() {
           description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
           keywords="закуски, русская кухня"
           url={`https://russka-kuhnya-9551.vercel.app/category/snacks?recipe=${selectedRecipe.id}`}
-        />
-        
+        image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
+/>
+                
         {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ — ВНУТРИ if (selectedRecipe)! */}
         <Breadcrumbs 
           recipeTitle={selectedRecipe.name}
@@ -65,7 +66,7 @@ function SnacksCategory() {
               <img 
                 loading="lazy"
                 src={selectedRecipe.image} 
-                alt={selectedRecipe.name}
+                alt={`${selectedRecipe.name} — традиционная русская закуска, пошаговый рецепт с фото`}
                 className="recipe-image"
                 onError={(e) => {
                   e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
@@ -130,7 +131,7 @@ function SnacksCategory() {
             <img 
               loading="lazy"
               src={recipe.image} 
-              alt={recipe.name}
+              alt={`${recipe.name} — русская закуска, рецепт с фото`}
               style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px', marginBottom: '8px' }}
               onError={(e) => { e.target.style.display = 'none'; }}
             />

@@ -146,7 +146,9 @@ const Soups = () => {
   description="Лучшие рецепты русских супов с пошаговыми фото: классические щи, наваристый борщ, ароматная уха. Готовьте как в старину!"
   keywords="супы, щи, борщ, уха, солянка, рецепты супов, русская кухня"
   url="https://russka-kuhnya-9551.vercel.app/soups"
+image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
 />
+
 <Breadcrumbs 
   recipeTitle={selectedRecipe.name}
   categoryName="Супы"  
