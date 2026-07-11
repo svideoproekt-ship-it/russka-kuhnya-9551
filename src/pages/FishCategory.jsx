@@ -94,6 +94,51 @@ function FishCategory() {
                 <p className="history-text">{selectedRecipe.history}</p>
               </div>
             )}
+      {/* ️ ДРУГИЕ РЕЦЕПТЫ */}
+<div className="recipe-section" style={{ marginTop: '30px', paddingTop: '20px', borderTop: '3px solid #FFD700' }}>
+  <h2 style={{ color: '#8B0000', fontSize: '1.8rem', marginBottom: '20px' }}>🍽️ Другие рецепты</h2>
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
+    {fishData
+      .filter(r => r.id !== selectedRecipe.id)
+      .slice(0, 4)
+      .map(recipe => (
+        <div 
+          key={recipe.id} 
+          onClick={() => handleRecipeClick(recipe)}
+          style={{ 
+            background: 'linear-gradient(135deg, #FFF8DC, #FFE4B5)', 
+            borderRadius: '12px', 
+            padding: '12px', 
+            cursor: 'pointer',
+            border: '2px solid #FFD700',
+            transition: 'transform 0.2s, box-shadow 0.2s',
+            textAlign: 'center'
+          }}
+          onMouseOver={e => {
+            e.currentTarget.style.transform = 'translateY(-5px)';
+            e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+          }}
+          onMouseOut={e => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow = 'none';
+          }}
+        >
+          {recipe.image && (
+            <img 
+              loading="lazy"
+              src={recipe.image} 
+              alt={recipe.name}
+              style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px', marginBottom: '8px' }}
+              onError={(e) => { e.target.style.display = 'none'; }}
+            />
+          )}
+          <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>{recipe.name}</h4>
+          <span style={{ fontSize: '0.9rem', color: '#666' }}>⏱ {recipe.time}</span>
+        </div>
+      ))
+    }
+  </div>
+</div>    
           </div>
         </div>
       </div>
