@@ -3,15 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 const Breadcrumbs = ({ recipeTitle = null, categoryName = null, categoryPath = null }) => {
   const location = useLocation();
   const pathnames = location.pathname.split('/').filter(x => x);
-  // 🔍 ОТЛАДКА: смотрим что приходит
-  console.log('🍞 Breadcrumbs:', {
-    location: location.pathname,
-    recipeTitle,
-    categoryName,
-    categoryPath,
-    pathnames
-  });
-  
+
   if (pathnames.length === 0) return null;
 
   const pathMap = {
