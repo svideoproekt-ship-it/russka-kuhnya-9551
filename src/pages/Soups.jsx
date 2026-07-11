@@ -185,15 +185,15 @@ const Soups = () => {
 
               {selectedRecipe.image && (
                 <div className="recipe-image-container">
-                  <img 
-                    loading="lazy"
-                    src={selectedRecipe.image} 
-                    alt={selectedRecipe.name}
-                    className="recipe-image"
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
-                    }}
-                  />
+                 <img 
+  loading="lazy"
+  src={selectedRecipe.image} 
+  alt={`${selectedRecipe.name} — традиционный русский суп, пошаговый рецепт с фото`}
+  className="recipe-image"
+  onError={(e) => {
+    e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото';
+  }}
+/>
                 </div>
               )}
 
@@ -308,13 +308,13 @@ const Soups = () => {
             <div className="recipe-card-image">
               {recipe.image ? (
                 <img 
-                  loading="lazy"
-                  src={recipe.image} 
-                  alt={recipe.name}
-                  onError={(e) => {
-                    e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
-                  }}
-                />
+  loading="lazy"
+  src={recipe.image} 
+  alt={`${recipe.name} — русский суп, рецепт с фото`}
+  onError={(e) => {
+    e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
+  }}
+/>
               ) : (
                 <div className="no-image">{recipe.icon || '🍲'}</div>
               )}
