@@ -182,7 +182,7 @@ function SnacksCategory() {
                 <img 
                   loading="lazy"
                   src={recipe.image} 
-                  alt={recipe.name}
+                  alt={`${recipe.name} — русская закуска, рецепт с фото`}
                   onError={(e) => {
                     e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
                   }}

@@ -168,7 +168,8 @@ function BakingCategory() {
         {bakingData.map((recipe) => (
           <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
             <div className="recipe-card-image">
-              <img loading="lazy" src={recipe.image} alt={recipe.name} />
+              <img loading="lazy" src={recipe.image}
+               alt={`${recipe.name} — русский суп, рецепт с фото`} />
             </div>
             <div className="recipe-card-content">
               <h3>{recipe.name}</h3>
