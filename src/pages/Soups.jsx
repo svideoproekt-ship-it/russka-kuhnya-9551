@@ -260,12 +260,13 @@ image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRe
         >
           {recipe.image && (
             <img 
-              loading="lazy"
-              src={recipe.image} 
-              alt={recipe.name}
-              style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px', marginBottom: '8px' }}
-              onError={(e) => { e.target.style.display = 'none'; }}
-            />
+  loading="lazy"
+  src={recipe.image} 
+  alt={`${recipe.name} — русский суп, рецепт с фото`}
+  onError={(e) => {
+    e.target.src = 'https://via.placeholder.com/300x200?text=Нет+фото';
+  }}
+/>
           )}
           <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>{recipe.name}</h4>
           <span style={{ fontSize: '0.9rem', color: '#666' }}>⏱ {recipe.time}</span>
