@@ -294,3 +294,67 @@
   .soups-category .history-text { font-size: 1rem !important; }
   .soups-category .back-button, .soups-category .back-home { font-size: 1rem !important; padding: 11px 16px; }
 }
+/*  Адаптивные карточки "Другие рецепты" */
+.related-recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .related-recipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .related-recipes-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  
+  .related-recipes-grid .related-recipe-card {
+    min-width: 0;
+  }
+  
+  .related-recipes-grid .related-recipe-card img {
+    height: 100px !important;
+    object-fit: cover;
+  }
+  
+  .related-recipes-grid .related-recipe-card h4 {
+    font-size: 0.85rem !important;
+  }
+}
+
+.related-recipe-card {
+  background: linear-gradient(135deg, #FFF8DC, #FFE4B5);
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid #FFD700;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.related-recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.related-recipe-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 480px) {
+  .related-recipe-card img {
+    height: 100px;
+  }
+}
