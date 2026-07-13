@@ -16,7 +16,7 @@ import ShareButtons from '../components/ShareButtons';
 const RecipePage = () => {
   const { id } = useParams();
 
-     // 1. Определяем категории и их пути
+  // 1. Определяем категории и их пути
   const categories = [
     { data: soupsData, name: 'Супы', path: '/soups' },
     { data: bakingData, name: 'Выпечка', path: '/category/baking' },
@@ -27,7 +27,7 @@ const RecipePage = () => {
     { data: drinksData, name: 'Напитки', path: '/category/drinks' },
     { data: doughData, name: 'Тесто', path: '/category/dough' },
     { data: porridgeData, name: 'Каши', path: '/category/porridge' },
-      ];
+  ];
 
   // 2. Ищем рецепт и автоматически определяем его категорию
   let recipe = null;
@@ -56,13 +56,7 @@ const RecipePage = () => {
       </div>
     );
   }
- // 🔍 ОТЛАДКА: смотрим что нашли
-  console.log('🍲 RecipePage:', {
-    id,
-    recipe,
-    recipeCategory,
-    title: recipe?.title || recipe?.name
-  });
+
   // 4. Нормализация полей
   const title = recipe.title || recipe.name || 'Без названия';
   const ingredients = recipe.ingredients || [];
@@ -76,128 +70,106 @@ const RecipePage = () => {
   const canonicalUrl = `${window.location.origin}/recipe/${recipe.id}`;
   const metaTitle = `${title} — Русская Кухня`;
   const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
-  // Формируем правильный путь к картинке на GitHub Raw
-const ogImage = image 
-  ? (image.startsWith('http') 
-      ? image 
-      : `https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public${image}`)
-  : 'https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public/og-fallback.jpg';
+  
+  const ogImage = image 
+    ? (image.startsWith('http') 
+        ? image 
+        : `https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public${image}`)
+    : 'https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public/og-fallback.jpg';
 
   // 6. Рендер страницы
   return (
     <>
-      {/* 🔹 Динамические мета-теги */}
- <Helmet>
-  <title>{metaTitle}</title>
-  <meta name="description" content={metaDesc} />
-  <link rel="canonical" href={canonicalUrl} />
-  
-  {/* Open Graph */}
-  <meta property="og:title" content={metaTitle} />
-  <meta property="og:description" content={metaDesc} />
-  <meta property="og:image" content={ogImage} />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:url" content={canonicalUrl} />
-  <meta property="og:type" content="article" />
-  
-  {/* Twitter Card */}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content={metaTitle} />
-  <meta name="twitter:description" content={metaDesc} />
-  <meta name="twitter:image" content={ogImage} />
-  
-  {/* Schema.org Recipe */}
-  <script type="application/ld+json">
-  {JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Recipe",
-    "name": title,
-    "image": ogImage,
-    "description": metaDesc,
-    "author": { 
-      "@type": "Organization", 
-      "name": "Русская Кухня",
-      "url": "https://russka-kuhnya-9551.vercel.app"
-    },
-    "datePublished": recipe.datePublished || "2026-07-07",
-    "prepTime": recipe.prepTime || time || "PT30M",
-    "cookTime": recipe.cookTime || "PT1H",
-    "totalTime": recipe.totalTime || "PT1H30M",
-    "recipeYield": recipe.yield || recipe.servings || "4 порции",
-    "recipeCategory": recipe.category || "Основное блюдо",
-    "recipeCuisine": recipe.cuisine || "Русская",
-    "keywords": recipe.keywords || `${title}, рецепт, русская кухня`,
-    "nutrition": {
-      "@type": "NutritionInformation",
-      "calories": recipe.calories || "300 ккал",
-      "fatContent": recipe.fat || "15 г",
-      "proteinContent": recipe.protein || "20 г",
-      "carbohydrateContent": recipe.carbs || "35 г"
-    },
-    "recipeIngredient": ingredients.map(i => typeof i === 'string' ? i : `${i.name} ${i.amount} ${i.unit}`),
-    "recipeInstructions": steps.map((s, idx) => ({ 
-      "@type": "HowToStep", 
-      "position": idx + 1,
-      "text": s 
-    })),
-    "aggregateRating": recipe.rating ? {
-      "@type": "AggregateRating",
-      "ratingValue": recipe.rating,
-      "ratingCount": recipe.ratingCount || 1
-    } : undefined
-  })}
-</script>
-</Helmet>
+      {/* 🔹 ВСЕ МЕТА-ТЕГИ И SCHEMA В ОДНОМ HELMET */}
+      <Helmet>
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDesc} />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={metaTitle} />
+        <meta name="twitter:description" content={metaDesc} />
+        <meta name="twitter:image" content={ogImage} />
+        
+        {/* Schema.org Recipe */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Recipe",
+            "name": title,
+            "image": ogImage,
+            "description": metaDesc,
+            "author": { "@type": "Organization", "name": "Русская Кухня", "url": "https://russka-kuhnya-9551.vercel.app" },
+            "datePublished": recipe.datePublished || "2026-07-07",
+            "prepTime": recipe.prepTime || time || "PT30M",
+            "cookTime": recipe.cookTime || "PT1H",
+            "totalTime": recipe.totalTime || "PT1H30M",
+            "recipeYield": recipe.yield || recipe.servings || "4 порции",
+            "recipeCategory": recipe.category || "Основное блюдо",
+            "recipeCuisine": recipe.cuisine || "Русская",
+            "keywords": recipe.keywords || `${title}, рецепт, русская кухня`,
+            "nutrition": {
+              "@type": "NutritionInformation",
+              "calories": recipe.calories || "300 ккал",
+              "fatContent": recipe.fat || "15 г",
+              "proteinContent": recipe.protein || "20 г",
+              "carbohydrateContent": recipe.carbs || "35 г"
+            },
+            "recipeIngredient": ingredients.map(i => typeof i === 'string' ? i : `${i.name} ${i.amount} ${i.unit}`),
+            "recipeInstructions": steps.map((s, idx) => ({ "@type": "HowToStep", "position": idx + 1, "text": s })),
+            "aggregateRating": recipe.rating ? { "@type": "AggregateRating", "ratingValue": recipe.rating, "ratingCount": recipe.ratingCount || 1 } : undefined
+          })}
+        </script>
+
+        {/* 🧠 FAQ SCHEMA ДЛЯ GOOGLE */}
+        {recipe.faq && (
+          <script type="application/ld+json">
+            {JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": recipe.faq.map(item => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.answer
+                }
+              }))
+            })}
+          </script>
+        )}
+      </Helmet>
 
       {/* 🔹 Визуальный контент */}
       <div style={{ minHeight: '100vh', background: 'linear-gradient(160deg, #0a0a2a 0%, #001f3f 100%)', padding: '20px', fontFamily: "'Times New Roman', serif" }}>
+        
+        {/* Кнопка Назад (теперь чистая, без вложенных блоков!) */}
         <button
           onClick={() => window.history.back()}
           style={{ display: 'inline-block', marginBottom: '20px', padding: '10px 20px', background: 'linear-gradient(135deg, #00BFFF, #008080)', color: '#fff', border: 'none', borderRadius: '8px', fontSize: '1rem', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s ease' }}
           onMouseOver={e => e.target.style.transform = 'translateY(-2px)'}
           onMouseOut={e => e.target.style.transform = 'translateY(0)'}
         >
-          {/* 🙋‍️ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ */}
-{recipe.faq && (
-  <div className="faq-section" style={{ marginTop: '40px', padding: '20px', background: '#f9f9f9', borderRadius: '12px' }}>
-    <h3 style={{ color: '#8B0000', marginBottom: '20px' }}>❓ Часто задаваемые вопросы</h3>
-    {recipe.faq.map((item, index) => (
-      <div key={index} style={{ marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
-        <h4 style={{ color: '#333', fontSize: '1.1rem', marginBottom: '8px' }}>{item.question}</h4>
-        <p style={{ color: '#666', lineHeight: '1.6' }}>{item.answer}</p>
-      </div>
-    ))}
-  </div>
-)}
           ← Назад к списку
         </button>
 
-      <Breadcrumbs 
-        recipeTitle={title} 
-        categoryName={recipeCategory.name} 
-        categoryPath={recipeCategory.path} 
-      />
-{/* 🧠 FAQ SCHEMA ДЛЯ GOOGLE */}
-{recipe.faq && (
-  <Helmet>
-    <script type="application/ld+json">
-      {JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": recipe.faq.map(item => ({
-          "@type": "Question",
-          "name": item.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": item.answer
-          }
-        }))
-      })}
-    </script>
-  </Helmet>
-)}
+        <Breadcrumbs 
+          recipeTitle={title} 
+          categoryName={recipeCategory.name} 
+          categoryPath={recipeCategory.path} 
+        />
+
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '30px', background: 'linear-gradient(135deg, #00BFFF, #4682B4)', border: '3px solid #20B2AA', borderRadius: '20px', boxShadow: '0 8px 25px rgba(0,0,0,0.4)' }}>
           
           {/* Заголовок + Мета + Шеринг */}
@@ -255,9 +227,22 @@ const ogImage = image
 
             {/* История */}
             {history && (
-              <div style={{ background: 'linear-gradient(135deg, #e0f7fa, #b2ebf2)', padding: '25px', borderRadius: '15px', border: '2px solid #008080' }}>
+              <div style={{ background: 'linear-gradient(135deg, #e0f7fa, #b2ebf2)', padding: '25px', borderRadius: '15px', border: '2px solid #008080', marginBottom: '30px' }}>
                 <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '15px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>📚 Историческая справка</h2>
                 <p style={{ color: '#004d40', fontSize: '1.15rem', lineHeight: '1.7', fontStyle: 'italic', margin: 0 }}>{history}</p>
+              </div>
+            )}
+
+            {/* 🙋‍️ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ (Теперь на своём законном месте!) */}
+            {recipe.faq && (
+              <div style={{ marginTop: '20px', padding: '25px', background: '#f0f8ff', borderRadius: '15px', border: '2px solid #20B2AA' }}>
+                <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>❓ Часто задаваемые вопросы</h2>
+                {recipe.faq.map((item, index) => (
+                  <div key={index} style={{ marginBottom: '15px', borderBottom: index === recipe.faq.length - 1 ? 'none' : '1px solid #b2ebf2', paddingBottom: '15px' }}>
+                    <h4 style={{ color: '#004d40', fontSize: '1.15rem', marginBottom: '8px', fontWeight: 'bold' }}>❓ {item.question}</h4>
+                    <p style={{ color: '#006064', lineHeight: '1.6', margin: 0, fontSize: '1.05rem' }}>💡 {item.answer}</p>
+                  </div>
+                ))}
               </div>
             )}
 
