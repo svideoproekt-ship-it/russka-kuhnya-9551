@@ -159,6 +159,18 @@ const ogImage = image
           onMouseOver={e => e.target.style.transform = 'translateY(-2px)'}
           onMouseOut={e => e.target.style.transform = 'translateY(0)'}
         >
+          {/* 🙋‍️ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ */}
+{recipe.faq && (
+  <div className="faq-section" style={{ marginTop: '40px', padding: '20px', background: '#f9f9f9', borderRadius: '12px' }}>
+    <h3 style={{ color: '#8B0000', marginBottom: '20px' }}>❓ Часто задаваемые вопросы</h3>
+    {recipe.faq.map((item, index) => (
+      <div key={index} style={{ marginBottom: '15px', borderBottom: '1px solid #eee', paddingBottom: '10px' }}>
+        <h4 style={{ color: '#333', fontSize: '1.1rem', marginBottom: '8px' }}>{item.question}</h4>
+        <p style={{ color: '#666', lineHeight: '1.6' }}>{item.answer}</p>
+      </div>
+    ))}
+  </div>
+)}
           ← Назад к списку
         </button>
 
@@ -167,7 +179,25 @@ const ogImage = image
         categoryName={recipeCategory.name} 
         categoryPath={recipeCategory.path} 
       />
-
+{/* 🧠 FAQ SCHEMA ДЛЯ GOOGLE */}
+{recipe.faq && (
+  <Helmet>
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": recipe.faq.map(item => ({
+          "@type": "Question",
+          "name": item.question,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.answer
+          }
+        }))
+      })}
+    </script>
+  </Helmet>
+)}
         <div style={{ maxWidth: '900px', margin: '0 auto', padding: '30px', background: 'linear-gradient(135deg, #00BFFF, #4682B4)', border: '3px solid #20B2AA', borderRadius: '20px', boxShadow: '0 8px 25px rgba(0,0,0,0.4)' }}>
           
           {/* Заголовок + Мета + Шеринг */}
