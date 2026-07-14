@@ -37,10 +37,9 @@ function HomePage() {
         <p className="tagline">Традиции, проверенные временем</p>
       </header>
 
-            {/* Поиск */}
-      <div className="search-section" style={{ padding: '0 20px', marginBottom: '30px' }}>
+                {/* Поиск */}
+      <div style={{ padding: '0 20px', marginBottom: '30px' }}>
         <form 
-          className="search-container" 
           onSubmit={handleSearch}
           style={{ 
             display: 'flex', 
@@ -51,8 +50,7 @@ function HomePage() {
           }}
         >
           <input
-            type="search" // 🔥 ВАЖНО: открывает клавиатуру с кнопкой "Поиск/Go" на мобильных
-            className="search-input"
+            type="search"
             placeholder="Найти рецепт (например: борщ, пельмени)..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
@@ -61,45 +59,60 @@ function HomePage() {
               padding: '14px 16px',
               borderRadius: '12px',
               border: '2px solid #e0e0e0',
-              fontSize: '16px', // 🔥 ВАЖНО: предотвращает зум на iPhone
+              fontSize: '16px',
               outline: 'none',
-              background: '#fff'
+              background: '#fff',
+              cursor: 'text'
             }}
-            onFocus={(e) => e.target.style.borderColor = '#8B0000'}
-            onBlur={(e) => e.target.style.borderColor = '#e0e0e0'}
           />
           
+          {/* 🔥 КНОПКА БЕЗ КЛАССОВ — ТОЛЬКО INLINE СТИЛИ */}
           <button 
             type="submit" 
-            className="search-icon"
-            onClick={handleSearch} // 🔥 ДВОЙНАЯ ЗАЩИТА: сработает и как submit, и как клик
-            style={{
-              background: 'linear-gradient(135deg, #8B0000, #A52A2A)',
-              color: 'white',
-              border: 'none',
-              borderRadius: '12px',
-              padding: '14px 18px',
-              cursor: 'pointer',
-              fontSize: '22px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              minWidth: '55px', // 🔥 ВАЖНО: минимальный размер для удобного тапа пальцем
-              minHeight: '55px',
-              boxShadow: '0 4px 12px rgba(139, 0, 0, 0.3)',
-              touchAction: 'manipulation', // 🔥 ВАЖНО: убирает задержку 300мс на мобильных
-              WebkitTapHighlightColor: 'transparent',
-              transition: 'transform 0.1s'
+            // УБРАЛИ className="search-icon" — он нам мешает!
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              handleSearch(e);
             }}
-            onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'}
-            onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
-            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            onMouseDown={(e) => {
+              e.currentTarget.style.transform = 'scale(0.95)';
+              e.currentTarget.style.opacity = '0.9';
+            }}
+            onMouseUp={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.opacity = '1';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.opacity = '1';
+            }}
+            style={{
+              background: 'linear-gradient(135deg, #8B0000, #A52A2A) !important',
+              color: 'white !important',
+              border: 'none !important',
+              borderRadius: '12px !important',
+              padding: '14px 18px !important',
+              cursor: 'pointer !important', // 🔥 ПАЛЬЧИК!
+              fontSize: '22px !important',
+              display: 'flex !important',
+              alignItems: 'center !important',
+              justifyContent: 'center !important',
+              minWidth: '55px !important',
+              minHeight: '55px !important',
+              boxShadow: '0 4px 12px rgba(139, 0, 0, 0.3) !important',
+              touchAction: 'manipulation !important',
+              WebkitTapHighlightColor: 'transparent !important',
+              pointerEvents: 'auto !important', // 🔥 РАЗРЕШАЕМ КЛИКИ
+              zIndex: '9999 !important', // 🔥 ПОВЕРХ ВСЕГО
+              position: 'relative !important',
+              transition: 'all 0.1s ease !important'
+            }}
           >
             🔍
           </button>
         </form>
       </div>
-
       {/* Кнопка подписки */}
       <SubscribeButton />
 
