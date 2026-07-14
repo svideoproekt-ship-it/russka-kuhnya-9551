@@ -18,35 +18,44 @@ function SearchPage() {
   const [results, setResults] = useState([]);
   const query = searchParams.get('q') || '';
 
-  useEffect(() => {
+    useEffect(() => {
     if (!query.trim()) {
       setResults([]);
       return;
     }
 
     const searchTerm = query.toLowerCase();
+    
+    // Собираем все рецепты и добавляем им правильное имя для поиска
     const allRecipes = [
-      ...soupsData.map(r => ({ ...r, category: 'Супы', link: '/soups' })),
-      ...bakingData.map(r => ({ ...r, category: 'Выпечка', link: '/category/baking' })),
-      ...meatData.map(r => ({ ...r, category: 'Мясо', link: '/category/meat' })),
-      ...fishData.map(r => ({ ...r, category: 'Рыба', link: '/category/fish' })),
-      ...snacksData.map(r => ({ ...r, category: 'Закуски', link: '/category/snacks' })),
-      ...dessertsData.map(r => ({ ...r, category: 'Десерты', link: '/category/desserts' })),
-      ...drinksData.map(r => ({ ...r, category: 'Напитки', link: '/category/drinks' })),
-      ...doughData.map(r => ({ ...r, category: 'Тесто', link: '/category/dough' })),
+      ...soupsData.map(r => ({ ...r, categoryName: 'Супы', link: '/soups' })),
+      ...bakingData.map(r => ({ ...r, categoryName: 'Выпечка', link: '/category/baking' })),
+      ...meatData.map(r => ({ ...r, categoryName: 'Мясо', link: '/category/meat' })),
+      ...fishData.map(r => ({ ...r, categoryName: 'Рыба', link: '/category/fish' })),
+      ...snacksData.map(r => ({ ...r, categoryName: 'Закуски', link: '/category/snacks' })),
+      ...dessertsData.map(r => ({ ...r, categoryName: 'Десерты', link: '/category/desserts' })),
+      ...drinksData.map(r => ({ ...r, categoryName: 'Напитки', link: '/category/drinks' })),
+      ...doughData.map(r => ({ ...r, categoryName: 'Тесто', link: '/category/dough' })),
+      ...porridgeData.map(r => ({ ...r, categoryName: 'Каши', link: '/category/porridge' })), // <-- Не забудь добавить каши, если они есть!
     ];
 
-    const filtered = allRecipes.filter(recipe =>
-      recipe.name.toLowerCase().includes(searchTerm) ||
-      (recipe.ingredients && recipe.ingredients.some(ing => 
-        typeof ing === 'string' 
-          ? ing.toLowerCase().includes(searchTerm)
-          : (ing.name && ing.name.toLowerCase().includes(searchTerm))
-      ))
-    );
+    const filtered = allRecipes.filter(recipe => {
+      // 🔥 БЕЗОПАСНОЕ ПОЛУЧЕНИЕ НАЗВАНИЯ (title ИЛИ name)
+      const recipeName = (recipe.title || recipe.name || '').toLowerCase();
+      const matchesName = recipeName.includes(searchTerm);
+
+      // 🔥 БЕЗОПАСНАЯ ПРОВЕРКА ИНГРЕДИЕНТОВ
+      const matchesIngredient = recipe.ingredients && recipe.ingredients.some(ing => {
+        const ingText = typeof ing === 'string' ? ing : (ing.name || '');
+        return ingText.toLowerCase().includes(searchTerm);
+      });
+
+      return matchesName || matchesIngredient;
+    });
 
     setResults(filtered);
   }, [query]);
+  
 
   return (
     <div className="search-page">
@@ -86,8 +95,8 @@ function SearchPage() {
             to={`${recipe.link}?recipe=${recipe.id}`}
             className="search-result-card"
           >
-            <div className="result-category">{recipe.category}</div>
-            <h3>{recipe.name}</h3>
+                        <div className="result-category">{recipe.categoryName}</div>
+            <h3>{recipe.title || recipe.name}</h3>
             <div className="result-meta">
               <span>🕰 {recipe.epoch}</span>
               <span>⏱ {recipe.time}</span>
