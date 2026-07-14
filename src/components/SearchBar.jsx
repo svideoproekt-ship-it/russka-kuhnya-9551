@@ -15,41 +15,9 @@ const SearchBar = () => {
   };
 
   return (
-    <form onSubmit={executeSearch} className="search-bar" style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%' }}>
+    <form onSubmit={executeSearch} className="search-bar" style={{ display: 'flex', alignItems: 'center', gap: '8px', width: '100%' }}>
       
-      <button 
-        type="submit" 
-        onClick={executeSearch}
-        onTouchStart={(e) => {
-          // 🔥 Дополнительная обработка для мобильных: срабатывает при касании
-          e.preventDefault();
-          executeSearch(e);
-        }}
-        style={{ 
-          background: 'none', 
-          border: 'none', 
-          cursor: 'pointer', 
-          padding: '10px', 
-          display: 'flex', 
-          alignItems: 'center',
-          justifyContent: 'center',
-          borderRadius: '8px',
-          transition: 'background 0.2s',
-          WebkitTapHighlightColor: 'transparent',
-          touchAction: 'manipulation' // Убирает задержку 300ms на мобильных
-        }}
-        onMouseOver={(e) => e.currentTarget.style.background = 'rgba(139, 0, 0, 0.1)'}
-        onMouseOut={(e) => e.currentTarget.style.background = 'none'}
-        aria-label="Искать"
-      >
-        {/* 🔥 pointerEvents: 'none' — клик проходит сквозь иконку к кнопке! */}
-        <Search 
-          size={24} 
-          color="#8B0000" 
-          style={{ pointerEvents: 'none' }} 
-        />
-      </button>
-      
+      {/* 🔥 ПОЛЕ ВВОДА — отдельно, без иконки внутри */}
       <input 
         type="search" 
         value={query}
@@ -57,16 +25,59 @@ const SearchBar = () => {
         placeholder="Поиск рецепта..." 
         style={{ 
           flex: 1, 
-          padding: '10px 12px', 
-          borderRadius: '8px', 
-          border: '1px solid #ccc', 
+          padding: '12px 16px', 
+          borderRadius: '10px', 
+          border: '2px solid #e0e0e0', 
           fontSize: '16px', 
           outline: 'none',
-          WebkitAppearance: 'none'
+          WebkitAppearance: 'none',
+          transition: 'border-color 0.2s',
+          background: '#fff'
         }}
         onFocus={(e) => e.target.style.borderColor = '#8B0000'}
-        onBlur={(e) => e.target.style.borderColor = '#ccc'}
+        onBlur={(e) => e.target.style.borderColor = '#e0e0e0'}
       />
+
+      {/* 🔥 КНОПКА С ЛУПОЙ — отдельно, рядом с полем */}
+      <button 
+        type="submit" 
+        onClick={executeSearch}
+        onTouchStart={(e) => {
+          e.preventDefault();
+          executeSearch(e);
+        }}
+        style={{ 
+          background: 'linear-gradient(135deg, #8B0000, #A52A2A)', 
+          border: 'none', 
+          cursor: 'pointer', 
+          padding: '12px 16px', 
+          display: 'flex', 
+          alignItems: 'center',
+          justifyContent: 'center',
+          borderRadius: '10px',
+          transition: 'all 0.2s',
+          WebkitTapHighlightColor: 'transparent',
+          touchAction: 'manipulation',
+          boxShadow: '0 2px 8px rgba(139, 0, 0, 0.3)',
+          minWidth: '48px', // Минимальный размер для удобного тапа на мобильном
+          minHeight: '48px'
+        }}
+        onMouseOver={(e) => {
+          e.currentTarget.style.background = 'linear-gradient(135deg, #A52A2A, #CD5C5C)';
+          e.currentTarget.style.transform = 'scale(1.05)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.background = 'linear-gradient(135deg, #8B0000, #A52A2A)';
+          e.currentTarget.style.transform = 'scale(1)';
+        }}
+        aria-label="Искать"
+      >
+        <Search 
+          size={22} 
+          color="#fff" 
+          strokeWidth={2.5}
+        />
+      </button>
     </form>
   );
 };
