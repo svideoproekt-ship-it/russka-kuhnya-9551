@@ -1,23 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search } from 'lucide-react'; 
 
 const SearchBar = () => {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
+  const buttonRef = useRef(null);
 
   const executeSearch = (e) => {
-    if (e) e.preventDefault();
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation(); // Останавливаем всплытие
+    }
     
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query.trim())}`);
     }
   };
 
+  // Прямое добавление обработчиков (в обход React)
+  useEffect(() => {
+    if (buttonRef.current) {
+      buttonRef.current.addEventListener('click', executeSearch);
+      buttonRef.current.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        executeSearch(e);
+      });
+    }
+    return () => {
+      if (buttonRef.current) {
+        buttonRef.current.removeEventListener('click', executeSearch);
+        buttonRef.current.removeEventListener('touchend', executeSearch);
+      }
+    };
+  }, [query, navigate]);
+
   return (
     <form onSubmit={executeSearch} className="search-bar" style={{ display: 'flex', alignItems: 'center', gap: '8px', width: '100%' }}>
       
-      {/* 🔥 ПОЛЕ ВВОДА — отдельно, без иконки внутри */}
       <input 
         type="search" 
         value={query}
@@ -38,14 +58,9 @@ const SearchBar = () => {
         onBlur={(e) => e.target.style.borderColor = '#e0e0e0'}
       />
 
-      {/* 🔥 КНОПКА С ЛУПОЙ — отдельно, рядом с полем */}
       <button 
-        type="submit" 
-        onClick={executeSearch}
-        onTouchStart={(e) => {
-          e.preventDefault();
-          executeSearch(e);
-        }}
+        ref={buttonRef}
+        type="submit"
         style={{ 
           background: 'linear-gradient(135deg, #8B0000, #A52A2A)', 
           border: 'none', 
@@ -59,8 +74,11 @@ const SearchBar = () => {
           WebkitTapHighlightColor: 'transparent',
           touchAction: 'manipulation',
           boxShadow: '0 2px 8px rgba(139, 0, 0, 0.3)',
-          minWidth: '48px', // Минимальный размер для удобного тапа на мобильном
-          minHeight: '48px'
+          minWidth: '48px',
+          minHeight: '48px',
+          position: 'relative',
+          zIndex: 1000,
+          pointerEvents: 'auto',
         }}
         onMouseOver={(e) => {
           e.currentTarget.style.background = 'linear-gradient(135deg, #A52A2A, #CD5C5C)';
@@ -76,6 +94,7 @@ const SearchBar = () => {
           size={22} 
           color="#fff" 
           strokeWidth={2.5}
+          style={{ pointerEvents: 'none' }}
         />
       </button>
     </form>
