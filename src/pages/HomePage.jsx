@@ -56,15 +56,15 @@ function HomePage() {
         >
           <input
             type="search"
-            placeholder="Найти рецепт (например: борщ, пельмени)..."
+            placeholder="Найти рецепт (борщ, пельмени...)" // 🔥 УКОРОТИЛИ ТЕКСТ ДЛЯ МОБИЛЬНЫХ
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             style={{
               flex: 1,
-              padding: '14px 16px',
+              padding: '12px 14px', // 🔥 ЧУТЬ УМЕНЬШИЛИ ОТСТУПЫ ДЛЯ КОМПАКТНОСТИ
               borderRadius: '12px',
               border: '2px solid #e0e0e0',
-              fontSize: '16px',
+              fontSize: '14px', // 🔥 УМЕНЬШИЛИ ШРИФТ, ТЕПЕРЬ ВСЁ ВЛЕЗЕТ
               outline: 'none',
               background: '#fff',
               WebkitAppearance: 'none'
