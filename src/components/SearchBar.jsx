@@ -6,31 +6,35 @@ const SearchBar = () => {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
-  // Эта функция сработает И при нажатии Enter на ПК, И при тапе на иконку, И при кнопке "Поиск" на мобильной клавиатуре!
-  const handleSearch = (e) => {
-    e.preventDefault(); // 🔥 ВАЖНО: предотвращаем стандартную перезагрузку страницы
+  // Единая функция поиска
+  const executeSearch = (e) => {
+    // Если событие есть (клик или сабмит), предотвращаем перезагрузку
+    if (e) e.preventDefault(); 
     
     if (query.trim()) {
-      // Перенаправляем на страницу поиска с параметром q (как ожидает твой SearchPage.jsx)
+      console.log('🚀 Запуск поиска:', query); // Для отладки в консоли
       navigate(`/search?q=${encodeURIComponent(query.trim())}`);
     }
   };
 
   return (
-    <form onSubmit={handleSearch} className="search-bar" style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%' }}>
+    <form onSubmit={executeSearch} className="search-bar" style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%' }}>
       
-      {/* 🔥 Превращаем иконку в настоящую кнопку отправки формы */}
+      {/* 🔥 КНОПКА С ДВОЙНЫМ ДЕЙСТВИЕМ */}
       <button 
         type="submit" 
+        onClick={executeSearch} // <-- ЭТО ГЛАВНОЕ ИСПРАВЛЕНИЕ ДЛЯ МОБИЛЬНЫХ!
         style={{ 
           background: 'none', 
           border: 'none', 
           cursor: 'pointer', 
-          padding: '8px', 
+          padding: '10px', 
           display: 'flex', 
           alignItems: 'center',
+          justifyContent: 'center',
           borderRadius: '8px',
-          transition: 'background 0.2s'
+          transition: 'background 0.2s',
+          WebkitTapHighlightColor: 'transparent' // Убирает синюю подсветку при тапе на Android/iOS
         }}
         onMouseOver={(e) => e.currentTarget.style.background = 'rgba(139, 0, 0, 0.1)'}
         onMouseOut={(e) => e.currentTarget.style.background = 'none'}
@@ -40,17 +44,18 @@ const SearchBar = () => {
       </button>
       
       <input 
-        type="search" // 🔥 ВАЖНО: открывает на мобильных клавиатуру с кнопкой "Поиск" / "Go"
+        type="search" 
         value={query}
         onChange={(e) => setQuery(e.target.value)}
-        placeholder="Поиск рецепта или ингредиента..." 
+        placeholder="Поиск рецепта..." 
         style={{ 
           flex: 1, 
           padding: '10px 12px', 
           borderRadius: '8px', 
           border: '1px solid #ccc', 
-          fontSize: '16px', // 🔥 ВАЖНО: предотвращает автоматический зум на iPhone при фокусе
-          outline: 'none'
+          fontSize: '16px', 
+          outline: 'none',
+          WebkitAppearance: 'none' // Сбрасывает стандартные стили iOS
         }}
         onFocus={(e) => e.target.style.borderColor = '#8B0000'}
         onBlur={(e) => e.target.style.borderColor = '#ccc'}
