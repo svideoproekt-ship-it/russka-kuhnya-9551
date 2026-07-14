@@ -37,10 +37,15 @@ function HomePage() {
         <p className="tagline">Традиции, проверенные временем</p>
       </header>
 
-                {/* Поиск */}
+          {/* Поиск */}
       <div style={{ padding: '0 20px', marginBottom: '30px' }}>
         <form 
-          onSubmit={handleSearch}
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (searchTerm.trim()) {
+              navigate(`/search?q=${encodeURIComponent(searchTerm.trim())}`);
+            }
+          }}
           style={{ 
             display: 'flex', 
             gap: '10px', 
@@ -62,57 +67,37 @@ function HomePage() {
               fontSize: '16px',
               outline: 'none',
               background: '#fff',
-              cursor: 'text'
+              WebkitAppearance: 'none'
             }}
           />
           
-          {/* 🔥 КНОПКА БЕЗ КЛАССОВ — ТОЛЬКО INLINE СТИЛИ */}
           <button 
-            type="submit" 
-            // УБРАЛИ className="search-icon" — он нам мешает!
-            onClick={(e) => {
-              e.preventDefault();
-              e.stopPropagation();
-              handleSearch(e);
-            }}
-            onMouseDown={(e) => {
-              e.currentTarget.style.transform = 'scale(0.95)';
-              e.currentTarget.style.opacity = '0.9';
-            }}
-            onMouseUp={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.opacity = '1';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'scale(1)';
-              e.currentTarget.style.opacity = '1';
-            }}
+            type="submit"
             style={{
-              background: 'linear-gradient(135deg, #8B0000, #A52A2A) !important',
-              color: 'white !important',
-              border: 'none !important',
-              borderRadius: '12px !important',
-              padding: '14px 18px !important',
-              cursor: 'pointer !important', // 🔥 ПАЛЬЧИК!
-              fontSize: '22px !important',
-              display: 'flex !important',
-              alignItems: 'center !important',
-              justifyContent: 'center !important',
-              minWidth: '55px !important',
-              minHeight: '55px !important',
-              boxShadow: '0 4px 12px rgba(139, 0, 0, 0.3) !important',
-              touchAction: 'manipulation !important',
-              WebkitTapHighlightColor: 'transparent !important',
-              pointerEvents: 'auto !important', // 🔥 РАЗРЕШАЕМ КЛИКИ
-              zIndex: '9999 !important', // 🔥 ПОВЕРХ ВСЕГО
-              position: 'relative !important',
-              transition: 'all 0.1s ease !important'
+              background: '#8B0000',
+              color: 'white',
+              border: 'none',
+              borderRadius: '12px',
+              padding: '14px 18px',
+              cursor: 'pointer',
+              fontSize: '22px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '56px',
+              minHeight: '56px',
+              boxShadow: '0 4px 12px rgba(139, 0, 0, 0.3)',
+              WebkitTapHighlightColor: 'transparent',
+              touchAction: 'manipulation'
             }}
+            onMouseDown={(e) => e.currentTarget.style.opacity = '0.8'}
+            onMouseUp={(e) => e.currentTarget.style.opacity = '1'}
+            onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
           >
             🔍
           </button>
         </form>
-      </div>
+      </div>            
       {/* Кнопка подписки */}
       <SubscribeButton />
 
