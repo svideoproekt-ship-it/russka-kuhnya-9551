@@ -8,7 +8,7 @@ export const soupsData = [
     title: "Щи из свежей капусты",
     epoch: "Древняя Русь (IX век)",
     time: "1 час 30 минут",
-    image: "/images/soups/1szhi.png",
+    image: "/publicimagessoups/sour_shchi.jpg",
     ingredients: [
       { name: "Говядина на кости", amount: 500, unit: "г" },
       { name: "Капуста свежая", amount: 300, unit: "г" },
