@@ -37,17 +37,66 @@ function HomePage() {
         <p className="tagline">Традиции, проверенные временем</p>
       </header>
 
-      {/* Поиск */}
-      <div className="search-section">
-        <form className="search-container" onSubmit={handleSearch}>
+            {/* Поиск */}
+      <div className="search-section" style={{ padding: '0 20px', marginBottom: '30px' }}>
+        <form 
+          className="search-container" 
+          onSubmit={handleSearch}
+          style={{ 
+            display: 'flex', 
+            gap: '10px', 
+            width: '100%', 
+            maxWidth: '600px', 
+            margin: '0 auto' 
+          }}
+        >
           <input
-            type="text"
+            type="search" // 🔥 ВАЖНО: открывает клавиатуру с кнопкой "Поиск/Go" на мобильных
             className="search-input"
-            placeholder="Найти рецепт (например: борщ, пельмени, медовик)..."
+            placeholder="Найти рецепт (например: борщ, пельмени)..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
+            style={{
+              flex: 1,
+              padding: '14px 16px',
+              borderRadius: '12px',
+              border: '2px solid #e0e0e0',
+              fontSize: '16px', // 🔥 ВАЖНО: предотвращает зум на iPhone
+              outline: 'none',
+              background: '#fff'
+            }}
+            onFocus={(e) => e.target.style.borderColor = '#8B0000'}
+            onBlur={(e) => e.target.style.borderColor = '#e0e0e0'}
           />
-          <button type="submit" className="search-icon">🔍</button>
+          
+          <button 
+            type="submit" 
+            className="search-icon"
+            onClick={handleSearch} // 🔥 ДВОЙНАЯ ЗАЩИТА: сработает и как submit, и как клик
+            style={{
+              background: 'linear-gradient(135deg, #8B0000, #A52A2A)',
+              color: 'white',
+              border: 'none',
+              borderRadius: '12px',
+              padding: '14px 18px',
+              cursor: 'pointer',
+              fontSize: '22px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '55px', // 🔥 ВАЖНО: минимальный размер для удобного тапа пальцем
+              minHeight: '55px',
+              boxShadow: '0 4px 12px rgba(139, 0, 0, 0.3)',
+              touchAction: 'manipulation', // 🔥 ВАЖНО: убирает задержку 300мс на мобильных
+              WebkitTapHighlightColor: 'transparent',
+              transition: 'transform 0.1s'
+            }}
+            onMouseDown={(e) => e.currentTarget.style.transform = 'scale(0.95)'}
+            onMouseUp={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            🔍
+          </button>
         </form>
       </div>
 
