@@ -1,4 +1,3 @@
-// src/pages/SearchPage.jsx
 import React, { useState, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { soupsData } from '../data/soupsData';
@@ -9,6 +8,7 @@ import { snacksData } from '../data/snacksData';
 import { dessertsData } from '../data/dessertsData';
 import { drinksData } from '../data/drinksData';
 import { doughData } from '../data/doughData';
+import { porridgeData } from '../data/porridgeData'; // 🔥 ВАЖНО: добавили импорт каш!
 import Breadcrumbs from '../components/Breadcrumbs';
 import SEO from '../components/SEO';
 import './SearchPage.css';
@@ -18,34 +18,36 @@ function SearchPage() {
   const [results, setResults] = useState([]);
   const query = searchParams.get('q') || '';
 
-    useEffect(() => {
-    if (!query.trim()) {
+  useEffect(() => {
+    // 1. Если запрос пустой, очищаем результаты и выходим
+    if (!query || !query.trim()) {
       setResults([]);
       return;
     }
 
     const searchTerm = query.toLowerCase();
     
-    // Собираем все рецепты и добавляем им правильное имя для поиска
+    // 2. Безопасно собираем все рецепты (добавили || [] на случай, если массив вдруг undefined)
     const allRecipes = [
-      ...soupsData.map(r => ({ ...r, categoryName: 'Супы', link: '/soups' })),
-      ...bakingData.map(r => ({ ...r, categoryName: 'Выпечка', link: '/category/baking' })),
-      ...meatData.map(r => ({ ...r, categoryName: 'Мясо', link: '/category/meat' })),
-      ...fishData.map(r => ({ ...r, categoryName: 'Рыба', link: '/category/fish' })),
-      ...snacksData.map(r => ({ ...r, categoryName: 'Закуски', link: '/category/snacks' })),
-      ...dessertsData.map(r => ({ ...r, categoryName: 'Десерты', link: '/category/desserts' })),
-      ...drinksData.map(r => ({ ...r, categoryName: 'Напитки', link: '/category/drinks' })),
-      ...doughData.map(r => ({ ...r, categoryName: 'Тесто', link: '/category/dough' })),
-      ...porridgeData.map(r => ({ ...r, categoryName: 'Каши', link: '/category/porridge' })), // <-- Не забудь добавить каши, если они есть!
+      ...(soupsData || []).map(r => ({ ...r, categoryName: 'Супы', link: '/soups' })),
+      ...(bakingData || []).map(r => ({ ...r, categoryName: 'Выпечка', link: '/category/baking' })),
+      ...(meatData || []).map(r => ({ ...r, categoryName: 'Мясо', link: '/category/meat' })),
+      ...(fishData || []).map(r => ({ ...r, categoryName: 'Рыба', link: '/category/fish' })),
+      ...(snacksData || []).map(r => ({ ...r, categoryName: 'Закуски', link: '/category/snacks' })),
+      ...(dessertsData || []).map(r => ({ ...r, categoryName: 'Десерты', link: '/category/desserts' })),
+      ...(drinksData || []).map(r => ({ ...r, categoryName: 'Напитки', link: '/category/drinks' })),
+      ...(doughData || []).map(r => ({ ...r, categoryName: 'Тесто', link: '/category/dough' })),
+      ...(porridgeData || []).map(r => ({ ...r, categoryName: 'Каши', link: '/category/porridge' })),
     ];
 
+    // 3. Безопасная фильтрация
     const filtered = allRecipes.filter(recipe => {
-      // 🔥 БЕЗОПАСНОЕ ПОЛУЧЕНИЕ НАЗВАНИЯ (title ИЛИ name)
+      // 🔥 Берем title ИЛИ name, если нет ни того, ни другого — пустая строка (не вызовет ошибку!)
       const recipeName = (recipe.title || recipe.name || '').toLowerCase();
       const matchesName = recipeName.includes(searchTerm);
 
-      // 🔥 БЕЗОПАСНАЯ ПРОВЕРКА ИНГРЕДИЕНТОВ
-      const matchesIngredient = recipe.ingredients && recipe.ingredients.some(ing => {
+      // 🔥 Безопасная проверка ингредиентов
+      const matchesIngredient = recipe.ingredients && Array.isArray(recipe.ingredients) && recipe.ingredients.some(ing => {
         const ingText = typeof ing === 'string' ? ing : (ing.name || '');
         return ingText.toLowerCase().includes(searchTerm);
       });
@@ -55,7 +57,6 @@ function SearchPage() {
 
     setResults(filtered);
   }, [query]);
-  
 
   return (
     <div className="search-page">
@@ -78,7 +79,7 @@ function SearchPage() {
         {results.length === 0 && query && (
           <div className="no-results">
             <p>😕 Ничего не найдено</p>
-            <p>Попробуйте другой запрос</p>
+            <p>Попробуйте другой запрос (например: "щи", "капуста", "говядина")</p>
           </div>
         )}
 
@@ -91,15 +92,16 @@ function SearchPage() {
 
         {results.map((recipe) => (
           <Link 
-            key={`${recipe.category}-${recipe.id}`} 
+            key={`${recipe.categoryName}-${recipe.id}`} 
             to={`${recipe.link}?recipe=${recipe.id}`}
             className="search-result-card"
           >
-                        <div className="result-category">{recipe.categoryName}</div>
-            <h3>{recipe.title || recipe.name}</h3>
+            <div className="result-category">{recipe.categoryName}</div>
+            {/* 🔥 Безопасный вывод названия: title или name */}
+            <h3>{recipe.title || recipe.name || 'Без названия'}</h3>
             <div className="result-meta">
-              <span>🕰 {recipe.epoch}</span>
-              <span>⏱ {recipe.time}</span>
+              <span>🕰 {recipe.epoch || 'Традиционное'}</span>
+              <span>⏱ {recipe.time || 'Не указано'}</span>
             </div>
           </Link>
         ))}
