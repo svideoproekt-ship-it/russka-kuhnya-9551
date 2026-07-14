@@ -6,13 +6,10 @@ const SearchBar = () => {
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
 
-  // Единая функция поиска
   const executeSearch = (e) => {
-    // Если событие есть (клик или сабмит), предотвращаем перезагрузку
-    if (e) e.preventDefault(); 
+    if (e) e.preventDefault();
     
     if (query.trim()) {
-      console.log('🚀 Запуск поиска:', query); // Для отладки в консоли
       navigate(`/search?q=${encodeURIComponent(query.trim())}`);
     }
   };
@@ -20,10 +17,14 @@ const SearchBar = () => {
   return (
     <form onSubmit={executeSearch} className="search-bar" style={{ display: 'flex', alignItems: 'center', gap: '10px', width: '100%' }}>
       
-      {/* 🔥 КНОПКА С ДВОЙНЫМ ДЕЙСТВИЕМ */}
       <button 
         type="submit" 
-        onClick={executeSearch} // <-- ЭТО ГЛАВНОЕ ИСПРАВЛЕНИЕ ДЛЯ МОБИЛЬНЫХ!
+        onClick={executeSearch}
+        onTouchStart={(e) => {
+          // 🔥 Дополнительная обработка для мобильных: срабатывает при касании
+          e.preventDefault();
+          executeSearch(e);
+        }}
         style={{ 
           background: 'none', 
           border: 'none', 
@@ -34,13 +35,19 @@ const SearchBar = () => {
           justifyContent: 'center',
           borderRadius: '8px',
           transition: 'background 0.2s',
-          WebkitTapHighlightColor: 'transparent' // Убирает синюю подсветку при тапе на Android/iOS
+          WebkitTapHighlightColor: 'transparent',
+          touchAction: 'manipulation' // Убирает задержку 300ms на мобильных
         }}
         onMouseOver={(e) => e.currentTarget.style.background = 'rgba(139, 0, 0, 0.1)'}
         onMouseOut={(e) => e.currentTarget.style.background = 'none'}
         aria-label="Искать"
       >
-        <Search size={24} color="#8B0000" />
+        {/* 🔥 pointerEvents: 'none' — клик проходит сквозь иконку к кнопке! */}
+        <Search 
+          size={24} 
+          color="#8B0000" 
+          style={{ pointerEvents: 'none' }} 
+        />
       </button>
       
       <input 
@@ -55,7 +62,7 @@ const SearchBar = () => {
           border: '1px solid #ccc', 
           fontSize: '16px', 
           outline: 'none',
-          WebkitAppearance: 'none' // Сбрасывает стандартные стили iOS
+          WebkitAppearance: 'none'
         }}
         onFocus={(e) => e.target.style.borderColor = '#8B0000'}
         onBlur={(e) => e.target.style.borderColor = '#ccc'}
