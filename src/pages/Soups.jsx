@@ -1,5 +1,4 @@
 import Breadcrumbs from '../components/Breadcrumbs';
-import { Helmet } from 'react-helmet-async';
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import SEO from '../components/SEO';
@@ -16,7 +15,7 @@ const Soups = () => {
       name: "Сырный суп с плавленым сыром",
       epoch: "Советская классика 1970-х",
       time: "40 минут",
-      image: "/images/soups/cheese-soup.jpg", // Исправлен путь (убран public)
+      image: "/images/soups/cheese-soup.jpg",
       icon: "🧀",
       ingredients: ["Плавленый сыр 200г", "Куриное филе 300г", "Картофель 3шт", "Морковь 1шт", "Лук 1шт", "Сливочное масло 30г", "Соль, перец", "Зелень укропа", "Сухарики"],
       preparation: ["Свари филе, нарежь", "В бульон добавь картофель", "Обжарь лук и морковь", "Натри сыр, добавь в суп до растворения", "Верни курицу, посоли", "Вари 5 минут, подавай с сухариками"],
@@ -70,7 +69,6 @@ const Soups = () => {
 
   const allSoups = [...soupsData, ...modernSoups];
 
-  // 🔥 ИСПРАВЛЕНИЕ 1: Универсальный поиск по ID (работает и для "soup-1", и для 103)
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
     const recipeId = urlParams.get('recipe');
@@ -84,7 +82,6 @@ const Soups = () => {
     }
   }, [allSoups]);
 
-  // 🔥 ИСПРАВЛЕНИЕ 2: Используем navigate для перехода на красивую страницу RecipePage
   const handleRecipeClick = (recipe) => {
     navigate(`/recipe/${recipe.id}`);
   };
@@ -110,114 +107,95 @@ const Soups = () => {
     }
   };
 
-  // Детальный просмотр (оставляем как запасной вариант, если открыли по ссылке ?recipe=...)
+  // 🔥 ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
   if (selectedRecipe) {
+    // Вычисляем правильный абсолютный URL картинки для соцсетей
+    const rawImage = selectedRecipe.image;
+    const seoImage = rawImage 
+      ? (rawImage.startsWith('http') ? rawImage : `https://russka-kuhnya-9551.vercel.app${rawImage}`)
+      : 'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg';
+
     const recipeName = selectedRecipe.name || selectedRecipe.title || 'Рецепт';
-    
+
     return (
       <>
-        <Helmet>
-          <script type="application/ld+json">
-            {JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Recipe",
-              "name": recipeName,
-              "image": selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : 'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg',
-              "description": selectedRecipe.description || selectedRecipe.history || '',
-              "prepTime": selectedRecipe.time || 'PT30M',
-              "recipeIngredient": selectedRecipe.ingredients || [],
-              "recipeInstructions": (selectedRecipe.preparation || []).map((step, index) => ({
-                "@type": "HowToStep",
-                "position": index + 1,
-                "text": step
-              })),
-              "author": { "@type": "Organization", "name": "Русская Кухня" },
-              "recipeCategory": selectedRecipe.category || selectedRecipe.epoch || "Суп",
-              "cuisine": "Русская кухня"
-            })}
-          </script>
-        </Helmet>
+        <SEO 
+          title={`${recipeName} — Рецепт с фото | Русская Кухня`}
+          description={selectedRecipe.history?.substring(0, 150) || recipeName}
+          keywords="супы, русская кухня, рецепты"
+          url={`https://russka-kuhnya-9551.vercel.app/recipe/${selectedRecipe.id}`}
+          image={seoImage} 
+        />
         
-        <div className="soups-category">
-          <SEO 
-  title={`${recipeName} — Рецепт с фото | Русская Кухня`}
-  description={selectedRecipe.history || 'Традиционный русский рецепт супа.'}
-  keywords="супы, рецепты, русская кухня"
-  // 🔥 ИСПРАВЛЕНО: ведёт на отдельную страницу рецепта, а не на ?recipe=...
-  url={`https://russka-kuhnya-9551.vercel.app/recipe/${selectedRecipe.id}`}
-  image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
-/>
+        <Breadcrumbs 
+          recipeTitle={recipeName}
+          categoryName="Супы"  
+          categoryPath="/soups"
+        />
 
-          <Breadcrumbs 
-            recipeTitle={recipeName}
-            categoryName="Супы"  
-            categoryPath="/soups"
-          />
-
-          <div className="recipe-detail">
-            <button onClick={handleBack} className="back-button">← Вернуться к списку</button>
-            
-            <div className="recipe-card">
-              <div className="recipe-header">
-                <h1>{recipeName}</h1>
-                <div className="recipe-meta">
-                  <span className="epoch">🕰 {selectedRecipe.epoch}</span>
-                  <span className="time">⏱ {selectedRecipe.time}</span>
-                </div>
-              </div>
-
-              <div className="recipe-top-actions">
-                <button className="share-btn-top" onClick={() => handleShare(selectedRecipe)}>
-                  <span>📤</span> Поделиться рецептом
-                </button>
-              </div>
-
-              {selectedRecipe.image && (
-                <div className="recipe-image-container">
-                  <img 
-                    loading="lazy"
-                    src={selectedRecipe.image} 
-                    alt={`${recipeName} — традиционный русский суп`}
-                    className="recipe-image"
-                    onError={(e) => { e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'; }}
-                  />
-                </div>
-              )}
-
-              <div className="recipe-content">
-                <div className="recipe-section">
-                  <h2>📝 Ингредиенты</h2>
-                  <ul className="ingredients-list">
-                    {selectedRecipe.ingredients.map((item, index) => (
-                      <li key={index}>{typeof item === 'string' ? item : `${item.name} ${item.amount} ${item.unit}`}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="recipe-section">
-                  <h2>👨‍🍳 Приготовление</h2>
-                  <ol className="preparation-list">
-                    {selectedRecipe.preparation.map((step, index) => (
-                      <li key={index}>{step}</li>
-                    ))}
-                  </ol>
-                </div>
-
-                {selectedRecipe.history && (
-  <div className="recipe-section history-section">
-    <h2> Историческая справка</h2>
-    <p className="history-text">{selectedRecipe.history}</p>
-  </div>
-)}
+        <div className="recipe-detail">
+          <button onClick={handleBack} className="back-button">← Вернуться к списку</button>
+          
+          <div className="recipe-card">
+            <div className="recipe-header">
+              <h1>{recipeName}</h1>
+              <div className="recipe-meta">
+                <span className="epoch">🕰 {selectedRecipe.epoch}</span>
+                <span className="time">⏱ {selectedRecipe.time}</span>
               </div>
             </div>
-          </div>
-        </div>
+
+            <div className="recipe-top-actions">
+              <button className="share-btn-top" onClick={() => handleShare(selectedRecipe)}>
+                <span>📤</span> Поделиться рецептом
+              </button>
+            </div>
+
+            {selectedRecipe.image && (
+              <div className="recipe-image-container">
+                <img 
+                  loading="lazy"
+                  src={selectedRecipe.image} 
+                  alt={`${recipeName} — традиционный русский суп`}
+                  className="recipe-image"
+                  onError={(e) => { e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'; }}
+                />
+              </div>
+            )}
+
+            <div className="recipe-content">
+              <div className="recipe-section">
+                <h2>📝 Ингредиенты</h2>
+                <ul className="ingredients-list">
+                  {selectedRecipe.ingredients.map((item, index) => (
+                    <li key={index}>{typeof item === 'string' ? item : `${item.name} ${item.amount} ${item.unit}`}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="recipe-section">
+                <h2>👨‍🍳 Приготовление</h2>
+                <ol className="preparation-list">
+                  {selectedRecipe.preparation.map((step, index) => (
+                    <li key={index}>{step}</li>
+                  ))}
+                </ol>
+              </div>
+
+              {selectedRecipe.history && (
+                <div className="recipe-section history-section">
+                  <h2>📚 Историческая справка</h2>
+                  <p className="history-text">{selectedRecipe.history}</p>
+                </div>
+              )}
+            </div> {/* Закрывает recipe-content */}
+          </div> {/* Закрывает recipe-card */}
+        </div> {/* Закрывает recipe-detail */}
       </>  
     );
   }
 
-  // СПИСОК ВСЕХ СУПОВ
+  // 🔥 СПИСОК ВСЕХ СУПОВ
   return (
     <div className="soups-category">
       <SEO 
@@ -241,7 +219,7 @@ const Soups = () => {
           <div 
             key={recipe.id} 
             className="recipe-card"
-            onClick={() => handleRecipeClick(recipe)} // 🔥 Теперь ведёт на /recipe/:id
+            onClick={() => handleRecipeClick(recipe)}
             style={{ cursor: 'pointer' }}
           >
             <div className="recipe-card-image">
