@@ -92,20 +92,21 @@ const Soups = () => {
   };
 
   const handleShare = (recipe) => {
-    const shareUrl = `https://russka-kuhnya-9551.vercel.app/soups?recipe=${recipe.id}`;
-    
-    if (navigator.share) {
-      navigator.share({
-        title: recipe.name || recipe.title,
-        text: (recipe.history || recipe.description || '').substring(0, 150) + '...',
-        url: shareUrl,
-      }).catch(() => console.log('Отменено'));
-    } else {
-      navigator.clipboard.writeText(shareUrl)
-        .then(() => alert('✅ Ссылка скопирована!'))
-        .catch(() => alert('❌ Ошибка'));
-    }
-  };
+  // 🔥 ИСПРАВЛЕНО: ведём на отдельную страницу рецепта, а не ?recipe=...
+  const shareUrl = `https://russka-kuhnya-9551.vercel.app/recipe/${recipe.id}`;
+  
+  if (navigator.share) {
+    navigator.share({
+      title: recipe.name || recipe.title,
+      text: (recipe.history || recipe.description || '').substring(0, 150) + '...',
+      url: shareUrl,
+    }).catch(() => console.log('Отменено'));
+  } else {
+    navigator.clipboard.writeText(shareUrl)
+      .then(() => alert('✅ Ссылка скопирована!'))
+      .catch(() => alert('❌ Ошибка'));
+  }
+};
 
   // 🔥 ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
   if (selectedRecipe) {
