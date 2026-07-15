@@ -140,12 +140,13 @@ const Soups = () => {
         
         <div className="soups-category">
           <SEO 
-            title={`${recipeName} — Рецепт с фото | Русская Кухня`}
-            description={selectedRecipe.history || 'Традиционный русский рецепт супа.'}
-            keywords="супы, рецепты, русская кухня"
-            url={`https://russka-kuhnya-9551.vercel.app/soups?recipe=${selectedRecipe.id}`}
-            image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
-          />
+  title={`${recipeName} — Рецепт с фото | Русская Кухня`}
+  description={selectedRecipe.history || 'Традиционный русский рецепт супа.'}
+  keywords="супы, рецепты, русская кухня"
+  // 🔥 ИСПРАВЛЕНО: ведёт на отдельную страницу рецепта, а не на ?recipe=...
+  url={`https://russka-kuhnya-9551.vercel.app/recipe/${selectedRecipe.id}`}
+  image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
+/>
 
           <Breadcrumbs 
             recipeTitle={recipeName}

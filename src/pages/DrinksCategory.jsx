@@ -27,7 +27,7 @@ function DrinksCategory() {
           title={`${selectedRecipe.name} — Русская Кухня`}
           description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
           keywords="напитки, русская кухня"
-          url={`https://russka-kuhnya-9551.vercel.app/category/drinks?recipe=${selectedRecipe.id}`}
+          url={`https://russka-kuhnya-9551.vercel.app/recipe/${selectedRecipe.id}`}
         image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
 />
         

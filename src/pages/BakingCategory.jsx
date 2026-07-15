@@ -23,12 +23,13 @@ function BakingCategory() {
   if (selectedRecipe) {
     return (
       <div className="baking-category">
-        <SEO 
-          title={`${selectedRecipe.name} — Русская Кухня`}
-          description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
-          keywords="выпечка, русская кухня"
-          url={`https://russka-kuhnya-9551.vercel.app/category/baking?recipe=${selectedRecipe.id}`}
-        image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
+      <SEO 
+  title={`${selectedRecipe.name} — Рецепт с фото | Русская Кухня`}
+  description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
+  keywords="выпечка, русская кухня, рецепты"
+  // 🔥 ИСПРАВЛЕНО: ведёт на отдельную страницу рецепта
+  url={`https://russka-kuhnya-9551.vercel.app/recipe/${selectedRecipe.id}`}
+  image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
 />
         
         {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ — ВНУТРИ if (selectedRecipe)! */}

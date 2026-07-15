@@ -82,7 +82,7 @@ const Porridge = () => {
             title={`${selectedRecipe.name} — Русская Кухня`}
             description={selectedRecipe.description || ''}
             keywords="каши, русская кухня"
-            url={`https://russka-kuhnya-9551.vercel.app/category/porridge?recipe=${selectedRecipe.id}`}
+            url={`https://russka-kuhnya-9551.vercel.app/recipe/${selectedRecipe.id}`}
           image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
 />
           
