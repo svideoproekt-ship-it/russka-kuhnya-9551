@@ -9,8 +9,7 @@ const Soups = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const navigate = useNavigate();
 
-  
-  const allSoups = [...soupsData, ...modernSoups];
+  const allSoups = [...soupsData];
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
@@ -35,25 +34,23 @@ const Soups = () => {
   };
 
   const handleShare = (recipe) => {
-  // 🔥 ИСПРАВЛЕНО: ведём на отдельную страницу рецепта, а не ?recipe=...
-  const shareUrl = `https://russka-kuhnya-9551.vercel.app/recipe/${recipe.id}`;
-  
-  if (navigator.share) {
-    navigator.share({
-      title: recipe.name || recipe.title,
-      text: (recipe.history || recipe.description || '').substring(0, 150) + '...',
-      url: shareUrl,
-    }).catch(() => console.log('Отменено'));
-  } else {
-    navigator.clipboard.writeText(shareUrl)
-      .then(() => alert('✅ Ссылка скопирована!'))
-      .catch(() => alert('❌ Ошибка'));
-  }
-};
+    const shareUrl = `https://russka-kuhnya-9551.vercel.app/recipe/${recipe.id}`;
+    
+    if (navigator.share) {
+      navigator.share({
+        title: recipe.name || recipe.title,
+        text: (recipe.history || recipe.description || '').substring(0, 150) + '...',
+        url: shareUrl,
+      }).catch(() => console.log('Отменено'));
+    } else {
+      navigator.clipboard.writeText(shareUrl)
+        .then(() => alert('✅ Ссылка скопирована!'))
+        .catch(() => alert('❌ Ошибка'));
+    }
+  };
 
-  // 🔥 ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
+  // ДЕТАЛЬНЫЙ ПРОСМОТР РЕЦЕПТА
   if (selectedRecipe) {
-    // Вычисляем правильный абсолютный URL картинки для соцсетей
     const rawImage = selectedRecipe.image;
     const seoImage = rawImage 
       ? (rawImage.startsWith('http') ? rawImage : `https://russka-kuhnya-9551.vercel.app${rawImage}`)
@@ -85,7 +82,7 @@ const Soups = () => {
               <h1>{recipeName}</h1>
               <div className="recipe-meta">
                 <span className="epoch">🕰 {selectedRecipe.epoch}</span>
-                <span className="time">⏱ {selectedRecipe.time}</span>
+                <span className="time"> {selectedRecipe.time}</span>
               </div>
             </div>
 
@@ -132,14 +129,14 @@ const Soups = () => {
                   <p className="history-text">{selectedRecipe.history}</p>
                 </div>
               )}
-            </div> {/* Закрывает recipe-content */}
-          </div> {/* Закрывает recipe-card */}
-        </div> {/* Закрывает recipe-detail */}
+            </div>
+          </div>
+        </div>
       </>  
     );
   }
 
-  // 🔥 СПИСОК ВСЕХ СУПОВ
+  // СПИСОК ВСЕХ СУПОВ
   return (
     <div className="soups-category">
       <SEO 
@@ -152,7 +149,7 @@ const Soups = () => {
       
       <div className="category-header">
         <Link to="/" className="back-home">← На главную</Link>
-        <h1>🍲 Супы</h1>
+        <h1> Супы</h1>
         <p className="category-description">
           Традиционные русские супы — от древних щей до современных крем-супов
         </p>
