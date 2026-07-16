@@ -71,12 +71,11 @@ const RecipePage = () => {
   const metaTitle = `${title} — Русская Кухня`;
   const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
   
-  const ogImage = image 
+    const ogImage = image 
     ? (image.startsWith('http') 
         ? image 
-        : `https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public${image}`)
-    : 'https://raw.githubusercontent.com/svideoproekt-ship-it/russka-kuhnya-9551/main/public/og-fallback.jpg';
-
+        : `https://russka-kuhnya-9551.vercel.app${image}`)
+      : 'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg';
   // 6. Рендер страницы
   return (
     <>
