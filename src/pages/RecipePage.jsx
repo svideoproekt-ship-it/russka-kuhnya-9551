@@ -34,7 +34,7 @@ const RecipePage = () => {
   let recipeCategory = { name: 'Рецепты', path: '/' };
 
   for (const cat of categories) {
-    const found = cat.data.find(r =>
+        const found = cat.data.find(r =>
       r.id === id || r.id === parseInt(id) || String(r.id) === String(id)
     );
     if (found) {
@@ -193,8 +193,8 @@ const RecipePage = () => {
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
                 {(() => {
                   // Берем рецепты из текущей категории, исключая текущий, перемешиваем и берём 4
-                  const otherRecipes = recipeCategory.data
-                    .filter(r => String(r.id) !== String(recipe.id))
+                  const otherRecipes = (recipeCategory.data || [])
+  .filter(r => String(r.id) !== String(recipe.id))
                     .sort(() => 0.5 - Math.random())
                     .slice(0, 4);
                   
