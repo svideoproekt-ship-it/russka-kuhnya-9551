@@ -31,17 +31,17 @@ const RecipePage = () => {
 
   // 2. Ищем рецепт и автоматически определяем его категорию
   let recipe = null;
-  let recipeCategory = { name: 'Рецепты', path: '/' };
+  let recipeCategory = { name: 'Рецепты', path: '/', data: [] }; // ✅ Добавили data: []
 
   for (const cat of categories) {
         const found = cat.data.find(r =>
       r.id === id || r.id === parseInt(id) || String(r.id) === String(id)
     );
     if (found) {
-      recipe = found;
-      recipeCategory = { name: cat.name, path: cat.path };
-      break;
-    }
+  recipe = found;
+  recipeCategory = { name: cat.name, path: cat.path, data: cat.data }; // ✅ Добавили data: cat.data
+  break;
+}
   }
 
   // 3. Обработка "не найдено"
@@ -181,68 +181,10 @@ const RecipePage = () => {
             </div>
           </div>
 
-          {/* Фото */}
+                   {/* Фото */}
           {image && (
             <div style={{ width: '100%', marginBottom: '30px', borderRadius: '15px', overflow: 'hidden', border: '3px solid #00CED1' }}>
               <img loading="lazy" src={image} alt={title} style={{ width: '100%', height: 'auto', display: 'block' }} onError={e => e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'} />
-                        {/* 🍽️ ДРУГИЕ РЕЦЕПТЫ ИЗ ЭТОЙ ЖЕ КАТЕГОРИИ (УНИВЕРСАЛЬНЫЙ БЛОК) */}
-            <div style={{ marginTop: '40px', paddingTop: '30px', borderTop: '3px solid #FFD700' }}>
-              <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px' }}>
-                🍽️ Другие рецепты из категории "{recipeCategory.name}"
-              </h2>
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
-                {(() => {
-                  // Берем рецепты из текущей категории, исключая текущий, перемешиваем и берём 4
-                  const otherRecipes = (recipeCategory.data || [])
-  .filter(r => String(r.id) !== String(recipe.id))
-                    .sort(() => 0.5 - Math.random())
-                    .slice(0, 4);
-                  
-                  return otherRecipes.map(r => (
-                    <Link 
-                      key={r.id} 
-                      to={`/recipe/${r.id}`}
-                      style={{ 
-                        background: 'linear-gradient(135deg, #FFF8DC, #FFE4B5)', 
-                        borderRadius: '12px', 
-                        padding: '12px', 
-                        textDecoration: 'none',
-                        border: '2px solid #FFD700',
-                        transition: 'transform 0.2s, box-shadow 0.2s',
-                        textAlign: 'center',
-                        color: 'inherit',
-                        display: 'block'
-                      }}
-                    >
-                      {r.image && (
-                        <img 
-                          loading="lazy"
-                          src={r.image} 
-                          alt={r.name || r.title}
-                          style={{ 
-                            width: '100%', 
-                            height: '120px', 
-                            objectFit: 'cover', 
-                            borderRadius: '8px', 
-                            marginBottom: '8px',
-                            background: '#eee' // Серый фон, если картинка грузится
-                          }}
-                          onError={(e) => { 
-                            // Если картинки нет, показываем красивую заглушку, а не прячем блок
-                            e.target.src = 'https://via.placeholder.com/300x200?text=Русская+Кухня'; 
-                            e.target.style.background = '#eee'; 
-                          }}
-                        />
-                      )}
-                      <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>
-                        {r.name || r.title}
-                      </h4>
-                      <span style={{ fontSize: '0.9rem', color: '#666' }}>⏱ {r.time}</span>
-                    </Link>
-                  ));
-                })()}
-              </div>
-            </div>
             </div>
           )}
 
@@ -290,7 +232,7 @@ const RecipePage = () => {
               </div>
             )}
 
-            {/* 🙋‍️ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ (Теперь на своём законном месте!) */}
+            {/* 🙋‍️ ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ */}
             {recipe.faq && (
               <div style={{ marginTop: '20px', padding: '25px', background: '#f0f8ff', borderRadius: '15px', border: '2px solid #20B2AA' }}>
                 <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px', borderBottom: '3px solid #20B2AA', paddingBottom: '10px' }}>❓ Часто задаваемые вопросы</h2>
@@ -303,9 +245,67 @@ const RecipePage = () => {
               </div>
             )}
 
-          </div>
-        </div>
-      </div>
+            {/* 🍽️ ДРУГИЕ РЕЦЕПТЫ ИЗ ЭТОЙ ЖЕ КАТЕГОРИИ (ТЕПЕРЬ НА СВОЁМ МЕСТЕ!) */}
+            <div style={{ marginTop: '40px', paddingTop: '30px', borderTop: '3px solid #FFD700' }}>
+              <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px' }}>
+                🍽️ Другие рецепты из категории "{recipeCategory.name}"
+              </h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
+                {(() => {
+                  // ТЕПЕРЬ recipeCategory.data ТОЧНО СУЩЕСТВУЕТ!
+                  const otherRecipes = (recipeCategory.data || [])
+                    .filter(r => String(r.id) !== String(recipe.id))
+                    .sort(() => 0.5 - Math.random())
+                    .slice(0, 4);
+                  
+                  return otherRecipes.map(r => (
+                    <Link 
+                      key={r.id} 
+                      to={`/recipe/${r.id}`}
+                      style={{ 
+                        background: 'linear-gradient(135deg, #FFF8DC, #FFE4B5)', 
+                        borderRadius: '12px', 
+                        padding: '12px', 
+                        textDecoration: 'none',
+                        border: '2px solid #FFD700',
+                        transition: 'transform 0.2s, box-shadow 0.2s',
+                        textAlign: 'center',
+                        color: 'inherit',
+                        display: 'block'
+                      }}
+                    >
+                      {r.image && (
+                        <img 
+                          loading="lazy"
+                          src={r.image} 
+                          alt={r.name || r.title}
+                          style={{ 
+                            width: '100%', 
+                            height: '120px', 
+                            objectFit: 'cover', 
+                            borderRadius: '8px', 
+                            marginBottom: '8px',
+                            background: '#eee'
+                          }}
+                          onError={(e) => { 
+                            e.target.src = 'https://via.placeholder.com/300x200?text=Русская+Кухня'; 
+                            e.target.style.background = '#eee'; 
+                          }}
+                        />
+                      )}
+                      <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>
+                        {r.name || r.title}
+                      </h4>
+                      <span style={{ fontSize: '0.9rem', color: '#666' }}>⏱ {r.time}</span>
+                    </Link>
+                  ));
+                })()}
+              </div>
+            </div>
+
+          </div> {/* Закрывает белый блок контента */}
+        </div> {/* Закрывает основную карточку */}
+      </div> {/* Закрывает фон страницы */}
     </>
   );
 };
