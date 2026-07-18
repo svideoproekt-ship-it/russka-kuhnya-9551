@@ -2,13 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const ShareButtons = ({ title, url }) => {
   const [showMenu, setShowMenu] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef(null);
-
-  // Определяем, мобильное ли устройство
-  useEffect(() => {
-    setIsMobile(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
-  }, []);
 
   // Закрываем меню при клике вне его
   useEffect(() => {
@@ -27,8 +21,9 @@ const ShareButtons = ({ title, url }) => {
   
   const shareText = `Посмотри рецепт "${title}" на сайте Русская Кухня! 🍲`;
 
-  // Нативное меню для мобильных
-  const handleNativeShare = async () => {
+  // Обработчик кнопки "Поделиться"
+  const handleShare = async () => {
+    // Проверяем, поддерживается ли нативное меню (мобильные)
     if (navigator.share) {
       try {
         await navigator.share({ 
@@ -38,11 +33,13 @@ const ShareButtons = ({ title, url }) => {
         });
       } catch (err) {
         if (err.name !== 'AbortError') {
-          setShowMenu(true); // Fallback на кастомное меню
+          // Если ошибка или отмена, показываем кастомное меню
+          setShowMenu(!showMenu);
         }
       }
     } else {
-      setShowMenu(true); // ПК или неподдерживаемый браузер
+      // На ПК (где нет navigator.share) показываем кастомное меню
+      setShowMenu(!showMenu);
     }
   };
 
@@ -95,7 +92,7 @@ const ShareButtons = ({ title, url }) => {
   return (
     <div style={{ position: 'relative', display: 'inline-block' }} ref={menuRef}>
       <button 
-        onClick={handleNativeShare}
+        onClick={handleShare}
         style={btnStyle}
         onMouseOver={(e) => {
           e.currentTarget.style.background = '#f57c00';
@@ -106,11 +103,11 @@ const ShareButtons = ({ title, url }) => {
           e.currentTarget.style.transform = 'translateY(0)';
         }}
       >
-         Поделиться
+        📤 Поделиться
       </button>
 
-      {/* Выпадающее меню для ПК */}
-      {showMenu && !isMobile && (
+      {/* Выпадающее меню (показывается на ПК или когда нативное меню недоступно) */}
+      {showMenu && (
         <div style={{
           position: 'absolute',
           top: '100%',
@@ -166,7 +163,7 @@ const ShareButtons = ({ title, url }) => {
             onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
             onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
           >
-             Email
+            📧 Email
           </a>
 
           <button 
