@@ -1,140 +1,184 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const ShareButtons = ({ title, url }) => {
-  const [copied, setCopied] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const menuRef = useRef(null);
 
-  // Формируем абсолютный URL
+  // Определяем, мобильное ли устройство
+  useEffect(() => {
+    setIsMobile(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+  }, []);
+
+  // Закрываем меню при клике вне его
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setShowMenu(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const shareUrl = url?.startsWith('http') 
     ? url 
     : `${window.location.origin}${url || window.location.pathname}`;
   
-  const shareText = `Посмотри рецепт "${title}" на сайте Русская Кухня! 🍲 ${shareUrl}`;
+  const shareText = `Посмотри рецепт "${title}" на сайте Русская Кухня! 🍲`;
 
-  // Функция копирования без надоедливого alert
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(shareUrl);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch (err) {
-      console.error('Не удалось скопировать ссылку', err);
-      // Fallback для очень старых браузеров
-      const textArea = document.createElement("textarea");
-      textArea.value = shareUrl;
-      document.body.appendChild(textArea);
-      textArea.select();
-      document.execCommand("copy");
-      document.body.removeChild(textArea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    }
-  };
-
-  // Функция для нативного меню "Поделиться" (Viber, Почта, SMS и т.д.)
+  // Нативное меню для мобильных
   const handleNativeShare = async () => {
     if (navigator.share) {
       try {
         await navigator.share({ 
           title: title || 'Русская Кухня', 
-          text: `Посмотри рецепт "${title}"!`, 
+          text: shareText, 
           url: shareUrl 
         });
       } catch (err) {
         if (err.name !== 'AbortError') {
-          // Если пользователь отменил или произошла ошибка, просто копируем
-          handleCopy();
+          setShowMenu(true); // Fallback на кастомное меню
         }
       }
     } else {
-      // На ПК, где navigator.share не работает, просто копируем ссылку
-      handleCopy();
+      setShowMenu(true); // ПК или неподдерживаемый браузер
     }
   };
 
-  // Общий стиль для кнопок
-  const btnStyle = (bgColor) => ({
-    padding: '10px 14px',
-    fontSize: '14px',
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      alert('✅ Ссылка скопирована!');
+      setShowMenu(false);
+    } catch (err) {
+      console.error('Не удалось скопировать:', err);
+    }
+  };
+
+  const btnStyle = {
+    padding: '12px 24px',
+    fontSize: '16px',
     color: 'white',
-    background: bgColor,
+    background: '#ff9800',
     border: 'none',
     borderRadius: '8px',
     cursor: 'pointer',
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: '6px',
-    transition: 'transform 0.2s, opacity 0.2s',
+    gap: '8px',
+    transition: 'all 0.3s ease',
     fontWeight: '600',
-    textDecoration: 'none',
     fontFamily: 'inherit',
+    boxShadow: '0 4px 12px rgba(255, 152, 0, 0.4)'
+  };
+
+  const menuItemStyle = (bgColor) => ({
+    display: 'flex',
+    alignItems: 'center',
+    gap: '12px',
+    padding: '12px 16px',
+    background: bgColor,
+    color: 'white',
+    textDecoration: 'none',
+    borderRadius: '8px',
+    fontWeight: '600',
+    fontSize: '14px',
+    transition: 'transform 0.2s, opacity 0.2s',
+    cursor: 'pointer',
+    border: 'none',
+    width: '100%',
+    textAlign: 'left'
   });
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      gap: '8px', 
-      justifyContent: 'center', 
-      margin: '15px 0',
-      flexWrap: 'wrap' 
-    }}>
-      {/* Telegram */}
-      <a 
-        href={`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
-        target="_blank" 
-        rel="noopener noreferrer"
-        style={btnStyle('#24A1DE')}
-        onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
-        onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
-      >
-        ✈️ TG
-      </a>
-
-      {/* WhatsApp */}
-      <a 
-        href={`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`}
-        target="_blank" 
-        rel="noopener noreferrer"
-        style={btnStyle('#25D366')}
-        onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
-        onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
-      >
-        💬 WA
-      </a>
-
-      {/* VK */}
-      <a 
-        href={`https://vk.com/share.php?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(title)}`}
-        target="_blank" 
-        rel="noopener noreferrer"
-        style={btnStyle('#0077FF')}
-        onMouseOver={(e) => e.currentTarget.style.opacity = '0.9'}
-        onMouseOut={(e) => e.currentTarget.style.opacity = '1'}
-      >
-        🔵 VK
-      </a>
-
-      {/* Копировать ссылку */}
-      <button 
-        onClick={handleCopy}
-        style={btnStyle(copied ? '#4CAF50' : '#607D8B')} // Серый цвет, зелёный при успехе
-        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        title="Скопировать ссылку"
-      >
-        {copied ? '✅' : '📋'}
-      </button>
-
-      {/* ЕЩЁ (Нативное меню устройства: Почта, Viber, SMS и т.д.) */}
+    <div style={{ position: 'relative', display: 'inline-block' }} ref={menuRef}>
       <button 
         onClick={handleNativeShare}
-        style={btnStyle('#FF9800')}
-        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        title="Поделиться через другие приложения"
+        style={btnStyle}
+        onMouseOver={(e) => {
+          e.currentTarget.style.background = '#f57c00';
+          e.currentTarget.style.transform = 'translateY(-2px)';
+        }}
+        onMouseOut={(e) => {
+          e.currentTarget.style.background = '#ff9800';
+          e.currentTarget.style.transform = 'translateY(0)';
+        }}
       >
-        📤 Ещё
+         Поделиться
       </button>
+
+      {/* Выпадающее меню для ПК */}
+      {showMenu && !isMobile && (
+        <div style={{
+          position: 'absolute',
+          top: '100%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          marginTop: '10px',
+          background: 'white',
+          borderRadius: '12px',
+          boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+          padding: '12px',
+          minWidth: '220px',
+          zIndex: 1000,
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '8px'
+        }}>
+          <a 
+            href={`https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={menuItemStyle('#24A1DE')}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            ✈️ Telegram
+          </a>
+
+          <a 
+            href={`https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={menuItemStyle('#25D366')}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            💬 WhatsApp
+          </a>
+
+          <a 
+            href={`https://vk.com/share.php?url=${encodeURIComponent(shareUrl)}&title=${encodeURIComponent(title)}`}
+            target="_blank" 
+            rel="noopener noreferrer"
+            style={menuItemStyle('#0077FF')}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            🔵 ВКонтакте
+          </a>
+
+          <a 
+            href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
+            style={menuItemStyle('#EA4335')}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+             Email
+          </a>
+
+          <button 
+            onClick={handleCopy}
+            style={menuItemStyle('#607D8B')}
+            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            📋 Копировать ссылку
+          </button>
+        </div>
+      )}
     </div>
   );
 };
