@@ -2,7 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const ShareButtons = ({ title, url }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef(null);
+
+  // Определяем мобильное устройство по userAgent
+  useEffect(() => {
+    const mobileCheck = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent);
+    setIsMobile(mobileCheck);
+  }, []);
 
   // Закрываем меню при клике вне его
   useEffect(() => {
@@ -22,23 +29,20 @@ const ShareButtons = ({ title, url }) => {
   const shareText = `Посмотри рецепт "${title}" на сайте Русская Кухня! 🍲`;
 
   // Обработчик кнопки "Поделиться"
-  const handleShare = async () => {
-    // Проверяем, поддерживается ли нативное меню (мобильные)
-    if (navigator.share) {
-      try {
-        await navigator.share({ 
-          title: title || 'Русская Кухня', 
-          text: shareText, 
-          url: shareUrl 
-        });
-      } catch (err) {
+  const handleShare = () => {
+    if (isMobile && navigator.share) {
+      // На мобильных используем нативное меню
+      navigator.share({ 
+        title: title || 'Русская Кухня', 
+        text: shareText, 
+        url: shareUrl 
+      }).catch(err => {
         if (err.name !== 'AbortError') {
-          // Если ошибка или отмена, показываем кастомное меню
-          setShowMenu(!showMenu);
+          setShowMenu(true);
         }
-      }
+      });
     } else {
-      // На ПК (где нет navigator.share) показываем кастомное меню
+      // На ПК показываем кастомное меню
       setShowMenu(!showMenu);
     }
   };
@@ -106,8 +110,8 @@ const ShareButtons = ({ title, url }) => {
         📤 Поделиться
       </button>
 
-      {/* Выпадающее меню (показывается на ПК или когда нативное меню недоступно) */}
-      {showMenu && (
+      {/* Выпадающее меню (только на ПК) */}
+      {showMenu && !isMobile && (
         <div style={{
           position: 'absolute',
           top: '100%',
