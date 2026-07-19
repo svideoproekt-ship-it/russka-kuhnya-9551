@@ -162,14 +162,26 @@ const ShareButtons = ({ title, url }) => {
           </a>
 
           <a 
-            href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
-            style={menuItemStyle('#EA4335')}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-          >
-            📧 Email
-          </a>
-
+  href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
+  onClick={(e) => {
+    // Пробуем открыть почтовый клиент
+    // Если не получилось — копируем текст письма в буфер
+    setTimeout(() => {
+      navigator.clipboard.writeText(`${title}\n\n${shareText}`)
+        .then(() => {
+          alert('📧 Почтовый клиент не открылся.\n\nТекст письма скопирован в буфер обмена!\nТеперь вставьте его в своё письмо.');
+        })
+        .catch(() => {
+          alert('📧 Чтобы отправить по email:\n1. Откройте вашу почту\n2. Создайте новое письмо\n3. Вставьте ссылку: ' + shareUrl);
+        });
+    }, 500);
+  }}
+  style={menuItemStyle('#EA4335')}
+  onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+  onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+>
+  📧 Email
+</a>
           <button 
             onClick={handleCopy}
             style={menuItemStyle('#607D8B')}
