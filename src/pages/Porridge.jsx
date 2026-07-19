@@ -11,8 +11,8 @@ const Porridge = () => {
   const navigate = useNavigate();
 
   const handleRecipeClick = (recipe) => {
-    navigate(`/recipe/porridge-${recipe.id}`);
-  };
+  navigate(`/recipe/${recipe.id}`);
+};
 
   // ✅ СПИСОК ВСЕХ КАШ
   return (
