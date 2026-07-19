@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 
 const ShareButtons = ({ title, url }) => {
   const [showMenu, setShowMenu] = useState(false);
+  const [showEmailMenu, setShowEmailMenu] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const menuRef = useRef(null);
 
@@ -161,27 +162,79 @@ const ShareButtons = ({ title, url }) => {
             🔵 ВКонтакте
           </a>
 
-          <a 
-  href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
-  onClick={(e) => {
-    // Пробуем открыть почтовый клиент
-    // Если не получилось — копируем текст письма в буфер
-    setTimeout(() => {
-      navigator.clipboard.writeText(`${title}\n\n${shareText}`)
-        .then(() => {
-          alert('📧 Почтовый клиент не открылся.\n\nТекст письма скопирован в буфер обмена!\nТеперь вставьте его в своё письмо.');
-        })
-        .catch(() => {
-          alert('📧 Чтобы отправить по email:\n1. Откройте вашу почту\n2. Создайте новое письмо\n3. Вставьте ссылку: ' + shareUrl);
-        });
-    }, 500);
-  }}
-  style={menuItemStyle('#EA4335')}
-  onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
-  onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
->
-  📧 Email
-</a>
+          {/* Email - выпадающее меню */}
+<div style={{ position: 'relative' }}>
+  <button 
+    onClick={() => setShowEmailMenu(!showEmailMenu)}
+    style={menuItemStyle('#EA4335')}
+    onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+    onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+  >
+    📧 Email ▾
+  </button>
+  
+  {showEmailMenu && (
+    <div style={{
+      position: 'absolute',
+      bottom: '100%',
+      left: 0,
+      marginBottom: '8px',
+      background: 'white',
+      borderRadius: '8px',
+      boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+      padding: '8px',
+      minWidth: '180px',
+      zIndex: 1001,
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '4px'
+    }}>
+      <a 
+        href={`https://mail.google.com/mail/?view=cm&fs=1&su=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{...menuItemStyle('#EA4335'), padding: '8px 12px', fontSize: '13px'}}
+        onClick={() => setShowEmailMenu(false)}
+      >
+        ✉️ Gmail
+      </a>
+      <a 
+        href={`https://mail.yandex.ru/?mailto=&subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{...menuItemStyle('#FC3F1D'), padding: '8px 12px', fontSize: '13px'}}
+        onClick={() => setShowEmailMenu(false)}
+      >
+        ✉️ Яндекс
+      </a>
+      <a 
+        href={`https://e.mail.ru/compose/?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{...menuItemStyle('#005FF9'), padding: '8px 12px', fontSize: '13px'}}
+        onClick={() => setShowEmailMenu(false)}
+      >
+        ✉️ Mail.ru
+      </a>
+      <a 
+        href={`https://outlook.live.com/mail/0/deeplink/compose?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{...menuItemStyle('#0078D4'), padding: '8px 12px', fontSize: '13px'}}
+        onClick={() => setShowEmailMenu(false)}
+      >
+        ✉️ Outlook
+      </a>
+      <a 
+        href={`mailto:?subject=${encodeURIComponent(title)}&body=${encodeURIComponent(shareText)}`}
+        style={{...menuItemStyle('#607D8B'), padding: '8px 12px', fontSize: '13px', borderTop: '1px solid #eee', marginTop: '4px', paddingTop: '8px'}}
+        onClick={() => setShowEmailMenu(false)}
+      >
+        ✉️ Другая почта
+      </a>
+    </div>
+  )}
+</div>
           <button 
             onClick={handleCopy}
             style={menuItemStyle('#607D8B')}
