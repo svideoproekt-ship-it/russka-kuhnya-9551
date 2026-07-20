@@ -1,6 +1,6 @@
 import Breadcrumbs from '../components/Breadcrumbs';
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom'; // 🔥 ДОБАВИЛИ useLocation
 import { Helmet } from 'react-helmet-async';
 import { soupsData } from '../data/soupsData';
 import { bakingData } from '../data/bakingData';
@@ -15,33 +15,50 @@ import ShareButtons from '../components/ShareButtons';
 
 const RecipePage = () => {
   const { id } = useParams();
+  const location = useLocation(); // 🔥 ПОЛУЧАЕМ ДОСТУП К URL
+  
+  // 🔥 ЧИТАЕМ ПОДСКАЗКУ КАТЕГОРИИ ИЗ URL (например, ?from=dough)
+  const searchParams = new URLSearchParams(location.search);
+  const fromCategory = searchParams.get('from');
 
-  // 1. Определяем категории и их пути
+  // 1. Определяем категории, их пути и добавляем slug для точного поиска
   const categories = [
-    { data: soupsData, name: 'Супы', path: '/soups' },
-    { data: bakingData, name: 'Выпечка', path: '/category/baking' },
-    { data: meatData, name: 'Мясо', path: '/category/meat' },
-    { data: fishData, name: 'Рыба', path: '/category/fish' },
-    { data: snacksData, name: 'Закуски', path: '/category/snacks' },
-    { data: dessertsData, name: 'Десерты', path: '/category/desserts' },
-    { data: drinksData, name: 'Напитки', path: '/category/drinks' },
-    { data: doughData, name: 'Тесто', path: '/category/dough' },
-    { data: porridgeData, name: 'Каши', path: '/category/porridge' },
+    { data: soupsData, name: 'Супы', path: '/soups', slug: 'soups' },
+    { data: bakingData, name: 'Выпечка', path: '/category/baking', slug: 'baking' },
+    { data: meatData, name: 'Мясо', path: '/category/meat', slug: 'meat' },
+    { data: fishData, name: 'Рыба', path: '/category/fish', slug: 'fish' },
+    { data: snacksData, name: 'Закуски', path: '/category/snacks', slug: 'snacks' },
+    { data: dessertsData, name: 'Десерты', path: '/category/desserts', slug: 'desserts' },
+    { data: drinksData, name: 'Напитки', path: '/category/drinks', slug: 'drinks' },
+    { data: doughData, name: 'Тесто', path: '/category/dough', slug: 'dough' },
+    { data: porridgeData, name: 'Каши', path: '/category/porridge', slug: 'porridge' },
   ];
 
-  // 2. Ищем рецепт и автоматически определяем его категорию
   let recipe = null;
-  let recipeCategory = { name: 'Рецепты', path: '/', data: [] }; // ✅ Добавили data: []
+  let recipeCategory = { name: 'Рецепты', path: '/', data: [] };
 
-  for (const cat of categories) {
-        const found = cat.data.find(r =>
-      r.id === id || r.id === parseInt(id) || String(r.id) === String(id)
-    );
-    if (found) {
-  recipe = found;
-  recipeCategory = { name: cat.name, path: cat.path, data: cat.data }; // ✅ Добавили data: cat.data
-  break;
-}
+  // 🔥 ШАГ А: ЕСЛИ ЕСТЬ ПОДСКАЗКА, ИЩЕМ СНАЧАЛА В ЭТОЙ КАТЕГОРИИ
+  if (fromCategory) {
+    const targetCat = categories.find(c => c.slug === fromCategory);
+    if (targetCat) {
+      const found = targetCat.data.find(r => String(r.id) === String(id));
+      if (found) {
+        recipe = found;
+        recipeCategory = { name: targetCat.name, path: targetCat.path, data: targetCat.data };
+      }
+    }
+  }
+
+  // 🔥 ШАГ Б: ЕСЛИ НЕ НАШЛИ ИЛИ ПОДСКАЗКИ НЕТ, ИЩЕМ ПО ВСЕМ КАТЕГОРИЯМ (FALLBACK)
+  if (!recipe) {
+    for (const cat of categories) {
+      const found = cat.data.find(r => String(r.id) === String(id));
+      if (found) {
+        recipe = found;
+        recipeCategory = { name: cat.name, path: cat.path, data: cat.data };
+        break;
+      }
+    }
   }
 
   // 3. Обработка "не найдено"
@@ -71,11 +88,12 @@ const RecipePage = () => {
   const metaTitle = `${title} — Русская Кухня`;
   const metaDesc = `Рецепт: ${title}. ${epoch ? `Эпоха: ${epoch}.` : ''} ${time ? `Время приготовления: ${time}.` : ''} ${history ? history.slice(0, 150) + '...' : 'Традиционный русский рецепт с исторической справкой.'}`;
   
-       const ogImage = image // 🔥 FIX 2026-07-16
-     ? (image.startsWith('http') 
-         ? image 
-         : `https://russka-kuhnya-9551.vercel.app${image}`)
-       : 'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg';
+  const ogImage = image 
+    ? (image.startsWith('http') 
+        ? image 
+        : `https://russka-kuhnya-9551.vercel.app${image}`)
+    : 'https://russka-kuhnya-9551.vercel.app/og-fallback.jpg';
+
   // 6. Рендер страницы
   return (
     <>
@@ -153,7 +171,7 @@ const RecipePage = () => {
       {/* 🔹 Визуальный контент */}
       <div style={{ minHeight: '100vh', background: 'linear-gradient(160deg, #0a0a2a 0%, #001f3f 100%)', padding: '20px', fontFamily: "'Times New Roman', serif" }}>
         
-        {/* Кнопка Назад (теперь чистая, без вложенных блоков!) */}
+        {/* Кнопка Назад */}
         <button
           onClick={() => window.history.back()}
           style={{ display: 'inline-block', marginBottom: '20px', padding: '10px 20px', background: 'linear-gradient(135deg, #00BFFF, #008080)', color: '#fff', border: 'none', borderRadius: '8px', fontSize: '1rem', fontWeight: 'bold', cursor: 'pointer', transition: 'all 0.3s ease' }}
@@ -181,21 +199,21 @@ const RecipePage = () => {
             </div>
           </div>
 
-                   {/* Фото */}
+          {/* Фото с исправленными стилями */}
           {image && (
             <div style={{ width: '100%', marginBottom: '30px', borderRadius: '15px', overflow: 'hidden', border: '3px solid #00CED1' }}>
               <img 
-  loading="lazy" 
-  src={image} 
-  alt={title} 
-  style={{ 
-    width: '100%', 
-    maxHeight: '400px',       /* 🔥 ОГРАНИЧИВАЕМ ВЫСОТУ */
-    objectFit: 'cover',       /* 🔥 ОБРЕЗАЕМ АККУРАТНО, БЕЗ ИСКАЖЕНИЙ */
-    display: 'block' 
-  }} 
-  onError={e => e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'} 
-/>
+                loading="lazy" 
+                src={image} 
+                alt={title} 
+                style={{ 
+                  width: '100%', 
+                  maxHeight: '400px',
+                  objectFit: 'cover',
+                  display: 'block' 
+                }} 
+                onError={e => e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'} 
+              />
             </div>
           )}
 
@@ -256,14 +274,13 @@ const RecipePage = () => {
               </div>
             )}
 
-            {/* 🍽️ ДРУГИЕ РЕЦЕПТЫ ИЗ ЭТОЙ ЖЕ КАТЕГОРИИ (ТЕПЕРЬ НА СВОЁМ МЕСТЕ!) */}
+            {/* 🍽️ ДРУГИЕ РЕЦЕПТЫ ИЗ ЭТОЙ ЖЕ КАТЕГОРИИ */}
             <div style={{ marginTop: '40px', paddingTop: '30px', borderTop: '3px solid #FFD700' }}>
               <h2 style={{ color: '#006064', fontSize: '1.8rem', marginBottom: '20px' }}>
                 🍽️ Другие рецепты из категории "{recipeCategory.name}"
               </h2>
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
                 {(() => {
-                  // ТЕПЕРЬ recipeCategory.data ТОЧНО СУЩЕСТВУЕТ!
                   const otherRecipes = (recipeCategory.data || [])
                     .filter(r => String(r.id) !== String(recipe.id))
                     .sort(() => 0.5 - Math.random())

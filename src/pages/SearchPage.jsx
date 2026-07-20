@@ -26,16 +26,17 @@ function SearchPage() {
 
     const searchTerm = query.toLowerCase();
     
+    // 🔥 ДОБАВИЛИ categorySlug для каждой категории
     const allRecipes = [
-      ...(soupsData || []).map(r => ({ ...r, categoryName: 'Супы' })),
-      ...(bakingData || []).map(r => ({ ...r, categoryName: 'Выпечка' })),
-      ...(meatData || []).map(r => ({ ...r, categoryName: 'Мясо' })),
-      ...(fishData || []).map(r => ({ ...r, categoryName: 'Рыба' })),
-      ...(snacksData || []).map(r => ({ ...r, categoryName: 'Закуски' })),
-      ...(dessertsData || []).map(r => ({ ...r, categoryName: 'Десерты' })),
-      ...(drinksData || []).map(r => ({ ...r, categoryName: 'Напитки' })),
-      ...(doughData || []).map(r => ({ ...r, categoryName: 'Тесто' })),
-      ...(porridgeData || []).map(r => ({ ...r, categoryName: 'Каши' })),
+      ...(soupsData || []).map(r => ({ ...r, categoryName: 'Супы', categorySlug: 'soups' })),
+      ...(bakingData || []).map(r => ({ ...r, categoryName: 'Выпечка', categorySlug: 'baking' })),
+      ...(meatData || []).map(r => ({ ...r, categoryName: 'Мясо', categorySlug: 'meat' })),
+      ...(fishData || []).map(r => ({ ...r, categoryName: 'Рыба', categorySlug: 'fish' })),
+      ...(snacksData || []).map(r => ({ ...r, categoryName: 'Закуски', categorySlug: 'snacks' })),
+      ...(dessertsData || []).map(r => ({ ...r, categoryName: 'Десерты', categorySlug: 'desserts' })),
+      ...(drinksData || []).map(r => ({ ...r, categoryName: 'Напитки', categorySlug: 'drinks' })),
+      ...(doughData || []).map(r => ({ ...r, categoryName: 'Тесто', categorySlug: 'dough' })),
+      ...(porridgeData || []).map(r => ({ ...r, categoryName: 'Каши', categorySlug: 'porridge' })),
     ];
 
     const filtered = allRecipes.filter(recipe => {
@@ -86,51 +87,31 @@ function SearchPage() {
         )}
 
         {results.map((recipe) => {
-          // 🔥 Формируем правильный URL картинки
           const recipeImage = recipe.image 
             ? (recipe.image.startsWith('http') ? recipe.image : `https://russka-kuhnya-9551.vercel.app${recipe.image}`)
             : 'https://via.placeholder.com/300x180?text=Русская+Кухня';
 
           return (
             <Link 
-              key={`${recipe.categoryName}-${recipe.id}`} 
-              to={`/recipe/${recipe.id}`} // 🔥 ИСПРАВЛЕНО: прямой переход на /recipe/{id}
+              key={`${recipe.categorySlug}-${recipe.id}`} 
+              // 🔥 ПЕРЕДАЕМ ПОДСКАЗКУ КАТЕГОРИИ В URL: ?from=dough
+              to={`/recipe/${recipe.id}?from=${recipe.categorySlug}`}
               className="search-result-card"
               style={{
-                display: 'flex',
-                flexDirection: 'column',
-                background: '#fff',
-                borderRadius: '12px',
-                overflow: 'hidden',
-                textDecoration: 'none',
-                color: 'inherit',
-                boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-                transition: 'transform 0.2s, box-shadow 0.2s'
+                display: 'flex', flexDirection: 'column', background: '#fff', borderRadius: '12px',
+                overflow: 'hidden', textDecoration: 'none', color: 'inherit',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)', transition: 'transform 0.2s, box-shadow 0.2s'
               }}
-              onMouseOver={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.15)';
-              }}
-              onMouseOut={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
-              }}
+              onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.15)'; }}
+              onMouseOut={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)'; }}
             >
-              {/* 🔥 БЛОК С КАРТИНКОЙ И ИДЕАЛЬНЫМИ СТИЛЯМИ */}
               <div style={{ width: '100%', height: '180px', overflow: 'hidden', background: '#f0f0f0' }}>
                 <img 
-                  src={recipeImage}
-                  alt={recipe.title || recipe.name}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover', // 🔥 ГЛАВНОЕ ИСПРАВЛЕНИЕ: обрезает, не искажая пропорции
-                    display: 'block'
-                  }}
+                  src={recipeImage} alt={recipe.title || recipe.name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                   onError={(e) => { e.target.src = 'https://via.placeholder.com/300x180?text=Нет+фото'; }}
                 />
               </div>
-              
               <div style={{ padding: '15px' }}>
                 <div style={{ fontSize: '0.85rem', color: '#8B0000', fontWeight: 'bold', marginBottom: '5px', textTransform: 'uppercase' }}>
                   {recipe.categoryName}
