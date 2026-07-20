@@ -184,7 +184,18 @@ const RecipePage = () => {
                    {/* Фото */}
           {image && (
             <div style={{ width: '100%', marginBottom: '30px', borderRadius: '15px', overflow: 'hidden', border: '3px solid #00CED1' }}>
-              <img loading="lazy" src={image} alt={title} style={{ width: '100%', height: 'auto', display: 'block' }} onError={e => e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'} />
+              <img 
+  loading="lazy" 
+  src={image} 
+  alt={title} 
+  style={{ 
+    width: '100%', 
+    maxHeight: '400px',       /* 🔥 ОГРАНИЧИВАЕМ ВЫСОТУ */
+    objectFit: 'cover',       /* 🔥 ОБРЕЗАЕМ АККУРАТНО, БЕЗ ИСКАЖЕНИЙ */
+    display: 'block' 
+  }} 
+  onError={e => e.target.src = 'https://via.placeholder.com/800x400?text=Нет+фото'} 
+/>
             </div>
           )}
 
