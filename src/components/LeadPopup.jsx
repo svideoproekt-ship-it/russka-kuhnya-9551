@@ -17,11 +17,9 @@ const LeadPopup = () => {
       }
     }
 
-    // Показываем через 15 секунд
     const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 15000);
-
+  setIsVisible(true);
+}, 3000); // 🔥 3 секунды вместо 15
     return () => clearTimeout(timer);
   }, []);
 
