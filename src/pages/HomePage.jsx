@@ -36,7 +36,10 @@ function HomePage() {
         </div>
         <p className="tagline">Традиции, проверенные временем</p>
       </header>
+import SoupWeekBanner from '../components/SoupWeekBanner';
 
+// ... внутри компонента, после header:
+<SoupWeekBanner />
           {/* Поиск */}
       <div style={{ padding: '0 20px', marginBottom: '30px' }}>
         <form 
