@@ -1,6 +1,7 @@
 // src/pages/HomePage.jsx
 import FeedbackForm from '../components/FeedbackForm';
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
+import SoupWeekBanner from '../components/SoupWeekBanner';
 import { useNavigate } from 'react-router-dom';
 import Categories from '../components/Categories';
 import SubscribeButton from '../components/SubscribeButton';
@@ -36,7 +37,6 @@ function HomePage() {
         </div>
         <p className="tagline">Традиции, проверенные временем</p>
       </header>
-import SoupWeekBanner from '../components/SoupWeekBanner';
 
 // ... внутри компонента, после header:
 <SoupWeekBanner />
