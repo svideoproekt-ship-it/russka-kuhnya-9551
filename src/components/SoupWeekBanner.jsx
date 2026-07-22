@@ -70,25 +70,38 @@ const SoupWeekBanner = () => {
       </h2>
 
       {/* Описание */}
-      <p style={{
-        color: '#fff',
-        fontSize: '1.2rem',
-        textAlign: 'center',
-        margin: '0 0 10px 0',
-        lineHeight: '1.5'
-      }}>
-        Каждый день — новый рецепт!
-      </p>
+<h3 style={{
+  color: '#FFD700',
+  fontSize: '1.4rem',
+  textAlign: 'center',
+  margin: '0 0 20px 0',
+  fontWeight: 'bold'
+}}>
+  СЕГОДНЯ: СУП ИЗ МОЛОДОЙ КАРТОШКИ
+</h3>
 
-      <p style={{
-        color: '#fff',
-        fontSize: '1rem',
-        textAlign: 'center',
-        margin: '0 0 25px 0',
-        opacity: 0.95
-      }}>
-       Есть борщ, рассольник, солянка и другие любимые супы
-      </p>
+<ul style={{
+  listStyle: 'none',
+  padding: 0,
+  margin: '0 0 25px 0',
+  textAlign: 'center'
+}}>
+  {[
+    '✨ Нежный',
+    '✨Ароматный',
+    '✨ Готовится за 35 минут',
+    '✨ Все ингредиенты в любом магазине'
+  ].map((item, index) => (
+    <li key={index} style={{
+      color: '#fff',
+      fontSize: '1.1rem',
+      margin: '8px 0',
+      textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+    }}>
+      {item}
+    </li>
+  ))}
+</ul>
 
       {/* Кнопка */}
       <div style={{ textAlign: 'center' }}>
