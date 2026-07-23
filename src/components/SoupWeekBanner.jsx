@@ -6,7 +6,7 @@ const SoupWeekBanner = () => {
 
   // Проверяем, закрывал ли пользователь баннер
   useEffect(() => {
-    const closed = localStorage.getItem('soupWeekBannerClosed');
+    const closed = localStorage.getItem('soupWeekBannerClosed_v2');
     if (closed) {
       setIsVisible(false);
     }
@@ -14,7 +14,7 @@ const SoupWeekBanner = () => {
 
   const handleClose = () => {
     setIsVisible(false);
-    localStorage.setItem('soupWeekBannerClosed', Date.now().toString());
+    localStorage.setItem('soupWeekBannerClosed_v2', Date.now().toString());
   };
 
   if (!isVisible) return null;
