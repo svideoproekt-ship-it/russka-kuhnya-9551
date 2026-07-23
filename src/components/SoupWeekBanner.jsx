@@ -22,7 +22,7 @@ const SoupWeekBanner = () => {
   return (
     <div style={{
       position: 'relative',
-      background: 'linear-gradient(135deg, #FF6347 0%, #FF4500 50%, #DC143C 100%)',
+      background: 'linear-gradient(135deg, #8B0000 0%, #A52A2A 50%, #DC143C 100%)',
       borderRadius: '15px',
       padding: '30px',
       margin: '20px auto',
@@ -72,12 +72,12 @@ const SoupWeekBanner = () => {
       {/* Описание */}
 <h3 style={{
   color: '#FFD700',
-  fontSize: '1.4rem',
+  fontSize: '1.3rem',
   textAlign: 'center',
   margin: '0 0 20px 0',
   fontWeight: 'bold'
 }}>
-  СЕГОДНЯ: СУП ИЗ МОЛОДОЙ КАРТОШКИ
+  СЕГОДНЯ: СУП-ПЮРЕ ИЗ СВЕКОЛЬНОЙ БОТВЫ
 </h3>
 
 <ul style={{
@@ -87,15 +87,15 @@ const SoupWeekBanner = () => {
   textAlign: 'center'
 }}>
   {[
-    '✨ Нежный',
-    '✨Ароматный',
-    '✨ Готовится за 35 минут',
-    '✨ Все ингредиенты в любом магазине'
+    '🍲 Нежный суп-пюре',
+    '🌿 Из свекольной ботвы',
+    '✨ Готовится за 40 минут',
+    '💚 Полезно и вкусно'
   ].map((item, index) => (
     <li key={index} style={{
       color: '#fff',
-      fontSize: '1.1rem',
-      margin: '8px 0',
+      fontSize: '1.05rem',
+      margin: '6px 0',
       textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
     }}>
       {item}
