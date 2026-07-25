@@ -6,8 +6,8 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'prompt', // ← Добавь это
-  injectRegister: null,   // ← Отключаем авто-регистрацию
+      registerType: 'autoUpdate', // ← Должно быть autoUpdate
+  injectRegister: 'auto',     // ← Или 'auto', но не null
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {

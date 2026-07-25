@@ -65,47 +65,57 @@ function Loader() {
 function App() {
   // Инициализация OneSignal - отложена до взаимодействия пользователя
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      // Ждём 3 секунды или первого взаимодействия пользователя
-      const initOneSignal = () => {
-        const initializeOneSignal = async () => {
-          try {
-            await OneSignal.init({
-              appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
-              allowLocalhostAsSecureOrigin: true,
-              serviceWorkerParam: { scope: '/' },
-              serviceWorkerPath: '/OneSignalSDKWorker.js',
-            });
-            console.log('✅ OneSignal инициализирован!');
-          } catch (error) {
-            console.error('❌ Ошибка инициализации OneSignal:', error);
-          }
-        };
-        
-        initializeOneSignal();
-      };
-
-      // Инициализируем через 3 секунды ИЛИ при первом взаимодействии
-      const timeout = setTimeout(initOneSignal, 3000);
-      
-      const handleInteraction = () => {
-        clearTimeout(timeout);
-        initOneSignal();
-        // Убираем слушатели после инициализации
-        window.removeEventListener('scroll', handleInteraction);
-        window.removeEventListener('click', handleInteraction);
-      };
-
-      window.addEventListener('scroll', handleInteraction, { once: true });
-      window.addEventListener('click', handleInteraction, { once: true });
-
-      return () => {
-        clearTimeout(timeout);
-        window.removeEventListener('scroll', handleInteraction);
-        window.removeEventListener('click', handleInteraction);
-      };
+  if (typeof window !== 'undefined') {
+    // 1. Регистрируем Vite PWA Service Worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => {
+          console.log('✅ Vite PWA SW registered:', reg.scope);
+        })
+        .catch(err => {
+          console.error('❌ Vite PWA SW registration failed:', err);
+        });
     }
-  }, []);
+
+    // 2. Инициализируем OneSignal
+    const initOneSignal = () => {
+      const initializeOneSignal = async () => {
+        try {
+          await OneSignal.init({
+            appId: "140a0eef-2934-46ba-9af6-3ae7bd31dc57",
+            allowLocalhostAsSecureOrigin: true,
+            serviceWorkerParam: { scope: '/' },
+            serviceWorkerPath: '/OneSignalSDKWorker.js',
+          });
+          console.log('✅ OneSignal инициализирован!');
+        } catch (error) {
+          console.error('❌ Ошибка инициализации OneSignal:', error);
+        }
+      };
+      
+      initializeOneSignal();
+    };
+
+    // Инициализируем через 3 секунды ИЛИ при первом взаимодействии
+    const timeout = setTimeout(initOneSignal, 3000);
+    
+    const handleInteraction = () => {
+      clearTimeout(timeout);
+      initOneSignal();
+      window.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('click', handleInteraction);
+    };
+
+    window.addEventListener('scroll', handleInteraction, { once: true });
+    window.addEventListener('click', handleInteraction, { once: true });
+
+    return () => {
+      clearTimeout(timeout);
+      window.removeEventListener('scroll', handleInteraction);
+      window.removeEventListener('click', handleInteraction);
+    };
+  }
+}, []);
 
   return (
     <Router>
