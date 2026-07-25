@@ -4,18 +4,20 @@ import { Link } from 'react-router-dom';
 const SoupWeekBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  // Проверяем, закрывал ли пользователь баннер
+  // 🔥 Автоматически генерируем ключ на основе заголовка баннера
+  const bannerTitle = "СЕГОДНЯ: КРЕМ-СУП С ОПЯТАМИ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
+  const bannerKey = `soupWeekBanner_${btoa(bannerTitle).slice(0, 20)}`; // Уникальный ключ!
+
   useEffect(() => {
-    const closed = localStorage.getItem('soupWeekBannerClosed_v3'); // 🔥 Новый ключ!
-    
+    const closed = localStorage.getItem(bannerKey);
     if (closed) {
       setIsVisible(false);
     }
-  }, []);
+  }, [bannerKey]);
 
   const handleClose = () => {
     setIsVisible(false);
-    localStorage.setItem('soupWeekBannerClosed_v3', Date.now().toString()); // 🔥 Тот же клю
+    localStorage.setItem(bannerKey, Date.now().toString());
   };
 
   if (!isVisible) return null;
@@ -23,7 +25,7 @@ const SoupWeekBanner = () => {
   return (
     <div style={{
       position: 'relative',
-      background: 'linear-gradient(135deg, #8B0000 0%, #A52A2A 50%, #DC143C 100%)',
+      background: 'linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%)',
       borderRadius: '15px',
       padding: '30px',
       margin: '20px auto',
@@ -53,69 +55,54 @@ const SoupWeekBanner = () => {
         ×
       </button>
 
-      {/* Иконка */}
-      <div style={{ fontSize: '50px', textAlign: 'center', marginBottom: '15px' }}>
-        🍲
-      </div>
+      {/* День недели */}
+      <p style={{
+        color: '#FFD700',
+        fontSize: '0.85rem',
+        textAlign: 'center',
+        margin: '0 0 10px 0',
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
+        letterSpacing: '1px'
+      }}>
+        День четвёртый
+      </p>
 
       {/* Заголовок */}
-      <h2 style={{
-        color: '#fff',
-        fontSize: '2rem',
+      <h3 style={{
+        color: '#FFD700',
+        fontSize: '1.4rem',
         textAlign: 'center',
-        margin: '0 0 15px 0',
-        fontWeight: 'bold',
-        textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+        margin: '0 0 20px 0',
+        fontWeight: 'bold'
       }}>
-        НЕДЕЛЯ СУПОВ!
-      </h2>
+        {bannerTitle}
+      </h3>
 
-      {/* День недели */}
-<p style={{
-  color: '#FFD700',
-  fontSize: '0.85rem',
-  textAlign: 'center',
-  margin: '0 0 10px 0',
-  fontWeight: 'bold',
-  textTransform: 'uppercase',
-  letterSpacing: '1px'
-}}>
-  День четвёртый
-</p>
+      {/* Список преимуществ */}
+      <ul style={{
+        listStyle: 'none',
+        padding: 0,
+        margin: '0 0 25px 0',
+        textAlign: 'center'
+      }}>
+        {[
+          '🍄 Ароматный грибной суп',
+          '✨ Нежный крем-суп',
+          '️ Готовится за 45 минут',
+          '🌿 Свежий укроп и сметана'
+        ].map((item, index) => (
+          <li key={index} style={{
+            color: '#fff',
+            fontSize: '1.05rem',
+            margin: '6px 0',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+          }}>
+            {item}
+          </li>
+        ))}
+      </ul>
 
-{/* Заголовок */}
-<h3 style={{
-  color: '#FFD700',
-  fontSize: '1.4rem',
-  textAlign: 'center',
-  margin: '0 0 20px 0',
-  fontWeight: 'bold'
-}}>
-  СЕГОДНЯ: КРЕМ-СУП С ОПЯТАМИ
-</h3>
-
-<ul style={{
-  listStyle: 'none',
-  padding: 0,
-  margin: '0 0 25px 0',
-  textAlign: 'center'
-}}>
-  {[
-    ' Ароматный грибной суп',
-    '✨ Нежный крем-суп',
-    ' Готовится за 45 минут',
-    '🌿 Свежий укроп и сметана'
-  ].map((item, index) => (
-    <li key={index} style={{
-      color: '#fff',
-      fontSize: '1.05rem',
-      margin: '6px 0',
-      textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
-    }}>
-      {item}
-    </li>
-  ))}
-</ul>
       {/* Кнопка */}
       <div style={{ textAlign: 'center' }}>
         <Link
@@ -143,6 +130,11 @@ const SoupWeekBanner = () => {
         >
           👉 Смотреть все супы
         </Link>
+      </div>
+
+      {/* Иконка */}
+      <div style={{ fontSize: '50px', textAlign: 'center', marginTop: '20px' }}>
+        🍲
       </div>
 
       {/* CSS анимация */}
