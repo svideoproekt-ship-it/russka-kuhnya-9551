@@ -69,15 +69,28 @@ const SoupWeekBanner = () => {
         НЕДЕЛЯ СУПОВ!
       </h2>
 
-      {/* Описание */}
+      {/* День недели */}
+<p style={{
+  color: '#FFD700',
+  fontSize: '0.85rem',
+  textAlign: 'center',
+  margin: '0 0 10px 0',
+  fontWeight: 'bold',
+  textTransform: 'uppercase',
+  letterSpacing: '1px'
+}}>
+  День четвёртый
+</p>
+
+{/* Заголовок */}
 <h3 style={{
   color: '#FFD700',
-  fontSize: '1.3rem',
+  fontSize: '1.4rem',
   textAlign: 'center',
   margin: '0 0 20px 0',
   fontWeight: 'bold'
 }}>
-  СЕГОДНЯ: ТУШЁНЫЙ СУП С РЁБРЫШКАМИ
+  СЕГОДНЯ: КРЕМ-СУП С ОПЯТАМИ
 </h3>
 
 <ul style={{
@@ -87,10 +100,10 @@ const SoupWeekBanner = () => {
   textAlign: 'center'
 }}>
   {[
-    ' Сытный мясной суп',
-    '🔥 Тушится 1.5 часа',
-    '✨ Мясо тает во рту',
-    '💪 Идеален для мужчин'
+    ' Ароматный грибной суп',
+    '✨ Нежный крем-суп',
+    ' Готовится за 45 минут',
+    '🌿 Свежий укроп и сметана'
   ].map((item, index) => (
     <li key={index} style={{
       color: '#fff',
@@ -102,7 +115,6 @@ const SoupWeekBanner = () => {
     </li>
   ))}
 </ul>
-
       {/* Кнопка */}
       <div style={{ textAlign: 'center' }}>
         <Link
