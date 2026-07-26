@@ -6,8 +6,6 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      registerType: 'autoUpdate', // ← Должно быть autoUpdate
-  injectRegister: 'auto',     // ← Или 'auto', но не null
       registerType: 'autoUpdate',
       includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
       manifest: {
@@ -42,5 +40,16 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+  build: {
+    cssCodeSplit: true, // Разделяем CSS на чанки
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          onesignal: ['react-onesignal']
+        }
+      }
+    }
+  }
 });
