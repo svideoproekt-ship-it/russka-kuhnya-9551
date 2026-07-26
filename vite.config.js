@@ -42,7 +42,7 @@ export default defineConfig({
     })
   ],
   build: {
-    cssCodeSplit: true, // Разделяем CSS на чанки
+    cssCodeSplit: true,
     rollupOptions: {
       output: {
         manualChunks: {
