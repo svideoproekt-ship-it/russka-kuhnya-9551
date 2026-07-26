@@ -5,7 +5,7 @@ const SoupWeekBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   // 🔥 Автоматически генерируем ключ на основе заголовка баннера
-  const bannerTitle = "СЕГОДНЯ: КРЕМ-СУП С ОПЯТАМИ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
+  const bannerTitle = "СЕГОДНЯ: СЫРНЫЙ СУП С КУРИЦЕЙ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
   // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
 const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
@@ -26,7 +26,7 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
   return (
     <div style={{
       position: 'relative',
-      background: 'linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%)',
+      background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #FFD700 100%)',
       borderRadius: '15px',
       padding: '30px',
       margin: '20px auto',
@@ -66,7 +66,7 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
         textTransform: 'uppercase',
         letterSpacing: '1px'
       }}>
-        День четвёртый
+        День пятый
       </p>
 
       {/* Заголовок */}
@@ -88,10 +88,10 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
         textAlign: 'center'
       }}>
         {[
-          '🍄 Ароматный грибной суп',
-          '✨ Нежный крем-суп',
-          '️ Готовится за 45 минут',
-          '🌿 Свежий укроп и сметана'
+          '🧀 Нежный сырный вкус',
+    '✨ Готовится всего 30 минут',
+    '🍗 Сытный и лёгкий',
+    '🍞 Хрустящие сухарики'
         ].map((item, index) => (
           <li key={index} style={{
             color: '#fff',
