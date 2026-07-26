@@ -6,7 +6,8 @@ const SoupWeekBanner = () => {
 
   // 🔥 Автоматически генерируем ключ на основе заголовка баннера
   const bannerTitle = "СЕГОДНЯ: КРЕМ-СУП С ОПЯТАМИ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
-  const bannerKey = `soupWeekBanner_${btoa(bannerTitle).slice(0, 20)}`; // Уникальный ключ!
+  // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
+const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
   useEffect(() => {
     const closed = localStorage.getItem(bannerKey);
