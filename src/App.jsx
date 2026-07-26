@@ -64,9 +64,9 @@ function Loader() {
 
 function App() {
   // Инициализация OneSignal - отложена до взаимодействия пользователя
-  useEffect(() => {
+ useEffect(() => {
   if (typeof window !== 'undefined') {
-    // 1. Регистрируем Vite PWA Service Worker
+    // Регистрируем Vite PWA Service Worker
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(reg => {
@@ -77,7 +77,7 @@ function App() {
         });
     }
 
-    // 2. Инициализируем OneSignal
+    //  Инициализируем OneSignal ТОЛЬКО после полной загрузки страницы
     const initOneSignal = () => {
       const initializeOneSignal = async () => {
         try {
@@ -96,23 +96,26 @@ function App() {
       initializeOneSignal();
     };
 
-    // Инициализируем через 3 секунды ИЛИ при первом взаимодействии
-    const timeout = setTimeout(initOneSignal, 3000);
+    // 🔥 Ждём 5 секунд ИЛИ пока пользователь не начнёт взаимодействовать
+    const timeout = setTimeout(initOneSignal, 5000); // Было 3000, стало 5000
     
     const handleInteraction = () => {
       clearTimeout(timeout);
       initOneSignal();
       window.removeEventListener('scroll', handleInteraction);
       window.removeEventListener('click', handleInteraction);
+      window.removeEventListener('touchstart', handleInteraction); // Добавили для мобильных
     };
 
     window.addEventListener('scroll', handleInteraction, { once: true });
     window.addEventListener('click', handleInteraction, { once: true });
+    window.addEventListener('touchstart', handleInteraction, { once: true }); // Для мобильных
 
     return () => {
       clearTimeout(timeout);
       window.removeEventListener('scroll', handleInteraction);
       window.removeEventListener('click', handleInteraction);
+      window.removeEventListener('touchstart', handleInteraction);
     };
   }
 }, []);
