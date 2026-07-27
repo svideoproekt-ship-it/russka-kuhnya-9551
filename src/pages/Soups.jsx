@@ -117,7 +117,7 @@ const Soups = () => {
               <div className="recipe-section">
                 <h2>👨‍🍳 Приготовление</h2>
                 <ol className="preparation-list">
-                  {selectedRecipe.preparation.map((step, index) => (
+                  {selectedRecipe.steps.map((step, index) => (
                     <li key={index}>{step}</li>
                   ))}
                 </ol>
