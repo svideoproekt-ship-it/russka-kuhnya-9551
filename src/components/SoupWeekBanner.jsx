@@ -5,7 +5,7 @@ const SoupWeekBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   // 🔥 Автоматически генерируем ключ на основе заголовка баннера
-  const bannerTitle = "СЕГОДНЯ: СЫРНЫЙ СУП С КУРИЦЕЙ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
+  const  bannerTitle = "СЕГОДНЯ: СУП ИЗ УТКИ С ЛАПШОЙ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
   // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
 const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
@@ -26,7 +26,7 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
   return (
     <div style={{
       position: 'relative',
-      background: 'linear-gradient(135deg, #FFA500 0%, #FF8C00 50%, #FFD700 100%)',
+      background: 'linear-gradient(135deg, #D2691E 0%, #CD853F 50%, #DEB887 100%)',
       borderRadius: '15px',
       padding: '30px',
       margin: '20px auto',
@@ -56,6 +56,18 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
         ×
       </button>
 
+      {/* Главный заголовок */}
+      <h2 style={{
+        color: '#fff',
+        fontSize: '2rem',
+        textAlign: 'center',
+        margin: '0 0 15px 0',
+        fontWeight: 'bold',
+        textShadow: '2px 2px 4px rgba(0,0,0,0.4)'
+      }}>
+        НЕДЕЛЯ СУПОВ!
+      </h2>
+
       {/* День недели */}
       <p style={{
         color: '#FFD700',
@@ -66,7 +78,7 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
         textTransform: 'uppercase',
         letterSpacing: '1px'
       }}>
-        День пятый
+        День шестой
       </p>
 
       {/* Заголовок */}
@@ -88,10 +100,10 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
         textAlign: 'center'
       }}>
         {[
-          '🧀 Нежный сырный вкус',
-    '✨ Готовится всего 30 минут',
-    '🍗 Сытный и лёгкий',
-    '🍞 Хрустящие сухарики'
+          '🦆 Наваристый утиный бульон',
+    '✨ С домашней лапшой',
+    ' Готовится 2 часа',
+    '🍜 Сытный праздничный суп'
         ].map((item, index) => (
           <li key={index} style={{
             color: '#fff',
