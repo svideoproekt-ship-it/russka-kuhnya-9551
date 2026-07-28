@@ -5,7 +5,7 @@ const SoupWeekBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   // 🔥 Автоматически генерируем ключ на основе заголовка баннера
-  const  bannerTitle = "СЕГОДНЯ: СУП ИЗ УТКИ С ЛАПШОЙ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
+  const bannerTitle = "СЕГОДНЯ: ВЕСЕННИЙ СУП С ФРИКАДЕЛЬКАМИ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
   // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
 const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
@@ -26,7 +26,7 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
   return (
     <div style={{
       position: 'relative',
-      background: 'linear-gradient(135deg, #D2691E 0%, #CD853F 50%, #DEB887 100%)',
+      background: 'linear-gradient(135deg, #4CAF50 0%, #8BC34A 50%, #CDDC39 100%)',
       borderRadius: '15px',
       padding: '30px',
       margin: '20px auto',
@@ -70,16 +70,16 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
 
       {/* День недели */}
       <p style={{
-        color: '#FFD700',
-        fontSize: '0.85rem',
-        textAlign: 'center',
-        margin: '0 0 10px 0',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
-        letterSpacing: '1px'
-      }}>
-        День шестой
-      </p>
+  color: '#fff',
+  fontSize: '0.85rem',
+  textAlign: 'center',
+  margin: '0 0 10px 0',
+  fontWeight: 'bold',
+  textTransform: 'uppercase',
+  letterSpacing: '1px'
+}}>
+  День седьмой (Финал!)
+</p>
 
       {/* Заголовок */}
       <h3 style={{
@@ -99,12 +99,12 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
         margin: '0 0 25px 0',
         textAlign: 'center'
       }}>
-        {[
-          '🦆 Наваристый утиный бульон',
-    '✨ С домашней лапшой',
-    ' Готовится 2 часа',
-    '🍜 Сытный праздничный суп'
-        ].map((item, index) => (
+          {[
+    '🟢 Свежий зелёный горошек',
+    '✨ Готовится всего 30 минут',
+    '🍡 Нежные домашние фрикадельки',
+    '🌿 Лёгкий и полезный'
+  ].map((item, index) => (
           <li key={index} style={{
             color: '#fff',
             fontSize: '1.05rem',
