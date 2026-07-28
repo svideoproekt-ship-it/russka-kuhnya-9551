@@ -7,6 +7,7 @@ import Categories from '../components/Categories';
 import SubscribeButton from '../components/SubscribeButton';
 import './HomePage.css';
 import SEO from '../components/SEO';
+import { sendGoal } from '../utils/analytics'; // 👈 Не забудь импортировать
 
 function HomePage() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -38,7 +39,7 @@ function HomePage() {
         <p className="tagline">Традиции, проверенные временем</p>
       </header>
 
-// ... внутри компонента, после header:
+
 <SoupWeekBanner />
           {/* Поиск */}
       <div style={{ padding: '0 20px', marginBottom: '30px' }}>

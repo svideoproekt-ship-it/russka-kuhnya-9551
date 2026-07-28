@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import OneSignal from 'react-onesignal';
 import NotificationHelp from './NotificationHelp';
 import './SubscribeButton.css';
+import { sendGoal } from '../utils/analytics'; // 👈 1. ДОБАВЛЯЕМ ИМПОРТ
 
 const SubscribeButton = () => {
-  const [status, setStatus] = useState('idle');
+    const [status, setStatus] = useState('idle');
 
   useEffect(() => {
     // Проверяем статус через 1.5 секунды
@@ -34,6 +35,7 @@ const SubscribeButton = () => {
   }, []);
 
   const handleSubscribe = async () => {
+    sendGoal('subscribe_push_click');
     console.log('🔔 Клик по кнопке!');
     setStatus('loading');
 
