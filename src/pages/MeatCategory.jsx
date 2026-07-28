@@ -93,13 +93,27 @@ function MeatCategory() {
               </ol>
             </div>
 
-            {selectedRecipe.history && (
+                        {selectedRecipe.history && (
               <div className="recipe-section history-section">
                 <h2>📚 Историческая справка</h2>
                 <p className="history-text">{selectedRecipe.history}</p>
               </div>
             )}
 
+            {/* 🔥 ДОБАВЛЯЕМ БЛОК ЧАСТЫХ ВОПРОСОВ (FAQ) */}
+            {selectedRecipe.faq && selectedRecipe.faq.length > 0 && (
+              <div className="recipe-section faq-section">
+                <h2>❓ Частые вопросы</h2>
+                {selectedRecipe.faq.map((item, index) => (
+                  <div key={index} className="faq-item" style={{ marginBottom: '15px', paddingBottom: '15px', borderBottom: '1px solid #eee' }}>
+                    <h3 style={{ color: '#8B0000', fontSize: '1.1rem', marginBottom: '8px' }}>❓ {item.question}</h3>
+                    <p style={{ color: '#333', lineHeight: '1.6', paddingLeft: '10px', borderLeft: '3px solid #FFD700' }}>{item.answer}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            
             {/* 🍽️ ДРУГИЕ РЕЦЕПТЫ */}
             <div className="recipe-section" style={{ marginTop: '30px', paddingTop: '20px', borderTop: '3px solid #FFD700' }}>
               <h2 style={{ color: '#8B0000', fontSize: '1.8rem', marginBottom: '20px' }}>🍽️ Другие рецепты</h2>
