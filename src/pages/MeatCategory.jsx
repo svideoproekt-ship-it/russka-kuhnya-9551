@@ -87,9 +87,9 @@ function MeatCategory() {
               <h2>👨‍🍳 Приготовление</h2>
               <ol className="preparation-list">
                 {/* 🔥 ИСПРАВЛЕНО: preparation заменено на steps */}
-                {selectedRecipe.steps.map((step, index) => (
-                  <li key={index}>{step}</li>
-                ))}
+                {(selectedRecipe.steps || selectedRecipe.preparation || []).map((step, index) => (
+                <li key={index}>{step}</li>
+              ))}
               </ol>
             </div>
 
