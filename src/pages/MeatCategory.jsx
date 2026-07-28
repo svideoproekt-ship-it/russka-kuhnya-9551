@@ -54,7 +54,7 @@ function MeatCategory() {
             <div className="recipe-meta">
               <span className="epoch">🕰 {selectedRecipe.epoch}</span>
               <span className="time">⏱ {selectedRecipe.time}</span>
-              {selectedRecipe.servings && <span className="servings">🍽 {selectedRecipe.servings} порций</span>} {/* 🔥 ПОРЦИИ */}
+              <span className="servings">🍽 {selectedRecipe.servings || 4} порции</span>
             </div>
           </div>
 
@@ -155,7 +155,7 @@ function MeatCategory() {
                       <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>{recipe.name}</h4>
                       <div style={{ fontSize: '0.85rem', color: '#666', display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap' }}>
                         <span>⏱ {recipe.time}</span>
-                        {recipe.servings && <span>🍽 {recipe.servings} порц.</span>} {/* 🔥 ПОРЦИИ В БЛОКЕ ДРУГИХ РЕЦЕПТОВ */}
+                        <span>🍽 {recipe.servings || 4} порц.</span>{/* 🔥 ПОРЦИИ В БЛОКЕ ДРУГИХ РЕЦЕПТОВ */}
                       </div>
                     </div>
                   ))
