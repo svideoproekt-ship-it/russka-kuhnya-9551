@@ -194,9 +194,10 @@ function MeatCategory() {
             <div className="recipe-card-content">
               <h3>{recipe.name}</h3>
               <div className="recipe-card-meta">
-                <span>🕰 {recipe.epoch}</span>
-                <span>⏱ {recipe.time}</span>
-              </div>
+         <span>🕰 {recipe.epoch}</span>
+         <span>⏱ {recipe.time}</span>
+          {recipe.servings && <span>🍽️ {recipe.servings} порц.</span>}
+             </div>
               <button className="view-recipe-btn">
                 Смотреть рецепт
               </button>
