@@ -24,41 +24,45 @@ function FishCategory() {
     return (
       <div className="fish-category">
         <SEO 
-          title={`${selectedRecipe.name} — Русская Кухня`}
+          title={`${selectedRecipe.name} — Рецепт с фото | Русская Кухня`}
           description={selectedRecipe.history?.substring(0, 150) || selectedRecipe.name}
-          keywords="рыбные блюда, русская кухня"
+          keywords="рыбные блюда, русская кухня, рецепты рыбы"
           url={`https://russka-kuhnya-9551.vercel.app/recipe/${selectedRecipe.id}`}
-        image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
-/>
+          image={selectedRecipe.image ? `https://russka-kuhnya-9551.vercel.app${selectedRecipe.image}` : undefined}
+        />
         
-        {/* 🍞 ХЛЕБНЫЕ КРОШКИ С ПРОПСАМИ — ВНУТРИ if (selectedRecipe)! */}
+        {/* 🍞 ХЛЕБНЫЕ КРОШКИ */}
         <Breadcrumbs 
           recipeTitle={selectedRecipe.name}
           categoryName="Рыба"
           categoryPath="/category/fish"
         />
         
-       <button 
-  onClick={() => window.location.href = '/category/fish'}
-  className="back-button"
-  style={{ 
-    position: 'relative', 
-    zIndex: 1000,
-    cursor: 'pointer',
-    pointerEvents: 'auto'
-  }}
->
-  ← Вернуться к рыбе
-</button>
+        {/* 🔥 ИСПРАВЛЕННАЯ КНОПКА НАЗАД (использует handleBack) */}
+        <button 
+          onClick={handleBack}
+          className="back-button"
+          style={{ 
+            position: 'relative', 
+            zIndex: 1000,
+            cursor: 'pointer',
+            pointerEvents: 'auto'
+          }}
+        >
+          ← Назад к списку
+        </button>
+
         <div className="recipe-detail">
           <div className="recipe-header">
-            <ShareButtons title={selectedRecipe.name} />
             <h1>{selectedRecipe.name}</h1>
             <div className="recipe-meta">
               <span className="epoch">🕰 {selectedRecipe.epoch}</span>
               <span className="time">⏱ {selectedRecipe.time}</span>
             </div>
           </div>
+
+          <ShareButtons title={selectedRecipe.name} />
+          
           {selectedRecipe.image && (
             <div className="recipe-image-container">
               <img 
@@ -72,6 +76,7 @@ function FishCategory() {
               />
             </div>
           )}
+
           <div className="recipe-content">
             <div className="recipe-section">
               <h2>📝 Ингредиенты</h2>
@@ -81,65 +86,68 @@ function FishCategory() {
                 ))}
               </ul>
             </div>
+
             <div className="recipe-section">
-              <h2>👨🍳 Приготовление</h2>
+              <h2>👨‍🍳 Приготовление</h2>
               <ol className="preparation-list">
                 {selectedRecipe.preparation.map((step, index) => (
                   <li key={index}>{step}</li>
                 ))}
               </ol>
             </div>
+
             {selectedRecipe.history && (
               <div className="recipe-section history-section">
                 <h2>📚 Историческая справка</h2>
                 <p className="history-text">{selectedRecipe.history}</p>
               </div>
             )}
-      {/* ️ ДРУГИЕ РЕЦЕПТЫ */}
-<div className="recipe-section" style={{ marginTop: '30px', paddingTop: '20px', borderTop: '3px solid #FFD700' }}>
-  <h2 style={{ color: '#8B0000', fontSize: '1.8rem', marginBottom: '20px' }}>🍽️ Другие рецепты</h2>
-  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
-    {fishData
-      .filter(r => r.id !== selectedRecipe.id)
-      .slice(0, 4)
-      .map(recipe => (
-        <div 
-          key={recipe.id} 
-          onClick={() => handleRecipeClick(recipe)}
-          style={{ 
-            background: 'linear-gradient(135deg, #FFF8DC, #FFE4B5)', 
-            borderRadius: '12px', 
-            padding: '12px', 
-            cursor: 'pointer',
-            border: '2px solid #FFD700',
-            transition: 'transform 0.2s, box-shadow 0.2s',
-            textAlign: 'center'
-          }}
-          onMouseOver={e => {
-            e.currentTarget.style.transform = 'translateY(-5px)';
-            e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
-          }}
-          onMouseOut={e => {
-            e.currentTarget.style.transform = 'translateY(0)';
-            e.currentTarget.style.boxShadow = 'none';
-          }}
-        >
-          {recipe.image && (
-            <img 
-              loading="lazy"
-              src={recipe.image} 
-              alt={`${recipe.name} — русское рыбное блюдо, рецепт с фото`}
-              style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px', marginBottom: '8px' }}
-              onError={(e) => { e.target.style.display = 'none'; }}
-            />
-          )}
-          <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>{recipe.name}</h4>
-          <span style={{ fontSize: '0.9rem', color: '#666' }}>⏱ {recipe.time}</span>
-        </div>
-      ))
-    }
-  </div>
-</div>    
+
+            {/* 🍽️ ДРУГИЕ РЕЦЕПТЫ */}
+            <div className="recipe-section" style={{ marginTop: '30px', paddingTop: '20px', borderTop: '3px solid #FFD700' }}>
+              <h2 style={{ color: '#8B0000', fontSize: '1.8rem', marginBottom: '20px' }}>🍽️ Другие рецепты из этой категории</h2>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '15px' }}>
+                {fishData
+                  .filter(r => r.id !== selectedRecipe.id)
+                  .slice(0, 4)
+                  .map(recipe => (
+                    <div 
+                      key={recipe.id} 
+                      onClick={() => handleRecipeClick(recipe)}
+                      style={{ 
+                        background: 'linear-gradient(135deg, #FFF8DC, #FFE4B5)', 
+                        borderRadius: '12px', 
+                        padding: '12px', 
+                        cursor: 'pointer',
+                        border: '2px solid #FFD700',
+                        transition: 'transform 0.2s, box-shadow 0.2s',
+                        textAlign: 'center'
+                      }}
+                      onMouseOver={e => {
+                        e.currentTarget.style.transform = 'translateY(-5px)';
+                        e.currentTarget.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+                      }}
+                      onMouseOut={e => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
+                    >
+                      {recipe.image && (
+                        <img 
+                          loading="lazy"
+                          src={recipe.image} 
+                          alt={`${recipe.name} — русское рыбное блюдо, рецепт с фото`}
+                          style={{ width: '100%', height: '120px', objectFit: 'cover', borderRadius: '8px', marginBottom: '8px' }}
+                          onError={(e) => { e.target.style.display = 'none'; }}
+                        />
+                      )}
+                      <h4 style={{ color: '#8B0000', fontSize: '1rem', margin: '8px 0 4px 0', lineHeight: '1.3' }}>{recipe.name}</h4>
+                      <span style={{ fontSize: '0.9rem', color: '#666' }}>⏱ {recipe.time}</span>
+                    </div>
+                  ))
+                }
+              </div>
+            </div>    
           </div>
         </div>
       </div>
@@ -151,12 +159,12 @@ function FishCategory() {
     <div className="fish-category">
       <SEO 
         title="Рыбные блюда — уха, запечённая рыба, котлеты | Русская Кухня"
-        description="Традиционные рецепты рыбных блюд: наваристая уха, запечённая рыба, рыбные котлеты. Пошаговые инструкции с фото!"
-        keywords="рыбные блюда, уха, запечённая рыба, рыбные котлеты, русская кухня"
+        description="Традиционные рецепты рыбных блюд: наваристая уха, запечённая рыба, рыбные котлеты. Пошаговые инструкции с фото и исторической справкой!"
+        keywords="рыбные блюда, уха, запечённая рыба, рыбные котлеты, русская кухня, рецепты"
         url="https://russka-kuhnya-9551.vercel.app/category/fish"
       />
       
-      {/* 🍞 ХЛЕБНЫЕ КРОШКИ БЕЗ ПРОПССОВ — в списке! */}
+      {/* 🍞 ХЛЕБНЫЕ КРОШКИ */}
       <Breadcrumbs />
 
       <div className="category-header">
@@ -169,7 +177,11 @@ function FishCategory() {
 
       <div className="recipes-grid">
         {fishData.map((recipe) => (
-          <div key={recipe.id} className="recipe-card" onClick={() => handleRecipeClick(recipe)}>
+          <div 
+            key={recipe.id} 
+            className="recipe-card" 
+            onClick={() => handleRecipeClick(recipe)}
+          >
             <div className="recipe-card-image">
               <img 
                 loading="lazy" 
