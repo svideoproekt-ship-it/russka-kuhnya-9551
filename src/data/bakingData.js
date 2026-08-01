@@ -4,7 +4,7 @@ export const bakingData = [
     name: "Блины классические",
     epoch: "Древняя Русь (IX век) - наши дни",
     time: "45 минут",
-    image: "/images/baking/blini.jpg",
+    image: "/publicimagesbaking/blini.jpg",
     description: "Древнейший символ солнца на русском столе. Тонкие, кружевные блины на молоке, которые тают во рту.",
     keywords: "блины рецепт, тонкие блины на молоке, классические блины, русская кухня",
     ingredients: [
@@ -27,7 +27,7 @@ export const bakingData = [
     name: "Курник (Царский пирог)",
     epoch: "XVI-XVII век",
     time: "2 часа 30 минут",
-    image: "/images/baking/kurnik.jpg",
+    image: "/publicimagesbaking/kurnik.jpg",
     description: "Величественный 'царь пирогов' с многослойной начинкой из курицы, риса, яиц и грибов в сдобном тесте.",
     keywords: "курник рецепт, царский пирог, пирог с курицей и грибами, русская выпечка",
     ingredients: [
@@ -51,7 +51,7 @@ export const bakingData = [
     name: "Калачи московские",
     epoch: "XIV-XV век",
     time: "3 часа",
-    image: "/images/baking/kalachi.jpg",
+    image: "/publicimagesbaking/kalachi.jpg",
     description: "Старинный московский белый хлеб с характерной ручкой-замком. Символ достатка и гостеприимства.",
     keywords: "калачи московские рецепт, старинный русский хлеб, калачи с ручкой",
     ingredients: [
@@ -73,7 +73,7 @@ export const bakingData = [
     name: "Ватрушки с творогом",
     epoch: "XVIII век",
     time: "2 часа",
-    image: "/images/baking/vatrushki.jpg",
+    image: "/publicimagesbaking/vatrushki.jpg",
     description: "Нежные дрожжевые лепешки с сочной сладкой творожной начинкой, любимое лакомство русской кухни.",
     keywords: "ватрушки с творогом рецепт, дрожжевые ватрушки, домашняя выпечка",
     ingredients: [
@@ -97,7 +97,7 @@ export const bakingData = [
     name: "Пряники тульские",
     epoch: "XVII век",
     time: "1 час 30 минут + настаивание",
-    image: "/images/baking/pryaniki.jpg",
+    image: "/publicimagesbaking/pryaniki.jpg",
     description: "Настоящие тульские пряники с ароматными специями и сладкой повидловой начинкой под сахарной глазурью.",
     keywords: "тульские пряники рецепт, пряники с повидлом, русские пряники",
     ingredients: [
@@ -121,7 +121,7 @@ export const bakingData = [
     name: "Кулебяка с рыбой",
     epoch: "XVI-XVII век",
     time: "2 часа 30 минут",
-    image: "/images/baking/kulebaka.jpg",
+    image: "/publicimagesbaking/kulebaka.jpg",
     description: "Праздничный закрытый пирог сложной формы с богатой начинкой из рыбы, риса и яиц.",
     keywords: "кулебяка с рыбой рецепт, русский пирог с рыбой, осетрина в тесте",
     ingredients: [
@@ -146,7 +146,7 @@ export const bakingData = [
     name: "Пирожки с капустой",
     epoch: "Древняя Русь",
     time: "2 часа",
-    image: "/images/baking/pirozhki.jpg",
+    image: "/publicimagesbaking/pirozhki.jpg",
     description: "Пышные печеные пирожки с тушеной капустой и яйцом. Классика домашней русской выпечки.",
     keywords: "пирожки с капустой рецепт, печеные пирожки в духовке, дрожжевое тесто",
     ingredients: [
@@ -170,7 +170,7 @@ export const bakingData = [
     name: "Сочники с творогом",
     epoch: "XIX век",
     time: "1 час 30 минут",
-    image: "/images/baking/schniki.jpg",
+    image: "/publicimagesbaking/schniki.jpg",
     description: "Полуоткрытые песочные изделия с нежной сладкой творожной начинкой, тающие во рту.",
     keywords: "сочники с творогом рецепт, классические сочники как в детстве, песочное тесто",
     ingredients: [
@@ -194,7 +194,7 @@ export const bakingData = [
     name: "Каравай свадебный",
     epoch: "Древняя Русь",
     time: "3 часа",
-    image: "/images/baking/karavai.jpg",
+    image: "/publicimagesbaking/karavai.jpg",
     description: "Пышный, богато украшенный свадебный хлеб, символ благополучия и гостеприимства на Руси.",
     keywords: "свадебный каравай рецепт, как испечь каравай, русский свадебный хлеб",
     ingredients: [
@@ -218,7 +218,7 @@ export const bakingData = [
     name: "Шаньги с картофелем",
     epoch: "XVI-XVII век (поморская кухня)",
     time: "2 часа",
-    image: "/images/baking/shanygi.jpg",
+    image: "/publicimagesbaking/shanygi.jpg",
     description: "Открытые северные пирожки с сытной картофельной начинкой и шкварками, традиция поморов.",
     keywords: "шаньги с картошкой рецепт, поморская кухня, северная выпечка",
     ingredients: [
@@ -243,7 +243,7 @@ export const bakingData = [
     name: "Плюшки с сахаром",
     epoch: "XIX век",
     time: "2 часа",
-    image: "/images/baking/plushki.jpg",
+    image: "/publicimagesbaking/plushki.jpg",
     description: "Воздушные сдобные булочки в форме сердечка, щедро посыпанные сахаром и корицей.",
     keywords: "плюшки с сахаром рецепт, сдобные булочки, плюшки как в столовой",
     ingredients: [
@@ -267,7 +267,7 @@ export const bakingData = [
     name: "Расстегаи с рыбой",
     epoch: "XVII-XVIII век",
     time: "2 часа",
-    image: "/images/baking/rasstegai.jpg",
+    image: "/publicimagesbaking/rasstegai.jpg",
     description: "Элегантные открытые пирожки с рыбной начинкой, где верх теста не защипывается до конца.",
     keywords: "расстегаи с рыбой рецепт, открытые пирожки, русская праздничная выпечка",
     ingredients: [
@@ -292,7 +292,7 @@ export const bakingData = [
     name: "Крендели с маком",
     epoch: "XVIII век",
     time: "2 часа",
-    image: "/images/baking/kreml.jpg",
+    image: "/publicimagesbaking/kreml.jpg",
     description: "Хрустящие сдобные колечки, густо посыпанные маком и сахаром, классика петербургских пекарен.",
     keywords: "крендели с маком рецепт, сдобные крендели, русская выпечка с маком",
     ingredients: [
@@ -316,7 +316,7 @@ export const bakingData = [
     name: "Пышки дрожжевые",
     epoch: "XIX век",
     time: "1 час 30 минут",
-    image: "/images/baking/pyshki.jpg",
+    image: "/publicimagesbaking/pyshki.jpg",
     description: "Невероятно воздушные жареные пончики из дрожжевого теста, обильно припудренные сахаром.",
     keywords: "пышки рецепт, пышки как в пышечной, жареные пончики на кефире",
     ingredients: [
@@ -340,7 +340,7 @@ export const bakingData = [
     name: "Коврижка медовая",
     epoch: "XVI-XVII век",
     time: "1 час 30 минут",
-    image: "/images/baking/kovrizhka.jpg",
+    image: "/publicimagesbaking/kovrizhka.jpg",
     description: "Пряный, ароматный медовый пирог с орехами и изюмом, пропитанный теплом и уютом.",
     keywords: "медовая коврижка рецепт, пряный пирог с медом, русская коврижка",
     ingredients: [
