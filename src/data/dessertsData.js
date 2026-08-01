@@ -4,7 +4,7 @@ export const dessertsData = [
     name: "Медовик классический",
     epoch: "XIX век",
     time: "2 часа + пропитка",
-    image: "/images/desserts/medovik.jpg",
+    image: "/publicimagesdesserts/medovik.jpg",
     description: "Легендарный многослойный торт с медовыми коржами и нежным сметанным кремом. Классика русской домашней выпечки, которую обожала императрица Елизавета Петровна.",
     keywords: "медовик рецепт, классический медовик, русский торт, медовый торт со сметаной",
     ingredients: [
@@ -27,7 +27,7 @@ export const dessertsData = [
     name: "Пастила белёвская",
     epoch: "XIV-XV век",
     time: "3 дня",
-    image: "/images/desserts/pastila.jpg",
+    image: "/publicimagesdesserts/pastila.jpg",
     description: "Древнейший воздушный десерт из печеных антоновских яблок и яичных белков. Натуральная сладость без химии, любимое лакомство императорского двора.",
     keywords: "белевская пастила рецепт, пастила из антоновки, старинный русский десерт",
     ingredients: [
@@ -49,7 +49,7 @@ export const dessertsData = [
     name: "Птичье молоко",
     epoch: "1960-е годы",
     time: "1 час + застывание",
-    image: "/images/desserts/ptichie_moloko.jpg",
+    image: "/publicimagesdesserts/ptichie_moloko.jpg",
     description: "Нежнейший суфле-десерт на агар-агаре, покрытый хрустящей шоколадной глазурью. Легендарный символ советской кондитерской школы.",
     keywords: "птичье молоко рецепт, торт птичье молоко гост, десерт с агар-агаром",
     ingredients: [
@@ -73,7 +73,7 @@ export const dessertsData = [
     name: "Варенье из шишек",
     epoch: "XVII-XVIII век",
     time: "2 часа + настаивание",
-    image: "/images/desserts/varenie_shishki.jpg",
+    image: "/publicimagesdesserts/varenie_shishki.jpg",
     description: "Старинное сибирское лакомство из молодых сосновых шишек. Мощный природный источник витамина C и уникальных хвойных ароматов.",
     keywords: "варенье из сосновых шишек, шишечное варенье рецепт, сибирское лакомство",
     ingredients: [
@@ -95,7 +95,7 @@ export const dessertsData = [
     name: "Творожная пасха",
     epoch: "XVII век",
     time: "1 час + выстаивание",
-    image: "/images/desserts/paskha.jpg",
+    image: "/publicimagesdesserts/paskha.jpg",
     description: "Главное пасхальное блюдо русской кухни из жирного творога, сливок и цукатов. Нежная, сытная и по-настоящему праздничная классика.",
     keywords: "творожная пасха рецепт, классическая пасха без выпечки, пасхальное блюдо",
     ingredients: [
@@ -119,7 +119,7 @@ export const dessertsData = [
     name: "Сырники классические",
     epoch: "XVIII век",
     time: "40 минут",
-    image: "/images/desserts/syrniki.jpg",
+    image: "/publicimagesdesserts/syrniki.jpg",
     description: "Идеальные пышные сырники из протертого творога с золотистой корочкой. Самый популярный и полезный завтрак русской кухни.",
     keywords: "сырники рецепт, пышные сырники из творога, классические сырники как в детстве",
     ingredients: [
@@ -141,7 +141,7 @@ export const dessertsData = [
     name: "Кисель ягодный",
     epoch: "Древняя Русь",
     time: "40 минут",
-    image: "/images/desserts/kisel.jpg",
+    image: "/publicimagesdesserts/kisel.jpg",
     description: "Густой, обволакивающий ягодный кисель на картофельном крахмале. Древнейший русский напиток-десерт, согревающий и утоляющий жажду.",
     keywords: "ягодный кисель рецепт, кисель из крахмала, старинный русский напиток",
     ingredients: [
@@ -163,7 +163,7 @@ export const dessertsData = [
     name: "Пончики дрожжевые",
     epoch: "XIX век",
     time: "2 часа",
-    image: "/images/desserts/ponchiki.jpg",
+    image: "/publicimagesdesserts/ponchiki.jpg",
     description: "Воздушные, пышные дрожжевые пончики, обильно посыпанные сахарной пудрой. Хрустящие снаружи и невероятно мягкие внутри.",
     keywords: "пончики рецепт, дрожжевые пончики как в детстве, пышки рецепт",
     ingredients: [
@@ -186,7 +186,7 @@ export const dessertsData = [
     name: "Шарлотка с яблоками",
     epoch: "XIX век",
     time: "1 час",
-    image: "/images/desserts/sharlotka.jpg",
+    image: "/publicimagesdesserts/sharlotka.jpg",
     description: "Самый простой и быстрый яблочный пирог с пышным бисквитным тестом и ароматной корицей. Беспроигрышный вариант к чаю.",
     keywords: "шарлотка с яблоками рецепт, пышная шарлотка, яблочный пирог классический",
     ingredients: [
@@ -208,7 +208,7 @@ export const dessertsData = [
     name: "Козинаки из семечек",
     epoch: "XVIII-XIX век",
     time: "40 минут",
-    image: "/images/desserts/kozinaki.jpg",
+    image: "/publicimagesdesserts/kozinaki.jpg",
     description: "Хрустящие восточные сладости из обжаренных подсолнечных семечек в карамели из мёда и сахара. Простой и сытный десерт.",
     keywords: "козинаки из семечек рецепт, домашние козинаки, сладости из подсолнечных семечек",
     ingredients: [
@@ -230,7 +230,7 @@ export const dessertsData = [
     name: "Сметанник",
     epoch: "XIX век",
     time: "1.5 часа",
-    image: "/images/desserts/smetannik.jpg",
+    image: "/publicimagesdesserts/smetannik.jpg",
     description: "Нежный, тающий во рту пирог на песочной основе с воздушной сметанной заливкой. Воплощение домашнего уюта.",
     keywords: "сметанник рецепт, пирог со сметанной заливкой, классический сметанник",
     ingredients: [
@@ -251,7 +251,7 @@ export const dessertsData = [
     name: "Цукаты из тыквы",
     epoch: "XVIII век",
     time: "2 дня",
-    image: "/images/desserts/tsukaty_tykva.jpg",
+    image: "/publicimagesdesserts/tsukaty_tykva.jpg",
     description: "Ароматные, прозрачные кубики тыквы, вываренные в сахарном сиропе с пряностями. Полезная и красивая альтернатива магазинным конфетам.",
     keywords: "цукаты из тыквы рецепт, тыквенные цукаты в домашних условиях, сладости из тыквы",
     ingredients: [
@@ -273,7 +273,7 @@ export const dessertsData = [
     name: "Безе (меренги)",
     epoch: "XVIII век",
     time: "2 часа",
-    image: "/images/desserts/beze.jpg",
+    image: "/publicimagesdesserts/beze.jpg",
     description: "Хрустящие снаружи и воздушные внутри облачка из взбитых яичных белков с сахаром. Элегантный и минималистичный десерт.",
     keywords: "безе рецепт, меренга классическая, как приготовить безе в духовке",
     ingredients: [
@@ -295,7 +295,7 @@ export const dessertsData = [
     name: "Тёртый пирог с вареньем",
     epoch: "XIX век",
     time: "1.5 часа",
-    image: "/images/desserts/tertyj_pirog.jpg",
+    image: "/publicimagesdesserts/tertyj_pirog.jpg",
     description: "Рассыпчатый песочный пирог с обильной ягодной начинкой, где тесто натирается на тёрке для создания уникальной текстуры.",
     keywords: "тертый пирог с вареньем, рассыпчатый пирог рецепт, пирог с тертым тестом",
     ingredients: [
@@ -319,7 +319,7 @@ export const dessertsData = [
     name: "Желе из смородины",
     epoch: "XVIII-XIX век",
     time: "1 час + застывание",
-    image: "/images/desserts/zhele_smorodina.jpg",
+    image: "/publicimagesdesserts/zhele_smorodina.jpg",
     description: "Прозрачное, упругое и невероятно ароматное желе из свежей смородины. Пошаговый рецепт с правильным добавлением желатина.",
     keywords: "желе из смородины рецепт, как добавить желатин в желе, ягодное желе",
     ingredients: [
