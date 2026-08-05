@@ -4222,7 +4222,575 @@ Roasted meat is one of the oldest dishes in Russian cuisine. In ancient times, m
 
 ---
 
-## Check Accessibility
+---
+
+## PORRIDGES & GRAINS RECIPES
+
+### RECIPE: Crumbly Buckwheat Kasha
+- ID: porridge-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-1
+- Name: Crumbly Buckwheat Kasha (Гречневая каша рассыпчатая)
+- Epoch: 7th century
+- Time: 40 minutes
+- Image: /publicimagesporridge/grechka.jpg
+- Keywords: buckwheat kasha recipe, crumbly buckwheat, how to cook buckwheat, Russian cuisine
+
+**Description:**
+Classic crumbly buckwheat kasha cooked in water with butter. The queen of the Russian table and the perfect healthy side dish.
+
+**Ingredients:**
+- Buckwheat groats - 1 cup
+- Water - 2 cups
+- Butter - 50g
+- Salt - to taste
+
+**Preparation Steps:**
+1. Sort and rinse buckwheat in cold water
+2. Place groats in a pot, cover with cold water (ratio 1:2)
+3. Add salt, bring to a boil over high heat
+4. Reduce heat to minimum, cover with lid
+5. Cook for 15-20 minutes until water is absorbed
+6. Add butter, stir well
+7. Let rest covered for 10 minutes
+8. Serve hot with milk or as a side dish
+
+**Historical Context:**
+Buckwheat kasha is the queen of the Russian table. Buckwheat has been cultivated in Rus since the 7th century and was the staple food of peasants. The proverb "Shchi da kasha — pishcha nasha" (Cabbage soup and kasha are our food) primarily refers to buckwheat.
+
+---
+
+### RECIPE: Oatmeal with Milk
+- ID: porridge-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-2
+- Name: Oatmeal with Milk (Овсяная каша на молоке)
+- Epoch: 9th century
+- Time: 25 minutes
+- Image: /publicimagesporridge/ovsyanka.jpg
+- Keywords: oatmeal with milk recipe, porridge for breakfast, healthy breakfast, Russian cuisine
+
+**Description:**
+Tender oatmeal cooked with milk, the perfect healthy breakfast. Quick to prepare and especially delicious with butter.
+
+**Ingredients:**
+- Rolled oats - 1 cup
+- Milk - 2 cups
+- Water - 1 cup
+- Sugar - 2 tbsp
+- Butter - 30g
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Bring water to a boil in a pot
+2. Add rolled oats, cook for 5 minutes
+3. Pour in hot milk, stir
+4. Add sugar and salt
+5. Cook over low heat for 10 minutes, stirring
+6. Remove from heat, add butter
+7. Cover and let rest for 5 minutes
+8. Serve hot with jam or berries
+
+**Historical Context:**
+Oatmeal is a traditional breakfast in Russian villages. Oats were one of the main grain crops. The kasha was cooked in a Russian oven, making it especially slow-cooked and delicious.
+
+---
+
+### RECIPE: Millet Kasha with Pumpkin
+- ID: porridge-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-3
+- Name: Millet Kasha with Pumpkin (Пшённая каша с тыквой)
+- Epoch: 10th century
+- Time: 50 minutes
+- Image: /publicimagesporridge/psheno-tykva.jpg
+- Keywords: millet kasha with pumpkin recipe, millet with pumpkin in milk, pumpkin with millet
+
+**Description:**
+Sunny millet kasha with tender pumpkin cooked in milk. An ancient Russian dish, hearty, sweet, and incredibly aromatic.
+
+**Ingredients:**
+- Millet groats - 1 cup
+- Pumpkin - 300g
+- Milk - 2 cups
+- Water - 1 cup
+- Sugar - 2 tbsp
+- Butter - 40g
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Peel pumpkin, cut into cubes
+2. Boil pumpkin in water until soft (15 minutes)
+3. Rinse millet, add to pumpkin
+4. Pour in hot milk, add salt
+5. Cook over low heat for 20 minutes, stirring
+6. Add sugar and butter
+7. Stir, cover with lid
+8. Let rest for 10 minutes, serve hot
+
+**Historical Context:**
+Millet kasha with pumpkin is an ancient Russian dish. Pumpkin was available to peasants in autumn and winter, added to kasha for sweetness and heartiness. Such kasha was considered festive.
+
+---
+
+### RECIPE: Semolina Kasha with Jam
+- ID: porridge-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-4
+- Name: Semolina Kasha with Jam (Манная каша с вареньем)
+- Epoch: 19th century
+- Time: 15 minutes
+- Image: /publicimagesporridge/manka.jpg
+- Keywords: semolina kasha with milk recipe, how to cook semolina without lumps, children's porridge
+
+**Description:**
+Classic semolina kasha with milk without lumps, with vanilla and butter. A favorite children's breakfast served with jam.
+
+**Ingredients:**
+- Semolina - 3 tbsp
+- Milk - 2 cups
+- Sugar - 1 tbsp
+- Vanilla - a pinch
+- Butter - 20g
+- Jam - for serving
+
+**Preparation Steps:**
+1. Bring milk to a boil in a pot
+2. Sprinkle in semolina in a thin stream, stirring constantly
+3. Add sugar and vanilla
+4. Cook for 5 minutes over low heat, stirring
+5. Remove from heat, add butter
+6. Divide into bowls
+7. Serve hot with jam
+
+**Historical Context:**
+Semolina kasha became popular in the USSR in the 1930s. It was considered ideal baby food. In Russian villages, semolina was rarely cooked — the groats were expensive and considered a treat.
+
+---
+
+### RECIPE: Rice Milk Kasha
+- ID: porridge-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-5
+- Name: Rice Milk Kasha (Рисовая молочная каша)
+- Epoch: 18th century
+- Time: 35 minutes
+- Image: /publicimagesporridge/ris-moloko.jpg
+- Keywords: rice milk kasha recipe, rice with milk, breakfast with cinnamon
+
+**Description:**
+Creamy and tender rice milk kasha made with short-grain rice. A cozy and hearty breakfast with butter and cinnamon.
+
+**Ingredients:**
+- Short-grain rice - 1 cup
+- Milk - 3 cups
+- Water - 1 cup
+- Sugar - 2 tbsp
+- Butter - 30g
+- Salt - a pinch
+- Cinnamon - to taste
+
+**Preparation Steps:**
+1. Rinse rice until water runs clear
+2. Cook rice in water until half-done (10 minutes)
+3. Drain water, pour in hot milk
+4. Add sugar and salt
+5. Cook over low heat for 20 minutes, stirring
+6. Add butter
+7. Sprinkle with cinnamon when serving
+
+**Historical Context:**
+Rice kasha appeared on the Russian table in the 18th century when rice began to be imported from Asia. For a long time it was a dish of the wealthy, but by the 19th century it became accessible to all.
+
+---
+
+### RECIPE: Pearl Barley Kasha with Mushrooms
+- ID: porridge-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-6
+- Name: Pearl Barley Kasha with Mushrooms (Перловая каша с грибами)
+- Epoch: 15th century
+- Time: 1 hour 15 minutes
+- Image: /publicimagesporridge/perlovka-griby.jpg
+- Keywords: pearl barley with mushrooms recipe, barley with mushrooms and onions, lentil grain dishes
+
+**Description:**
+Hearty pearl barley kasha with forest mushrooms and fried onions. A traditional Russian lenten dish with a rich, earthy flavor.
+
+**Ingredients:**
+- Pearl barley - 1 cup
+- Forest mushrooms - 300g
+- Onion - 1 pc
+- Water - 3 cups
+- Vegetable oil - 3 tbsp
+- Salt, pepper - to taste
+- Fresh herbs - for serving
+
+**Preparation Steps:**
+1. Soak pearl barley for 2 hours (or overnight)
+2. Cook groats until tender (40 minutes)
+3. Slice mushrooms and onion
+4. Fry onion in oil until golden
+5. Add mushrooms, fry for 15 minutes
+6. Mix kasha with mushrooms and onions
+7. Season with salt and pepper
+8. Serve hot with fresh herbs
+
+**Historical Context:**
+Pearl barley with mushrooms is a traditional lenten dish. Barley was cooked in the Russian oven, and mushrooms were gathered in the forest. This was the food of hunters and foresters.
+
+---
+
+### RECIPE: Barley Kasha in Clay Pots
+- ID: porridge-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-7
+- Name: Barley Kasha in Clay Pots (Ячневая каша в горшочке)
+- Epoch: 9th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesporridge/yachka.jpg
+- Keywords: barley kasha in clay pots recipe, slow-cooked barley, oven-baked porridge
+
+**Description:**
+Slow-cooked barley kasha in clay pots. One of the oldest Russian dishes, revealing its full flavor through long simmering in the oven.
+
+**Ingredients:**
+- Barley groats - 1 cup
+- Water - 2.5 cups
+- Butter - 50g
+- Salt - to taste
+
+**Preparation Steps:**
+1. Rinse barley groats
+2. Place groats in clay pots
+3. Cover with cold water, add salt
+4. Cover with lids
+5. Place in the oven at 180°C (350°F)
+6. Simmer for 1 hour 15 minutes
+7. Add butter
+8. Serve directly in the pots
+
+**Historical Context:**
+Barley kasha is one of the oldest in Rus. Barley was the main grain crop of the Slavs. The kasha was slow-cooked in the oven all night, making it especially delicious.
+
+---
+
+### RECIPE: Cornmeal Kasha (Mamalyga)
+- ID: porridge-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-8
+- Name: Cornmeal Kasha (Кукурузная каша)
+- Epoch: 17th century
+- Time: 40 minutes
+- Image: /publicimagesporridge/kukuruza.jpg
+- Keywords: cornmeal kasha recipe, mamalyga, polenta, southern cuisine
+
+**Description:**
+Sunny cornmeal kasha (mamalyga) cooked with water and milk. A hearty and healthy dish popular in southern Russia and Cossack cuisine.
+
+**Ingredients:**
+- Cornmeal - 1 cup
+- Water - 3 cups
+- Milk - 1 cup
+- Sugar - 1 tbsp
+- Butter - 30g
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Bring salted water to a boil
+2. Sprinkle in cornmeal in a thin stream
+3. Cook over low heat for 30 minutes, stirring
+4. Pour in hot milk
+5. Add sugar and butter
+6. Cook for another 5 minutes
+7. Serve hot
+
+**Historical Context:**
+Cornmeal kasha (mamalyga) came to southern Russia from Moldova and Ukraine. In Cossack villages, this was a staple dish, eaten with feta cheese and cracklings.
+
+---
+
+### RECIPE: Pea Kasha
+- ID: porridge-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-9
+- Name: Pea Kasha (Гороховая каша)
+- Epoch: 12th century
+- Time: 1 hour 15 minutes
+- Image: /publicimagesporridge/goroh.jpg
+- Keywords: pea kasha recipe, how to cook pea porridge, mashed peas with onions
+
+**Description:**
+Thick and hearty pea kasha with golden fried onions. A classic hearty lenten dish of Russian cuisine.
+
+**Ingredients:**
+- Split peas - 1 cup
+- Water - 3 cups
+- Onion - 1 pc
+- Vegetable oil - 2 tbsp
+- Salt - to taste
+
+**Preparation Steps:**
+1. Soak peas for 2-3 hours
+2. Drain water, cover with fresh
+3. Cook over low heat for 1 hour
+4. Mash the kasha with a masher
+5. Fry onion in oil
+6. Add onion to the kasha
+7. Add salt, stir
+8. Serve hot
+
+**Historical Context:**
+Pea kasha is a traditional lenten dish. In Rus, peas were accessible to everyone, and the kasha was cooked often. It was eaten with fried onions and sauerkraut.
+
+---
+
+### RECIPE: Spelt Kasha
+- ID: porridge-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-10
+- Name: Spelt Kasha (Полбяная каша)
+- Epoch: 6th century
+- Time: 45 minutes
+- Image: /publicimagesporridge/polba.jpg
+- Keywords: spelt kasha recipe, how to cook spelt, ancient grain porridge
+
+**Description:**
+Healthy kasha made from spelt — an ancient grain. Crumbly with a nutty flavor, rich in fiber.
+
+**Ingredients:**
+- Spelt - 1 cup
+- Water - 2 cups
+- Butter - 40g
+- Salt - to taste
+
+**Preparation Steps:**
+1. Rinse the spelt
+2. Place in a pot, cover with water
+3. Add salt, bring to a boil
+4. Reduce heat, cover with lid
+5. Cook for 30 minutes
+6. Add butter
+7. Let rest for 10 minutes
+8. Serve hot
+
+**Historical Context:**
+Spelt is one of the oldest grain crops. It was cultivated in Ancient Rus. Pushkin mentioned spelt in his tale about the priest and his worker Balda. The kasha was very popular.
+
+---
+
+### RECIPE: Lentil Kasha
+- ID: porridge-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-11
+- Name: Lentil Kasha (Каша из чечевицы)
+- Epoch: 10th century
+- Time: 50 minutes
+- Image: /publicimagesporridge/chechevica.jpg
+- Keywords: lentil kasha recipe, lentil porridge with vegetables, lentil soup
+
+**Description:**
+Aromatic green lentil kasha with sautéed vegetables. A rich source of plant-based protein and a traditional lenten dish.
+
+**Ingredients:**
+- Green lentils - 1 cup
+- Water - 2.5 cups
+- Onion - 1 pc
+- Carrot - 1 pc
+- Vegetable oil - 2 tbsp
+- Salt, spices - to taste
+
+**Preparation Steps:**
+1. Rinse the lentils
+2. Cover with water, bring to a boil
+3. Cook over low heat for 30 minutes
+4. Slice onion and carrot
+5. Sauté vegetables in oil
+6. Add to the lentils
+7. Add salt and spices
+8. Cook for another 10 minutes, serve
+
+**Historical Context:**
+Lentil kasha was popular in Russian villages. Lentils are rich in protein and replaced meat during Lent. It was especially beloved in the central provinces of Russia.
+
+---
+
+### RECIPE: Millet Kasha with Mushrooms
+- ID: porridge-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-12
+- Name: Millet Kasha with Mushrooms (Пшённая каша с грибами)
+- Epoch: 13th century
+- Time: 55 minutes
+- Image: /publicimagesporridge/psheno-griby.jpg
+- Keywords: millet kasha with mushrooms recipe, millet with mushrooms and onions, lenten dish
+
+**Description:**
+Aromatic millet kasha cooked with forest mushrooms and onions. A hearty and flavorful autumn dish of Russian cuisine.
+
+**Ingredients:**
+- Millet groats - 1 cup
+- Mushrooms - 250g
+- Water - 2 cups
+- Onion - 1 pc
+- Vegetable oil - 3 tbsp
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Rinse the millet
+2. Cook groats until tender (25 minutes)
+3. Slice mushrooms and onion
+4. Fry onion, add mushrooms
+5. Fry for 15 minutes
+6. Mix kasha with mushrooms
+7. Season with salt and pepper
+8. Serve hot
+
+**Historical Context:**
+Millet kasha with mushrooms is a traditional autumn dish. When the millet harvest was gathered and mushrooms were foraged, this was the main dish in villages.
+
+---
+
+### RECIPE: Merchant-Style Buckwheat Kasha
+- ID: porridge-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-13
+- Name: Merchant-Style Buckwheat Kasha (Гречневая каша по-купечески)
+- Epoch: 18th century
+- Time: 1 hour
+- Image: /publicimagesporridge/grechka-kupecheskaya.jpg
+- Keywords: merchant-style buckwheat recipe, buckwheat with meat, buckwheat with beef
+
+**Description:**
+Rich buckwheat kasha slow-cooked with juicy beef, carrots, and onions. A hearty and festive dish of Russian cuisine.
+
+**Ingredients:**
+- Buckwheat groats - 1 cup
+- Beef - 300g
+- Onion - 1 pc
+- Carrot - 1 pc
+- Water - 2 cups
+- Vegetable oil - 2 tbsp
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Cut meat into cubes
+2. Fry meat in oil for 10 minutes
+3. Add onion and carrot
+4. Fry for another 5 minutes
+5. Add buckwheat, stir
+6. Cover with water, add salt
+7. Cook covered for 30 minutes
+8. Serve hot
+
+**Historical Context:**
+Merchant-style buckwheat is a festive dish of wealthy merchants. Meat and buckwheat — symbols of prosperity. Such kasha was prepared for big holidays and family celebrations.
+
+---
+
+### RECIPE: Rice Kasha with Apples
+- ID: porridge-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-14
+- Name: Rice Kasha with Apples (Рисовая каша с яблоками)
+- Epoch: 19th century
+- Time: 40 minutes
+- Image: /publicimagesporridge/ris-yabloki.jpg
+- Keywords: rice kasha with apples recipe, rice with apples and cinnamon, sweet rice porridge
+
+**Description:**
+Tender rice milk kasha with aromatic apples and cinnamon. A cozy dessert breakfast from Russian noble cuisine.
+
+**Ingredients:**
+- Rice - 1 cup
+- Milk - 3 cups
+- Apples - 2 pcs
+- Sugar - 3 tbsp
+- Cinnamon - 1 tsp
+- Butter - 30g
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Cook rice in milk until tender
+2. Cut apples into cubes
+3. Add apples to the rice
+4. Add sugar and cinnamon
+5. Cook for 10 minutes
+6. Add butter
+7. Serve warm
+
+**Historical Context:**
+Rice kasha with apples is a dish of Russian noble cuisine. It was served for breakfast in aristocratic families. Especially popular in autumn when apples ripened.
+
+---
+
+### RECIPE: Oatmeal with Berries
+- ID: porridge-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/porridge-15
+- Name: Oatmeal with Berries (Овсяная каша с ягодами)
+- Epoch: 19th century
+- Time: 25 minutes
+- Image: /publicimagesporridge/ovsyanka-yagody.jpg
+- Keywords: oatmeal with berries recipe, oatmeal with strawberries and honey, healthy breakfast
+
+**Description:**
+Fresh oatmeal cooked in milk, topped with seasonal berries and honey. The perfect vitamin-packed breakfast for the whole family.
+
+**Ingredients:**
+- Rolled oats - 1 cup
+- Milk - 2 cups
+- Berries (strawberries, raspberries, blueberries) - 150g
+- Honey - 2 tbsp
+- Butter - 20g
+
+**Preparation Steps:**
+1. Cook oatmeal in milk
+2. Add honey, stir
+3. Divide kasha into bowls
+4. Top with berries
+5. Add butter
+6. Serve warm
+
+**Historical Context:**
+Oatmeal with berries is a summer dish from Russian estates. When berries ripened in the garden, they were added to the morning kasha. This was a favorite breakfast of children.
+
+---
+
+## PORRIDGES Index Summary
+
+**Total Recipes Added:** 15
+**Total Recipes Overall:** 107 (17 Baking + 15 Desserts + 20 Dough + 9 Drinks + 15 Fish + 16 Meat + 15 Porridges)
+
+**Grain Types Covered:**
+- 🌾 Buckwheat: Crumbly, Merchant-Style
+- 🌾 Oats: Oatmeal with Milk, Oatmeal with Berries
+- 🌾 Millet: Millet with Pumpkin, Millet with Mushrooms
+- 🌾 Rice: Rice Milk Kasha, Rice with Apples
+- 🌾 Barley: Pearl Barley with Mushrooms, Barley in Clay Pots
+- 🌾 Corn: Cornmeal Kasha (Mamalyga)
+- 🌾 Peas: Pea Kasha
+- 🌾 Spelt: Spelt Kasha
+- 🌾 Lentils: Lentil Kasha
+- 🌾 Semolina: Semolina Kasha
+
+**Cooking Methods:**
+- 🔥 Boiled on stovetop: Most recipes
+- 🔥 Slow-cooked in oven: Barley in Clay Pots
+- 🔥 With additions: Mushrooms, Meat, Vegetables, Fruits
+
+**Historical Highlights:**
+- Ancient Rus (6th-10th c.): Buckwheat, Barley, Millet
+- Medieval (12th-15th c.): Peas, Pearl Barley, Lentils
+- Imperial (18th-19th c.): Rice, Semolina, Spelt
+- Soviet era: Semolina as baby food
+
+**Nutritional Notes:**
+- High in fiber: Buckwheat, Barley, Spelt
+- High in protein: Buckwheat, Lentils, Peas
+- Gluten-free: Buckwheat, Millet, Rice, Cornmeal
+
+---
+
+## Complete Recipe Summary
+
+| Category | Count |
+|----------|-------|
+| 🥖 Baking & Pastry | 17 |
+| 🍰 Desserts & Sweets | 15 |
+| 🥖 Dough & Pastry | 20 |
+| 🍹 Beverages | 9 |
+| 🐟 Fish & Seafood | 15 |
+| 🥩 Meat Dishes | 16 |
+| 🥣 Porridges & Grains | 15 |
+| **TOTAL** | **107** |
+
+---
 
 
 
