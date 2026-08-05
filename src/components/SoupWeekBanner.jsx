@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const SoupWeekBanner = () => {
+const NewRecipeBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  // 🔥 Автоматически генерируем ключ на основе заголовка баннера
-  const bannerTitle = "СЕГОДНЯ: ВЕСЕННИЙ СУП С ФРИКАДЕЛЬКАМИ"; // ← МЕНЯЙ ЭТОТ ТЕКСТ при смене баннера
-  // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
-const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
+  // 🔥 Заголовок баннера (меняй его при смене новинки)
+  const bannerTitle = "НАСТОЙКА НА ЧЕРЁМУХЕ: СВЕЖАЯ И СУШЁНАЯ"; 
+  
+  // 🔥 Безопасное создание ключа для localStorage
+  const bannerKey = 'newRecipeBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
   useEffect(() => {
     const closed = localStorage.getItem(bannerKey);
@@ -26,12 +27,13 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
   return (
     <div style={{
       position: 'relative',
-      background: 'linear-gradient(135deg, #4CAF50 0%, #8BC34A 50%, #CDDC39 100%)',
+      // 🔥 Благородный бордово-винный градиент, идеально подходящий для темы настоек
+      background: 'linear-gradient(135deg, #581018 0%, #8B0000 50%, #A52A2A 100%)',
       borderRadius: '15px',
       padding: '30px',
       margin: '20px auto',
       maxWidth: '900px',
-      boxShadow: '0 8px 25px rgba(255, 69, 0, 0.4)',
+      boxShadow: '0 8px 25px rgba(139, 0, 0, 0.4)',
       border: '3px solid #FFD700',
       animation: 'slideIn 0.5s ease'
     }}>
@@ -44,50 +46,55 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
           right: '15px',
           background: 'none',
           border: 'none',
-          fontSize: '24px',
+          fontSize: '28px',
           color: '#fff',
           cursor: 'pointer',
           opacity: 0.8,
-          transition: 'opacity 0.2s'
+          transition: 'opacity 0.2s',
+          lineHeight: '1'
         }}
         onMouseOver={(e) => e.currentTarget.style.opacity = 1}
         onMouseOut={(e) => e.currentTarget.style.opacity = 0.8}
+        aria-label="Закрыть баннер"
       >
         ×
       </button>
 
       {/* Главный заголовок */}
       <h2 style={{
+        color: '#FFD700',
+        fontSize: '2.2rem',
+        textAlign: 'center',
+        margin: '0 0 10px 0',
+        fontWeight: 'bold',
+        textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+        letterSpacing: '1px'
+      }}>
+        🌟 НОВИНКА НА САЙТЕ! 🌟
+      </h2>
+
+      {/* Подзаголовок */}
+      <p style={{
         color: '#fff',
-        fontSize: '2rem',
+        fontSize: '0.9rem',
         textAlign: 'center',
         margin: '0 0 15px 0',
         fontWeight: 'bold',
-        textShadow: '2px 2px 4px rgba(0,0,0,0.4)'
+        textTransform: 'uppercase',
+        letterSpacing: '2px',
+        opacity: 0.9
       }}>
-        НЕДЕЛЯ СУПОВ!
-      </h2>
+        Специальный выпуск: Традиционные рецепты
+      </p>
 
-      {/* День недели */}
-      <p style={{
-  color: '#fff',
-  fontSize: '0.85rem',
-  textAlign: 'center',
-  margin: '0 0 10px 0',
-  fontWeight: 'bold',
-  textTransform: 'uppercase',
-  letterSpacing: '1px'
-}}>
-  День седьмой (Финал!)
-</p>
-
-      {/* Заголовок */}
+      {/* Название рецепта */}
       <h3 style={{
-        color: '#FFD700',
-        fontSize: '1.4rem',
+        color: '#fff',
+        fontSize: '1.5rem',
         textAlign: 'center',
-        margin: '0 0 20px 0',
-        fontWeight: 'bold'
+        margin: '0 0 25px 0',
+        fontWeight: 'bold',
+        textShadow: '1px 1px 3px rgba(0,0,0,0.6)'
       }}>
         {bannerTitle}
       </h3>
@@ -96,20 +103,26 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
       <ul style={{
         listStyle: 'none',
         padding: 0,
-        margin: '0 0 25px 0',
-        textAlign: 'center'
+        margin: '0 0 30px 0',
+        textAlign: 'center',
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        gap: '10px 30px'
       }}>
-          {[
-    '🟢 Свежий зелёный горошек',
-    '✨ Готовится всего 30 минут',
-    '🍡 Нежные домашние фрикадельки',
-    '🌿 Лёгкий и полезный'
-  ].map((item, index) => (
+        {[
+          '🍒 Уникальный миндально-пряный аромат',
+          '🏺 Два проверенных временем рецепта',
+          '⏳ Идеально для зимних вечеров и лета',
+          '🌿 По старинным русским традициям'
+        ].map((item, index) => (
           <li key={index} style={{
             color: '#fff',
-            fontSize: '1.05rem',
-            margin: '6px 0',
-            textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+            fontSize: '1.1rem',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.4)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
           }}>
             {item}
           </li>
@@ -119,15 +132,15 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
       {/* Кнопка */}
       <div style={{ textAlign: 'center' }}>
         <Link
-          to="/soups"
+          to="/category/drinks"
           style={{
             display: 'inline-block',
-            padding: '14px 30px',
+            padding: '14px 35px',
             background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
-            color: '#8B0000',
+            color: '#581018',
             textDecoration: 'none',
             borderRadius: '10px',
-            fontSize: '1.1rem',
+            fontSize: '1.15rem',
             fontWeight: 'bold',
             transition: 'transform 0.2s, box-shadow 0.2s',
             boxShadow: '0 4px 12px rgba(255, 215, 0, 0.4)'
@@ -141,13 +154,13 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 215, 0, 0.4)';
           }}
         >
-          👉 Смотреть все супы
+          👉 Смотреть рецепты настоек
         </Link>
       </div>
 
       {/* Иконка */}
-      <div style={{ fontSize: '50px', textAlign: 'center', marginTop: '20px' }}>
-        🍲
+      <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '25px', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}>
+        🍒🏺
       </div>
 
       {/* CSS анимация */}
@@ -167,4 +180,4 @@ const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-Я
   );
 };
 
-export default SoupWeekBanner;
+export default NewRecipeBanner;
