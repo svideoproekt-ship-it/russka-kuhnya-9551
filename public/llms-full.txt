@@ -5346,12 +5346,1014 @@ One of the oldest Russian appetizers, mentioned in 11th-century chronicles. Simp
 
 ## Final Check
 
-```bash
-curl https://russka-kuhnya-9551.vercel.app/llms-full.txt | grep "### RECIPE:" | wc -l
-# Should output: 122
+---
 
+## SOUPS RECIPES
+
+### RECIPE: Fresh Cabbage Shchi
+- ID: soup-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-1
+- Name: Fresh Cabbage Shchi (Щи из свежей капусты)
+- Epoch: Ancient Rus (9th century)
+- Time: 1 hour 30 minutes
+- Image: /publicimagessoups/sour_shchi.jpg
+- Keywords: fresh cabbage shchi recipe, Russian cabbage soup with beef, classic Russian soup
+
+**Description:**
+Classic Russian shchi made with fresh cabbage and beef. A hearty, rich, and aromatic soup mentioned in chronicles since the 9th century.
+
+**Ingredients:**
+- Beef on the bone - 500g
+- Fresh cabbage - 300g
+- Potatoes - 3 pcs
+- Carrot - 1 pc
+- Onion - 1 pc
+- Tomato paste - 2 tbsp
+- Bay leaf - 1 pc
+- Peppercorns - 5 pcs
+- Sour cream - for serving
+- Fresh herbs - for garnish
+
+**Preparation Steps:**
+1. Cook beef broth for 1 hour
+2. Add shredded cabbage, cook for 15 minutes
+3. Add diced potatoes
+4. Sauté onion and carrot with tomato paste
+5. Add sautéed vegetables and spices to the soup
+6. Cook for another 10 minutes
+7. Serve with sour cream and fresh herbs
+
+**Historical Context:**
+Shchi is one of the oldest Russian soups, mentioned in chronicles from the 9th century. In the 18th century, shchi was served even at royal feasts. A.S. Pushkin loved shchi with rye bread.
+
+---
+
+### RECIPE: Classic Borscht
+- ID: soup-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-2
+- Name: Classic Borscht (Борщ классический)
+- Epoch: 17th century - present day
+- Time: 2 hours
+- Image: /publicimagessoups/borshch.jpg
+- Keywords: classic borscht recipe, borscht with beef, how to make delicious borscht
+
+**Description:**
+Traditional classic borscht with beef, beets, and cabbage. A rich, aromatic, and healthy soup that has become a symbol of Eastern Slavic cuisine.
+
+**Ingredients:**
+- Beets - 2 pcs
+- Cabbage - 300g
+- Carrot - 1 pc
+- Onion - 1 pc
+- Potatoes - 4 pcs
+- Beef on the bone - 500g
+- Tomato paste - 3 tbsp
+- Garlic, herbs, sour cream - for serving
+
+**Preparation Steps:**
+1. Cook beef broth for 1.5 hours
+2. Grate beets, sauté with tomato paste
+3. Add diced potatoes and shredded cabbage to the broth
+4. After 15 minutes, add sautéed onion and carrot
+5. Add beets, cook for another 10 minutes
+6. Serve with sour cream and fresh herbs
+
+**Historical Context:**
+Borscht came to Russian cuisine from Ukraine but quickly became a pan-Russian dish. Catherine the Great and Leo Tolstoy loved it. In the 19th century, borscht was served with garlic fritters (pampushki).
+
+---
+
+### RECIPE: Mixed Meat Solyanka
+- ID: soup-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-3
+- Name: Mixed Meat Solyanka (Солянка сборная мясная)
+- Epoch: 15th century - present day
+- Time: 1 hour 40 minutes
+- Image: /publicimagessoups/solyanka.jpg
+- Keywords: mixed meat solyanka recipe, classic solyanka with lemon, spicy meat soup
+
+**Description:**
+Rich mixed meat solyanka with sausage, ham, and pickled cucumbers. A spicy, warming soup with lemon and olives.
+
+**Ingredients:**
+- Beef - 300g
+- Boiled sausage - 200g
+- Ham - 200g
+- Pickled cucumbers - 3 pcs
+- Onion - 2 pcs
+- Tomato paste - 2 tbsp
+- Olives - 100g
+- Lemon, herbs, sour cream - for serving
+
+**Preparation Steps:**
+1. Cook beef until tender, strain the broth
+2. Slice meat, sausage, and ham into strips
+3. Slice onion and cucumbers, sauté with tomato paste
+4. Add all meat ingredients to the broth, bring to a boil
+5. Add sautéed vegetables, olives, and spices, cook for 10 minutes
+6. Serve with lemon and sour cream
+
+**Historical Context:**
+Solyanka has been known since the 15th century as a "pohlyobka" (thin soup) made from pickled foods. In the 19th century, it became popular in taverns. Gogol mentioned solyanka in "Dead Souls."
+
+---
+
+### RECIPE: Classic Rassolnik
+- ID: soup-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-4
+- Name: Classic Rassolnik (Рассольник)
+- Epoch: 18th century - present day
+- Time: 1 hour 20 minutes
+- Image: /publicimagessoups/rassolnik.jpg
+- Keywords: rassolnik recipe, barley and pickle soup, classic Russian soup
+
+**Description:**
+Classic rassolnik with pearl barley, pickled cucumbers, and beef kidneys. A savory, moderately sour, and very hearty traditional soup.
+
+**Ingredients:**
+- Beef kidneys - 300g
+- Pickled cucumbers - 4 pcs
+- Potatoes - 4 pcs
+- Carrot - 1 pc
+- Onion - 1 pc
+- Pearl barley - 100g
+- Cucumber brine - 1 cup
+
+**Preparation Steps:**
+1. Soak kidneys, boil until tender
+2. Rinse barley, soak for 2 hours, then cook until half-done
+3. Dice potatoes, cucumbers, onion, and carrot
+4. Add barley to boiling broth, after 15 minutes add potatoes
+5. Add sautéed onion and carrot, cucumbers, brine, and spices
+6. Cook for 15 minutes, let steep
+
+**Historical Context:**
+Rassolnik appeared in the 18th century as a dish for workers. Later it became popular among the nobility. A.P. Chekhov often mentioned rassolnik in his stories.
+
+---
+
+### RECIPE: Tsar's Ukha (Fish Soup)
+- ID: soup-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-5
+- Name: Tsar's Ukha (Уха царская)
+- Epoch: 16th-17th century
+- Time: 1 hour
+- Image: /publicimagessoups/ukha.jpg
+- Keywords: tsar's ukha recipe, sturgeon or zander fish soup, classic Russian fish soup
+
+**Description:**
+Tsar's ukha made from sturgeon or zander with vegetables and spices. A clear, aromatic, and truly festive fish soup.
+
+**Ingredients:**
+- Sturgeon or zander - 600g
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Carrot - 1 pc
+- Parsley root - 1 pc
+- Bay leaf, peppercorns - to taste
+- Vodka - 50ml (optional)
+
+**Preparation Steps:**
+1. Clean fish, separate fillet; boil head and tail for 20 minutes
+2. Strain broth, add sliced vegetables
+3. Add fish pieces and spices, cook for 15 minutes
+4. Add vodka for a piquant kick (optional)
+5. Serve with fresh herbs and pies
+
+**Historical Context:**
+Ukha was considered a royal dish in the 16th century, made from sturgeon. Ivan the Terrible loved ukha with saffron. In the 19th century, ukha was praised in the poetry of Nekrasov and Turgenev.
+
+---
+
+### RECIPE: Kvass Okroshka
+- ID: soup-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-6
+- Name: Kvass Okroshka (Окрошка квасная)
+- Epoch: 18th century - present day
+- Time: 30 minutes (excluding boiling)
+- Image: /publicimagessoups/okroshka.jpg
+- Keywords: kvass okroshka recipe, classic meat okroshka, summer cold soup
+
+**Description:**
+Refreshing summer okroshka on natural bread kvass with boiled meat, vegetables, and herbs. The perfect dish for a hot day.
+
+**Ingredients:**
+- Boiled meat - 300g
+- Boiled eggs - 3 pcs
+- Fresh cucumbers - 3 pcs
+- Green onions - 1 bunch
+- Dill, parsley - 1 bunch each
+- Bread kvass - 1.5L
+- Sour cream - to taste
+
+**Preparation Steps:**
+1. Dice meat and eggs
+2. Finely chop cucumbers and herbs
+3. Mix all ingredients in a bowl
+4. Divide into bowls, pour kvass over
+5. Add sour cream, serve with mustard
+
+**Historical Context:**
+Kvass okroshka has been known since the 18th century as a peasant dish. In the 19th century, it was often served at summer lunches among the nobility. A.S. Pushkin loved okroshka at Mikhailovskoye.
+
+---
+
+### RECIPE: Mushroom Soup with Barley
+- ID: soup-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-7
+- Name: Mushroom Soup with Barley (Суп грибной с перловкой)
+- Epoch: 19th century - present day
+- Time: 1 hour
+- Image: /publicimagessoups/mushroom.jpg
+- Keywords: mushroom barley soup recipe, dried porcini mushroom soup, lenten mushroom soup
+
+**Description:**
+Aromatic mushroom soup with barley and dried porcini mushrooms. A hearty, lean, and incredibly flavorful first course.
+
+**Ingredients:**
+- Dried porcini mushrooms - 50g
+- Pearl barley - 100g
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Carrot - 1 pc
+- Sour cream and herbs - for serving
+
+**Preparation Steps:**
+1. Soak mushrooms for 2 hours, then cook for 30 minutes
+2. Cook barley separately until half-done
+3. Dice potatoes, onion, and carrot
+4. Add barley to mushroom broth, after 15 minutes add potatoes
+5. Add sautéed onion and carrot, cook for 15 minutes
+6. Serve with sour cream
+
+**Historical Context:**
+Mushroom soups are quintessential Russian food, especially popular during Lent. In the 19th century, they were loved in merchant homes. Mushroom soup is mentioned in Turgenev's "A Sportsman's Sketches."
+
+---
+
+### RECIPE: Pea Soup with Smoked Meats
+- ID: soup-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-8
+- Name: Pea Soup with Smoked Meats (Гороховый суп с копчёностями)
+- Epoch: 16th century - present day
+- Time: 1 hour 30 minutes (with soaking)
+- Image: /publicimagessoups/peasoup.jpg
+- Keywords: pea soup with smoked meats recipe, smoked ribs soup, classic pea soup
+
+**Description:**
+Thick and hearty pea soup with smoked ribs. A satisfying, aromatic dish that warms you up in any weather.
+
+**Ingredients:**
+- Dried peas - 300g
+- Smoked ribs - 400g
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Carrot - 1 pc
+- Garlic, herbs, croutons - to taste
+
+**Preparation Steps:**
+1. Soak peas overnight, then cook for 1 hour
+2. Fry ribs with onion and carrot
+3. Add diced potatoes to the pea broth
+4. After 15 minutes, add ribs with sautéed vegetables
+5. Cook until done, add garlic and herbs
+6. Serve with croutons
+
+**Historical Context:**
+Pea soup has been known since the 16th century as a hearty meal. In Soviet times, it was often prepared in canteens. Smoked meats give the dish a special aroma that remains popular today.
+
+---
+
+### RECIPE: Chicken Noodle Soup
+- ID: soup-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-9
+- Name: Chicken Noodle Soup (Суп-лапша куриная)
+- Epoch: 17th century - present day
+- Time: 1 hour
+- Image: /publicimagessoups/noodlesoup.jpg
+- Keywords: chicken noodle soup recipe, homemade chicken noodles, light chicken soup
+
+**Description:**
+Homemade chicken noodle soup with tender meat and vegetables. A cozy, light, and healthy first course for the whole family.
+
+**Ingredients:**
+- Chicken - 500g
+- Carrot - 1 pc
+- Onion - 1 pc
+- Potatoes - 2 pcs
+- Homemade noodles - 100g
+- Fresh herbs - to taste
+
+**Preparation Steps:**
+1. Cook chicken until tender, strain broth
+2. Sauté carrot and onion
+3. Add diced potatoes to broth, after 10 minutes add noodles
+4. Add sautéed vegetables, cook until noodles are done (5-7 minutes)
+5. Season with salt and pepper, serve with fresh herbs
+
+**Historical Context:**
+Chicken noodle soup came to Russian cuisine in the 17th century from Tatar cuisine. Peter the Great loved it. In the 19th century, it became a cozy, homely dish.
+
+---
+
+### RECIPE: Kharcho Soup (Adapted)
+- ID: soup-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-10
+- Name: Kharcho Soup (Харчо по-грузински)
+- Epoch: 20th century (popular in Russia)
+- Time: 1 hour 40 minutes
+- Image: /publicimagessoups/kharcho.jpg
+- Keywords: kharcho recipe, beef and rice soup, Georgian soup Russian-style
+
+**Description:**
+Spicy and aromatic kharcho soup with beef, rice, walnuts, and khmeli-suneli. The rich taste of Caucasian cuisine, adapted for home cooking.
+
+**Ingredients:**
+- Beef - 400g
+- Rice - 100g
+- Onion - 2 pcs
+- Tomato paste - 2 tbsp
+- Garlic - 3 cloves
+- Walnuts - 50g
+- Khmeli-suneli, fresh herbs - to taste
+
+**Preparation Steps:**
+1. Slice meat, cover with water, cook for 1 hour
+2. Add rice, cook for 15 minutes
+3. Sauté onion with tomato paste, add to soup
+4. Chop walnuts, garlic, and herbs, add 5 minutes before done
+5. Season with khmeli-suneli, let steep
+
+**Historical Context:**
+Kharcho is a Georgian dish, but in the 20th century it became beloved throughout Russia. In Soviet cookbooks, kharcho was often presented as a spicy soup with rice and meat.
+
+---
+
+### RECIPE: Cold Beetroot Soup (Svekolnik)
+- ID: soup-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-11
+- Name: Cold Beetroot Soup (Свекольник холодный)
+- Epoch: 18th century - summer dish
+- Time: 40 minutes (excluding beet boiling)
+- Image: /publicimagessoups/svekolnik.jpg
+- Keywords: cold beetroot soup recipe, kefir beet soup, summer cold soup
+
+**Description:**
+Cold summer beetroot soup with kefir, cucumber, and egg. A refreshing, healthy, and vibrant soup for the hot season.
+
+**Ingredients:**
+- Beets - 3 pcs
+- Fresh cucumbers - 2 pcs
+- Boiled eggs - 3 pcs
+- Green onions, dill - 1 bunch each
+- Kefir or buttermilk - 1L
+- Salt, sugar, lemon juice - to taste
+
+**Preparation Steps:**
+1. Boil or roast beets, grate them
+2. Dice cucumbers and eggs, finely chop herbs
+3. Mix all ingredients, pour kefir over
+4. Season with salt, sugar, and lemon juice to taste
+5. Chill before serving
+
+**Historical Context:**
+Svekolnik is a traditional summer dish in southern Russia. In the 19th century, it was served with boiled potatoes. A.I. Kuprin mentioned svekolnik in his stories.
+
+---
+
+### RECIPE: Botvinya (Sorrel and Fish Soup)
+- ID: soup-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-12
+- Name: Botvinya (Ботвинья)
+- Epoch: 16th-17th century
+- Time: 30 minutes (with boiled ingredients)
+- Image: /publicimagessoups/botvinia.jpg
+- Keywords: botvinya recipe, cold sorrel soup with fish, ancient Russian kvass soup
+
+**Description:**
+Ancient Russian botvinya on bread kvass with red fish, sorrel, and spinach. A unique cold soup with a rich history.
+
+**Ingredients:**
+- Sorrel - 200g
+- Spinach - 200g
+- Red fish (pink salmon) - 300g
+- Fresh cucumbers - 2 pcs
+- Green onions, dill - to taste
+- Bread kvass - 1L
+- Horseradish, mustard - to taste
+
+**Preparation Steps:**
+1. Boil sorrel and spinach, rub through a sieve
+2. Boil fish, cool, break into pieces
+3. Slice cucumbers and herbs
+4. In bowls, place greens, fish, cucumbers, pour kvass over
+5. Add horseradish and mustard to taste
+
+**Historical Context:**
+Botvinya is an ancient Russian dish served in boyar homes. Mentioned in Domostroy. It was prepared with sour kvass and served with fish and herbs.
+
+---
+
+### RECIPE: Kalya (Fish Soup with Pickles)
+- ID: soup-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-13
+- Name: Kalya (Калья)
+- Epoch: 17th century
+- Time: 1 hour
+- Image: /publicimagessoups/kalya.jpg
+- Keywords: kalya fish soup recipe, fish soup with pickles, ancient Russian fish soup
+
+**Description:**
+Spicy fish kalya with pickled cucumbers and brine. An ancient Russian precursor to solyanka with a rich and tangy flavor.
+
+**Ingredients:**
+- Zander - 500g
+- Pickled cucumbers - 4 pcs
+- Cucumber brine - 1 cup
+- Onion - 1 pc
+- Potatoes - 3 pcs
+- Lemon, olives - optional
+- Dill, parsley - to taste
+
+**Preparation Steps:**
+1. Clean fish, boil head and tail for 20 minutes
+2. Strain broth, add diced potatoes
+3. Slice cucumbers, sauté onion, add to soup
+4. Pour in brine, add fish pieces, cook for 15 minutes
+5. Season with lemon and olives, serve with fresh herbs
+
+**Historical Context:**
+Kalya is a spicy fish soup with pickled foods, popular in the 17th-18th centuries. Pushkin's "The Tale of the Fisherman and the Fish" contains hints of such dishes.
+
+---
+
+### RECIPE: Meat Pokhlyobka with Roots
+- ID: soup-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-14
+- Name: Meat Pokhlyobka with Roots (Похлёбка мясная с кореньями)
+- Epoch: 19th century - peasant cuisine
+- Time: 2 hours
+- Image: /publicimagessoups/pokhlebka.jpg
+- Keywords: meat pokhlyobka recipe, village beef soup, traditional Russian soup
+
+**Description:**
+Thick village pokhlyobka with meat and root vegetables. A simple, hearty, and aromatic dish of traditional Russian cuisine.
+
+**Ingredients:**
+- Lamb or beef - 400g
+- Potatoes - 4 pcs
+- Carrot - 1 pc
+- Parsley root - 1 pc
+- Onion - 1 pc
+- Garlic, bay leaf, pepper - to taste
+- Sour cream - for serving
+
+**Preparation Steps:**
+1. Cook meat for 1.5 hours, skim foam
+2. Slice vegetables and parsley root
+3. Add potatoes and roots to the broth, cook for 20 minutes
+4. Add onion, carrot, garlic, and spices
+5. Cook until meat is tender, let steep
+6. Serve with sour cream
+
+**Historical Context:**
+Pokhlyobka is a thick village soup made from whatever was available. In the 19th century, it was often cooked in peasant families. Mentioned in stories by Tolstoy and Chekhov.
+
+---
+
+### RECIPE: Sour Shchi (Sauerkraut Soup)
+- ID: soup-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-15
+- Name: Sour Shchi (Щи кислые)
+- Epoch: Ancient Rus - present day
+- Time: 2 hours
+- Image: /publicimagessoups/sour_shchi.jpg
+- Keywords: sour shchi recipe, sauerkraut soup, classic Russian cabbage soup
+
+**Description:**
+Traditional sour shchi made from sauerkraut with beef. A rich, aromatic soup with a characteristic tangy flavor, beloved in Rus.
+
+**Ingredients:**
+- Sauerkraut - 500g
+- Beef - 400g
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Carrot - 1 pc
+- Tomato paste - 1 tbsp
+- Garlic, herbs, sour cream - to taste
+
+**Preparation Steps:**
+1. Cook meat for 1.5 hours, strain broth
+2. Stew sauerkraut with tomato paste for 20 minutes
+3. Add potatoes to broth, after 15 minutes add sauerkraut
+4. Add sautéed onion and carrot
+5. Cook for 10 minutes, add garlic and herbs
+6. Serve with sour cream
+
+**Historical Context:**
+Sour shchi is one of the oldest Russian soups, mentioned in the Primary Chronicle. They were loved in Rus, even during the Siege of Leningrad.
+
+---
+
+### RECIPE: Creamy Chicken Soup
+- ID: soup-16
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-16
+- Name: Creamy Chicken Soup (Сырный суп с курицей)
+- Epoch: Modern classic
+- Time: 40 minutes
+- Image: /publicimagessoups/cheese-soups.jpg
+- Keywords: creamy chicken soup recipe, cheese soup with chicken, quick lunch
+
+**Description:**
+Creamy soup with melted cheese, chicken, and croutons. Perfect comfort food for the whole family.
+
+**Ingredients:**
+- Chicken fillet - 300g
+- Processed cheese - 200g
+- Potatoes - 3 pcs
+- Carrot - 1 pc
+- Onion - 1 pc
+- Croutons - 50g
+- Butter - 20g
+- Fresh herbs - 1 bunch
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Boil chicken fillet in salted water (15-20 minutes)
+2. Remove chicken, dice into small pieces
+3. Add diced potatoes to boiling broth
+4. Finely chop onion, grate carrot
+5. Sauté onion and carrot in butter until golden (5 minutes)
+6. Add sautéed vegetables to the soup
+7. Add processed cheese, stir until completely dissolved
+8. Return diced chicken to the soup
+9. Season with salt and pepper
+10. Cook for another 5 minutes over low heat
+11. Remove from heat, add finely chopped herbs
+12. Serve with croutons sprinkled on top
+
+**Historical Context:**
+Cheese soup became incredibly popular in the late 20th century when processed cheeses became mass-produced. This dish is the perfect example of comfort food: it warms you up, cooks quickly, and requires minimal effort.
+
+---
+
+### RECIPE: Meatball Soup
+- ID: soup-17
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-17
+- Name: Meatball Soup (Суп с фрикадельками)
+- Epoch: International classic
+- Time: 45 minutes
+- Image: /publicimagessoups/meatball-soup.jpg
+- Keywords: meatball soup recipe, soup with meatballs, light lunch soup
+
+**Description:**
+Light and hearty soup with tender meatballs, potatoes, and rice. The perfect everyday first course for the whole family.
+
+**Ingredients:**
+- Ground beef - 400g
+- Onion - 1 pc
+- Egg - 1 pc
+- Potatoes - 3 pcs
+- Carrot - 1 pc
+- Rice - 2 tbsp
+- Bay leaf - 1 pc
+- Salt, pepper - to taste
+- Fresh herbs - to taste
+
+**Preparation Steps:**
+1. Mix ground beef with finely chopped onion, egg, and salt
+2. Roll into small meatballs
+3. Bring water to a boil, drop in meatballs
+4. Add diced potatoes
+5. After 15 minutes, add sautéed carrot and onion
+6. Cook until done, serve with sour cream
+
+**Historical Context:**
+Popular in Soviet canteens as a quick way to make a hearty lunch without long meat cooking. Similar to Italian polpettine and Swedish köttbullar.
+
+---
+
+### RECIPE: Creamy Mushroom Soup
+- ID: soup-18
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-18
+- Name: Creamy Mushroom Soup (Сливочный суп с шампиньонами)
+- Epoch: Modern cuisine
+- Time: 50 minutes
+- Image: /publicimagessoups/mushroom-cream-soup.jpg
+- Keywords: creamy mushroom soup recipe, champignon cream soup, mushroom puree soup
+
+**Description:**
+Velvety creamy mushroom puree soup with champignons. An exquisite, delicate, and aromatic restaurant dish that's easy to make at home.
+
+**Ingredients:**
+- Champignons - 500g
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Cream 10% - 200ml
+- Butter - 50g
+- Bay leaf - 1 pc
+- Salt, pepper - to taste
+- Fresh herbs - for garnish
+
+**Preparation Steps:**
+1. Slice mushrooms, sauté in butter
+2. Add onion, cook for 5 minutes
+3. Bring water to a boil, add diced potatoes
+4. After 10 minutes, add mushrooms
+5. Pour in cream, heat for 2 minutes
+6. Blend until smooth with an immersion blender
+7. Serve with fresh herbs
+
+**Historical Context:**
+Differs from traditional mushroom soup by using fresh champignons and cream. Became popular in the 1990s as a restaurant dish.
+
+---
+
+### RECIPE: Sorrel Soup with Egg
+- ID: soup-19
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-19
+- Name: Sorrel Soup with Egg (Щавелевый суп с яйцом)
+- Epoch: Spring classic
+- Time: 35 minutes
+- Image: /publicimagessoups/sorrel-soup.jpg
+- Keywords: sorrel soup recipe, green shchi with egg, spring sorrel soup
+
+**Description:**
+Spring green sorrel soup with boiled egg and sour cream. A light, vitamin-rich, and refreshing soup with a pleasant tangy flavor.
+
+**Ingredients:**
+- Fresh sorrel - 300g
+- Eggs - 3 pcs
+- Potatoes - 3 pcs
+- Carrot - 1 pc
+- Onion - 1 pc
+- Sour cream - 100g
+- Salt, pinch of sugar - to taste
+- Fresh dill - to taste
+
+**Preparation Steps:**
+1. Boil eggs hard
+2. Add diced potatoes to boiling water
+3. Sauté onion and carrot
+4. Add sorrel and sautéed vegetables
+5. Cook for 7 minutes
+6. Serve with sliced egg and sour cream
+
+**Historical Context:**
+One of the first spring dishes in Rus. Called "green shchi." A symbol of renewal after the long winter.
+
+---
+
+### RECIPE: Canned Fish Soup
+- ID: soup-20
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-20
+- Name: Canned Fish Soup (Рыбный суп из консервов)
+- Epoch: Soviet classic
+- Time: 30 minutes
+- Image: /publicimagessoups/fish-canned-soup.jpg
+- Keywords: canned fish soup recipe, saury fish soup, quick fish soup
+
+**Description:**
+Quick and tasty fish soup made from canned saury with potatoes and rice. A classic of home cooking that's ready in 30 minutes.
+
+**Ingredients:**
+- Canned saury - 1 can
+- Potatoes - 4 pcs
+- Carrot - 1 pc
+- Onion - 1 pc
+- Rice - 3 tbsp
+- Bay leaf - 1 pc
+- Salt, pepper - to taste
+- Fresh herbs, lemon - to taste
+
+**Preparation Steps:**
+1. Bring water to a boil, add potatoes and rice
+2. Sauté onion and carrot
+3. After 15 minutes, add sautéed vegetables
+4. Mash canned fish with a fork, add to soup
+5. Cook for 10 minutes
+6. Serve with lemon and fresh herbs
+
+**Historical Context:**
+Became mass-popular in the USSR in the post-war years during fresh fish shortages. Still associated with quick home cooking.
+
+---
+
+### RECIPE: Young Potato Soup with Herbs
+- ID: soup-21
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-21
+- Name: Young Potato Soup with Herbs (Суп из молодой картошки с зеленью)
+- Epoch: Spring classic
+- Time: 35 minutes
+- Image: /publicimagessoups/young-potato-soup.jpg
+- Keywords: young potato soup recipe, spring potato soup with cream, fresh herb soup
+
+**Description:**
+Tender spring soup made from young potatoes with cream and fresh herbs. A light, aromatic, and vitamin-rich first course.
+
+**Ingredients:**
+- Young potatoes - 500g
+- Chicken broth - 1.5L
+- Carrot - 1 pc
+- Onion - 1 pc
+- Cream 10% - 200ml
+- Fresh herbs (dill, parsley) - 1 bunch
+- Butter - 30g
+- Salt, pepper - to taste
+- Bay leaf - 1 pc
+
+**Preparation Steps:**
+1. Peel young potatoes, dice
+2. Bring broth to a boil, add potatoes and bay leaf
+3. Cook for 15 minutes until potatoes are soft
+4. Finely chop onion and carrot
+5. Sauté in butter until golden (5 minutes)
+6. Add sautéed vegetables to the soup
+7. Pour in cream, bring to a boil
+8. Add finely chopped fresh herbs
+9. Season with salt and pepper
+10. Remove from heat, let steep for 10 minutes
+11. Serve hot with sour cream and fresh bread
+
+**Historical Context:**
+Young potato soup is a traditional spring dish in Russian cuisine. It was made with the first harvest of young potatoes. The delicate flavor and aroma of fresh herbs made this soup a favorite after the long winter.
+
+---
+
+### RECIPE: Creamy Beet Green Soup
+- ID: soup-22
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-22
+- Name: Creamy Beet Green Soup (Суп-пюре из свекольной ботвы)
+- Epoch: Summer classic
+- Time: 40 minutes
+- Image: /publicimagessoups/beet-greens-soup.jpg
+- Keywords: creamy beet green soup recipe, beet leaf cream soup, summer vegetable soup
+
+**Description:**
+Tender and vibrant creamy soup made from beet greens with cream. An original, healthy, and beautiful summer dish with zero food waste.
+
+**Ingredients:**
+- Beet greens - 500g
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Carrot - 1 pc
+- Boiled eggs - 2 pcs
+- Cream 10% - 150ml
+- Butter - 30g
+- Chicken broth - 1L
+- Fresh herbs - 1 bunch
+- Salt, pepper - to taste
+- Sour cream - for serving
+
+**Preparation Steps:**
+1. Wash beet greens, separate stems from leaves
+2. Dice stems, finely chop leaves
+3. Peel potatoes, dice
+4. Bring broth to a boil, add potatoes and beet stems
+5. Cook for 15 minutes until potatoes are soft
+6. Chop onion and carrot, sauté in butter
+7. Add sautéed vegetables and beet leaves to the soup
+8. Cook for another 5 minutes
+9. Remove from heat, cool slightly
+10. Blend with an immersion blender until smooth
+11. Pour in cream, season with salt and pepper
+12. Bring to a boil over low heat
+13. Serve with boiled egg, sour cream, and fresh herbs
+
+**Historical Context:**
+Creamy beet green soup is an ancient Russian dish. In the past, beet greens were never thrown away — they were used to make nourishing soups. This recipe was especially popular in villages where every product was valued. The delicate flavor and vibrant color make this soup a true summer delicacy.
+
+---
+
+### RECIPE: Braised Beef Rib Soup
+- ID: soup-23
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-23
+- Name: Braised Beef Rib Soup (Тушёный суп с говяжьими рёбрышками)
+- Epoch: Classic Russian cuisine
+- Time: 1 hour 30 minutes
+- Image: /publicimagessoups/beef-rib-stew.jpg
+- Keywords: braised beef rib soup recipe, hearty meat soup, rib and potato soup
+
+**Description:**
+Rich and hearty braised soup with tender beef ribs, potatoes, and tomatoes. A true man's dish for cold days.
+
+**Ingredients:**
+- Beef ribs - 600g
+- Potatoes - 4 pcs
+- Carrot - 2 pcs
+- Onion - 2 pcs
+- Tomatoes - 3 pcs
+- Tomato paste - 2 tbsp
+- Garlic - 3 cloves
+- Bay leaf - 2 pcs
+- Black peppercorns - 5 pcs
+- Vegetable oil - 3 tbsp
+- Fresh herbs - 1 bunch
+- Salt - to taste
+
+**Preparation Steps:**
+1. Cut ribs into portions
+2. Fry ribs over high heat until browned (5-7 minutes)
+3. Slice onion into half-rings, carrot into rounds
+4. Add vegetables to the meat, fry for 5 minutes
+5. Add tomato paste, stir
+6. Pour in water or broth (1.5L), bring to a boil
+7. Reduce heat, cover, simmer for 40 minutes
+8. Peel potatoes, cut into large cubes
+9. Add potatoes to the soup, cook for 20 minutes
+10. Dice tomatoes, add to the soup
+11. Add bay leaf, peppercorns, garlic, and salt
+12. Simmer for another 10 minutes until meat is tender
+13. Remove from heat, sprinkle with fresh herbs
+14. Let steep covered for 15 minutes
+15. Serve hot with rye bread
+
+**Historical Context:**
+Braised beef rib soup is a hearty man's dish that was cooked in Russian villages after hard labor. The meat was slow-cooked in the oven, becoming incredibly tender. Such soup warmed on cold winter evenings and gave strength for working the land.
+
+---
+
+### RECIPE: Creamy Honey Mushroom Soup (Крем-суп с опятами)
+- ID: soup-24
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-24
+- Name: Creamy Honey Mushroom Soup (Крем-суп с опятами)
+- Epoch: Autumn classic (Осенняя классика)
+- Time: 45 minutes
+- Image: /publicimagessoups/honey-mushroom-soup.jpg
+- Keywords: creamy honey mushroom soup recipe, mushroom puree soup, autumn mushroom soup
+
+**Description:**
+An exquisite autumn creamy soup made with honey mushrooms and cream. Velvety texture and rich mushroom aroma in every spoonful.
+
+**Ingredients:**
+- Fresh or frozen honey mushrooms - 400g
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Carrot - 1 pc
+- Cream 20% - 200ml
+- Butter - 40g
+- Garlic - 2 cloves
+- Chicken broth - 1L
+- Fresh dill - 1 bunch
+- Salt, pepper - to taste
+- Sour cream - for serving
+
+**Preparation Steps:**
+1. Clean honey mushrooms, cut large ones in half
+2. Peel potatoes, dice
+3. Bring broth to a boil, add potatoes
+4. Cook for 15 minutes until potatoes are soft
+5. Finely chop onion, grate carrot
+6. Sauté onion and carrot in butter for 5 minutes
+7. Add honey mushrooms and garlic, sauté for another 7 minutes
+8. Add sautéed vegetables with mushrooms to the soup
+9. Cook for 10 minutes
+10. Remove from heat, cool slightly
+11. Blend with an immersion blender until creamy
+12. Pour in cream, season with salt and pepper
+13. Heat over low heat for 3 minutes (do not boil!)
+14. Serve with sour cream and fresh dill
+
+**Historical Context:**
+Creamy honey mushroom soup is a modern interpretation of traditional Russian mushroom soup. Honey mushrooms have always been beloved in Russia: they were gathered in large quantities in autumn, dried for winter, salted and pickled. The creamy soup became popular in restaurants in the 2000s and quickly made its way into home kitchens.
+
+---
+
+### RECIPE: Duck Noodle Soup
+- ID: soup-25
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-25
+- Name: Duck Noodle Soup (Суп из утки с лапшой)
+- Epoch: Village classic (Деревенская классика)
+- Time: 2 hours
+- Image: /publicimagessoups/duck-noodle-soup.jpg
+- Keywords: duck noodle soup recipe, duck soup, hearty duck broth
+
+**Description:**
+Rich and festive duck soup with homemade noodles and vegetables. Deep aroma and rich flavor of a traditional village dish.
+
+**Ingredients:**
+- Duck (parts or whole) - 700g
+- Potatoes - 4 pcs
+- Carrot - 2 pcs
+- Onion - 2 pcs
+- Egg noodles (or homemade) - 100g
+- Bay leaf - 2 pcs
+- Black peppercorns - 6 pcs
+- Garlic - 2 cloves
+- Fresh herbs - 1 bunch
+- Salt - to taste
+
+**Preparation Steps:**
+1. Rinse duck, cut into portions
+2. Cover with cold water (2.5L), bring to a boil
+3. Skim foam, reduce heat to minimum
+4. Add 1 whole carrot and 1 onion (for broth aroma)
+5. Add bay leaf and peppercorns
+6. Cook duck for 1-1.5 hours until meat is tender
+7. Remove duck, strain broth through a sieve
+8. Return broth to pot, bring to a boil
+9. Dice potatoes, add to broth
+10. Slice remaining carrot and onion, sauté until golden
+11. Add sautéed vegetables to soup
+12. Slice duck meat into pieces, return to soup
+13. Add noodles, cook for 5-7 minutes until done
+14. Season with salt, add minced garlic
+15. Remove from heat, sprinkle with fresh herbs
+16. Let steep covered for 10 minutes
+17. Serve hot with rye bread
+
+**Historical Context:**
+Duck noodle soup is an ancient Russian dish prepared for holidays and Sundays. Duck was considered a delicacy, and the rich broth with homemade noodles warmed the whole family. This soup was especially popular in autumn and winter when ducks were slaughtered for meat.
+
+---
+
+### RECIPE: Spring Meatball Soup with Peas
+- ID: soup-26
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/soup-26
+- Name: Spring Meatball Soup with Green Peas (Весенний суп с фрикадельками и горошком)
+- Epoch: Modern classic (Современная классика)
+- Time: 30 minutes
+- Image: /publicimagessoups/meatball-pea-soup.jpg
+- Keywords: meatball and green pea soup recipe, light spring soup, chicken meatball soup
+
+**Description:**
+A light and vibrant spring soup with tender meatballs and young green peas. A quick, healthy, and beautiful first course.
+
+**Ingredients:**
+- Ground meat (chicken or beef) - 300g
+- Green peas (frozen or canned) - 200g
+- Potatoes - 3 pcs
+- Carrot - 1 pc
+- Onion - 1 pc
+- Egg - 1 pc
+- Rice or semolina - 1 tbsp (for meatballs)
+- Fresh dill and parsley - 1 bunch
+- Bay leaf, salt, pepper - to taste
+
+**Preparation Steps:**
+1. Add egg, rice (or semolina), salt, and pepper to the ground meat. Mix thoroughly.
+2. Wet hands with water and roll into small neat meatballs (walnut-sized).
+3. Bring 1.5L of salted water to a boil.
+4. Carefully drop meatballs into boiling water. Cook for 5 minutes, skimming foam.
+5. Dice potatoes, add to broth. Cook for 10 minutes.
+6. Finely chop onion, grate carrot. Sauté in vegetable oil until golden.
+7. Add sautéed vegetables and green peas to the soup.
+8. Add bay leaf, cook for another 5-7 minutes.
+9. Remove from heat, add finely chopped fresh herbs.
+10. Let steep covered for 10 minutes and serve hot!
+
+**Historical Context:**
+Light soups with meatballs and green peas became incredibly popular in the mid-20th century. They perfectly combine the heartiness of meat broth with the freshness of vegetables. This dish is a true symbol of home comfort, cooking in a flash and pleasing both children and adults.
+
+---
+
+## SOUPS Index Summary
+
+**Total Recipes Added:** 26
+**Total Recipes Overall:** 148 (17 Baking + 15 Desserts + 20 Dough + 9 Drinks + 15 Fish + 16 Meat + 15 Porridges + 15 Snacks + 26 Soups)
+
+**Soup Types Covered:**
+- 🥣 Cabbage Soups: Fresh Shchi, Sour Shchi
+- 🥣 Beet Soups: Borscht, Svekolnik, Beet Green Soup
+- 🥣 Meat Soups: Solyanka, Pokhlyobka, Rib Soup
+- 🥣 Fish Soups: Ukha, Kalya, Canned Fish Soup, Botvinya
+- 🥣 Mushroom Soups: Mushroom with Barley, Creamy Mushroom, Creamy Honey Mushroom
+- 🥣 Chicken Soups: Noodle Soup, Creamy Cheese Soup
+- 🥣 Cold Soups: Okroshka, Botvinya, Svekolnik
+- 🥣 Meatball Soups: Classic Meatball, Spring with Peas
+- 🥣 Other: Rassolnik, Kharcho, Sorrel Soup, Young Potato Soup
+
+---
+
+## COMPLETE FINAL SUMMARY
+
+**Total Recipes in `llms-full.txt`:** **148**
+
+| Category | Count |
+|----------|-------|
+| 🥖 Baking & Pastry | 17 |
+| 🍰 Desserts & Sweets | 15 |
+| 🥖 Dough & Pastry | 20 |
+| 🍹 Beverages | 9 |
+| 🐟 Fish & Seafood | 15 |
+| 🥩 Meat Dishes | 16 |
+| 🥣 Porridges & Grains | 15 |
+| 🥗 Snacks & Appetizers | 15 |
+| 🥣 Soups | 26 |
+| **TOTAL** | **148** |
+
+---
+
+## Final File Footer
+
+Убедись, что в самом конце файла `llms-full.txt` есть это:
+
+```txt
+---
 
 *This file is intended for AI agents and crawlers. For detailed recipe pages, append the recipe ID to the base URL.*
 *Example: https://russka-kuhnya-9551.vercel.app/recipe/baking-1*
 
-*Updated: 2026-08-05*
+*Total Recipes: 148*
+*Categories: Baking, Desserts, Dough, Beverages, Fish, Meat, Porridges, Snacks, Soups*
+*Last Updated: 2026-08-05*
