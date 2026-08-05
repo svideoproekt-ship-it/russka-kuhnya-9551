@@ -3026,6 +3026,1204 @@ Pomors in the Russian North prepared cod with potatoes and cream. A simple, hear
 | **TOTAL** | **76** | |
 
 ---
+---
+
+## MEAT DISHES RECIPES
+
+### RECIPE: Beef Stroganoff
+- ID: meat-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-1
+- Name: Beef Stroganoff (Бефстроганов)
+- Epoch: 19th century
+- Time: 40 minutes
+- Image: /publicimagesmeat/befstroganov.jpg
+- Keywords: beef stroganoff recipe, beef in sour cream sauce, classic Russian cuisine
+
+**Description:**
+Tender beef simmered in a rich sour cream sauce with tomato paste. A classic Russian dish named after Count Stroganov.
+
+**Ingredients:**
+- Beef (tenderloin) - 500g
+- Onion - 2 pcs
+- Sour cream - 200g
+- Flour - 1 tbsp
+- Tomato paste - 1 tbsp
+- Butter - 50g
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Cut meat into thin strips
+2. Finely chop onion and sauté until translucent
+3. Add meat, fry over high heat until browned
+4. Sprinkle with flour, mix well
+5. Add sour cream and tomato paste
+6. Simmer covered for 10-15 minutes until tender
+7. Season with salt and pepper
+
+**Historical Context:**
+The dish is named after Count Pavel Alexandrovich Stroganov. His chef Andrei created this dish so the Count could enjoy meat despite his dental problems.
+
+---
+
+### RECIPE: Pozharsky Cutlets
+- ID: meat-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-2
+- Name: Pozharsky Cutlets (Котлеты Пожарские)
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesmeat/pozharskie.jpg
+- Keywords: Pozharsky cutlets recipe, minced chicken cutlets, ancient Russian cutlet recipe
+
+**Description:**
+Legendary juicy cutlets made from minced meat with plenty of butter inside and a crispy breadcrumb coating.
+
+**Ingredients:**
+- Chicken fillet or veal - 600g
+- Cold butter - 150g
+- White bread (crusts removed) - 100g
+- Milk - 50ml
+- Breadcrumbs - 1 cup
+- Egg - 1 pc
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Grind meat through a meat grinder
+2. Soak bread in milk, squeeze out, add to meat
+3. Grind mixture through the grinder a second time
+4. Fold in grated cold butter
+5. Form cutlets, coat in egg and breadcrumbs
+6. Fry in butter until golden brown
+7. Finish in the oven for 10 minutes
+
+**Historical Context:**
+A.S. Pushkin was a great fan of these cutlets. In a letter to his wife he wrote: "...arriving at the inn, I ordered dinner. They served me cutlets, I cried out 'bravo'... and learned they were Pozharsky cutlets."
+
+---
+
+### RECIPE: Classic Kholodets (Meat Jelly)
+- ID: meat-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-3
+- Name: Classic Kholodets (Холодец классический)
+- Epoch: Ancient Rus
+- Time: 5 hours + setting
+- Image: /publicimagesmeat/kholodets.jpg
+- Keywords: kholodets recipe, how to make meat jelly, pork feet jelly
+
+**Description:**
+Rich, clear, and aromatic meat jelly made from pork feet and beef with garlic. The main appetizer of the festive table.
+
+**Ingredients:**
+- Pork feet - 4 pcs
+- Beef (meat) - 500g
+- Carrot - 1 pc
+- Onion - 1 pc
+- Garlic - 4 cloves
+- Bay leaf, peppercorns - to taste
+- Salt - to taste
+
+**Preparation Steps:**
+1. Cover meat and feet with water, simmer over low heat for 4 hours
+2. One hour before the end, add vegetables and spices
+3. Remove meat, separate from bones, chop
+4. Strain the broth, add garlic and salt
+5. Arrange meat in molds, pour broth over
+6. Leave in the cold to set (5-6 hours)
+
+**Historical Context:**
+Originally this was a poor man's dish (using bones and leftovers), but over time it became a festive dish and made its way to the Tsar's table.
+
+---
+
+### RECIPE: Golubtsy (Stuffed Cabbage Rolls)
+- ID: meat-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-4
+- Name: Golubtsy with Meat and Rice (Голубцы с мясом и рисом)
+- Epoch: 18th-19th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesmeat/golubtsy.jpg
+- Keywords: golubtsy recipe, stuffed cabbage rolls with meat, classic cabbage rolls in sour cream sauce
+
+**Description:**
+Juicy stuffed cabbage rolls with meat filling and rice, simmered in a thick sour cream-tomato sauce. A hearty and beloved home dish.
+
+**Ingredients:**
+- White cabbage - 1 head
+- Minced meat (pork+beef) - 500g
+- Rice - 100g
+- Onion - 1 pc
+- Carrot - 1 pc
+- Tomato paste - 3 tbsp
+- Sour cream - 2 tbsp
+
+**Preparation Steps:**
+1. Blanch cabbage, remove leaves
+2. Cook rice until half-done
+3. Mix minced meat, rice, and sautéed onion
+4. Wrap filling in cabbage leaves
+5. Pack tightly in a pot
+6. Cover with sour cream, tomato, and water sauce
+7. Simmer covered for 1 hour
+
+**Historical Context:**
+Mentioned in Russian literature as a hearty and beloved folk dish. Traditionally prepared in large batches for holidays.
+
+---
+
+### RECIPE: Zharkoe (Potted Meat Stew)
+- ID: meat-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-5
+- Name: Zharkoe in Clay Pots (Жаркое в горшочках)
+- Epoch: Ancient Rus
+- Time: 2 hours
+- Image: /publicimagesmeat/zharkoe.jpg
+- Keywords: potted meat stew recipe, meat with potatoes in clay pots, homemade stew with mushrooms
+
+**Description:**
+Aromatic stew of meat, potatoes, and mushrooms, slow-cooked in clay pots. The true taste of a traditional Russian oven.
+
+**Ingredients:**
+- Beef or pork - 500g
+- Potatoes - 6 pcs
+- Onion - 1 pc
+- Mushrooms (champignons) - 200g
+- Sour cream - 100g
+- Salt, pepper, herbs - to taste
+
+**Preparation Steps:**
+1. Cut meat into cubes, fry until browned
+2. Cut potatoes into large chunks
+3. Sauté onion and mushrooms
+4. Layer in clay pots: meat, onion/mushrooms, potatoes
+5. Add sour cream and a little water
+6. Cover, bake at 180°C (350°F) for 1.5 hours
+
+**Historical Context:**
+"Zharkoe" comes from the word "to fry." This was a staple dish in peasant huts, where food was cooked in clay pots in the Russian oven.
+
+---
+
+### RECIPE: Chicken Kiev
+- ID: meat-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-6
+- Name: Chicken Kiev (Курица по-киевски)
+- Epoch: Soviet period (roots in 19th century)
+- Time: 1 hour
+- Image: /publicimagesmeat/chicken_kiev.jpg
+- Keywords: chicken kiev recipe, chicken cutlet with butter inside, homemade
+
+**Description:**
+Juicy chicken fillet with a piece of aromatic butter and herbs inside, coated in a crispy double breadcrumb crust.
+
+**Ingredients:**
+- Chicken fillet - 4 pcs
+- Butter - 100g
+- Fresh herbs (dill, parsley) - 1 bunch
+- Eggs - 2 pcs
+- Breadcrumbs - 1 cup
+- Flour - 2 tbsp
+- Salt - to taste
+
+**Preparation Steps:**
+1. Mix butter with chopped herbs, form into sticks, freeze
+2. Pound fillets, season with salt
+3. Wrap butter in the meat, shape into cutlets
+4. Dredge in flour, then egg, then breadcrumbs
+5. Repeat breading (double coating)
+6. Deep-fry until golden brown
+7. Finish in the oven for 5 minutes
+
+**Historical Context:**
+The dish became a hallmark of Soviet cuisine. Named after Kyiv, although the recipe has French roots (côtelette de volaille).
+
+---
+
+### RECIPE: Siberian Pelmeni
+- ID: meat-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-7
+- Name: Siberian Pelmeni (Пельмени сибирские)
+- Epoch: 13th-14th century (Siberia)
+- Time: 1 hour 30 minutes
+- Image: /publicimagesmeat/pelmeni.jpg
+- Keywords: Siberian pelmeni recipe, homemade meat dumplings, pelmeni dough
+
+**Description:**
+Authentic Siberian pelmeni with a juicy filling of mixed minced meat, onion, and garlic in a thin elastic dough.
+
+**Ingredients:**
+- Flour - 500g
+- Eggs - 2 pcs
+- Water - 200ml
+- Minced meat (beef+pork) - 500g
+- Onion - 2 pcs
+- Garlic - 2 cloves
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Knead stiff dough from flour, eggs, water, and salt
+2. Rest dough for 30 minutes
+3. Add finely chopped onion and garlic to the mince
+4. Roll out dough, cut into circles
+5. Place filling, pinch edges
+6. Boil in salted water for 5-7 minutes after floating
+7. Serve with sour cream or vinegar
+
+**Historical Context:**
+The word "pelmeni" comes from Udmurt "pelnyan" (bread ear). Pelmeni were taken on long winter journeys, frozen outdoors.
+
+---
+
+### RECIPE: Homemade Buzhenina
+- ID: meat-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-8
+- Name: Homemade Buzhenina (Буженина домашняя)
+- Epoch: Ancient Rus
+- Time: 2.5 hours + marinating
+- Image: /publicimagesmeat/buzhenina.jpg
+- Keywords: baked pork recipe, roasted pork shoulder, homemade garlic pork
+
+**Description:**
+Juicy roasted pork, studded with garlic and carrots. The perfect cold appetizer or sandwich base.
+
+**Ingredients:**
+- Pork (leg or neck) - 1.5kg
+- Garlic - 1 head
+- Mustard - 2 tbsp
+- Salt, black pepper, bay leaf - to taste
+- Carrot - 1 pc
+
+**Preparation Steps:**
+1. Slice garlic into slivers, stud the meat
+2. Rub meat with salt, pepper, and mustard
+3. Refrigerate overnight
+4. Surround with carrot and onion
+5. Roast in a sleeve or foil at 180°C (350°F) for 2 hours
+6. Cool before slicing
+
+**Historical Context:**
+Buzhenina is a traditional Sunday table dish. Mentioned in the 16th-century "Domostroy." Served with horseradish and mustard.
+
+---
+
+### RECIPE: Potato Zrazy with Meat
+- ID: meat-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-9
+- Name: Potato Zrazy with Meat (Зразы картофельные с мясом)
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesmeat/zrazy.jpg
+- Keywords: potato zrazy with meat recipe, mashed potato pancakes with filling
+
+**Description:**
+Tender potato zrazy with a hearty meat filling. A popular, budget-friendly, and delicious home-cooked dish.
+
+**Ingredients:**
+- Potatoes - 1kg
+- Eggs - 2 pcs
+- Flour - 3 tbsp
+- Minced meat - 300g
+- Onion - 1 pc
+- Boiled eggs - 2 pcs
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Boil potatoes, make mash
+2. Add raw eggs and flour, knead into dough
+3. Sauté minced meat with onion, add chopped boiled eggs
+4. Form potato dough into flat cakes
+5. Place filling, seal edges
+6. Fry on both sides until golden
+
+**Historical Context:**
+The dish came from Polish cuisine (zrazy) but became an integral part of Russian home cooking, especially during Soviet times.
+
+---
+
+### RECIPE: Duck with Apples
+- ID: meat-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-10
+- Name: Duck with Apples (Утка с яблоками)
+- Epoch: 18th-19th century
+- Time: 2.5 hours
+- Image: /publicimagesmeat/duck_apples.jpg
+- Keywords: duck with apples recipe, roast duck whole, New Year's duck
+
+**Description:**
+A festive roast duck with sour apples, honey, and soy sauce. A symbol of the Christmas and New Year's table.
+
+**Ingredients:**
+- Duck - 1 pc (2kg)
+- Sour apples (Antonovka) - 6 pcs
+- Honey - 2 tbsp
+- Soy sauce - 2 tbsp
+- Garlic - 3 cloves
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Rub duck with salt and pepper
+2. Cut apples into large wedges
+3. Stuff duck with apples, sew up
+4. Mix honey and soy sauce, brush duck
+5. Roast at 180°C (350°F) for 2 hours
+6. Baste periodically with pan juices
+
+**Historical Context:**
+The main dish for Christmas and New Year in pre-revolutionary Russia. Mentioned by Gogol as a symbol of prosperity.
+
+---
+
+### RECIPE: Liver in Sour Cream
+- ID: meat-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-11
+- Name: Liver in Sour Cream (Печень в сметане)
+- Epoch: Soviet cuisine
+- Time: 40 minutes
+- Image: /publicimagesmeat/pechen.jpg
+- Keywords: liver in sour cream recipe, beef liver stewed, tender liver preparation
+
+**Description:**
+Tender and soft beef or chicken liver simmered in sour cream with onions. A quick, healthy, and budget-friendly dinner.
+
+**Ingredients:**
+- Beef or chicken liver - 600g
+- Onion - 2 pcs
+- Sour cream - 200g
+- Flour - 2 tbsp
+- Salt, pepper - to taste
+- Fresh herbs - for garnish
+
+**Preparation Steps:**
+1. Slice liver, dredge in flour
+2. Quickly fry over high heat (3-4 minutes)
+3. Add sliced onion, fry for another 2 minutes
+4. Add sour cream, season with salt
+5. Simmer covered for 10 minutes over low heat
+6. Sprinkle with fresh herbs
+
+**Historical Context:**
+A simple, healthy, and budget-friendly dish that was on every Soviet table. Liver was considered a source of iron and health.
+
+---
+
+### RECIPE: French-Style Pork
+- ID: meat-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-12
+- Name: French-Style Pork (Свинина по-французски)
+- Epoch: Soviet period
+- Time: 1 hour
+- Image: /publicimagesmeat/pork_french.jpg
+- Keywords: French-style pork recipe, baked pork chops with cheese, oven-baked meat
+
+**Description:**
+Juicy pork chops baked under an appetizing topping of onion, mayonnaise, and melted cheese.
+
+**Ingredients:**
+- Pork chops - 4 pcs
+- Onion - 2 pcs
+- Hard cheese - 200g
+- Mayonnaise - 100g
+- Salt, pepper - to taste
+- Oil - for greasing
+
+**Preparation Steps:**
+1. Pound meat, season with salt and pepper
+2. Arrange on a baking sheet
+3. Top with onion rings
+4. Spread with mayonnaise
+5. Sprinkle with grated cheese
+6. Bake at 180°C (350°F) for 30-40 minutes until golden
+
+**Historical Context:**
+Originally this dish was called "Meat Orlovsky" (veal with mushrooms and cheese). In Soviet canteens, mushrooms were removed and replaced with pork and mayonnaise.
+
+---
+
+### RECIPE: Tatar-Style Azu
+- ID: meat-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-13
+- Name: Tatar-Style Azu (Азу по-татарски)
+- Epoch: Tatar/Russian cuisine
+- Time: 1 hour
+- Image: /publicimagesmeat/azu.jpg
+- Keywords: Tatar-style azu recipe, beef with pickles, Tatar cuisine
+
+**Description:**
+Spicy and aromatic beef stew with salted cucumbers, potatoes, and a rich tomato sauce.
+
+**Ingredients:**
+- Beef - 500g
+- Potatoes - 4 pcs
+- Salted cucumbers - 2 pcs
+- Tomato paste - 2 tbsp
+- Onion - 1 pc
+- Garlic - 2 cloves
+- Bay leaf - to taste
+
+**Preparation Steps:**
+1. Cut beef into strips, fry
+2. Add onion, fry until soft
+3. Add tomato paste with water, simmer for 40 minutes
+4. Cut potatoes into sticks, fry separately
+5. Slice cucumbers, add to meat
+6. Combine potatoes with meat, simmer for 10 minutes
+
+**Historical Context:**
+A dish of Kazan cuisine that became popular throughout Russia. The name comes from the Turkic "azy" (piece).
+
+---
+
+### RECIPE: Lamb with Prunes
+- ID: meat-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-14
+- Name: Lamb with Prunes (Баранина с черносливом)
+- Epoch: Southern Russia / Caucasus
+- Time: 2 hours
+- Image: /publicimagesmeat/lamb_prunes.jpg
+- Keywords: lamb with prunes recipe, braised lamb, meat with prunes in oven
+
+**Description:**
+Slow-braised lamb with aromatic prunes and Eastern spices. Tender meat that melts in your mouth.
+
+**Ingredients:**
+- Lamb (shoulder) - 800g
+- Pitted prunes - 200g
+- Onion - 2 pcs
+- Carrot - 1 pc
+- Garlic - 3 cloves
+- Cumin, coriander - to taste
+- Salt - to taste
+
+**Preparation Steps:**
+1. Cut meat into large pieces, fry until browned
+2. Add onion and carrot, fry for 5 minutes
+3. Add water, simmer for 1.5 hours until tender
+4. 20 minutes before the end, add prunes and spices
+5. Add garlic, let steep
+
+**Historical Context:**
+A festive dish from the southern regions of Russia. The combination of sweet prunes and fatty lamb is a classic of Caucasian cuisine.
+
+---
+
+### RECIPE: Pork Shashlik
+- ID: meat-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-15
+- Name: Pork Shashlik (Шашлык из свинины)
+- Epoch: 20th century (Dacha culture)
+- Time: 40 minutes + marinating
+- Image: /publicimagesmeat/shashlik.jpg
+- Keywords: pork shashlik recipe, shashlik marinade, pork neck on grill
+
+**Description:**
+Classic pork shashlik in an onion marinade. Juicy, aromatic, with a smoky flavor — perfect for a picnic.
+
+**Ingredients:**
+- Pork neck - 1.5kg
+- Onion - 3 pcs
+- Vinegar 9% - 2 tbsp (or lemon juice)
+- Salt, pepper - to taste
+- Fresh herbs (cilantro, dill) - to taste
+- Lavash - for serving
+
+**Preparation Steps:**
+1. Cut meat into large chunks
+2. Slice onion into rings, crush with hands
+3. Mix meat, onion, vinegar, and spices
+4. Marinate for 4-6 hours (preferably overnight)
+5. Grill over charcoal, turning occasionally
+6. Serve with onion and lavash
+
+**Historical Context:**
+Shashlik became a symbol of Russian summer and dacha weekends. Although the dish has Caucasian roots, in Russia it adapted to pork and vinegar-based marinade.
+
+---
+
+### RECIPE: Oven-Baked Pork
+- ID: meat-16
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-16
+- Name: Oven-Baked Pork (Мясо в духовке)
+- Epoch: Modern classic
+- Time: 1.5 hours
+- Image: /publicimagesmeat/oven-meat.jpg
+- Keywords: oven-baked pork recipe, roasted pork piece, juicy meat in foil
+
+**Description:**
+Juicy and tender oven-baked pork, studded with garlic and rubbed with mustard. The perfect recipe for the festive table.
+
+**Ingredients:**
+- Pork (neck or shoulder) - 1.5kg
+- Garlic - 6 cloves
+- Mustard (regular or grainy) - 2 tbsp
+- Coarse salt - 1 tbsp
+- Black pepper - 1 tsp
+- Vegetable oil - 3 tbsp
+- Bay leaf - 3 pcs
+- Rosemary or thyme (dried) - 1 tsp
+
+**Preparation Steps:**
+1. Rinse meat, pat dry with paper towels
+2. Mix salt, pepper, mustard, and oil in a bowl
+3. Slice garlic into thin slivers
+4. Make deep cuts in the meat (10-12)
+5. Insert garlic slivers into each cut
+6. Rub meat with the spice mixture
+7. Cover and refrigerate for 2-4 hours (preferably overnight)
+8. Preheat oven to 180°C (350°F)
+9. Wrap meat in foil (shiny side in)
+10. Place on baking sheet, roast for 1 hour
+11. Unwrap foil, baste with pan juices
+12. Roast for another 20-30 minutes without foil for color
+13. Remove, cover with foil, let rest for 10 minutes
+14. Slice and serve with vegetables or potatoes
+
+**Historical Context:**
+Roasted meat is one of the oldest dishes in Russian cuisine. In ancient times, meat was prepared in the oven, wrapped in birch bark or clay dishes. The modern recipe with garlic and mustard came from European cuisine but settled perfectly in Russian homes. This dish is a symbol of the festive table and family gatherings.
+
+---
+
+## MEAT DISHES Index Summary
+
+**Total Recipes Added:** 16
+**Total Recipes Overall:** 92 (17 Baking + 15 Desserts + 20 Dough + 9 Drinks + 15 Fish + 16 Meat)
+
+**Meat Types Covered:**
+- 🥩 Beef: Stroganoff, Kholodets, Azu
+- 🐖 Pork: Buzhenina, French-Style, Shashlik, Oven-Baked
+- 🐓 Poultry: Chicken Kiev, Duck with Apples
+- 🐑 Lamb: Lamb with Prunes
+- 🥩 Mixed: Pozharsky Cutlets, Golubtsy, Pelmeni, Zrazy
+- 🫀 Offal: Liver in Sour Cream
+- 🥘 Stews: Zharkoe
+
+**Cooking Methods:**
+- 🔥 Pan-fried: Stroganoff, Liver, Zrazy
+- 🔥 Baked/Roasted: Chicken Kiev, Duck, Buzhenina, Oven-Baked Pork, French-Style
+- 🔥 Simmered/Braised: Golubtsy, Zharkoe, Azu, Lamb
+- 🔥 Boiled: Pelmeni, Kholodets
+- 🔥 Grilled: Shashlik
+
+**Historical Highlights:**
+- Ancient Rus traditions: Kholodets, Zharkoe, Buzhenina
+- 19th-century classics: Stroganoff, Pozharsky, Golubtsy
+- Soviet era: Chicken Kiev, French-Style Pork
+- Regional influences: Azu (Tatar), Lamb with Prunes (Caucasus), Shashlik
+- Modern classics: Oven-Baked Pork
+
+---
+
+## Updated Recipe Summary
+
+| Category | Count |
+|----------|-------|
+| 🥖 Baking & Pastry | 17 |
+| 🍰 Desserts & Sweets | 15 |
+| 🥖 Dough & Pastry | 20 |
+| 🍹 Beverages | 9 |
+| 🐟 Fish & Seafood | 15 |
+| 🥩 Meat Dishes | 16 |
+| **TOTAL** | **92** |
+
+---
+
+---
+
+## MEAT DISHES RECIPES
+
+### RECIPE: Beef Stroganoff
+- ID: meat-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-1
+- Name: Beef Stroganoff (Бефстроганов)
+- Epoch: 19th century
+- Time: 40 minutes
+- Image: /publicimagesmeat/befstroganov.jpg
+- Keywords: beef stroganoff recipe, beef in sour cream sauce, classic Russian cuisine
+
+**Description:**
+Tender beef simmered in a rich sour cream sauce with tomato paste. A classic Russian dish named after Count Stroganov.
+
+**Ingredients:**
+- Beef (tenderloin) - 500g
+- Onion - 2 pcs
+- Sour cream - 200g
+- Flour - 1 tbsp
+- Tomato paste - 1 tbsp
+- Butter - 50g
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Cut meat into thin strips
+2. Finely chop onion and sauté until translucent
+3. Add meat, fry over high heat until browned
+4. Sprinkle with flour, mix well
+5. Add sour cream and tomato paste
+6. Simmer covered for 10-15 minutes until tender
+7. Season with salt and pepper
+
+**Historical Context:**
+The dish is named after Count Pavel Alexandrovich Stroganov. His chef Andrei created this dish so the Count could enjoy meat despite his dental problems.
+
+---
+
+### RECIPE: Pozharsky Cutlets
+- ID: meat-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-2
+- Name: Pozharsky Cutlets (Котлеты Пожарские)
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesmeat/pozharskie.jpg
+- Keywords: Pozharsky cutlets recipe, minced chicken cutlets, ancient Russian cutlet recipe
+
+**Description:**
+Legendary juicy cutlets made from minced meat with plenty of butter inside and a crispy breadcrumb coating.
+
+**Ingredients:**
+- Chicken fillet or veal - 600g
+- Cold butter - 150g
+- White bread (crusts removed) - 100g
+- Milk - 50ml
+- Breadcrumbs - 1 cup
+- Egg - 1 pc
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Grind meat through a meat grinder
+2. Soak bread in milk, squeeze out, add to meat
+3. Grind mixture through the grinder a second time
+4. Fold in grated cold butter
+5. Form cutlets, coat in egg and breadcrumbs
+6. Fry in butter until golden brown
+7. Finish in the oven for 10 minutes
+
+**Historical Context:**
+A.S. Pushkin was a great fan of these cutlets. In a letter to his wife he wrote: "...arriving at the inn, I ordered dinner. They served me cutlets, I cried out 'bravo'... and learned they were Pozharsky cutlets."
+
+---
+
+### RECIPE: Classic Kholodets (Meat Jelly)
+- ID: meat-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-3
+- Name: Classic Kholodets (Холодец классический)
+- Epoch: Ancient Rus
+- Time: 5 hours + setting
+- Image: /publicimagesmeat/kholodets.jpg
+- Keywords: kholodets recipe, how to make meat jelly, pork feet jelly
+
+**Description:**
+Rich, clear, and aromatic meat jelly made from pork feet and beef with garlic. The main appetizer of the festive table.
+
+**Ingredients:**
+- Pork feet - 4 pcs
+- Beef (meat) - 500g
+- Carrot - 1 pc
+- Onion - 1 pc
+- Garlic - 4 cloves
+- Bay leaf, peppercorns - to taste
+- Salt - to taste
+
+**Preparation Steps:**
+1. Cover meat and feet with water, simmer over low heat for 4 hours
+2. One hour before the end, add vegetables and spices
+3. Remove meat, separate from bones, chop
+4. Strain the broth, add garlic and salt
+5. Arrange meat in molds, pour broth over
+6. Leave in the cold to set (5-6 hours)
+
+**Historical Context:**
+Originally this was a poor man's dish (using bones and leftovers), but over time it became a festive dish and made its way to the Tsar's table.
+
+---
+
+### RECIPE: Golubtsy (Stuffed Cabbage Rolls)
+- ID: meat-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-4
+- Name: Golubtsy with Meat and Rice (Голубцы с мясом и рисом)
+- Epoch: 18th-19th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesmeat/golubtsy.jpg
+- Keywords: golubtsy recipe, stuffed cabbage rolls with meat, classic cabbage rolls in sour cream sauce
+
+**Description:**
+Juicy stuffed cabbage rolls with meat filling and rice, simmered in a thick sour cream-tomato sauce. A hearty and beloved home dish.
+
+**Ingredients:**
+- White cabbage - 1 head
+- Minced meat (pork+beef) - 500g
+- Rice - 100g
+- Onion - 1 pc
+- Carrot - 1 pc
+- Tomato paste - 3 tbsp
+- Sour cream - 2 tbsp
+
+**Preparation Steps:**
+1. Blanch cabbage, remove leaves
+2. Cook rice until half-done
+3. Mix minced meat, rice, and sautéed onion
+4. Wrap filling in cabbage leaves
+5. Pack tightly in a pot
+6. Cover with sour cream, tomato, and water sauce
+7. Simmer covered for 1 hour
+
+**Historical Context:**
+Mentioned in Russian literature as a hearty and beloved folk dish. Traditionally prepared in large batches for holidays.
+
+---
+
+### RECIPE: Zharkoe (Potted Meat Stew)
+- ID: meat-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-5
+- Name: Zharkoe in Clay Pots (Жаркое в горшочках)
+- Epoch: Ancient Rus
+- Time: 2 hours
+- Image: /publicimagesmeat/zharkoe.jpg
+- Keywords: potted meat stew recipe, meat with potatoes in clay pots, homemade stew with mushrooms
+
+**Description:**
+Aromatic stew of meat, potatoes, and mushrooms, slow-cooked in clay pots. The true taste of a traditional Russian oven.
+
+**Ingredients:**
+- Beef or pork - 500g
+- Potatoes - 6 pcs
+- Onion - 1 pc
+- Mushrooms (champignons) - 200g
+- Sour cream - 100g
+- Salt, pepper, herbs - to taste
+
+**Preparation Steps:**
+1. Cut meat into cubes, fry until browned
+2. Cut potatoes into large chunks
+3. Sauté onion and mushrooms
+4. Layer in clay pots: meat, onion/mushrooms, potatoes
+5. Add sour cream and a little water
+6. Cover, bake at 180°C (350°F) for 1.5 hours
+
+**Historical Context:**
+"Zharkoe" comes from the word "to fry." This was a staple dish in peasant huts, where food was cooked in clay pots in the Russian oven.
+
+---
+
+### RECIPE: Chicken Kiev
+- ID: meat-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-6
+- Name: Chicken Kiev (Курица по-киевски)
+- Epoch: Soviet period (roots in 19th century)
+- Time: 1 hour
+- Image: /publicimagesmeat/chicken_kiev.jpg
+- Keywords: chicken kiev recipe, chicken cutlet with butter inside, homemade
+
+**Description:**
+Juicy chicken fillet with a piece of aromatic butter and herbs inside, coated in a crispy double breadcrumb crust.
+
+**Ingredients:**
+- Chicken fillet - 4 pcs
+- Butter - 100g
+- Fresh herbs (dill, parsley) - 1 bunch
+- Eggs - 2 pcs
+- Breadcrumbs - 1 cup
+- Flour - 2 tbsp
+- Salt - to taste
+
+**Preparation Steps:**
+1. Mix butter with chopped herbs, form into sticks, freeze
+2. Pound fillets, season with salt
+3. Wrap butter in the meat, shape into cutlets
+4. Dredge in flour, then egg, then breadcrumbs
+5. Repeat breading (double coating)
+6. Deep-fry until golden brown
+7. Finish in the oven for 5 minutes
+
+**Historical Context:**
+The dish became a hallmark of Soviet cuisine. Named after Kyiv, although the recipe has French roots (côtelette de volaille).
+
+---
+
+### RECIPE: Siberian Pelmeni
+- ID: meat-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-7
+- Name: Siberian Pelmeni (Пельмени сибирские)
+- Epoch: 13th-14th century (Siberia)
+- Time: 1 hour 30 minutes
+- Image: /publicimagesmeat/pelmeni.jpg
+- Keywords: Siberian pelmeni recipe, homemade meat dumplings, pelmeni dough
+
+**Description:**
+Authentic Siberian pelmeni with a juicy filling of mixed minced meat, onion, and garlic in a thin elastic dough.
+
+**Ingredients:**
+- Flour - 500g
+- Eggs - 2 pcs
+- Water - 200ml
+- Minced meat (beef+pork) - 500g
+- Onion - 2 pcs
+- Garlic - 2 cloves
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Knead stiff dough from flour, eggs, water, and salt
+2. Rest dough for 30 minutes
+3. Add finely chopped onion and garlic to the mince
+4. Roll out dough, cut into circles
+5. Place filling, pinch edges
+6. Boil in salted water for 5-7 minutes after floating
+7. Serve with sour cream or vinegar
+
+**Historical Context:**
+The word "pelmeni" comes from Udmurt "pelnyan" (bread ear). Pelmeni were taken on long winter journeys, frozen outdoors.
+
+---
+
+### RECIPE: Homemade Buzhenina
+- ID: meat-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-8
+- Name: Homemade Buzhenina (Буженина домашняя)
+- Epoch: Ancient Rus
+- Time: 2.5 hours + marinating
+- Image: /publicimagesmeat/buzhenina.jpg
+- Keywords: baked pork recipe, roasted pork shoulder, homemade garlic pork
+
+**Description:**
+Juicy roasted pork, studded with garlic and carrots. The perfect cold appetizer or sandwich base.
+
+**Ingredients:**
+- Pork (leg or neck) - 1.5kg
+- Garlic - 1 head
+- Mustard - 2 tbsp
+- Salt, black pepper, bay leaf - to taste
+- Carrot - 1 pc
+
+**Preparation Steps:**
+1. Slice garlic into slivers, stud the meat
+2. Rub meat with salt, pepper, and mustard
+3. Refrigerate overnight
+4. Surround with carrot and onion
+5. Roast in a sleeve or foil at 180°C (350°F) for 2 hours
+6. Cool before slicing
+
+**Historical Context:**
+Buzhenina is a traditional Sunday table dish. Mentioned in the 16th-century "Domostroy." Served with horseradish and mustard.
+
+---
+
+### RECIPE: Potato Zrazy with Meat
+- ID: meat-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-9
+- Name: Potato Zrazy with Meat (Зразы картофельные с мясом)
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesmeat/zrazy.jpg
+- Keywords: potato zrazy with meat recipe, mashed potato pancakes with filling
+
+**Description:**
+Tender potato zrazy with a hearty meat filling. A popular, budget-friendly, and delicious home-cooked dish.
+
+**Ingredients:**
+- Potatoes - 1kg
+- Eggs - 2 pcs
+- Flour - 3 tbsp
+- Minced meat - 300g
+- Onion - 1 pc
+- Boiled eggs - 2 pcs
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Boil potatoes, make mash
+2. Add raw eggs and flour, knead into dough
+3. Sauté minced meat with onion, add chopped boiled eggs
+4. Form potato dough into flat cakes
+5. Place filling, seal edges
+6. Fry on both sides until golden
+
+**Historical Context:**
+The dish came from Polish cuisine (zrazy) but became an integral part of Russian home cooking, especially during Soviet times.
+
+---
+
+### RECIPE: Duck with Apples
+- ID: meat-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-10
+- Name: Duck with Apples (Утка с яблоками)
+- Epoch: 18th-19th century
+- Time: 2.5 hours
+- Image: /publicimagesmeat/duck_apples.jpg
+- Keywords: duck with apples recipe, roast duck whole, New Year's duck
+
+**Description:**
+A festive roast duck with sour apples, honey, and soy sauce. A symbol of the Christmas and New Year's table.
+
+**Ingredients:**
+- Duck - 1 pc (2kg)
+- Sour apples (Antonovka) - 6 pcs
+- Honey - 2 tbsp
+- Soy sauce - 2 tbsp
+- Garlic - 3 cloves
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Rub duck with salt and pepper
+2. Cut apples into large wedges
+3. Stuff duck with apples, sew up
+4. Mix honey and soy sauce, brush duck
+5. Roast at 180°C (350°F) for 2 hours
+6. Baste periodically with pan juices
+
+**Historical Context:**
+The main dish for Christmas and New Year in pre-revolutionary Russia. Mentioned by Gogol as a symbol of prosperity.
+
+---
+
+### RECIPE: Liver in Sour Cream
+- ID: meat-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-11
+- Name: Liver in Sour Cream (Печень в сметане)
+- Epoch: Soviet cuisine
+- Time: 40 minutes
+- Image: /publicimagesmeat/pechen.jpg
+- Keywords: liver in sour cream recipe, beef liver stewed, tender liver preparation
+
+**Description:**
+Tender and soft beef or chicken liver simmered in sour cream with onions. A quick, healthy, and budget-friendly dinner.
+
+**Ingredients:**
+- Beef or chicken liver - 600g
+- Onion - 2 pcs
+- Sour cream - 200g
+- Flour - 2 tbsp
+- Salt, pepper - to taste
+- Fresh herbs - for garnish
+
+**Preparation Steps:**
+1. Slice liver, dredge in flour
+2. Quickly fry over high heat (3-4 minutes)
+3. Add sliced onion, fry for another 2 minutes
+4. Add sour cream, season with salt
+5. Simmer covered for 10 minutes over low heat
+6. Sprinkle with fresh herbs
+
+**Historical Context:**
+A simple, healthy, and budget-friendly dish that was on every Soviet table. Liver was considered a source of iron and health.
+
+---
+
+### RECIPE: French-Style Pork
+- ID: meat-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-12
+- Name: French-Style Pork (Свинина по-французски)
+- Epoch: Soviet period
+- Time: 1 hour
+- Image: /publicimagesmeat/pork_french.jpg
+- Keywords: French-style pork recipe, baked pork chops with cheese, oven-baked meat
+
+**Description:**
+Juicy pork chops baked under an appetizing topping of onion, mayonnaise, and melted cheese.
+
+**Ingredients:**
+- Pork chops - 4 pcs
+- Onion - 2 pcs
+- Hard cheese - 200g
+- Mayonnaise - 100g
+- Salt, pepper - to taste
+- Oil - for greasing
+
+**Preparation Steps:**
+1. Pound meat, season with salt and pepper
+2. Arrange on a baking sheet
+3. Top with onion rings
+4. Spread with mayonnaise
+5. Sprinkle with grated cheese
+6. Bake at 180°C (350°F) for 30-40 minutes until golden
+
+**Historical Context:**
+Originally this dish was called "Meat Orlovsky" (veal with mushrooms and cheese). In Soviet canteens, mushrooms were removed and replaced with pork and mayonnaise.
+
+---
+
+### RECIPE: Tatar-Style Azu
+- ID: meat-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-13
+- Name: Tatar-Style Azu (Азу по-татарски)
+- Epoch: Tatar/Russian cuisine
+- Time: 1 hour
+- Image: /publicimagesmeat/azu.jpg
+- Keywords: Tatar-style azu recipe, beef with pickles, Tatar cuisine
+
+**Description:**
+Spicy and aromatic beef stew with salted cucumbers, potatoes, and a rich tomato sauce.
+
+**Ingredients:**
+- Beef - 500g
+- Potatoes - 4 pcs
+- Salted cucumbers - 2 pcs
+- Tomato paste - 2 tbsp
+- Onion - 1 pc
+- Garlic - 2 cloves
+- Bay leaf - to taste
+
+**Preparation Steps:**
+1. Cut beef into strips, fry
+2. Add onion, fry until soft
+3. Add tomato paste with water, simmer for 40 minutes
+4. Cut potatoes into sticks, fry separately
+5. Slice cucumbers, add to meat
+6. Combine potatoes with meat, simmer for 10 minutes
+
+**Historical Context:**
+A dish of Kazan cuisine that became popular throughout Russia. The name comes from the Turkic "azy" (piece).
+
+---
+
+### RECIPE: Lamb with Prunes
+- ID: meat-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-14
+- Name: Lamb with Prunes (Баранина с черносливом)
+- Epoch: Southern Russia / Caucasus
+- Time: 2 hours
+- Image: /publicimagesmeat/lamb_prunes.jpg
+- Keywords: lamb with prunes recipe, braised lamb, meat with prunes in oven
+
+**Description:**
+Slow-braised lamb with aromatic prunes and Eastern spices. Tender meat that melts in your mouth.
+
+**Ingredients:**
+- Lamb (shoulder) - 800g
+- Pitted prunes - 200g
+- Onion - 2 pcs
+- Carrot - 1 pc
+- Garlic - 3 cloves
+- Cumin, coriander - to taste
+- Salt - to taste
+
+**Preparation Steps:**
+1. Cut meat into large pieces, fry until browned
+2. Add onion and carrot, fry for 5 minutes
+3. Add water, simmer for 1.5 hours until tender
+4. 20 minutes before the end, add prunes and spices
+5. Add garlic, let steep
+
+**Historical Context:**
+A festive dish from the southern regions of Russia. The combination of sweet prunes and fatty lamb is a classic of Caucasian cuisine.
+
+---
+
+### RECIPE: Pork Shashlik
+- ID: meat-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-15
+- Name: Pork Shashlik (Шашлык из свинины)
+- Epoch: 20th century (Dacha culture)
+- Time: 40 minutes + marinating
+- Image: /publicimagesmeat/shashlik.jpg
+- Keywords: pork shashlik recipe, shashlik marinade, pork neck on grill
+
+**Description:**
+Classic pork shashlik in an onion marinade. Juicy, aromatic, with a smoky flavor — perfect for a picnic.
+
+**Ingredients:**
+- Pork neck - 1.5kg
+- Onion - 3 pcs
+- Vinegar 9% - 2 tbsp (or lemon juice)
+- Salt, pepper - to taste
+- Fresh herbs (cilantro, dill) - to taste
+- Lavash - for serving
+
+**Preparation Steps:**
+1. Cut meat into large chunks
+2. Slice onion into rings, crush with hands
+3. Mix meat, onion, vinegar, and spices
+4. Marinate for 4-6 hours (preferably overnight)
+5. Grill over charcoal, turning occasionally
+6. Serve with onion and lavash
+
+**Historical Context:**
+Shashlik became a symbol of Russian summer and dacha weekends. Although the dish has Caucasian roots, in Russia it adapted to pork and vinegar-based marinade.
+
+---
+
+### RECIPE: Oven-Baked Pork
+- ID: meat-16
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/meat-16
+- Name: Oven-Baked Pork (Мясо в духовке)
+- Epoch: Modern classic
+- Time: 1.5 hours
+- Image: /publicimagesmeat/oven-meat.jpg
+- Keywords: oven-baked pork recipe, roasted pork piece, juicy meat in foil
+
+**Description:**
+Juicy and tender oven-baked pork, studded with garlic and rubbed with mustard. The perfect recipe for the festive table.
+
+**Ingredients:**
+- Pork (neck or shoulder) - 1.5kg
+- Garlic - 6 cloves
+- Mustard (regular or grainy) - 2 tbsp
+- Coarse salt - 1 tbsp
+- Black pepper - 1 tsp
+- Vegetable oil - 3 tbsp
+- Bay leaf - 3 pcs
+- Rosemary or thyme (dried) - 1 tsp
+
+**Preparation Steps:**
+1. Rinse meat, pat dry with paper towels
+2. Mix salt, pepper, mustard, and oil in a bowl
+3. Slice garlic into thin slivers
+4. Make deep cuts in the meat (10-12)
+5. Insert garlic slivers into each cut
+6. Rub meat with the spice mixture
+7. Cover and refrigerate for 2-4 hours (preferably overnight)
+8. Preheat oven to 180°C (350°F)
+9. Wrap meat in foil (shiny side in)
+10. Place on baking sheet, roast for 1 hour
+11. Unwrap foil, baste with pan juices
+12. Roast for another 20-30 minutes without foil for color
+13. Remove, cover with foil, let rest for 10 minutes
+14. Slice and serve with vegetables or potatoes
+
+**Historical Context:**
+Roasted meat is one of the oldest dishes in Russian cuisine. In ancient times, meat was prepared in the oven, wrapped in birch bark or clay dishes. The modern recipe with garlic and mustard came from European cuisine but settled perfectly in Russian homes. This dish is a symbol of the festive table and family gatherings.
+
+---
+
+## MEAT DISHES Index Summary
+
+**Total Recipes Added:** 16
+**Total Recipes Overall:** 92 (17 Baking + 15 Desserts + 20 Dough + 9 Drinks + 15 Fish + 16 Meat)
+
+**Meat Types Covered:**
+- 🥩 Beef: Stroganoff, Kholodets, Azu
+- 🐖 Pork: Buzhenina, French-Style, Shashlik, Oven-Baked
+- 🐓 Poultry: Chicken Kiev, Duck with Apples
+- 🐑 Lamb: Lamb with Prunes
+- 🥩 Mixed: Pozharsky Cutlets, Golubtsy, Pelmeni, Zrazy
+- 🫀 Offal: Liver in Sour Cream
+- 🥘 Stews: Zharkoe
+
+**Cooking Methods:**
+- 🔥 Pan-fried: Stroganoff, Liver, Zrazy
+- 🔥 Baked/Roasted: Chicken Kiev, Duck, Buzhenina, Oven-Baked Pork, French-Style
+- 🔥 Simmered/Braised: Golubtsy, Zharkoe, Azu, Lamb
+- 🔥 Boiled: Pelmeni, Kholodets
+- 🔥 Grilled: Shashlik
+
+**Historical Highlights:**
+- Ancient Rus traditions: Kholodets, Zharkoe, Buzhenina
+- 19th-century classics: Stroganoff, Pozharsky, Golubtsy
+- Soviet era: Chicken Kiev, French-Style Pork
+- Regional influences: Azu (Tatar), Lamb with Prunes (Caucasus), Shashlik
+- Modern classics: Oven-Baked Pork
+
+---
+
+## Updated Recipe Summary
+
+| Category | Count |
+|----------|-------|
+| 🥖 Baking & Pastry | 17 |
+| 🍰 Desserts & Sweets | 15 |
+| 🥖 Dough & Pastry | 20 |
+| 🍹 Beverages | 9 |
+| 🐟 Fish & Seafood | 15 |
+| 🥩 Meat Dishes | 16 |
+| **TOTAL** | **92** |
+
+---
+
+## Check Accessibility
+
 
 
 *This file is intended for AI agents and crawlers. For detailed recipe pages, append the recipe ID to the base URL.*
