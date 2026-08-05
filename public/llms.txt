@@ -37,10 +37,25 @@ A culinary website featuring authentic Russian cuisine recipes, seasonal dishes,
 - URL: https://russka-kuhnya-9551.vercel.app/category/snacks
 - Description: Cold and hot appetizers including salads, pickled vegetables, sandwiches, pâtés, and charcuterie boards
 
-### Desserts & Sweets
+### ### Desserts & Sweets
 - URL: https://russka-kuhnya-9551.vercel.app/category/desserts
 - Description: Traditional Russian sweets including cakes, pastries, pryaniki (gingerbread), jam, kissel, compotes, and fruit drinks
-
+- Sub-categories:
+  - Medovik (Honey Cake)
+  - Belevskaya Pastila (Apple Marshmallow)
+  - Ptichye Moloko (Bird's Milk Cake)
+  - Pine Cone Jam
+  - Tvorozhnaya Paskha (Easter Cheese Dessert)
+  - Syrniki (Cheese Pancakes)
+  - Berry Kissel
+  - Yeast Doughnuts
+  - Apple Sharlotka
+  - Kozinaki (Seed Brittle)
+  - Smetannik (Sour Cream Pie)
+  - Pumpkin Candied Fruits
+  - Meringue
+  - Grated Pie with Jam
+  - Currant Jelly
 ### Beverages
 - URL: https://russka-kuhnya-9551.vercel.app/category/drinks
 - Description: Traditional Russian beverages including kvass, sbiten, mors (berry drink), compote, kissel, as well as tea and coffee

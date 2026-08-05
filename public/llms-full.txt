@@ -1,0 +1,3034 @@
+# Russian Cuisine - Full Recipe Index
+
+> Complete collection of traditional Russian recipes with detailed instructions.
+> Total recipes in this index: 17 (Baking category)
+> Last updated: 2026-08-05
+> Domain: https://russka-kuhnya-9551.vercel.app/
+
+---
+
+## BAKING & PASTRY RECIPES
+
+### RECIPE: Classic Blini (Russian Pancakes)
+- ID: baking-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-1
+- Name: Блины классические / Classic Blini
+- Epoch: Ancient Rus (9th century) - present day
+- Time: 45 minutes
+- Image: /publicimagesbaking/blini.jpg
+- Keywords: blini recipe, thin pancakes with milk, classic Russian pancakes, Russian cuisine
+
+**Description:**
+The ancient symbol of the sun on the Russian table. Thin, lacy milk-based pancakes that melt in your mouth. A true icon of Russian culinary tradition, served with sour cream, honey, or caviar.
+
+**Ingredients:**
+- Milk - 500ml
+- Eggs - 3 pcs
+- Flour - 250g
+- Sugar - 2 tbsp
+- Salt - 0.5 tsp
+- Vegetable oil - 3 tbsp
+- Butter for greasing
+
+**Preparation Steps:**
+1. Whisk eggs with sugar and salt
+2. Add milk, mix well
+3. Gradually sift in flour while whisking
+4. Add vegetable oil
+5. Let the batter rest for 30 minutes
+6. Fry on a hot pan on both sides
+7. Grease finished blini with butter
+
+**Historical Context:**
+Blini are the most ancient symbol of the sun in Russian culture. A.S. Pushkin was very fond of blini, especially with caviar. Empress Catherine the Great also adored blini and ate them with honey and sour cream.
+
+---
+
+### RECIPE: Kurnik (Royal Pie)
+- ID: baking-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-2
+- Name: Курник / Kurnik (Tsar's Pie)
+- Epoch: 16th-17th century
+- Time: 2 hours 30 minutes
+- Image: /publicimagesbaking/kurnik.jpg
+- Keywords: kurnik recipe, tsar's pie, chicken and mushroom pie, Russian pastry
+
+**Description:**
+The magnificent "Tsar of Pies" with layered filling of chicken, rice, eggs, and mushrooms in a rich butter dough. A showstopper for festive occasions and weddings.
+
+**Ingredients:**
+- Flour - 500g
+- Eggs - 2 pcs
+- Sour cream - 200g
+- Butter - 200g
+- Salt - 1 tsp
+- Chicken - 500g
+- Rice - 150g
+- Boiled eggs - 4 pcs
+- Mushrooms - 300g
+- Onion - 2 pcs
+
+**Preparation Steps:**
+1. Prepare the dough, let rest for 30 minutes
+2. Boil chicken, shred into fibers
+3. Cook rice, chop boiled eggs
+4. Sauté mushrooms with onions
+5. Roll out dough, layer fillings
+6. Close the pie, brush with egg
+7. Bake for 1 hour at 180°C (350°F)
+
+**Historical Context:**
+Kurnik was called the "Tsar of Pies" and served at weddings and grand celebrations. Tsar Nicholas II loved kurnik, and it was specially prepared for the royal family.
+
+---
+
+### RECIPE: Moscow Kalachi (White Bread Rolls)
+- ID: baking-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-3
+- Name: Калачи московские / Moscow Kalachi
+- Epoch: 14th-15th century
+- Time: 3 hours
+- Image: /publicimagesbaking/kalachi.jpg
+- Keywords: Moscow kalachi recipe, ancient Russian bread, kalachi with handle
+
+**Description:**
+Traditional Moscow white bread with a characteristic handle-lock shape. A symbol of prosperity and hospitality in old Russia. The handle was used to hold the bread without touching it with dirty hands.
+
+**Ingredients:**
+- Wheat flour - 500g
+- Milk - 250ml
+- Yeast - 10g
+- Eggs - 2 pcs
+- Butter - 100g
+- Sugar - 2 tbsp
+- Salt - 1 tsp
+- Poppy seeds or cumin for topping
+
+**Preparation Steps:**
+1. Make a sponge with yeast, milk, and sugar
+2. Add eggs, melted butter, salt
+3. Knead dough, let rise for 1.5 hours
+4. Shape kalachi with characteristic handles
+5. Brush with egg, sprinkle with poppy seeds
+6. Bake for 25-30 minutes at 200°C (390°F)
+
+**Historical Context:**
+Kalachi were a symbol of prosperity. Peter the Great loved fresh kalachi and often bought them from street vendors. Moscow once had an entire "Kalachnaya" street dedicated to their production.
+
+---
+
+### RECIPE: Vatrushki (Cheese-Filled Buns)
+- ID: baking-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-4
+- Name: Ватрушки с творогом / Vatrushki with Cottage Cheese
+- Epoch: 18th century
+- Time: 2 hours
+- Image: /publicimagesbaking/vatrushki.jpg
+- Keywords: vatrushki with cottage cheese recipe, yeast vatrushki, homemade pastry
+
+**Description:**
+Tender yeast buns with a generous filling of sweet cottage cheese. A beloved Russian pastry, perfect with tea or as a dessert. The name comes from the word "vatra" meaning fire or hearth.
+
+**Ingredients:**
+- Flour - 400g
+- Milk - 200ml
+- Yeast - 7g
+- Sugar - 3 tbsp
+- Butter - 100g
+- Egg - 1 pc
+- Cottage cheese - 400g
+- Sugar - 100g
+- Eggs - 2 pcs
+- Vanilla extract
+
+**Preparation Steps:**
+1. Prepare yeast dough
+2. Let rise for 1 hour
+3. Mash cottage cheese with sugar and eggs
+4. Roll out dough, cut into circles
+5. Make indentations, fill with cheese mixture
+6. Let rise for 20 minutes
+7. Bake for 20-25 minutes at 180°C (350°F)
+
+**Historical Context:**
+Vatrushki were a favorite treat of F.M. Dostoevsky. Anna Akhmatova also adored them and mentioned them in her poetry, recalling childhood memories of warm vatrushki with tea.
+
+---
+
+### RECIPE: Tula Pryaniki (Spiced Honey Cakes)
+- ID: baking-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-5
+- Name: Пряники тульские / Tula Pryaniki
+- Epoch: 17th century
+- Time: 1 hour 30 minutes + resting
+- Image: /publicimagesbaking/pryaniki.jpg
+- Keywords: Tula pryaniki recipe, spiced honey cookies, Russian gingerbread
+
+**Description:**
+Authentic Tula gingerbread with aromatic spices and sweet jam filling under a sugar glaze. The most famous Russian gingerbread, recognized worldwide. The city of Tula has been producing them for over 300 years.
+
+**Ingredients:**
+- Flour - 500g
+- Honey - 200g
+- Sugar - 150g
+- Eggs - 2 pcs
+- Butter - 100g
+- Baking soda - 1 tsp
+- Cinnamon, cloves, cardamom
+- Fruit jam for filling
+
+**Preparation Steps:**
+1. Warm honey, add sugar
+2. Add eggs, butter, spices
+3. Sift in flour with baking soda
+4. Knead dough, rest for 30 minutes
+5. Roll out, cut into shapes
+6. Add jam filling, top with second layer
+7. Bake for 15 minutes at 180°C (350°F)
+8. Brush with sugar syrup
+
+**Historical Context:**
+Tula pryaniki have been famous since the 17th century. Catherine the Great loved Tula gingerbread and often received them as gifts. Nicholas II also adored these spice cakes with tea.
+
+---
+
+### RECIPE: Kulebyaka (Fish Pie)
+- ID: baking-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-6
+- Name: Кулебяка с рыбой / Kulebyaka with Fish
+- Epoch: 16th-17th century
+- Time: 2 hours 30 minutes
+- Image: /publicimagesbaking/kulebaka.jpg
+- Keywords: kulebyaka with fish recipe, Russian fish pie, sturgeon in pastry
+
+**Description:**
+A festive, complex-shaped closed pie with a rich filling of fish, rice, and eggs. The name comes from the Finnish "kala" (fish), reflecting the dish's deep roots in Russian culinary tradition.
+
+**Ingredients:**
+- Flour - 600g
+- Milk - 300ml
+- Yeast - 10g
+- Eggs - 3 pcs
+- Butter - 150g
+- Sturgeon/salmon - 800g
+- Rice - 150g
+- Boiled eggs - 3 pcs
+- Fresh herbs
+- Black pepper
+
+**Preparation Steps:**
+1. Prepare rich yeast dough
+2. Clean fish, cut into pieces
+3. Cook rice, chop boiled eggs
+4. Roll dough into a large rectangle
+5. Layer: rice, fish, eggs
+6. Close, seal edges firmly
+7. Brush with egg, make vent holes
+8. Bake for 1 hour at 180°C (350°F)
+
+**Historical Context:**
+Kulebyaka was a festive dish. A.P. Chekhov loved kulebyaka and mentioned it in his stories. I.S. Turgenev was also a great admirer of this layered pie.
+
+---
+
+### RECIPE: Pirozhki with Cabbage
+- ID: baking-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-7
+- Name: Пирожки с капустой / Pirozhki with Cabbage
+- Epoch: Ancient Rus
+- Time: 2 hours
+- Image: /publicimagesbaking/pirozhki.jpg
+- Keywords: cabbage pirozhki recipe, baked pirozhki in oven, yeast dough
+
+**Description:**
+Fluffy baked buns with a hearty filling of sautéed cabbage and egg. The classic of Russian home baking. These are the ultimate comfort food, perfect for lunchboxes and picnics.
+
+**Ingredients:**
+- Flour - 500g
+- Kefir - 250ml
+- Yeast - 7g
+- Sugar - 1 tbsp
+- Vegetable oil - 50ml
+- Salt - 1 tsp
+- Cabbage - 600g
+- Onion - 2 pcs
+- Carrot - 1 pc
+- Boiled eggs - 2 pcs
+- Salt, pepper
+
+**Preparation Steps:**
+1. Prepare kefir-based yeast dough
+2. Shred cabbage, stew with vegetables
+3. Add chopped boiled eggs
+4. Roll dough, cut into circles
+5. Place filling, seal edges
+6. Let rise for 20 minutes
+7. Bake for 20 minutes at 200°C (390°F)
+
+**Historical Context:**
+Pirozhki are the most democratic Russian dish. Peter the Great loved cabbage pirozhki and ate them during his travels across Russia, even while on military campaigns.
+
+---
+
+### RECIPE: Sochniki with Cottage Cheese
+- ID: baking-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-8
+- Name: Сочники с творогом / Sochniki with Cottage Cheese
+- Epoch: 19th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesbaking/schniki.jpg
+- Keywords: sochniki with cottage cheese recipe, classic Russian cheese pastries, shortcrust dough
+
+**Description:**
+Half-open shortcrust pastries filled with sweet cottage cheese that melt in your mouth. The name comes from the Russian word "sok" (juice), referring to the juicy, moist filling.
+
+**Ingredients:**
+- Flour - 400g
+- Cottage cheese - 400g
+- Sour cream - 200g
+- Sugar - 150g
+- Eggs - 3 pcs
+- Butter - 100g
+- Baking soda - 0.5 tsp
+- Vanilla extract
+
+**Preparation Steps:**
+1. Cream butter with sugar
+2. Add eggs, sour cream, baking soda
+3. Sift in flour, knead dough
+4. Mix cottage cheese with sugar and vanilla
+5. Roll dough, cut into circles
+6. Place filling on one half
+7. Fold over, seal edges
+8. Bake for 20 minutes at 180°C (350°F)
+
+**Historical Context:**
+Sochniki were popular in Russian taverns of the 19th century. N.V. Gogol mentions sochniki in "Dead Souls" as Chichikov's favorite dish during his travels across Russia.
+
+---
+
+### RECIPE: Wedding Karavai
+- ID: baking-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-9
+- Name: Каравай свадебный / Wedding Karavai
+- Epoch: Ancient Rus
+- Time: 3 hours
+- Image: /publicimagesbaking/karavai.jpg
+- Keywords: wedding karavai recipe, how to bake karavai, Russian wedding bread
+
+**Description:**
+A magnificent, richly decorated wedding bread, symbolizing prosperity and hospitality in Russian tradition. The karavai is blessed and shared among the newlyweds and guests during the ceremony.
+
+**Ingredients:**
+- Flour - 1kg
+- Milk - 500ml
+- Yeast - 15g
+- Eggs - 5 pcs
+- Butter - 200g
+- Sugar - 200g
+- Salt - 1 tsp
+- Raisins, nuts
+- Poppy seeds, sesame for decoration
+
+**Preparation Steps:**
+1. Prepare rich yeast dough
+2. Let rise for 1.5 hours
+3. Add raisins and nuts
+4. Shape into a large round loaf
+5. Decorate with braided dough ropes
+6. Brush with egg, sprinkle with poppy seeds
+7. Bake for 1 hour 15 minutes at 180°C (350°F)
+
+**Historical Context:**
+Karavai is the most important Russian wedding bread. The tradition has survived since pagan times. Nicholas II and Alexandra Feodorovna observed the karavai tradition at their wedding ceremony in 1894.
+
+---
+
+### RECIPE: Shangi with Potatoes
+- ID: baking-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-10
+- Name: Шаньги с картофелем / Shangi with Potatoes
+- Epoch: 16th-17th century (Pomor cuisine)
+- Time: 2 hours
+- Image: /publicimagesbaking/shanygi.jpg
+- Keywords: shangi with potatoes recipe, Pomor cuisine, northern Russian pastry
+
+**Description:**
+Open-faced northern pies with a hearty potato filling and cracklings. A traditional dish of the Russian North and Siberia, beloved by Pomors (seafaring people) and Old Believers.
+
+**Ingredients:**
+- Flour - 500g
+- Milk - 250ml
+- Yeast - 10g
+- Sugar - 2 tbsp
+- Butter - 100g
+- Potatoes - 600g
+- Onion - 2 pcs
+- Pork fat or cracklings - 100g
+- Salt, pepper
+
+**Preparation Steps:**
+1. Prepare yeast dough
+2. Boil potatoes, mash them
+3. Sauté onion with cracklings
+4. Mix potatoes with onion mixture
+5. Roll dough, cut into circles
+6. Place filling in a mound
+7. Let rise for 20 minutes
+8. Bake for 25 minutes at 190°C (375°F)
+
+**Historical Context:**
+Shangi are traditional pastries of the Russian North and Siberia. They were a favorite of Pomors and Old Believers. Mikhail Lomonosov, the great Russian scientist, recalled shangi from his childhood in Arkhangelsk region.
+
+---
+
+### RECIPE: Plushki (Sugar Buns)
+- ID: baking-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-11
+- Name: Плюшки с сахаром / Plushki with Sugar
+- Epoch: 19th century
+- Time: 2 hours
+- Image: /publicimagesbaking/plushki.jpg
+- Keywords: plushki with sugar recipe, rich sweet buns, cafeteria-style buns
+
+**Description:**
+Airy sweet buns shaped like hearts, generously sprinkled with sugar and cinnamon. A nostalgic treat that brings back school cafeteria memories for many Russians.
+
+**Ingredients:**
+- Flour - 500g
+- Milk - 250ml
+- Yeast - 10g
+- Sugar - 150g
+- Eggs - 2 pcs
+- Butter - 100g
+- Cinnamon - 1 tsp
+- Salt - 0.5 tsp
+
+**Preparation Steps:**
+1. Prepare rich yeast dough
+2. Let rise for 1 hour
+3. Roll out into a rectangle
+4. Brush with melted butter
+5. Sprinkle with sugar and cinnamon
+6. Roll into a log, slice
+7. Shape into heart-like buns
+8. Bake for 20 minutes at 180°C (350°F)
+
+**Historical Context:**
+Plushki became popular in the 19th century. F.M. Dostoevsky mentions plushki in "The Brothers Karamazov." A.P. Chekhov was also a fan of these sweet buns with his tea.
+
+---
+
+### RECIPE: Rasstegai with Fish
+- ID: baking-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-12
+- Name: Расстегаи с рыбой / Rasstegai with Fish
+- Epoch: 17th-18th century
+- Time: 2 hours
+- Image: /publicimagesbaking/rasstegai.jpg
+- Keywords: rasstegai with fish recipe, open-faced pies, Russian festive pastry
+
+**Description:**
+Elegant open-faced pies with fish filling, where the top dough is left open (not fully sealed). The name comes from "rasstegat" meaning "to unbutton" - referring to the open top of the pie.
+
+**Ingredients:**
+- Flour - 500g
+- Milk - 250ml
+- Yeast - 10g
+- Eggs - 2 pcs
+- Butter - 100g
+- Fish (salmon, sturgeon) - 600g
+- Onion - 2 pcs
+- Rice - 100g
+- Eggs - 2 pcs
+- Black pepper
+
+**Preparation Steps:**
+1. Prepare yeast dough
+2. Poach fish, flake into pieces
+3. Cook rice, chop boiled eggs
+4. Mix filling ingredients
+5. Roll dough, cut into circles
+6. Place filling, leave top opening
+7. Brush with egg wash
+8. Bake for 25 minutes at 190°C (375°F)
+
+**Historical Context:**
+Rasstegai were a festive dish. Alexander I loved fish rasstegai. I.A. Goncharov was also an admirer, mentioning them in "Oblomov" as a delicacy of Russian cuisine.
+
+---
+
+### RECIPE: Krendeli with Poppy Seeds
+- ID: baking-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-13
+- Name: Крендели с маком / Krendeli with Poppy Seeds
+- Epoch: 18th century
+- Time: 2 hours
+- Image: /publicimagesbaking/kreml.jpg
+- Keywords: poppy seed krendeli recipe, rich pretzels, Russian poppy pastry
+
+**Description:**
+Crispy sweet rings thickly sprinkled with poppy seeds and sugar. A classic of St. Petersburg bakeries, perfect for tea time. The shape resembles a pretzel or twisted knot.
+
+**Ingredients:**
+- Flour - 500g
+- Milk - 200ml
+- Yeast - 10g
+- Sugar - 100g
+- Butter - 100g
+- Eggs - 2 pcs
+- Poppy seeds - 50g
+- Salt
+
+**Preparation Steps:**
+1. Prepare rich yeast dough
+2. Let rise for 1 hour
+3. Roll into long ropes
+4. Shape into pretzel-like rings
+5. Brush with egg wash
+6. Sprinkle with poppy seeds and sugar
+7. Let rise for 20 minutes
+8. Bake for 20 minutes at 190°C (375°F)
+
+**Historical Context:**
+Krendeli were baked for holidays. Peter the Great loved krendeli and introduced the fashion for them from Europe. In St. Petersburg, there were special krendel shops on Nevsky Prospekt.
+
+---
+
+### RECIPE: Pyshki (Yeast Doughnuts)
+- ID: baking-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-14
+- Name: Пышки дрожжевые / Pyshki (Yeast Doughnuts)
+- Epoch: 19th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesbaking/pyshki.jpg
+- Keywords: pyshki recipe, classic Russian doughnuts, fried kefir doughnuts
+
+**Description:**
+Incredibly light, airy fried yeast doughnuts generously dusted with powdered sugar. The most famous pyshki are from St. Petersburg's legendary Pyshechnaya on Bolshaya Konyushennaya Street.
+
+**Ingredients:**
+- Flour - 500g
+- Kefir - 300ml
+- Yeast - 7g
+- Sugar - 100g
+- Eggs - 2 pcs
+- Vegetable oil - 100ml
+- Salt - 0.5 tsp
+- Powdered sugar
+
+**Preparation Steps:**
+1. Warm kefir, add yeast
+2. Add eggs, sugar, salt
+3. Sift in flour, knead dough
+4. Let rise for 40 minutes
+5. Roll out dough
+6. Cut into circles
+7. Fry in hot oil on both sides
+8. Dust with powdered sugar
+
+**Historical Context:**
+Pyshki were popular in taverns and street stalls. A.S. Pushkin loved pyshki with tea. The legendary Pyshechnaya on Bolshaya Konyushennaya in St. Petersburg has been operating since 1958, preserving traditional recipes.
+
+---
+
+### RECIPE: Medovaya Kovrizhka (Honey Cake)
+- ID: baking-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-15
+- Name: Коврижка медовая / Medovaya Kovrizhka
+- Epoch: 16th-17th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesbaking/kovrizhka.jpg
+- Keywords: honey kovrizhka recipe, spiced honey cake, Russian honey pastry
+
+**Description:**
+A spicy, aromatic honey cake with nuts and raisins, soaked in warmth and comfort. This ancient Russian treat is perfect for winter evenings with a cup of tea or mulled wine.
+
+**Ingredients:**
+- Honey - 200g
+- Flour - 400g
+- Sugar - 150g
+- Eggs - 3 pcs
+- Butter - 100g
+- Baking soda - 1 tsp
+- Cinnamon, cloves
+- Nuts, raisins
+
+**Preparation Steps:**
+1. Warm honey with sugar
+2. Add eggs, whisk until combined
+3. Add melted butter
+4. Sift in flour with soda and spices
+5. Fold in nuts and raisins
+6. Pour into a prepared pan
+7. Bake for 40-45 minutes at 180°C (350°F)
+8. Serve with tea
+
+**Historical Context:**
+Kovrizhka is an ancient Russian delicacy. Catherine the Great loved honey kovrizhka. N.V. Gogol was also an admirer, mentioning it in "Evenings on a Farm Near Dikanka" as a favorite treat of Ukrainian and Russian households.
+
+---
+
+### RECIPE: Rye & Honey Pastila (Apple Marshmallow)
+- ID: baking-16
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-16
+- Name: Пастила с медом / Pastila with Honey
+- Epoch: 15th-16th century (Kolomna)
+- Time: 24 hours (including drying)
+- Image: /publicimagesbaking/pastila.jpg
+- Keywords: Russian pastila recipe, apple honey marshmallow, Kolomna pastila
+
+**Description:**
+A traditional Russian dessert made from whipped apples, honey, and egg whites. Unlike Western marshmallows, authentic pastila contains no gelatin - it relies on the natural pectin from apples and drying process.
+
+**Ingredients:**
+- Apples (Antonovka variety) - 1.5kg
+- Honey - 200g
+- Egg whites - 2 pcs
+- Sugar - 100g
+- Powdered sugar for dusting
+
+**Preparation Steps:**
+1. Bake apples until soft
+2. Puree the baked apples
+3. Whisk egg whites until stiff
+4. Add honey and sugar to apple puree
+5. Fold in egg whites gently
+6. Spread mixture on wooden boards
+7. Dry for 24 hours at room temperature
+8. Dust with powdered sugar
+
+**Historical Context:**
+Pastila has been made in the town of Kolomna since the 15th century. This was one of Ivan the Terrible's favorite desserts. The secret of Kolomna pastila was kept for centuries and is now being revived.
+
+---
+
+### RECIPE: Tvorozhniki (Cheese Pancakes)
+- ID: baking-17
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/baking-17
+- Name: Творожники / Tvorozhniki
+- Epoch: 18th century
+- Time: 30 minutes
+- Image: /publicimagesbaking/tvorozhniki.jpg
+- Keywords: tvorozhniki recipe, syrniki, Russian cheese pancakes
+
+**Description:**
+Soft, golden cheese pancakes made from cottage cheese, flour, and eggs. The perfect breakfast or dessert, served with sour cream, honey, or jam. Known in some regions as "syrniki."
+
+**Ingredients:**
+- Cottage cheese - 500g
+- Flour - 100g
+- Eggs - 2 pcs
+- Sugar - 80g
+- Salt - a pinch
+- Vanilla extract
+- Vegetable oil for frying
+
+**Preparation Steps:**
+1. Mash cottage cheese thoroughly
+2. Add eggs, sugar, salt, vanilla
+3. Gradually incorporate flour
+4. Form into patties
+5. Dust with flour
+6. Fry in hot oil until golden
+7. Serve with sour cream or jam
+
+**Historical Context:**
+Tvorozhniki were popular in the 18th century as a nutritious and wholesome breakfast. They became a staple of Russian cuisine and are now enjoyed in every Russian household. During Soviet times, they were featured prominently in school and kindergarten menus.
+
+---
+
+## Index Summary
+
+**Total Recipes Indexed:** 17
+**Category:** Baking & Pastry
+**Cuisine Type:** Traditional Russian
+**Epoch Range:** 9th century - present day
+
+**Dietary Notes:**
+- All recipes contain gluten (wheat flour)
+- Most contain dairy (milk, butter, cottage cheese)
+- Some contain eggs (vegetarian variants can be adapted)
+- Contains nuts/raisins in some recipes
+
+**Serving Suggestions:**
+- Best served with hot tea, coffee, or traditional Russian beverages (kvass, sbiten)
+- Commonly accompanied by sour cream, honey, jam, or fresh berries
+- Festive recipes (Kurnik, Karavai, Kulebyaka) are centerpieces for celebrations
+---
+
+## DESSERTS & SWEETS RECIPES
+
+### RECIPE: Classic Medovik (Honey Cake)
+- ID: dessert-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-1
+- Name: Медовик классический / Classic Medovik
+- Epoch: 19th century
+- Time: 2 hours + soaking
+- Image: /publicimagesdesserts/medovik.jpg
+- Keywords: medovik recipe, classic honey cake, Russian cake, honey cake with sour cream
+
+**Description:**
+A legendary multi-layered cake with honey-infused sponge layers and delicate sour cream frosting. A classic of Russian home baking that was adored by Empress Elizaveta Petrovna.
+
+**Ingredients:**
+- Honey - 200g
+- Sugar - 200g
+- Eggs - 2 pcs
+- Flour - 400g
+- Baking soda - 1 tsp
+- Sour cream (for cream) - 500g
+- Powdered sugar - 150g
+- Butter - 100g
+
+**Preparation Steps:**
+1. Melt honey with sugar in a double boiler
+2. Add eggs and soda, whisk thoroughly
+3. Gradually sift in flour, knead dough
+4. Divide into 8 parts, bake each layer for 5-7 minutes at 180°C (350°F)
+5. Whip sour cream with powdered sugar and butter
+6. Assemble the cake, spread cream between layers
+7. Refrigerate for 6-8 hours for soaking
+
+**Historical Context:**
+A legendary cake that became a symbol of Russian home baking. Empress Elizaveta Petrovna adored medovik. Legend says it was created by a chef for the young wife of the emperor. In the 19th century, it was the main wedding cake.
+
+---
+
+### RECIPE: Belevskaya Pastila (Apple Marshmallow)
+- ID: dessert-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-2
+- Name: Пастила белёвская / Belevskaya Pastila
+- Epoch: 14th-15th century
+- Time: 3 days
+- Image: /publicimagesdesserts/pastila.jpg
+- Keywords: Belevskaya pastila recipe, Antonovka apple marshmallow, ancient Russian dessert
+
+**Description:**
+An ancient airy dessert made from baked Antonovka apples and egg whites. A natural, chemical-free sweet treat that was a favorite of the imperial court.
+
+**Ingredients:**
+- Antonovka apples - 2 kg
+- Sugar - 200g
+- Egg whites - 2 pcs
+- Honey - 2 tbsp
+
+**Preparation Steps:**
+1. Bake apples in the oven until soft
+2. Press through a sieve to make puree
+3. Add sugar, cook down until thick
+4. Whip with egg whites until fluffy
+5. Spread in a 2-3 cm layer on parchment
+6. Dry in the oven at 60-80°C (140-175°F) for 8-10 hours
+7. Cut into diamond shapes, store in a dry place
+
+**Historical Context:**
+The oldest Russian dessert from the town of Belev. Peter the Great sent pastila to European monarchs as diplomatic gifts. Catherine the Great loved Belevskaya pastila with her tea. In the 19th century, Belev was famous for its pastila factories.
+
+---
+
+### RECIPE: Ptichye Moloko (Bird's Milk Cake)
+- ID: dessert-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-3
+- Name: Птичье молоко / Ptichye Moloko
+- Epoch: 1960s
+- Time: 1 hour + setting
+- Image: /publicimagesdesserts/ptichie_moloko.jpg
+- Keywords: ptichye moloko recipe, bird's milk cake, agar-agar dessert, Soviet cake
+
+**Description:**
+A delicate soufflé dessert made with agar-agar, coated in a crunchy chocolate glaze. A legendary symbol of Soviet confectionery excellence.
+
+**Ingredients:**
+- Sugar - 300g
+- Sweetened condensed milk - 1 can (397g)
+- Butter - 200g
+- Egg whites - 4 pcs
+- Agar-agar - 2 tsp
+- Water - 100ml
+- Chocolate for glaze - 200g
+
+**Preparation Steps:**
+1. Soak agar-agar in water
+2. Whip egg whites with sugar until stiff peaks
+3. Mix condensed milk with softened butter
+4. Bring agar-agar to a boil, dissolve completely
+5. Pour into whipped whites while continuing to beat
+6. Fold into the condensed milk mixture
+7. Pour into a mold, refrigerate until set
+8. Cover with chocolate glaze
+
+**Historical Context:**
+A legendary Soviet dessert created in the 1960s in Moscow. The name references the expression "bird's milk" — meaning something very rare and exquisite. Leonid Brezhnev adored ptichye moloko and demanded it at all official receptions. It became a symbol of Soviet confectionery school.
+
+---
+
+### RECIPE: Pine Cone Jam
+- ID: dessert-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-4
+- Name: Варенье из шишек / Pine Cone Jam
+- Epoch: 17th-18th century
+- Time: 2 hours + resting
+- Image: /publicimagesdesserts/varenie_shishki.jpg
+- Keywords: pine cone jam recipe, Siberian delicacy, pine cone preserve
+
+**Description:**
+An ancient Siberian delicacy made from young pine cones. A powerful natural source of vitamin C with unique pine aromas and health benefits.
+
+**Ingredients:**
+- Young pine cones - 1 kg
+- Sugar - 1.5 kg
+- Water - 2L
+- Lemon juice - 2 tbsp
+
+**Preparation Steps:**
+1. Wash pine cones thoroughly, cover with water
+2. Boil for 1.5 hours until soft
+3. Strain the liquid, add sugar
+4. Cook syrup for 30 minutes
+5. Return cones, cook for another 20 minutes
+6. Add lemon juice
+7. Pour into sterilized jars
+
+**Historical Context:**
+An ancient Siberian delicacy. Pomors made pine cone jam as a source of vitamin C. Mikhail Lomonosov fondly remembered pine cone jam from his childhood. In the 19th century, it was served at the imperial table as a rare delicacy.
+
+---
+
+### RECIPE: Tvorozhnaya Paskha (Easter Cheese Dessert)
+- ID: dessert-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-5
+- Name: Творожная пасха / Tvorozhnaya Paskha
+- Epoch: 17th century
+- Time: 1 hour + pressing
+- Image: /publicimagesdesserts/paskha.jpg
+- Keywords: tvorozhnaya paskha recipe, classic Easter dessert, Russian Easter cheese
+
+**Description:**
+The main Easter dessert of Russian cuisine made from rich cottage cheese, cream, and candied fruits. A delicate, rich, and truly festive classic.
+
+**Ingredients:**
+- Full-fat cottage cheese - 1 kg
+- Heavy cream (33%) - 200ml
+- Butter - 200g
+- Sugar - 200g
+- Egg yolks - 3 pcs
+- Vanilla extract
+- Raisins, candied fruits - 100g
+
+**Preparation Steps:**
+1. Press cottage cheese through a sieve
+2. Mash egg yolks with sugar
+3. Heat cream, pour into yolk mixture
+4. Thicken in a double boiler
+5. Mix with cottage cheese and butter
+6. Add raisins and candied fruits
+7. Pack into a paskha mold
+8. Place under pressure for 12 hours
+
+**Historical Context:**
+The main Easter dessert of Russian cuisine. The Romanov royal family always prepared paskha. Emperor Nicholas II personally participated in the preparation. The tradition was passed down through generations as a sacred ritual.
+
+---
+
+### RECIPE: Classic Syrniki (Cheese Pancakes)
+- ID: dessert-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-6
+- Name: Сырники классические / Classic Syrniki
+- Epoch: 18th century
+- Time: 40 minutes
+- Image: /publicimagesdesserts/syrniki.jpg
+- Keywords: syrniki recipe, fluffy cottage cheese pancakes, classic breakfast
+
+**Description:**
+Perfect, fluffy syrniki made from strained cottage cheese with a golden crust. The most popular and wholesome breakfast in Russian cuisine.
+
+**Ingredients:**
+- Cottage cheese - 500g
+- Eggs - 2 pcs
+- Flour - 4 tbsp
+- Sugar - 3 tbsp
+- Vanilla extract
+- Vegetable oil for frying
+- Sour cream for serving
+
+**Preparation Steps:**
+1. Press cottage cheese through a sieve
+2. Add eggs, sugar, vanilla
+3. Sift in flour, knead the mixture
+4. Form into patties, coat in flour
+5. Fry over medium heat until golden brown
+6. Serve with sour cream, jam, or honey
+
+**Historical Context:**
+A traditional Russian breakfast. A.P. Chekhov mentions syrniki in his stories as a favorite dish. In the 19th century, they were served in noble estates. F.M. Dostoevsky loved syrniki with his tea.
+
+---
+
+### RECIPE: Berry Kissel (Fruit Jelly Drink)
+- ID: dessert-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-7
+- Name: Кисель ягодный / Berry Kissel
+- Epoch: Ancient Rus
+- Time: 40 minutes
+- Image: /publicimagesdesserts/kisel.jpg
+- Keywords: berry kissel recipe, potato starch drink, ancient Russian dessert
+
+**Description:**
+A thick, velvety berry drink made with potato starch. One of the oldest Russian desserts — warming in winter and refreshing in summer.
+
+**Ingredients:**
+- Berries (cranberries, raspberries, cherries) - 400g
+- Sugar - 150g
+- Water - 1.5L
+- Potato starch - 3 tbsp
+
+**Preparation Steps:**
+1. Wash berries, extract juice
+2. Cover pomace with water, boil for 15 minutes
+3. Strain, add sugar
+4. Dissolve starch in cold water
+5. Pour into boiling compote in a thin stream
+6. Stirring constantly, bring to a boil
+7. Stir in berry juice, cool slightly
+
+**Historical Context:**
+One of the oldest Russian desserts, mentioned in chronicles of the 10th century. Peter the Great loved kissel at his feasts. It appears in fairy tales as "rivers of milk, banks of kissel." It was the main sweet dish before tea became popular in Russia.
+
+---
+
+### RECIPE: Yeast Doughnuts (Ponchiki)
+- ID: dessert-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-8
+- Name: Пончики дрожжевые / Yeast Ponchiki
+- Epoch: 19th century
+- Time: 2 hours
+- Image: /publicimagesdesserts/ponchiki.jpg
+- Keywords: ponchiki recipe, yeast doughnuts, St. Petersburg pyshki
+
+**Description:**
+Light, airy yeast doughnuts generously dusted with powdered sugar. Crispy on the outside and incredibly soft inside — a classic street-food treat.
+
+**Ingredients:**
+- Flour - 500g
+- Milk - 250ml
+- Yeast - 10g
+- Eggs - 2 pcs
+- Sugar - 100g
+- Butter - 50g
+- Vegetable oil for deep frying
+- Powdered sugar
+
+**Preparation Steps:**
+1. Make a starter with yeast and milk
+2. Add eggs, sugar, butter
+3. Knead dough, let rise for 1 hour
+4. Roll out, cut into circles
+5. Let rise for 20 minutes
+6. Deep fry until golden brown
+7. Dust with powdered sugar
+
+**Historical Context:**
+A beloved treat of St. Petersburg residents. A.S. Pushkin adored ponchiki with tea. In St. Petersburg on Bolshaya Konyushennaya Street, ponchiki have been made since 1958 using a traditional recipe. They have become a symbol of nostalgia for Soviet times.
+
+---
+
+### RECIPE: Apple Sharlotka (Apple Cake)
+- ID: dessert-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-9
+- Name: Шарлотка с яблоками / Apple Sharlotka
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesdesserts/sharlotka.jpg
+- Keywords: apple sharlotka recipe, fluffy apple cake, classic apple pie
+
+**Description:**
+The simplest and quickest apple cake with a fluffy sponge batter and aromatic cinnamon. A foolproof treat for tea time.
+
+**Ingredients:**
+- Apples - 500g
+- Eggs - 4 pcs
+- Sugar - 200g
+- Flour - 200g
+- Cinnamon - 1 tsp
+- Butter for greasing
+
+**Preparation Steps:**
+1. Peel apples, slice thinly
+2. Whip eggs with sugar until fluffy
+3. Fold in flour gently
+4. Grease the baking pan
+5. Arrange apples, sprinkle with cinnamon
+6. Pour batter over apples
+7. Bake for 40 minutes at 180°C (350°F)
+
+**Historical Context:**
+A simple home cake that became a classic. In the 19th century, it was served in Russian country estates. I.S. Turgenev mentions sharlotka in his correspondence. A favorite dessert of Russian schoolgirls and university students.
+
+---
+
+### RECIPE: Kozinaki (Seed Brittle)
+- ID: dessert-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-10
+- Name: Козинаки из семечек / Kozinaki
+- Epoch: 18th-19th century
+- Time: 40 minutes
+- Image: /publicimagesdesserts/kozinaki.jpg
+- Keywords: kozinaki recipe, sunflower seed brittle, homemade seed treats
+
+**Description:**
+Crunchy Eastern European sweets made from roasted sunflower seeds in honey-sugar caramel. A simple, hearty, and satisfying dessert.
+
+**Ingredients:**
+- Sunflower seeds - 300g
+- Honey - 200g
+- Sugar - 100g
+- Butter - 1 tbsp
+
+**Preparation Steps:**
+1. Roast seeds in a dry skillet
+2. Melt honey with sugar
+3. Add butter
+4. Cook until golden caramel forms
+5. Stir in seeds, mix well
+6. Spread onto parchment paper
+7. Cut into diamonds while still warm
+
+**Historical Context:**
+An Eastern sweet that took root in Russia. In southern Russia, kozinaki became popular in the 19th century. A favorite treat of Cossacks. Served with tea at Cossack weddings and celebrations.
+
+---
+
+### RECIPE: Smetannik (Sour Cream Pie)
+- ID: dessert-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-11
+- Name: Сметанник / Smetannik
+- Epoch: 19th century
+- Time: 1.5 hours
+- Image: /publicimagesdesserts/smetannik.jpg
+- Keywords: smetannik recipe, sour cream pie, classic Russian cream pie
+
+**Description:**
+A delicate, melt-in-your-mouth pie with a shortcrust base and airy sour cream filling. The embodiment of homey comfort and warmth.
+
+**Ingredients:**
+- Sour cream (filling) - 600g
+- Sugar - 200g
+- Eggs - 3 pcs
+- Flour - 3 tbsp
+- Vanilla extract
+- Shortcrust pastry for base
+
+**Preparation Steps:**
+1. Prepare the shortcrust base
+2. Whip sour cream with sugar
+3. Add eggs, flour, vanilla
+4. Pour onto the crust
+5. Bake for 40 minutes at 180°C (350°F)
+6. Cool, dust with powdered sugar
+
+**Historical Context:**
+A classic Russian pie. In the 19th century, it was the main dessert at peasant weddings. A.S. Pushkin loved smetannik at his Mikhailovskoye estate. Simple, hearty, and delicate — a symbol of Russian home cooking.
+
+---
+
+### RECIPE: Pumpkin Candied Fruits
+- ID: dessert-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-12
+- Name: Цукаты из тыквы / Pumpkin Tsukaty
+- Epoch: 18th century
+- Time: 2 days
+- Image: /publicimagesdesserts/tsukaty_tykva.jpg
+- Keywords: pumpkin candied fruits recipe, homemade pumpkin sweets, healthy candied fruit
+
+**Description:**
+Aromatic, translucent pumpkin cubes boiled in sugar syrup with spices. A healthy and beautiful alternative to store-bought candies.
+
+**Ingredients:**
+- Pumpkin - 1 kg
+- Sugar - 800g
+- Water - 200ml
+- Citric acid - 1 tsp
+- Cinnamon, cloves
+
+**Preparation Steps:**
+1. Peel pumpkin, cut into cubes
+2. Make syrup from sugar and water
+3. Pour syrup over pumpkin cubes
+4. Let stand for 12 hours
+5. Boil for 10 minutes, cool
+6. Repeat 3 times
+7. Dry, roll in sugar
+
+**Historical Context:**
+An ancient Russian sweet. Catherine the Great loved pumpkin candied fruits. In the 19th century, they were served with tea in aristocratic homes. They were an affordable alternative to imported candies.
+
+---
+
+### RECIPE: Classic Meringue (Beze)
+- ID: dessert-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-13
+- Name: Безе / Classic Meringue
+- Epoch: 18th century
+- Time: 2 hours
+- Image: /publicimagesdesserts/beze.jpg
+- Keywords: meringue recipe, classic beze, French meringue in oven
+
+**Description:**
+Crispy on the outside and airy on the inside — little clouds of whipped egg whites and sugar. An elegant and minimalist dessert.
+
+**Ingredients:**
+- Egg whites - 4 pcs
+- Sugar - 200g
+- Vanilla extract
+- Lemon juice - 1 tsp
+
+**Preparation Steps:**
+1. Separate egg whites from yolks
+2. Whip with lemon juice until stiff peaks form
+3. Gradually add sugar
+4. Whip until glossy and stiff
+5. Pipe onto parchment paper
+6. Dry in the oven at 100°C (210°F) for 1.5 hours
+7. Leave to cool in the closed oven
+
+**Historical Context:**
+A French dessert that took root in Russia. At Catherine the Great's court, meringues were served at balls. In the 19th century, they became a mandatory dessert at dinner parties. A.P. Chekhov mentions meringues in his stories.
+
+---
+
+### RECIPE: Grated Pie with Jam
+- ID: dessert-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-14
+- Name: Тёртый пирог с вареньем / Grated Pie with Jam
+- Epoch: 19th century
+- Time: 1.5 hours
+- Image: /publicimagesdesserts/tertyj_pirog.jpg
+- Keywords: grated pie with jam, crumbly pie recipe, Russian shortbread pie
+
+**Description:**
+A crumbly shortbread pie with a generous berry filling, where the dough is grated to create a unique, melt-in-your-mouth texture.
+
+**Ingredients:**
+- Flour - 400g
+- Butter - 200g
+- Sugar - 150g
+- Eggs - 2 pcs
+- Sour cream - 2 tbsp
+- Baking soda - 0.5 tsp
+- Jam (any berry) - 300g
+
+**Preparation Steps:**
+1. Cream butter with sugar
+2. Add eggs, sour cream, baking soda
+3. Sift in flour, knead dough
+4. Divide into 2 parts, freeze
+5. Grate one part onto a baking sheet
+6. Spread jam evenly
+7. Grate the second part on top
+8. Bake for 30 minutes at 180°C (350°F)
+
+**Historical Context:**
+A simple home pie. In the 19th century, it was the main dessert in Russian villages. F.M. Dostoevsky recalled grated pie from his childhood. A symbol of comfort and home warmth.
+
+---
+
+### RECIPE: Currant Jelly
+- ID: dessert-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dessert-15
+- Name: Желе из смородины / Currant Jelly
+- Epoch: 18th-19th century
+- Time: 1 hour + setting
+- Image: /publicimagesdesserts/zhele_smorodina.jpg
+- Keywords: currant jelly recipe, how to add gelatin to jelly, berry jelly
+
+**Description:**
+A transparent, firm, and incredibly aromatic jelly made from fresh currants. A step-by-step recipe with proper gelatin technique.
+
+**Ingredients:**
+- Currants (red or black) - 1 kg
+- Sugar - 800g
+- Water - 500ml
+- Gelatin - 20g (optional)
+
+**Preparation Steps:**
+1. Wash berries, extract juice, set aside
+2. Soak gelatin in 100ml cold water for 20-30 minutes
+3. Cover berry pomace with 500ml water, bring to a boil, simmer for 15 minutes
+4. Strain through a fine sieve or cheesecloth
+5. Add sugar to hot liquid, stir until dissolved
+6. Heat syrup to 80°C (175°F) — do not boil! Remove from heat
+7. Add soaked gelatin to hot syrup, stir vigorously until fully dissolved
+8. Stir in fresh berry juice, mix well
+9. Pour into molds or dessert cups
+10. Cool to room temperature, then refrigerate for 3-4 hours until set
+
+**Tips:**
+- Do not boil gelatin — above 80°C (175°F), it loses its gelling properties
+- If gelatin doesn't fully dissolve, strain the mixture through a fine sieve
+- Without gelatin, the jelly will still set but will be softer and require more time
+
+**Historical Context:**
+A light summer dessert. In Russian country estates, jelly was served after heavy meals. I.A. Goncharov in "Oblomov" describes jelly as an exquisite dessert. A favorite treat of young Russian ladies.
+
+---
+
+## Desserts Index Summary
+
+**Total Recipes Added:** 15
+**Total Recipes Overall:** 32 (17 Baking + 15 Desserts)
+**Category:** Desserts & Sweets
+**Cuisine Type:** Traditional Russian
+
+**Dessert Types Covered:**
+- 🍰 Cakes & Tortes: Medovik, Ptichye Moloko, Smetannik
+- 🍬 Traditional Sweets: Pastila, Paskha, Kozinaki
+- 🍪 Pastries: Grated Pie, Sharlotka, Meringue
+- 🍮 Jellies & Drinks: Berry Kissel, Currant Jelly
+- 🥛 Dairy-based: Syrniki, Paskha
+- 🍯 Preserves: Pine Cone Jam, Pumpkin Candied Fruits
+- 🍩 Fried Treats: Yeast Ponchiki
+
+**Dietary Notes:**
+- Most desserts contain dairy (milk, butter, sour cream)
+- Many contain eggs (meringue, syrniki, cakes)
+- Some are gluten-free (kissel, jelly, pastila, kozinaki)
+- Pine cone jam and pumpkin candied fruits are vegan-friendly
+
+**Serving Suggestions:**
+- Best served with: tea, coffee, or traditional Russian beverages
+- Paskha and Medovik are festive holiday desserts
+- Syrniki and Sharlotka are everyday comfort food
+- Kissel and Jelly are perfect for summer refreshment
+---
+
+## DOUGH & PASTRY RECIPES
+
+### RECIPE: Rich Yeast Dough (Sdobnoe)
+- ID: dough-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-1
+- Name: Дрожжевое тесто сдобное / Rich Yeast Dough
+- Epoch: Ancient Rus
+- Time: 2-3 hours
+- Image: /publicimagesdough/drozhzhevoe_sdobnoe.jpg
+- Keywords: rich yeast dough recipe, dough for kulich, soft dough for pies, Russian pastry
+
+**Description:**
+Classic soft and airy rich dough made with milk and butter. The perfect base for festive kulich (Easter bread), pies, and sweet rolls.
+
+**Ingredients:**
+- Flour - 500g
+- Milk - 250ml
+- Dry yeast - 10g
+- Eggs - 2 pcs
+- Sugar - 100g
+- Butter - 100g
+- Salt - 1 tsp
+- Vanilla extract
+
+**Preparation Steps:**
+1. Warm milk to 35-40°C (95-104°F)
+2. Dissolve yeast with 1 tbsp sugar
+3. Let stand for 15 minutes until foamy
+4. Whisk eggs with sugar and salt
+5. Add milk with yeast mixture
+6. Gradually sift in flour, knead dough
+7. Add softened butter and vanilla
+8. Knead for 10 minutes until elastic
+9. Leave in a warm place for 1.5-2 hours
+10. Punch down, let rise again
+
+**Common Uses:**
+- Kulich (Easter bread)
+- Sweet rolls
+- Sweet pies
+- Doughnuts (ponchiki)
+- Vatrushki
+
+**Historical Context:**
+Classic rich dough for festive baking. Used for kulich, buns, and pies. Catherine the Great loved rich pastries with this dough.
+
+---
+
+### RECIPE: Lenten Yeast Dough
+- ID: dough-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-2
+- Name: Дрожжевое тесто постное / Lenten Yeast Dough
+- Epoch: Ancient Rus
+- Time: 2 hours
+- Image: /publicimagesdough/drozhzhevoe_postnoe.jpg
+- Keywords: lenten yeast dough recipe, water-based dough without eggs, cabbage pies, lenten baking
+
+**Description:**
+A simple and light yeast dough without eggs and milk, made with water. Perfect for lenten baking, cabbage pies, and mushroom pastries.
+
+**Ingredients:**
+- Flour - 500g
+- Water - 300ml
+- Yeast - 7g
+- Sugar - 1 tbsp
+- Vegetable oil - 50ml
+- Salt - 1 tsp
+
+**Preparation Steps:**
+1. Warm the water
+2. Dissolve yeast with sugar
+3. Let stand for 15 minutes
+4. Add oil and salt
+5. Gradually sift in flour, knead dough
+6. Knead for 10 minutes
+7. Leave for 1.5 hours to rise
+8. Punch down before using
+
+**Common Uses:**
+- Cabbage pies
+- Mushroom pies
+- Rasstegai
+- Lenten baking
+
+**Historical Context:**
+Lenten dough without eggs and milk was prepared during fasting periods. In Domostroy (16th-century Russian household guide), it's described as the basic dough for everyday baking.
+
+---
+
+### RECIPE: Shortcrust Pastry (Pesochnoe)
+- ID: dough-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-3
+- Name: Песочное тесто / Shortcrust Pastry
+- Epoch: 18th-19th century
+- Time: 40 minutes + chilling
+- Image: /publicimagesdough/pesochnoe.jpg
+- Keywords: shortcrust pastry recipe, crumbly cookie dough, tart base, home baking
+
+**Description:**
+A delicate, melt-in-your-mouth crumbly pastry. The classic base for homemade cookies, tarts, and open-faced pies.
+
+**Ingredients:**
+- Flour - 400g
+- Butter - 250g
+- Sugar - 150g
+- Eggs - 2 pcs
+- Salt - a pinch
+- Vanilla extract
+
+**Preparation Steps:**
+1. Cut butter into cubes, keep cold
+2. Sift flour with salt
+3. Rub butter into flour until crumbly
+4. Whisk eggs with sugar
+5. Combine with flour crumbs
+6. Quickly knead into dough
+7. Wrap in plastic wrap
+8. Chill for 30 minutes
+
+**Common Uses:**
+- Shortbread pies
+- Cookies
+- Tartlets
+- Cream baskets
+- Cheesecake bases
+
+**Historical Context:**
+A delicate crumbly pastry that appeared in Russian country estates in the 19th century. A.P. Chekhov mentions shortbread pies in his stories.
+
+---
+
+### RECIPE: Yeast Puff Pastry
+- ID: dough-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-4
+- Name: Слоёное тесто дрожжевое / Yeast Puff Pastry
+- Epoch: 19th century
+- Time: 4-5 hours
+- Image: /publicimagesdough/sloyonoe_drozhzhevoe.jpg
+- Keywords: yeast puff pastry recipe, homemade croissants, layered pies, Napoleon cake dough
+
+**Description:**
+Airy, multi-layered pastry with a characteristic puffy structure. Perfect for croissants, layered pies, and the famous Napoleon cake.
+
+**Ingredients:**
+- Flour - 600g
+- Butter - 400g
+- Milk - 250ml
+- Yeast - 10g
+- Egg - 1 pc
+- Sugar - 2 tbsp
+- Salt - 1 tsp
+- Citric acid - a pinch
+
+**Preparation Steps:**
+1. Prepare yeast dough base
+2. Let rise for 1 hour
+3. Chill butter, roll into a slab
+4. Roll dough twice the size of butter
+5. Wrap butter in dough like an envelope
+6. Roll out, fold into thirds
+7. Chill for 30 minutes
+8. Repeat rolling process 4 times
+9. Chill before baking
+
+**Common Uses:**
+- Napoleon cake
+- Croissants
+- Puff pastry tongues
+- Pies
+- Kulebyaka
+
+**Historical Context:**
+Complex to make but very popular. In the 19th century, puff pastry was prepared for special occasions and festive celebrations.
+
+---
+
+### RECIPE: Quick Puff Pastry (No Yeast)
+- ID: dough-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-5
+- Name: Слоёное тесто бездрожжевое / Quick Puff Pastry
+- Epoch: 19th century
+- Time: 2 hours
+- Image: /publicimagesdough/sloyonoe_bezdrozhzhevoe.jpg
+- Keywords: yeast-free puff pastry recipe, crispy dough, homemade puff pastry, quick baking
+
+**Description:**
+Crispy and flaky pastry without yeast. A great choice for quick pies, crispy sticks, and tart bases.
+
+**Ingredients:**
+- Flour - 500g
+- Butter - 350g
+- Water - 200ml
+- Egg - 1 pc
+- Salt - 1 tsp
+- Vinegar (9%) - 1 tbsp
+
+**Preparation Steps:**
+1. Sift the flour
+2. Chill 300g of butter, cut into pieces
+3. Mix water with egg, vinegar, and salt
+4. Knead dough with 50g of butter
+5. Chill for 30 minutes
+6. Roll out, layer remaining butter
+7. Fold like an envelope
+8. Roll and fold 5-6 times
+9. Chill between rolling sessions
+
+**Common Uses:**
+- Crispy sticks
+- Cookies
+- Pies
+- Tart bases
+- Vol-au-vents
+
+**Historical Context:**
+A simpler version of puff pastry. Used for quick pies and cookies in Russian households.
+
+---
+
+### RECIPE: Choux Pastry (Zavarnoe)
+- ID: dough-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-6
+- Name: Заварное тесто / Choux Pastry
+- Epoch: 18th century
+- Time: 1 hour
+- Image: /publicimagesdough/zavarnoe.jpg
+- Keywords: choux pastry recipe, profiteroles and eclairs, cream puff dough
+
+**Description:**
+A versatile elastic pastry that creates hollow cavities when baked. The foundation for delicate profiteroles, eclairs, and choux rings.
+
+**Ingredients:**
+- Flour - 200g
+- Water - 250ml
+- Butter - 100g
+- Eggs - 4 pcs
+- Salt - a pinch
+- Sugar - 1 tsp
+
+**Preparation Steps:**
+1. Bring water, butter, and salt to a boil
+2. Add flour all at once, stir vigorously
+3. Cook for 2-3 minutes until it pulls away from the sides
+4. Cool to 60°C (140°F)
+5. Add eggs one at a time
+6. Mix thoroughly after each addition
+7. Dough should be smooth and glossy
+
+**Common Uses:**
+- Profiteroles
+- Eclairs
+- Choux rings
+- Cream puffs
+- Churros base
+
+**Historical Context:**
+A French pastry that took root in Russia. Catherine the Great loved choux pastries. They were served at imperial balls and receptions.
+
+---
+
+### RECIPE: Sponge Cake Batter (Biskvit)
+- ID: dough-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-7
+- Name: Бисквитное тесто / Sponge Cake Batter
+- Epoch: 18th-19th century
+- Time: 40 minutes
+- Image: /publicimagesdough/biskvitnoe.jpg
+- Keywords: sponge cake batter recipe, fluffy biscuit for cake, classic sponge, roll base
+
+**Description:**
+Airy, porous, and delicate sponge cake. The classic base for homemade cakes, rolls, and pastries.
+
+**Ingredients:**
+- Eggs - 6 pcs
+- Sugar - 200g
+- Flour - 200g
+- Vanilla extract
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Separate eggs into whites and yolks
+2. Whisk yolks with half the sugar until pale
+3. Whisk whites with salt until stiff peaks
+4. Add remaining sugar to whites
+5. Gently fold yolks into whites
+6. Gradually sift in flour
+7. Fold from bottom to top gently
+8. Bake immediately at 180°C (350°F) for 25-30 minutes
+
+**Common Uses:**
+- Cakes
+- Pastries
+- Swiss rolls
+- Sponge cake layers
+- Tiramisu
+
+**Historical Context:**
+The airy cake batter for tortes. In the 19th century, sponge cakes were served at balls. A.S. Pushkin mentions sponge cakes in his writings.
+
+---
+
+### RECIPE: Pelmeni Dough
+- ID: dough-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-8
+- Name: Тесто для пельменей / Pelmeni Dough
+- Epoch: 13th-14th century
+- Time: 1 hour
+- Image: /publicimagesdough/pelmeni.jpg
+- Keywords: pelmeni dough recipe, elastic water-based dough, homemade dumplings
+
+**Description:**
+Classic elastic and sturdy dough made with water and eggs. Ensures that pelmeni don't fall apart during cooking and keep the filling juicy.
+
+**Ingredients:**
+- Flour - 500g
+- Water - 200ml
+- Eggs - 2 pcs
+- Salt - 1 tsp
+- Vegetable oil - 1 tbsp
+
+**Preparation Steps:**
+1. Sift flour into a mound
+2. Make a well in the center
+3. Add eggs with salt
+4. Gradually pour in water
+5. Knead into a stiff dough
+6. Add oil
+7. Knead for 10 minutes
+8. Cover and rest for 30 minutes
+
+**Common Uses:**
+- Pelmeni (Russian dumplings)
+- Vareniki (Ukrainian dumplings)
+- Manti
+- Khinkali
+- Buuz
+
+**Historical Context:**
+Classic dough for Siberian pelmeni. The dough must be elastic enough to withstand boiling without tearing.
+
+---
+
+### RECIPE: Vareniki Dough
+- ID: dough-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-9
+- Name: Тесто для вареников / Vareniki Dough
+- Epoch: 18th century
+- Time: 50 minutes
+- Image: /publicimagesdough/vareniki.jpg
+- Keywords: vareniki dough with kefir, soft dough for dumplings, homemade vareniki
+
+**Description:**
+Soft, tender, and pliable dough made with kefir. Perfect for vareniki filled with cottage cheese, cherries, or potatoes.
+
+**Ingredients:**
+- Flour - 400g
+- Kefir or milk - 250ml
+- Egg - 1 pc
+- Salt - 0.5 tsp
+- Baking soda - 0.5 tsp
+
+**Preparation Steps:**
+1. Warm the kefir
+2. Add baking soda, stir
+3. Add egg and salt
+4. Gradually sift in flour
+5. Knead into a soft dough
+6. Rest for 20 minutes
+7. Dough should be tender and pliable
+
+**Common Uses:**
+- Vareniki with cottage cheese
+- Vareniki with cherries
+- Vareniki with potatoes
+- Lazy vareniki
+
+**Historical Context:**
+Soft dough for vareniki. In Ukraine and Russia, kefir-based dough was used for its tenderness and delicate texture.
+
+---
+
+### RECIPE: Noodle Dough (Lapsha)
+- ID: dough-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-10
+- Name: Пресное тесто для лапши / Noodle Dough
+- Epoch: 18th century
+- Time: 1 hour
+- Image: /publicimagesdough/lapsha.jpg
+- Keywords: homemade noodle dough recipe, egg noodles from scratch, soup dough
+
+**Description:**
+Traditional stiff egg-based dough for homemade noodles. Makes soups and broths truly hearty and nourishing.
+
+**Ingredients:**
+- Flour - 400g
+- Eggs - 3 pcs
+- Water - 2 tbsp
+- Salt - 1 tsp
+- Vegetable oil - 1 tbsp
+
+**Preparation Steps:**
+1. Sift the flour
+2. Whisk eggs with salt
+3. Pour into the flour
+4. Knead into a stiff dough
+5. Add water and oil
+6. Knead for 15 minutes
+7. Rest for 30 minutes
+8. Roll out very thin
+
+**Common Uses:**
+- Homemade noodles
+- Noodle casserole (Lapshevik)
+- Fish soup with noodles
+- Chicken noodle soup
+
+**Historical Context:**
+Homemade noodles were a source of pride for housewives. N.V. Gogol mentions homemade noodles in his works about Ukrainian and Russian cuisine.
+
+---
+
+### RECIPE: Blini Batter
+- ID: dough-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-11
+- Name: Тесто для блинов / Blini Batter
+- Epoch: Ancient Rus
+- Time: 40 minutes
+- Image: /publicimagesdough/bliny.jpg
+- Keywords: thin blini batter recipe, milk pancakes with holes, classic Russian pancakes
+
+**Description:**
+Classic thin batter for lacy, holey blini made with milk. Delicate and delicious — the traditional Russian pancake.
+
+**Ingredients:**
+- Flour - 300g
+- Milk - 500ml
+- Eggs - 3 pcs
+- Sugar - 2 tbsp
+- Salt - 0.5 tsp
+- Vegetable oil - 3 tbsp
+- Baking soda - 0.5 tsp
+
+**Preparation Steps:**
+1. Whisk eggs with sugar and salt
+2. Add milk
+3. Sift in flour, mix well
+4. Add baking soda
+5. Pour in oil
+6. Rest for 30 minutes
+7. Consistency should be like thin sour cream
+
+**Common Uses:**
+- Thin blini
+- Lacy pancakes
+- Nalistniki (filled pancakes)
+- Crepes
+
+**Historical Context:**
+Classic blini batter. Blini were baked for Maslenitsa (Butter Week). A.S. Pushkin adored blini and wrote about them.
+
+---
+
+### RECIPE: Oladi Batter (Fluffy Pancakes)
+- ID: dough-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-12
+- Name: Тесто для оладий / Oladi Batter
+- Epoch: 18th-19th century
+- Time: 30 minutes
+- Image: /publicimagesdough/oladi.jpg
+- Keywords: fluffy oladi batter recipe, kefir pancakes, childhood-style pancakes
+
+**Description:**
+Fluffy, airy batter made with kefir and baking soda. Oladi turn out tall, soft, and don't deflate after frying.
+
+**Ingredients:**
+- Kefir - 500ml
+- Flour - 300g
+- Egg - 1 pc
+- Sugar - 2 tbsp
+- Salt - 0.5 tsp
+- Baking soda - 1 tsp
+
+**Preparation Steps:**
+1. Warm the kefir
+2. Add baking soda, stir
+3. Add egg
+4. Add sugar and salt
+5. Gradually add flour
+6. Batter should be like thick sour cream
+7. Rest for 15 minutes
+8. Do not stir before frying
+
+**Common Uses:**
+- Fluffy oladi
+- Apple oladi
+- Pumpkin oladi
+- Potato pancakes (draniki)
+
+**Historical Context:**
+Fluffy oladi with kefir were a popular breakfast in Russian families. They were often served with sour cream or honey.
+
+---
+
+### RECIPE: Pizza Dough (Classic)
+- ID: dough-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-13
+- Name: Тесто для пиццы / Pizza Dough
+- Epoch: 20th century
+- Time: 1.5 hours
+- Image: /publicimagesdough/pizza.jpg
+- Keywords: pizza dough recipe, Italian pizza dough, thin homemade pizza
+
+**Description:**
+Classic Italian yeast dough for pizza. Thin, elastic, with a crispy crust and soft crumb.
+
+**Ingredients:**
+- Flour - 500g
+- Water - 300ml
+- Yeast - 7g
+- Olive oil - 3 tbsp
+- Sugar - 1 tsp
+- Salt - 1 tsp
+
+**Preparation Steps:**
+1. Warm the water
+2. Dissolve yeast with sugar
+3. Let stand for 15 minutes
+4. Add oil and salt
+5. Gradually sift in flour
+6. Knead into elastic dough
+7. Let rise for 1 hour
+8. Roll out thin
+
+**Common Uses:**
+- Pizza
+- Focaccia
+- Calzone
+- Thin-crust pizza
+
+**Historical Context:**
+Italian dough adapted in Russia. Became popular in the 1990s with the opening of pizzerias across the country.
+
+---
+
+### RECIPE: Chebureki Dough
+- ID: dough-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-14
+- Name: Тесто для чебуреков / Chebureki Dough
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesdough/chebureki.jpg
+- Keywords: chebureki dough recipe, choux pastry for chebureki, crispy Crimean pastries
+
+**Description:**
+Choux-style elastic dough with vodka added for extra crispiness and blistering when deep-fried.
+
+**Ingredients:**
+- Flour - 500g
+- Water - 250ml
+- Egg - 1 pc
+- Salt - 1 tsp
+- Vodka - 1 tbsp
+- Vegetable oil - 2 tbsp
+
+**Preparation Steps:**
+1. Boil water with salt and oil
+2. Add 1 cup of flour, brew
+3. Cool slightly
+4. Add egg
+5. Add vodka
+6. Add remaining flour
+7. Knead into elastic dough
+8. Rest for 30 minutes
+
+**Common Uses:**
+- Chebureki (Crimean fried pastries)
+- Belyashi
+- Deep-fried pies
+
+**Historical Context:**
+Crimean Tatar dough that became popular throughout Russia. Chebureki are deep-fried until golden and blistery.
+
+---
+
+### RECIPE: Khvorost Dough (Fried Cookies)
+- ID: dough-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-15
+- Name: Тесто для хвороста / Khvorost Dough
+- Epoch: 18th-19th century
+- Time: 40 minutes
+- Image: /publicimagesdough/hvorost.jpg
+- Keywords: khvorost dough recipe, crispy fried cookies, sour cream pastry
+
+**Description:**
+Thin, crispy dough made with sour cream and vodka. Perfect for golden, crunchy khvorost cookies served with tea.
+
+**Ingredients:**
+- Flour - 300g
+- Eggs - 2 pcs
+- Sour cream - 2 tbsp
+- Sugar - 1 tbsp
+- Vodka - 1 tbsp
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Whisk eggs with sugar and salt
+2. Add sour cream and vodka
+3. Gradually add flour
+4. Knead into stiff dough
+5. Roll out very thin
+6. Cut into strips
+7. Deep-fry until golden
+8. Dust with powdered sugar
+
+**Common Uses:**
+- Khvorost (traditional fried cookies)
+- Favorks
+- Ushki (little ears)
+- Crispy cookies
+
+**Historical Context:**
+Crispy dough for khvorost cookies, baked for holidays. The vodka makes the dough extra crispy and blistery.
+
+---
+
+### RECIPE: Strudel Dough (Viennese)
+- ID: dough-16
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-16
+- Name: Тесто для штруделя / Strudel Dough
+- Epoch: 18th-19th century
+- Time: 1.5 hours
+- Image: /publicimagesdough/shtrodel.jpg
+- Keywords: strudel dough recipe, stretched pastry, homemade apple strudel
+
+**Description:**
+Unique stretched dough that can be rolled paper-thin. The classic base for Viennese apple strudel.
+
+**Ingredients:**
+- Flour - 300g
+- Egg - 1 pc
+- Water - 150ml
+- Vegetable oil - 2 tbsp
+- Vinegar - 1 tsp
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Sift flour into a mound
+2. Make a well in the center
+3. Add egg, oil, and vinegar
+4. Gradually pour in water
+5. Knead into elastic dough
+6. Slam against the counter 20 times
+7. Rest for 1 hour
+8. Roll out paper-thin
+
+**Common Uses:**
+- Apple strudel
+- Cherry strudel
+- Cottage cheese strudel
+
+**Historical Context:**
+An Austrian dough that became popular in Russia. The dough should be stretched until translucent enough to read through.
+
+---
+
+### RECIPE: Quiche Dough (Pate Sablee)
+- ID: dough-17
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-17
+- Name: Тесто для кишей / Quiche Dough
+- Epoch: 19th-20th century
+- Time: 1 hour
+- Image: /publicimagesdough/kish.jpg
+- Keywords: quiche dough recipe, savory pie base, shortcrust for tarts
+
+**Description:**
+A short, crumbly pastry (pâte sablée). The perfect savory base for French quiches and open-faced pies.
+
+**Ingredients:**
+- Flour - 250g
+- Butter - 125g
+- Egg - 1 pc
+- Water - 2-3 tbsp
+- Salt - 0.5 tsp
+
+**Preparation Steps:**
+1. Sift flour with salt
+2. Cut butter into cubes
+3. Rub into flour until crumbly
+4. Add egg and water
+5. Quickly knead into dough
+6. Chill for 30 minutes
+7. Roll out, press into pan
+
+**Common Uses:**
+- Mushroom quiche
+- Salmon quiche
+- Vegetable quiche
+- Savory tarts
+
+**Historical Context:**
+French pastry for savory pies. Became popular in Russia in the 20th century with the influence of European cuisine.
+
+---
+
+### RECIPE: Muffin Batter
+- ID: dough-18
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-18
+- Name: Тесто для маффинов / Muffin Batter
+- Epoch: 20th century
+- Time: 30 minutes
+- Image: /publicimagesdough/muffins.jpg
+- Keywords: muffin batter recipe, quick muffins, homemade berry cakes
+
+**Description:**
+Quick and simple batter made with vegetable oil. Muffins turn out moist, porous, and ready in just 30 minutes.
+
+**Ingredients:**
+- Flour - 300g
+- Milk - 250ml
+- Eggs - 2 pcs
+- Sugar - 150g
+- Vegetable oil - 100ml
+- Baking powder - 2 tsp
+- Salt - a pinch
+
+**Preparation Steps:**
+1. Mix flour with baking powder and salt
+2. Whisk eggs with sugar
+3. Add milk and oil
+4. Pour into the flour mixture
+5. Mix until just moistened
+6. Do not overmix!
+7. Bake immediately
+
+**Common Uses:**
+- Sweet muffins
+- Berry muffins
+- Chocolate chip muffins
+- Cupcakes
+
+**Historical Context:**
+American-style batter that became popular worldwide. Quick baking at its finest — a 20th-century innovation.
+
+---
+
+### RECIPE: Quick Pizza Dough (with Kefir)
+- ID: dough-19
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-19
+- Name: Тесто для пиццы на кефире / Quick Pizza Dough with Kefir
+- Epoch: 20th century
+- Time: 40 minutes
+- Image: /publicimagesdough/pizza_kefir.jpg
+- Keywords: quick pizza dough with kefir, yeast-free pizza, pan pizza
+
+**Description:**
+Super-fast pizza dough without yeast, made with kefir. Ready in 5 minutes, perfect for lazy skillet pizza.
+
+**Ingredients:**
+- Kefir - 500ml
+- Flour - 500g
+- Egg - 1 pc
+- Baking soda - 1 tsp
+- Salt - 1 tsp
+- Sugar - 1 tbsp
+- Vegetable oil - 3 tbsp
+
+**Preparation Steps:**
+1. Mix kefir with baking soda
+2. Let stand for 10 minutes
+3. Add egg, salt, sugar
+4. Add oil
+5. Gradually add flour
+6. Knead into soft dough
+7. Use immediately
+
+**Common Uses:**
+- Quick pizza
+- Skillet pizza
+- Open-faced pies
+
+**Historical Context:**
+A quick yeast-free dough popular in Russian home cooking for fast weekday meals.
+
+---
+
+### RECIPE: Manti Dough
+- ID: dough-20
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/dough-20
+- Name: Тесто для мантов / Manti Dough
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesdough/manty.jpg
+- Keywords: manti dough recipe, elastic dough for steamed dumplings, homemade manti
+
+**Description:**
+A sturdy and elastic water-based dough. Holds up to long steaming without tearing, keeping all the juices inside.
+
+**Ingredients:**
+- Flour - 600g
+- Water - 300ml
+- Egg - 1 pc
+- Salt - 1 tsp
+
+**Preparation Steps:**
+1. Salt the water
+2. Add egg
+3. Gradually add flour
+4. Knead into a very stiff dough
+5. Knead for 15 minutes
+6. Rest for 30 minutes
+7. Roll out thin
+
+**Common Uses:**
+- Manti (Central Asian steamed dumplings)
+- Khinkali (Georgian dumplings)
+- Buuz (Mongolian dumplings)
+- Poses
+
+**Historical Context:**
+Uzbek-style dough for manti. Must be strong enough to not tear during steaming, preserving the flavorful broth inside.
+
+---
+
+## Dough Index Summary
+
+**Total Recipes Added:** 20
+**Total Recipes Overall:** 52 (17 Baking + 15 Desserts + 20 Dough)
+**Category:** Dough & Pastry
+**Cuisine Type:** Traditional Russian & International
+
+**Dough Types Covered:**
+- 🍞 Yeast-based: Rich Yeast, Lenten Yeast, Yeast Puff
+- 🥟 Dumpling doughs: Pelmeni, Vareniki, Manti, Chebureki
+- 🍰 Cake batters: Sponge, Shortcrust, Choux, Muffin
+- 🥞 Pancake batters: Blini, Oladi
+- 🥐 Puff pastries: Yeast Puff, Quick Puff
+- 🍕 Pizza doughs: Classic Pizza, Quick Kefir Pizza
+- 🍝 Noodle dough: Lapsha
+- 🥨 Fried doughs: Khvorost
+- 🥧 Pie doughs: Quiche, Strudel
+
+**Key Techniques:**
+- 💧 Water-based vs. Dairy-based doughs
+- 🧈 Cold butter method (shortcrust, puff)
+- 🔥 Choux method (cooked flour base)
+- 🌡️ Fermentation control (yeast doughs)
+- ⏱️ Resting and chilling periods
+
+**Dietary Notes:**
+- Most doughs contain gluten (wheat flour)
+- Many contain dairy (milk, butter, kefir, sour cream)
+- Some contain eggs (except lenten and some dumpling doughs)
+- Vegan options: Lenten yeast dough, Manti dough, Pelmeni dough
+
+---
+---
+
+## BEVERAGES & DRINKS RECIPES
+
+### RECIPE: Classic Kvass
+- ID: drink-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-1
+- Name: Classic Kvass (Квас классический)
+- Epoch: Ancient Rus (10th century)
+- Time: 3 days
+- Image: /publicimagesdrinks/kvass.jpg
+- Keywords: kvass recipe, traditional Russian fermented drink, homemade kvass
+
+**Description:**
+A traditional fermented beverage made from rye bread, malt, and sugar. Slightly sweet, refreshing, and naturally carbonated. The most iconic Russian summer drink.
+
+**Ingredients:**
+- Rye bread - 500g
+- Water - 3L
+- Sugar - 200g
+- Dry yeast - 5g (or 50g liquid)
+- Raisins - 50g
+- Mint (optional)
+
+**Preparation Steps:**
+1. Cut rye bread into cubes
+2. Dry in the oven until golden brown
+3. Pour boiling water over the bread
+4. Leave for 8-10 hours (overnight)
+5. Strain the liquid
+6. Add sugar and yeast
+7. Leave to ferment for 12-14 hours
+8. Add raisins for carbonation
+9. Bottle, leave for 2-3 hours at room temperature
+10. Refrigerate before serving
+
+**Historical Context:**
+Kvass has been known in Russia since the 10th century. It was the most common non-alcoholic drink, consumed daily by all social classes. Peter the Great loved kvass and ordered it to be served at all state banquets.
+
+---
+
+### RECIPE: Sbiten (Traditional Honey Drink)
+- ID: drink-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-2
+- Name: Sbiten (Сбитень)
+- Epoch: 12th-13th century
+- Time: 45 minutes
+- Image: /publicimagesdrinks/sbiten.jpg
+- Keywords: sbiten recipe, Russian honey drink, warming winter beverage
+
+**Description:**
+A warming traditional Russian beverage made with honey, spices, and herbs. Served hot as a winter warmer and cold as a refreshing drink. Known as "Russian mulled wine."
+
+**Ingredients:**
+- Honey - 200g
+- Water - 1.5L
+- Cinnamon - 2 sticks
+- Cloves - 5-6 pcs
+- Ginger (fresh) - 30g
+- Cardamom - 5 pods
+- Star anise - 1 pc
+- Lemon - 1 pc
+- Mint for garnish
+
+**Preparation Steps:**
+1. Bring water to a boil
+2. Add all spices and ginger
+3. Simmer for 15 minutes
+4. Add honey, stir until dissolved
+5. Simmer for another 10 minutes
+6. Add lemon juice
+7. Strain into cups
+8. Serve hot with a sprig of mint
+
+**Historical Context:**
+Sbiten is mentioned in chronicles from the 12th century. It was the most popular winter drink before tea arrived in Russia. Ivan the Terrible loved sbiten and drank it to warm up during the cold Russian winters.
+
+---
+
+### RECIPE: Mors (Berry Fruit Drink)
+- ID: drink-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-3
+- Name: Mors (Морс ягодный)
+- Epoch: 15th-16th century
+- Time: 20 minutes + chilling
+- Image: /publicimagesdrinks/mors.jpg
+- Keywords: mors recipe, berry fruit drink, cranberry drink, Russian summer beverage
+
+**Description:**
+A refreshing non-alcoholic drink made from fresh berries, sugar, and water. The most popular summer thirst-quencher in Russia, especially made with cranberries or lingonberries.
+
+**Ingredients:**
+- Fresh cranberries or lingonberries - 500g
+- Water - 2L
+- Sugar - 150g
+- Honey - 2 tbsp (optional)
+- Mint for garnish
+
+**Preparation Steps:**
+1. Wash berries thoroughly
+2. Extract juice using a juicer or press
+3. Set juice aside in the refrigerator
+4. Cover berry skins with water
+5. Bring to a boil, simmer for 10 minutes
+6. Strain the liquid
+7. Add sugar and honey, stir until dissolved
+8. Cool to room temperature
+9. Mix with reserved berry juice
+10. Refrigerate until cold
+
+**Historical Context:**
+Mors has been a traditional Russian drink since the 15th century. It was especially popular in monasteries and noble estates. Catherine the Great preferred mors made from cranberries, believing it had health benefits.
+
+---
+
+### RECIPE: Russian Compote
+- ID: drink-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-4
+- Name: Russian Compote (Компот)
+- Epoch: 18th century
+- Time: 30 minutes + chilling
+- Image: /publicimagesdrinks/compote.jpg
+- Keywords: compote recipe, dried fruit drink, Russian fruit beverage, homemade compote
+
+**Description:**
+A sweet, aromatic fruit drink made from fresh or dried fruits and berries. A staple in Russian kindergartens, schools, and homes. Perfect for summer refreshment.
+
+**Ingredients:**
+- Fresh fruits (apples, pears, plums) - 500g
+- Berries (cherries, raspberries, strawberries) - 200g
+- Water - 3L
+- Sugar - 150g
+- Lemon juice - 1 tbsp
+- Cinnamon - 1 stick (optional)
+
+**Preparation Steps:**
+1. Wash and chop fruits into large pieces
+2. Bring water to a boil
+3. Add fruits and sugar
+4. Simmer for 15-20 minutes
+5. Add berries and cinnamon
+6. Cook for another 5-7 minutes
+7. Add lemon juice
+8. Cool to room temperature
+9. Refrigerate before serving
+
+**Historical Context:**
+Compote became popular in Russia in the 18th century as a way to preserve summer fruits. It was a favorite drink in Russian country estates. A.P. Chekhov mentions compote in his stories about summer in the countryside.
+
+---
+
+### RECIPE: Kissel (Berry Jelly Drink)
+- ID: drink-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-5
+- Name: Berry Kissel (Кисель ягодный)
+- Epoch: Ancient Rus (10th century)
+- Time: 40 minutes
+- Image: /publicimagesdrinks/kissel.jpg
+- Keywords: kissel recipe, berry jelly drink, potato starch beverage, traditional Russian drink
+
+**Description:**
+A thick, velvety berry drink made with potato starch. One of the oldest Russian desserts — warming in winter and refreshing in summer. The texture ranges from drinkable to spoonable.
+
+**Ingredients:**
+- Fresh berries (cranberries, raspberries, cherries) - 400g
+- Sugar - 150g
+- Water - 1.5L
+- Potato starch - 3 tbsp
+- Berries for garnish
+
+**Preparation Steps:**
+1. Wash berries, extract juice (set aside)
+2. Cover pomace with water, bring to a boil
+3. Simmer for 15 minutes
+4. Strain the liquid
+5. Add sugar, stir until dissolved
+6. Dissolve potato starch in cold water
+7. Slowly pour starch mixture into boiling compote
+8. Stir constantly until thickened
+9. Add reserved berry juice
+10. Serve warm or chilled
+
+**Historical Context:**
+Kissel is one of the oldest Russian drinks, mentioned in chronicles from the 10th century. In ancient times, it was made from fermented grains. The drink appears in fairy tales as "rivers of milk and banks of kissel."
+
+---
+
+### RECIPE: Russian Tea with Samovar
+- ID: drink-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-6
+- Name: Russian Tea with Samovar (Чай из самовара)
+- Epoch: 18th-19th century (tea culture)
+- Time: 20 minutes
+- Image: /publicimagesdrinks/samovar.jpg
+- Keywords: Russian tea recipe, samovar tea, zavarka concentrate, traditional tea ceremony
+
+**Description:**
+Traditional Russian tea made in a samovar using a tea concentrate called "zavarka." Served with jam, honey, and traditional Russian sweets. A social ritual at the heart of Russian hospitality.
+
+**Ingredients:**
+- Black loose leaf tea - 3 tbsp
+- Water - 1L (for zavarka)
+- Hot water (in samovar) - 3L
+- Sugar or honey - to taste
+- Jam (any) - for serving
+- Lemon - slices
+
+**Preparation Steps:**
+1. Place tea leaves in a small teapot
+2. Pour boiling water over the leaves
+3. Let steep for 5-7 minutes to make zavarka (concentrate)
+4. Fill the samovar with fresh hot water
+5. Pour a small amount of zavarka into each cup
+6. Top with hot water from the samovar
+7. Add sugar, honey, or jam to taste
+8. Serve with traditional Russian sweets
+
+**Historical Context:**
+Tea became popular in Russia in the 18th century. The samovar (self-boiling kettle) became a symbol of Russian hospitality. A.S. Pushkin mentions tea drinking in his works. Russian tea was historically brought from China and later from India and Ceylon.
+
+---
+
+### RECIPE: Homemade Lemonade
+- ID: drink-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-7
+- Name: Homemade Lemonade (Домашний лимонад)
+- Epoch: 19th century
+- Time: 15 minutes + chilling
+- Image: /publicimagesdrinks/lemonade.jpg
+- Keywords: homemade lemonade recipe, Russian lemonade, fresh citrus drink
+
+**Description:**
+A refreshing homemade lemonade made with fresh lemons, oranges, and mint. The classic Russian summer drink, perfect for hot days. Light, bright, and naturally sweet.
+
+**Ingredients:**
+- Lemons - 4 pcs
+- Oranges - 2 pcs
+- Sugar - 150g
+- Water - 2L
+- Fresh mint - 1 bunch
+- Ice cubes - for serving
+- Sparkling water (optional)
+
+**Preparation Steps:**
+1. Wash lemons and oranges thoroughly
+2. Juice the citrus fruits
+3. Combine juice with sugar
+4. Add water and stir well
+5. Add fresh mint leaves
+6. Refrigerate for 2 hours
+7. Serve over ice
+8. Top with sparkling water if desired
+
+**Historical Context:**
+Lemonade became popular in Russia in the 19th century after imported citrus fruits became more available. It was served at summer parties and picnics. In Soviet times, "Limonad" was a popular soda drink sold across the country.
+
+---
+
+### RECIPE: Russian Medovukha (Honey Mead)
+- ID: drink-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-8
+- Name: Russian Medovukha (Медовуха)
+- Epoch: Ancient Rus (9th-10th century)
+- Time: 5-7 days (fermentation)
+- Image: /publicimagesdrinks/medovukha.jpg
+- Keywords: medovukha recipe, Russian honey mead, traditional fermented honey drink
+
+**Description:**
+A traditional low-alcohol fermented beverage made from honey, water, and spices. The ancient Slavic drink, sweeter than beer but less alcoholic. The oldest known Russian beverage.
+
+**Ingredients:**
+- Honey - 500g
+- Water - 3L
+- Dry yeast - 5g
+- Hops - 2 tbsp
+- Cinnamon - 1 stick
+- Cloves - 3 pcs
+- Ginger - 20g
+
+**Preparation Steps:**
+1. Bring water to a boil
+2. Add hops and spices, simmer for 15 minutes
+3. Strain the liquid
+4. Add honey, stir until dissolved
+5. Cool to 25°C (77°F)
+6. Add yeast
+7. Ferment at room temperature for 4-6 days
+8. Bottle and age for 2-3 days in a cool place
+9. Refrigerate before serving
+
+**Historical Context:**
+Medovukha is one of the oldest alcoholic drinks in Russian history, dating back to the 9th century. It was highly valued in ancient times and was given as a diplomatic gift. The Grand Princes of Kiev drank medovukha at royal feasts and celebrations.
+
+---
+
+### RECIPE: Russian Coffee with Condensed Milk
+- ID: drink-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/drink-9
+- Name: Russian Coffee with Condensed Milk (Кофе со сгущёнкой)
+- Epoch: 20th century
+- Time: 10 minutes
+- Image: /publicimagesdrinks/coffee.jpg
+- Keywords: Russian coffee recipe, condensed milk coffee, Soviet-style coffee
+
+**Description:**
+Strong black coffee sweetened with sweetened condensed milk. A Soviet-era favorite, still popular across Russia. Rich, creamy, and perfectly sweet.
+
+**Ingredients:**
+- Freshly ground coffee - 4 tbsp
+- Water - 500ml
+- Sweetened condensed milk - 2-3 tbsp
+- Cinnamon (optional)
+
+**Preparation Steps:**
+1. Brew strong black coffee
+2. Add sweetened condensed milk to taste
+3. Stir until fully combined
+4. Top with a dash of cinnamon if desired
+5. Serve hot
+
+**Historical Context:**
+Coffee with condensed milk became popular in Soviet times when both coffee and condensed milk were available in grocery stores. It was a favorite in army kitchens, railway cafes, and in the homes of students. Today it remains a nostalgic drink.
+
+---
+
+## BEVERAGES Index Summary
+
+**Total Recipes Added:** 9
+**Total Recipes Overall:** 61 (17 Baking + 15 Desserts + 20 Dough + 9 Drinks)
+
+**Drink Types Covered:**
+- 🍯 Fermented drinks: Kvass, Medovukha
+- 🫖 Hot drinks: Sbiten, Russian Tea, Coffee with Condensed Milk
+- 🍒 Berry drinks: Mors, Kissel
+- 🍎 Fruit drinks: Compote, Lemonade
+
+**Special Characteristics:**
+- Fermented: Kvass, Medovukha
+- Hot winter drinks: Sbiten, Tea
+- Cold summer drinks: Mors, Compote, Kissel, Lemonade
+- Alcoholic: Medovukha (low alcohol)
+- Non-alcoholic: All others
+
+**Common Ingredients:**
+- Berries: Cranberries, lingonberries, raspberries
+- Honey: Used in Sbiten, Medovukha
+- Spices: Cinnamon, cloves, ginger, cardamom
+
+**Historical Importance:**
+- Kvass and Kissel: Ancient Rus (10th century)
+- Sbiten and Medovukha: 12th-13th century
+- Tea and Compote: 18th-19th century
+- Coffee with Condensed Milk: 20th century
+
+---
+
+## Updated Recipe Summary
+
+| Category | Count | Recipes |
+|----------|-------|---------|
+| 🥖 Baking & Pastry | 17 | Classic Blini, Kurnik, Kalachi, Vatrushki, Tula Pryaniki, Kulebyaka, Cabbage Pirozhki, Sochniki, Wedding Karavai, Shangi, Plushki, Rasstegai, Krendeli, Pyshki, Medovaya Kovrizhka, Rye Pastila, Tvorozhniki |
+| 🍰 Desserts & Sweets | 15 | Medovik, Belevskaya Pastila, Ptichye Moloko, Pine Cone Jam, Tvorozhnaya Paskha, Syrniki, Berry Kissel, Ponchiki, Sharlotka, Kozinaki, Smetannik, Pumpkin Tsukaty, Meringue, Grated Pie, Currant Jelly |
+| 🥖 Dough & Pastry | 20 | Rich Yeast, Lenten Yeast, Shortcrust, Yeast Puff, Quick Puff, Choux, Sponge, Pelmeni, Vareniki, Noodle, Blini, Oladi, Pizza, Chebureki, Khvorost, Strudel, Quiche, Muffin, Quick Pizza, Manti |
+| 🍹 Beverages | 9 | Classic Kvass, Sbiten, Mors, Compote, Berry Kissel, Russian Tea, Homemade Lemonade, Medovukha, Coffee with Condensed Milk |
+| **TOTAL** | **61** | |
+
+---
+
+---
+
+## FISH & SEAFOOD RECIPES
+
+### RECIPE: Boiled Sturgeon with Horseradish
+- ID: fish-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-1
+- Name: Boiled Sturgeon with Horseradish (Осетрина отварная с хреном)
+- Epoch: 16th-17th century
+- Time: 1 hour
+- Image: /publicimagesfish/osetr.jpg
+- Keywords: boiled sturgeon recipe, sturgeon with horseradish, royal fish, ancient Russian fish dishes
+
+**Description:**
+Classic boiled sturgeon according to an ancient Russian recipe. A tender Tsar's dish that pairs perfectly with pungent grated horseradish.
+
+**Ingredients:**
+- Sturgeon - 1 kg
+- Onion - 2 pcs
+- Carrot - 1 pc
+- Parsley root - 1 pc
+- Bay leaf - 2 pcs
+- Peppercorns - 5 pcs
+- Salt - to taste
+- Grated horseradish - for serving
+- Vinegar (3%) - 2 tbsp
+
+**Preparation Steps:**
+1. Clean sturgeon, remove the notochord (viziga)
+2. Cut into serving pieces
+3. Place vegetables and spices in a pot
+4. Cover with water, bring to a boil
+5. Add fish, cook for 20-25 minutes over low heat
+6. Remove with a slotted spoon, arrange on a platter
+7. Serve with grated horseradish and vinegar
+
+**Historical Context:**
+Sturgeon was considered the Tsar's fish. During the reign of Alexei Mikhailovich, there was a special court position of "Master of Sturgeon Affairs." Tsar Alexei Mikhailovich greatly loved sturgeon and demanded it be served at all feasts. Catherine the Great also adored sturgeon, especially with horseradish.
+
+---
+
+### RECIPE: Russian-Style Zander (Sudak)
+- ID: fish-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-2
+- Name: Russian-Style Zander (Судак по-русски)
+- Epoch: 18th-19th century
+- Time: 1 hour 15 minutes
+- Image: /publicimagesfish/sudak.jpg
+- Keywords: zander Russian-style recipe, baked zander with pickles, ancient Russian fish recipe
+
+**Description:**
+Exquisite zander baked with salted cucumbers, capers, and olives in a rich sauce. A classic of Russian aristocratic cuisine.
+
+**Ingredients:**
+- Zander - 1.5 kg
+- Salted cucumbers - 3 pcs
+- Onion - 2 pcs
+- Cucumber brine - 1 cup
+- Capers - 50g
+- Olives - 100g
+- Lemon - 1 pc
+- Butter - 100g
+
+**Preparation Steps:**
+1. Clean zander, cut into portions
+2. Slice cucumbers, sauté them
+3. Fry onion until golden
+4. Bake fish in the oven for 20 minutes
+5. Prepare sauce from brine, capers, and butter
+6. Arrange fish on a platter
+7. Garnish with cucumbers, olives, lemon
+8. Pour sauce over the dish
+
+**Historical Context:**
+Zander is one of the most popular fish in Russian cuisine. I.S. Turgenev and A.P. Chekhov mention zander as an exquisite restaurant dish. Nikolai Leskov describes zander as a favorite dish of Russian aristocrats in his works.
+
+---
+
+### RECIPE: Herring Under a Fur Coat (Shuba)
+- ID: fish-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-3
+- Name: Herring Under a Fur Coat (Сельдь под шубой)
+- Epoch: Late 19th - early 20th century
+- Time: 40 minutes
+- Image: /publicimagesfish/seled_pod_shuboy.jpg
+- Keywords: herring under a fur coat recipe, classic shuba salad, layered salad with herring
+
+**Description:**
+A legendary layered salad with salted herring, vegetables, and mayonnaise. The main symbol of the festive Soviet table and feasts.
+
+**Ingredients:**
+- Salted herring - 2 pcs
+- Beets - 3 pcs
+- Potatoes - 4 pcs
+- Carrots - 2 pcs
+- Onion - 1 pc
+- Eggs - 4 pcs
+- Mayonnaise - 300g
+
+**Preparation Steps:**
+1. Boil vegetables and eggs, peel them
+2. Fillet herring, cut into cubes
+3. Grate vegetables separately
+4. Finely chop onion
+5. Layer: herring, onion, potato, carrot, egg, beet
+6. Spread each layer with mayonnaise
+7. Decorate as desired
+8. Chill for 2 hours before serving
+
+**Historical Context:**
+This salad became a symbol of Soviet feasts. Legend says it was created by merchant Anastas Bogomilov in 1918. V.I. Lenin, according to contemporaries, loved simple herring, and the "Shuba" salad became a mandatory dish on the New Year's table during Brezhnev's era.
+
+---
+
+### RECIPE: Rasstegai with Fish
+- ID: fish-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-4
+- Name: Rasstegai with Fish (Расстегаи с рыбой)
+- Epoch: 17th-18th century
+- Time: 2 hours 30 minutes
+- Image: /publicimagesfish/rasstegai_fish.jpg
+- Keywords: rasstegai with fish recipe, fish pies, Russian pastry, salmon rasstegai
+
+**Description:**
+Traditional Russian rasstegai with a juicy filling of salmon or sturgeon. An open-faced pie that melts in your mouth.
+
+**Ingredients:**
+- Flour - 500g
+- Milk - 250ml
+- Yeast - 10g
+- Eggs - 2 pcs
+- Butter - 100g
+- Sugar - 1 tbsp
+- Fish (salmon, sturgeon) - 600g
+- Onion - 2 pcs
+- Rice - 100g
+- Boiled eggs - 2 pcs
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Prepare yeast dough
+2. Let rise for 1 hour
+3. Poach fish, flake into pieces
+4. Cook rice, chop boiled eggs
+5. Sauté onion until golden
+6. Mix filling ingredients
+7. Roll out dough, cut into circles
+8. Place filling, pinch edges leaving an opening on top
+9. Brush with egg wash
+10. Bake for 25 minutes at 190°C (375°F)
+
+**Historical Context:**
+Rasstegai are called so because they are "unbuttoned" (rasstegnuty) on top. Alexander I greatly loved sturgeon rasstegai and ordered them to be served at all receptions. Nicholas II also adored rasstegai, especially with salmon.
+
+---
+
+### RECIPE: Sturgeon Balyk
+- ID: fish-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-5
+- Name: Sturgeon Balyk (Балык осетровый)
+- Epoch: 16th-17th century
+- Time: 3 days + drying
+- Image: /publicimagesfish/balyk.jpg
+- Keywords: sturgeon balyk recipe, homemade balyk, dried fish, ancient delicacies
+
+**Description:**
+Homemade dried sturgeon or sevruga balyk according to ancient recipes. A Tsar's table delicacy with a rich, concentrated flavor.
+
+**Ingredients:**
+- Sturgeon or sevruga - 2 kg
+- Coarse salt - 500g
+- Sugar - 2 tbsp
+- Bay leaf - 3 pcs
+- Allspice - 5 pcs
+
+**Preparation Steps:**
+1. Fillet fish, remove bones
+2. Mix salt, sugar, and spices
+3. Rub fish with the mixture on all sides
+4. Place in an enamel dish
+5. Put under pressure in the refrigerator for 3 days
+6. Rinse, soak in water for 2 hours
+7. Hang to dry for 5-7 days in a cool place
+
+**Historical Context:**
+Balyk (from the Turkic "balyk" - fish) was a delicacy on the Tsar's table. Ivan the Terrible received Astrakhan balyks as tribute. Peter the Great, after visiting Astrakhan, was delighted with the local balyk and ordered it to be supplied to the royal court.
+
+---
+
+### RECIPE: Stuffed Pike
+- ID: fish-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-6
+- Name: Stuffed Pike (Щука фаршированная)
+- Epoch: 18th-19th century
+- Time: 2 hours
+- Image: /publicimagesfish/schuka_farsh.jpg
+- Keywords: stuffed pike recipe, whole baked pike, festive fish dish, gefilte fish
+
+**Description:**
+A festive stuffed pike, baked whole. A masterpiece of Russian and Jewish cuisine with a tender fish filling.
+
+**Ingredients:**
+- Pike - 1.5 kg
+- White bread - 100g
+- Milk - 100ml
+- Onion - 2 pcs
+- Eggs - 2 pcs
+- Carrot - 1 pc
+- Beetroot - 1 pc
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Clean pike, remove skin like a stocking
+2. Separate flesh from bones
+3. Grind through a meat grinder with bread and onion
+4. Add eggs, salt, pepper
+5. Stuff the skin, sew it up with thread
+6. Shape like a whole fish
+7. Place on a baking sheet with vegetables
+8. Bake for 1 hour at 180°C (350°F)
+9. Cool, slice into portions
+
+**Historical Context:**
+Stuffed pike is a pride of Jewish and Russian cuisine. A.P. Chekhov in the story "Ionych" mentions stuffed pike as a mandatory dish on the festive table. Empress Alexandra Feodorovna, wife of Nicholas II, also loved this dish.
+
+---
+
+### RECIPE: Fish Cutlets
+- ID: fish-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-7
+- Name: Fish Cutlets (Котлеты рыбные)
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagesfish/kotlety_rybnye.jpg
+- Keywords: fish cutlets recipe, homemade fish patties, cod or zander cutlets
+
+**Description:**
+Juicy and fluffy homemade fish cutlets made from cod or zander. A classic lean and dietary dish of Russian cuisine.
+
+**Ingredients:**
+- Fish fillet (cod, zander) - 600g
+- White bread - 100g
+- Milk - 50ml
+- Onion - 1 pc
+- Egg - 1 pc
+- Breadcrumbs - 1 cup
+- Butter - for frying
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Soak bread in milk
+2. Grind fish through a meat grinder with bread and onion
+3. Add egg, salt, pepper
+4. Mix the forcemeat well
+5. Form into cutlets
+6. Coat in breadcrumbs
+7. Fry in butter until golden brown
+8. Finish in the oven for 5 minutes
+
+**Historical Context:**
+Fish cutlets became popular in the 19th century as a lean dish. F.M. Dostoevsky in "The Brothers Karamazov" mentions fish cutlets. In Soviet times, by Stalin's decree, "Fish Thursday" was introduced, when fish cutlets were mandatory in canteens.
+
+---
+
+### RECIPE: Lightly Salted Salmon
+- ID: fish-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-8
+- Name: Lightly Salted Salmon (Сёмга слабосолёная)
+- Epoch: 19th century
+- Time: 2 days
+- Image: /publicimagesfish/semga_sol.jpg
+- Keywords: lightly salted salmon recipe, home-cured fish, quick-cured red fish
+
+**Description:**
+Perfect home-cured lightly salted salmon. Tender, melt-in-your-mouth fish prepared with dill and lemon.
+
+**Ingredients:**
+- Salmon fillet - 1 kg
+- Coarse salt - 3 tbsp
+- Sugar - 2 tbsp
+- Lemon juice - 1 tbsp
+- Fresh dill - 1 bunch
+- White pepper - to taste
+
+**Preparation Steps:**
+1. Rinse fish, pat dry
+2. Mix salt, sugar, and pepper
+3. Rub fillet with the mixture on all sides
+4. Sprinkle with chopped dill
+5. Drizzle with lemon juice
+6. Place in a container skin-side down
+7. Cover with plastic wrap, refrigerate
+8. Turn over after 24 hours
+9. Ready to eat after another 24 hours
+
+**Historical Context:**
+Lightly salted salmon is a traditional appetizer of the Russian North. Pomors have been salting fish since the 16th century. Emperor Alexander III, who loved simple food, particularly appreciated lightly salted salmon and ate it with black bread.
+
+---
+
+### RECIPE: Carp in Sour Cream
+- ID: fish-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-9
+- Name: Carp in Sour Cream (Карп в сметане)
+- Epoch: 18th-19th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesfish/karp_smetana.jpg
+- Keywords: carp in sour cream recipe, baked carp, fish in sour cream, Russian cuisine
+
+**Description:**
+Aromatic carp baked in thick sour cream with onion. A hearty and tender dish loved in Russian manor estates.
+
+**Ingredients:**
+- Carp - 1.5 kg
+- Sour cream - 300g
+- Onion - 2 pcs
+- Flour - 2 tbsp
+- Butter - 50g
+- Salt, pepper - to taste
+- Fresh herbs - for garnish
+
+**Preparation Steps:**
+1. Clean carp, gut it
+2. Cut into serving pieces
+3. Dredge in flour
+4. Fry on both sides until golden
+5. Slice onion into rings, sauté
+6. Place fish in a baking dish
+7. Top with sautéed onion
+8. Pour sour cream over everything
+9. Bake for 30 minutes at 180°C (350°F)
+10. Sprinkle with fresh herbs
+
+**Historical Context:**
+Carp was raised in ponds on Russian estates. A.S. Pushkin mentions carp in sour cream as a favorite dish at Mikhailovskoye in his letters. I.A. Goncharov in "Oblomov" describes carp as a festive dish served at name-day celebrations.
+
+---
+
+### RECIPE: Don-Style Ukha (Fish Soup)
+- ID: fish-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-10
+- Name: Don-Style Ukha (Уха донская)
+- Epoch: 16th-17th century
+- Time: 1 hour 30 minutes
+- Image: /publicimagesfish/ukha_donskaya.jpg
+- Keywords: Don-style ukha recipe, fish soup with millet and vodka, Cossack fish soup
+
+**Description:**
+Rich Don-style ukha made from several types of fish with millet and a shot of vodka. A real Cossack campfire recipe.
+
+**Ingredients:**
+- Fish (ruffe, perch, zander) - 1 kg
+- Water - 2L
+- Potatoes - 3 pcs
+- Onion - 1 pc
+- Carrot - 1 pc
+- Millet - 50g
+- Vodka - 50ml
+- Bay leaf, peppercorns - to taste
+- Fresh dill - for garnish
+
+**Preparation Steps:**
+1. Cook small fish for the broth
+2. Strain the broth
+3. Add potatoes and carrot
+4. Cook for 15 minutes
+5. Add millet
+6. After 10 minutes, add large fish pieces
+7. Cook for another 15 minutes
+8. Add spices and vodka
+9. Let steep for 10 minutes
+10. Serve with fresh herbs
+
+**Historical Context:**
+Don-style ukha is distinguished by the addition of millet and vodka. Don Cossacks were famous for their ukha, which they cooked over a campfire after fishing. Mikhail Sholokhov in "And Quiet Flows the Don" describes ukha as the main Cossack dish.
+
+---
+
+### RECIPE: Smoked Sprat (Salaka)
+- ID: fish-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-11
+- Name: Smoked Sprat (Салака копчёная)
+- Epoch: 19th-20th century
+- Time: 2 days + smoking
+- Image: /publicimagesfish/salaka.jpg
+- Keywords: smoked sprat recipe, home-smoked fish, hot-smoked Baltic herring
+
+**Description:**
+Aromatic home-smoked sprat (Baltic herring). A favorite appetizer of St. Petersburg residents and a Baltic classic.
+
+**Ingredients:**
+- Sprat (or Baltic herring) - 1 kg
+- Salt - 100g
+- Sugar - 1 tbsp
+- Black pepper - to taste
+- Bay leaf - to taste
+
+**Preparation Steps:**
+1. Rinse fish, do not gut
+2. Mix salt, sugar, and spices
+3. Coat fish with the mixture
+4. Leave in the refrigerator for 24 hours
+5. Rinse, pat dry
+6. Cold smoke for 12-24 hours
+7. Or hot smoke for 40 minutes at 80°C (175°F)
+
+**Historical Context:**
+Sprat is a Baltic herring popular in St. Petersburg and the Baltics. Smoked sprat was a favorite appetizer of St. Petersburg residents. Dmitry Mendeleev, according to contemporaries, loved smoked sprat with his tea.
+
+---
+
+### RECIPE: Fish Pelmeni
+- ID: fish-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-12
+- Name: Fish Pelmeni (Пельмени с рыбой)
+- Epoch: 19th century (Siberia)
+- Time: 1 hour 30 minutes
+- Image: /publicimagesfish/pelmeni_fish.jpg
+- Keywords: fish pelmeni recipe, pike pelmeni, Siberian dumplings, lean dumplings
+
+**Description:**
+Traditional Siberian pelmeni with a tender fish filling made from pike or zander. A hearty lean dish with a rich history.
+
+**Ingredients:**
+- Flour - 500g
+- Eggs - 2 pcs
+- Water - 200ml
+- Salt - to taste
+- Fish fillet (pike, zander) - 500g
+- Onion - 2 pcs
+- Butter - 100g
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Knead a stiff dough
+2. Rest for 30 minutes
+3. Grind fish through a meat grinder with onion
+4. Add melted butter
+5. Roll out dough, cut into circles
+6. Place filling, pinch edges
+7. Boil in salted water for 5-7 minutes
+8. Serve with sour cream or vinegar
+
+**Historical Context:**
+Fish pelmeni is a Siberian dish. During Great Lent, they replaced meat pelmeni. Old Believers who moved to Siberia especially loved fish pelmeni. Fyodor Dostoevsky, during his exile in Siberia, tried fish pelmeni and highly praised them.
+
+---
+
+### RECIPE: Dried Vobla (Caspian Roach)
+- ID: fish-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-13
+- Name: Dried Vobla (Вобла вяленая)
+- Epoch: 17th-18th century
+- Time: 5 days + drying
+- Image: /publicimagesfish/vobla.jpg
+- Keywords: dried vobla recipe, how to dry fish at home, Astrakhan vobla
+
+**Description:**
+Classic dried vobla according to a Volga recipe. The perfect snack, prepared with soul and proper salting.
+
+**Ingredients:**
+- Vobla (or bream) - 2 kg
+- Coarse salt - 400g
+- Sugar - 1 tbsp
+
+**Preparation Steps:**
+1. Do not clean or gut the fish
+2. Sprinkle salt into the gills and inside
+3. Layer in an enamel dish
+4. Sprinkle each layer with salt
+5. Put under pressure for 5 days
+6. Rinse, soak for 3 hours
+7. Hang to dry for 7-10 days
+
+**Historical Context:**
+Vobla is a symbol of Astrakhan and the Volga River. Dried vobla was the main snack for beer and tea among Volga fishermen. Maxim Gorky, who grew up on the Volga, often mentions vobla as a symbol of Volga life in his works.
+
+---
+
+### RECIPE: Jellied Fish (Zalivnaya)
+- ID: fish-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-14
+- Name: Jellied Fish (Заливная рыба)
+- Epoch: 19th century
+- Time: 3 hours + setting
+- Image: /publicimagesfish/zalivnaya_ryba.jpg
+- Keywords: jellied fish recipe, zander aspic, cold appetizer, New Year's jellied fish
+
+**Description:**
+Elegant jellied fish (zander or sturgeon) in a clear broth with vegetables. An exquisite cold appetizer for the festive table.
+
+**Ingredients:**
+- Fish (zander, sturgeon) - 1 kg
+- Gelatin - 20g
+- Carrot - 1 pc
+- Onion - 1 pc
+- Bay leaf - 2 pcs
+- Peppercorns - to taste
+- Boiled eggs - 2 pcs
+- Fresh herbs, lemon - for garnish
+
+**Preparation Steps:**
+1. Boil whole fish with spices
+2. Strain the broth
+3. Add soaked gelatin
+4. Break fish into pieces
+5. In a mold, layer fish, vegetables, eggs
+6. Pour broth over everything
+7. Garnish with herbs and lemon
+8. Refrigerate until set
+
+**Historical Context:**
+Jellied fish is a mandatory dish on the New Year's table. The film "The Irony of Fate" made it iconic. But the recipe existed back in the 19th century. A.P. Chekhov and I.A. Goncharov mention jellied fish as an exquisite appetizer at dinner parties.
+
+---
+
+### RECIPE: Pomor-Style Cod
+- ID: fish-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/fish-15
+- Name: Pomor-Style Cod (Треска по-поморски)
+- Epoch: 16th-17th century
+- Time: 1 hour
+- Image: /publicimagesfish/treska_pomorski.jpg
+- Keywords: Pomor-style cod recipe, cod with potatoes and cream, Russian northern cuisine
+
+**Description:**
+Hearty cod baked with potatoes and cream according to ancient Pomor recipes. The taste of the real Russian North.
+
+**Ingredients:**
+- Cod - 1 kg
+- Potatoes - 6 pcs
+- Onion - 2 pcs
+- Cream - 200ml
+- Butter - 100g
+- Salt, pepper - to taste
+- Fresh dill - for garnish
+
+**Preparation Steps:**
+1. Cut cod into portions
+2. Boil potatoes, make mashed potatoes
+3. Sauté onion until golden
+4. Bake fish for 20 minutes at 180°C (350°F)
+5. Prepare sauce from cream and butter
+6. Place fish on the mashed potatoes
+7. Pour sauce over, sprinkle with onion
+8. Serve with fresh dill
+
+**Historical Context:**
+Pomors in the Russian North prepared cod with potatoes and cream. A simple, hearty dish of northerners who caught cod in the Barents Sea. Mikhail Lomonosov, a native of a Pomor family, fondly remembered cod in his letters.
+
+---
+
+## FISH & SEAFOOD Index Summary
+
+**Total Recipes Added:** 15
+**Total Recipes Overall:** 76 (17 Baking + 15 Desserts + 20 Dough + 9 Drinks + 15 Fish)
+
+**Fish Types Covered:**
+- 🐟 Sturgeon: Boiled, Balyk, Jellied
+- 🐠 Zander: Russian-style, Jellied
+- 🐡 Pike: Stuffed, Fish Pelmeni
+- 🐋 Salmon/Salmonids: Rasstegai, Lightly Salted
+- 🐟 Cod: Pomor-style, Fish Cutlets
+- 🐟 Carp: In Sour Cream
+- 🐟 Herring: Under a Fur Coat, Sprat
+- 🐟 Vobla: Dried
+- 🐟 Mixed: Don-Style Ukha
+
+**Cooking Methods:**
+- 🔥 Boiled: Sturgeon
+- 🔥 Baked: Zander, Carp, Cod
+- 🔥 Fried: Fish Cutlets
+- 🔥 Smoked: Sprat
+- 🔥 Dried: Balyk, Vobla
+- 🔥 Cured: Lightly Salted Salmon
+- 🔥 Steamed: Fish Pelmeni
+- 🔥 Jellied: Zander, Sturgeon
+- 🔥 Soups: Ukha
+
+**Historical Highlights:**
+- Royal favorites: Sturgeon, Balyk
+- Soviet classics: Herring Under a Fur Coat, Fish Cutlets
+- Northern traditions: Pomor-Style Cod, Smoked Sprat
+- Siberian dishes: Fish Pelmeni
+- Cossack dishes: Don-Style Ukha
+- Jewish influence: Stuffed Pike
+
+---
+
+## Updated Recipe Summary
+
+| Category | Count | Recipes |
+|----------|-------|---------|
+| 🥖 Baking & Pastry | 17 | Classic Blini, Kurnik, Kalachi, Vatrushki, Tula Pryaniki, Kulebyaka, Cabbage Pirozhki, Sochniki, Wedding Karavai, Shangi, Plushki, Rasstegai, Krendeli, Pyshki, Medovaya Kovrizhka, Rye Pastila, Tvorozhniki |
+| 🍰 Desserts & Sweets | 15 | Medovik, Belevskaya Pastila, Ptichye Moloko, Pine Cone Jam, Tvorozhnaya Paskha, Syrniki, Berry Kissel, Ponchiki, Sharlotka, Kozinaki, Smetannik, Pumpkin Tsukaty, Meringue, Grated Pie, Currant Jelly |
+| 🥖 Dough & Pastry | 20 | Rich Yeast, Lenten Yeast, Shortcrust, Yeast Puff, Quick Puff, Choux, Sponge, Pelmeni, Vareniki, Noodle, Blini, Oladi, Pizza, Chebureki, Khvorost, Strudel, Quiche, Muffin, Quick Pizza, Manti |
+| 🍹 Beverages | 9 | Classic Kvass, Sbiten, Mors, Compote, Berry Kissel, Russian Tea, Homemade Lemonade, Medovukha, Coffee with Condensed Milk |
+| 🐟 Fish & Seafood | 15 | Boiled Sturgeon, Russian-Style Zander, Herring Under a Fur Coat, Rasstegai with Fish, Sturgeon Balyk, Stuffed Pike, Fish Cutlets, Lightly Salted Salmon, Carp in Sour Cream, Don-Style Ukha, Smoked Sprat, Fish Pelmeni, Dried Vobla, Jellied Fish, Pomor-Style Cod |
+| **TOTAL** | **76** | |
+
+---
+
+
+*This file is intended for AI agents and crawlers. For detailed recipe pages, append the recipe ID to the base URL.*
+*Example: https://russka-kuhnya-9551.vercel.app/recipe/baking-1*
+
+*Updated: 2026-08-05*
