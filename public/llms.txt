@@ -63,7 +63,27 @@ A culinary website featuring authentic Russian cuisine recipes, seasonal dishes,
 ### Dough & Pastry Basics
 - URL: https://russka-kuhnya-9551.vercel.app/category/dough
 - Description: Various dough types for baking: yeast-based, puff pastry, shortcrust, choux pastry, plus pancakes (blini) and fritters (oladyi)
-
+- Sub-categories:
+  - Rich Yeast Dough
+  - Lenten Yeast Dough
+  - Shortcrust Pastry
+  - Yeast Puff Pastry
+  - Quick Puff Pastry
+  - Choux Pastry
+  - Sponge Cake Batter
+  - Pelmeni Dough
+  - Vareniki Dough
+  - Noodle Dough
+  - Blini Batter
+  - Oladi Batter
+  - Pizza Dough
+  - Chebureki Dough
+  - Khvorost Dough
+  - Strudel Dough
+  - Quiche Dough
+  - Muffin Batter
+  - Quick Pizza Dough
+  - Manti Dough
 ### Porridges & Grains
 - URL: https://russka-kuhnya-9551.vercel.app/category/porridge
 - Description: Traditional Russian grain dishes including buckwheat, rice, oatmeal, millet, pearl barley, and semolina porridge
