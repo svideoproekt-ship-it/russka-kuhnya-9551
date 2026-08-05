@@ -4791,7 +4791,564 @@ Oatmeal with berries is a summer dish from Russian estates. When berries ripened
 | **TOTAL** | **107** |
 
 ---
+---
 
+## SNACKS & APPETIZERS RECIPES
+
+### RECIPE: Classic Vinegret
+- ID: snack-1
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-1
+- Name: Classic Vinegret (Винегрет классический)
+- Epoch: 19th century
+- Time: 40 minutes
+- Image: /publicimagessnacks/vinegret.jpg
+- Keywords: vinegret recipe, classic Russian salad, lentil salad with beets
+
+**Description:**
+Classic Russian vinegret with beets, potatoes, carrots, pickles, and sauerkraut. A hearty and healthy lenten salad.
+
+**Ingredients:**
+- Beets - 2 pcs
+- Potatoes - 3 pcs
+- Carrots - 2 pcs
+- Pickled cucumbers - 3 pcs
+- Sauerkraut - 150g
+- Onion - 1 pc
+- Vegetable oil - 3 tbsp
+- Vinegar 9% - 1 tsp
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Boil beets, potatoes, and carrots until tender
+2. Peel and dice vegetables into cubes
+3. Finely chop cucumbers and sauerkraut
+4. Slice onion into thin half-rings
+5. Mix all ingredients in a bowl
+6. Dress with oil, vinegar, salt, and pepper
+7. Toss and let rest for 15 minutes
+
+**Historical Context:**
+The dish is named after the French vinaigrette sauce. Became popular in the 19th century. Empress Maria Feodorovna loved vinegret for breakfast. In Soviet times, it became a symbol of home comfort and simple joys.
+
+---
+
+### RECIPE: Traditional Olivier Salad
+- ID: snack-2
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-2
+- Name: Traditional Olivier Salad (Оливье традиционный)
+- Epoch: Late 19th century
+- Time: 1 hour
+- Image: /publicimagessnacks/olivye.jpg
+- Keywords: olivier salad recipe, traditional Russian salad, New Year's salad
+
+**Description:**
+Traditional Olivier salad with boiled sausage, potatoes, carrots, eggs, and green peas. The main symbol of the New Year's table.
+
+**Ingredients:**
+- Potatoes - 4 pcs
+- Carrots - 2 pcs
+- Eggs - 4 pcs
+- Boiled sausage (or chicken) - 300g
+- Pickled cucumbers - 3 pcs
+- Green peas - 1 can
+- Mayonnaise - 200g
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Boil potatoes, carrots, and eggs
+2. Peel and dice everything into equal-sized cubes
+3. Dice sausage and cucumbers similarly
+4. Mix vegetables, sausage, cucumbers, and peas
+5. Dress with mayonnaise, season with salt and pepper
+6. Gently mix, transfer to a salad bowl
+
+**Historical Context:**
+Created by French chef Lucien Olivier at Moscow's Hermitage restaurant. Originally made with grouse and crayfish. In Soviet times, it became the main New Year's dish. Leonid Brezhnev adored Olivier and demanded it at all official receptions.
+
+---
+
+### RECIPE: Sauerkraut with Cranberries
+- ID: snack-3
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-3
+- Name: Sauerkraut with Cranberries (Квашеная капуста с клюквой)
+- Epoch: Ancient Rus
+- Time: 3 days (fermentation)
+- Image: /publicimagessnacks/kapusta_klyukva.jpg
+- Keywords: sauerkraut with cranberries recipe, how to ferment cabbage, Russian appetizer
+
+**Description:**
+Crunchy sauerkraut with carrots and cranberries. An ancient Russian appetizer rich in vitamin C and natural probiotics.
+
+**Ingredients:**
+- White cabbage - 2 kg
+- Carrots - 2 pcs
+- Cranberries - 100g
+- Salt - 2 tbsp
+- Sugar - 1 tbsp
+- Caraway seeds - 1 tsp
+
+**Preparation Steps:**
+1. Shred cabbage, grate carrots
+2. Mix vegetables with salt and sugar, knead by hand
+3. Add cranberries and caraway seeds
+4. Pack into an enamel pot or barrel
+5. Place under pressure for 3 days at room temperature
+6. Transfer to a cool place for storage
+
+**Historical Context:**
+The main winter source of vitamin C in Rus. Peter the Great called sauerkraut "Russian gold." Catherine the Great demanded it be served at the royal table daily. No Lent was complete without it.
+
+---
+
+### RECIPE: Mushroom Caviar
+- ID: snack-4
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-4
+- Name: Mushroom Caviar (Грибная икра)
+- Epoch: 15th-16th century
+- Time: 1.5 hours
+- Image: /publicimagessnacks/gribnaya_ikra.jpg
+- Keywords: mushroom caviar recipe, porcini mushroom spread, lentil appetizer
+
+**Description:**
+Tender mushroom caviar made from porcini or aspen mushrooms with fried onions. The perfect lenten spread for sandwiches and blini.
+
+**Ingredients:**
+- Mushrooms (porcini or aspen) - 500g
+- Onion - 2 pcs
+- Vegetable oil - 50ml
+- Vinegar 9% - 1 tbsp
+- Salt, pepper, bay leaf - to taste
+
+**Preparation Steps:**
+1. Clean mushrooms, boil for 20 minutes
+2. Grind through a meat grinder or finely chop
+3. Fry onion until golden
+4. Mix mushrooms with onion, simmer for 15 minutes
+5. Add vinegar, salt, pepper, and bay leaf
+6. Cool, transfer to a jar
+
+**Historical Context:**
+A lenten appetizer popular in monasteries and peasant huts. Ivan the Terrible loved mushroom caviar with black bread. It is described in Domostroy as a mandatory dish for fasting days.
+
+---
+
+### RECIPE: Mimosa Salad
+- ID: snack-5
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-5
+- Name: Mimosa Salad (Салат 'Мимоза')
+- Epoch: 1970s
+- Time: 40 minutes
+- Image: /publicimagessnacks/mimoza.jpg
+- Keywords: mimosa salad recipe, layered fish salad, festive appetizer
+
+**Description:**
+Layered Mimosa salad with canned fish, potatoes, carrots, eggs, and cheese. Tender, hearty, and festive.
+
+**Ingredients:**
+- Canned pink salmon or saury - 1 can
+- Eggs - 4 pcs
+- Potatoes - 3 pcs
+- Carrots - 2 pcs
+- Onion - 1 pc
+- Mayonnaise - 200g
+- Hard cheese - 100g
+- Salt - to taste
+
+**Preparation Steps:**
+1. Boil potatoes, carrots, and eggs
+2. Mash fish with a fork, finely chop onion
+3. Grate vegetables and eggs
+4. Layer: fish, onion, potato, carrot, egg, cheese
+5. Spread each layer with mayonnaise
+6. Garnish with grated egg yolk, chill for 2 hours
+
+**Historical Context:**
+Appeared in Soviet canteens in the 1970s. Named after the mimosa flower — a symbol of March 8th. Became a hit at feasts. Mikhail Gorbachev, according to his security detail, loved Mimosa at family dinners.
+
+---
+
+### RECIPE: Forshmak
+- ID: snack-6
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-6
+- Name: Forshmak (Форшмак)
+- Epoch: 19th century
+- Time: 30 minutes
+- Image: /publicimagessnacks/forshmak.jpg
+- Keywords: forshmak recipe, herring spread with apple, Odessa cuisine
+
+**Description:**
+Classic forshmak made from salted herring with apple, onion, and butter. A tangy and tender spread for black bread.
+
+**Ingredients:**
+- Salted herring - 2 pcs
+- Sour apple - 1 pc
+- Onion - 1 pc
+- Butter - 100g
+- Boiled eggs - 2 pcs
+- Vinegar - 1 tbsp
+- Black bread - for serving
+
+**Preparation Steps:**
+1. Soak herring in water or tea for 2 hours
+2. Grind through a meat grinder with apple and onion
+3. Add softened butter and vinegar
+4. Whip until smooth
+5. Transfer to a ramekin, garnish with chopped egg
+6. Serve with toasted black bread
+
+**Historical Context:**
+A Jewish-Russian appetizer that came from Odessa. Isaac Babel in his Odessa Tales celebrates forshmak. A favorite snack of Odessans and Russian aristocrats of the 19th century. Feodor Chaliapin loved forshmak before concerts.
+
+---
+
+### RECIPE: Boiled Tongue with Horseradish
+- ID: snack-7
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-7
+- Name: Boiled Tongue with Horseradish (Язык отварной с хреном)
+- Epoch: 18th-19th century
+- Time: 2 hours
+- Image: /publicimagessnacks/yazyk.jpg
+- Keywords: boiled beef tongue recipe, tongue with horseradish, cold appetizer
+
+**Description:**
+Tender boiled beef tongue, sliced and served with a spicy horseradish and sour cream sauce. An exquisite cold appetizer.
+
+**Ingredients:**
+- Beef tongue - 800g
+- Carrot - 1 pc
+- Onion - 1 pc
+- Bay leaf - 2 pcs
+- Peppercorns - 5 pcs
+- Grated horseradish - 3 tbsp
+- Vinegar 3% - 1 tbsp
+- Sour cream - 2 tbsp
+
+**Preparation Steps:**
+1. Rinse tongue, cover with cold water
+2. Cook for 1.5 hours with carrot, onion, and spices
+3. Plunge hot tongue into cold water, peel off skin
+4. Slice thinly
+5. Mix horseradish with vinegar and sour cream
+6. Serve tongue drizzled with horseradish sauce
+
+**Historical Context:**
+A delicacy of the noble table. A.S. Pushkin mentions boiled tongue as a favorite appetizer in his letters. Nicholas I loved tongue with horseradish while hunting. In the 19th century, it was considered a sign of good taste at dinner parties.
+
+---
+
+### RECIPE: Black Caviar Sandwiches
+- ID: snack-8
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-8
+- Name: Black Caviar Sandwiches (Бутерброды с чёрной икрой)
+- Epoch: 17th-18th century
+- Time: 15 minutes
+- Image: /publicimagessnacks/ikra_buterbrod.jpg
+- Keywords: black caviar sandwiches recipe, caviar appetizer, Russian festive snack
+
+**Description:**
+Luxurious sandwiches with natural black caviar on Borodino bread with butter. A symbol of the Russian festive table.
+
+**Ingredients:**
+- Borodino bread - 1 loaf
+- Butter - 100g
+- Black caviar - 100g
+- Lemon - 0.5 pc
+- Fresh dill - 1 bunch
+- Salt (optional)
+
+**Preparation Steps:**
+1. Slice bread thinly
+2. Generously spread with softened butter
+3. Top with a thin layer of caviar
+4. Garnish with a lemon slice and dill sprig
+5. Serve immediately before bread becomes soggy
+
+**Historical Context:**
+A symbol of Russian wealth. Peter the Great sent barrels of caviar to Europe as diplomatic gifts. Catherine the Great loved caviar sandwiches for breakfast. In the 19th century, caviar was available to common people, but by the 20th century it became elite.
+
+---
+
+### RECIPE: Marinated Honey Mushrooms
+- ID: snack-9
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-9
+- Name: Marinated Honey Mushrooms (Маринованные опята)
+- Epoch: 16th-17th century
+- Time: 1 hour + marinating
+- Image: /publicimagessnacks/opyata_marin.jpg
+- Keywords: marinated honey mushrooms recipe, how to pickle mushrooms, homemade pickled mushrooms
+
+**Description:**
+Aromatic marinated honey mushrooms with garlic, vinegar, and spices. Crunchy and delicious homemade preserve for winter.
+
+**Ingredients:**
+- Honey mushrooms - 1 kg
+- Vinegar 9% - 3 tbsp
+- Sugar - 2 tbsp
+- Salt - 1 tbsp
+- Cloves - 3 pcs
+- Bay leaf - 2 pcs
+- Peppercorns - 5 pcs
+- Garlic - 3 cloves
+
+**Preparation Steps:**
+1. Clean mushrooms, rinse, boil for 20 minutes
+2. Drain water, cover with fresh, add spices
+3. Cook for another 15 minutes
+4. At the end, add vinegar and garlic
+5. Pack into sterilized jars
+6. Cover with marinade, seal, store in a cool place
+
+**Historical Context:**
+A traditional winter preserve. Domostroy describes the process of pickling mushrooms in detail. Ivan the Terrible loved marinated honey mushrooms with vodka. In peasant families, they were the main treat for holidays.
+
+---
+
+### RECIPE: Beets with Garlic and Walnuts
+- ID: snack-10
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-10
+- Name: Beets with Garlic and Walnuts (Свёкла с чесноком и орехами)
+- Epoch: 19th century
+- Time: 30 minutes
+- Image: /publicimagessnacks/svekla_orehi.jpg
+- Keywords: beets with garlic and walnuts recipe, simple beet salad, lenten beet appetizer
+
+**Description:**
+A simple and delicious salad of boiled beets with garlic and walnuts, dressed with mayonnaise or sour cream.
+
+**Ingredients:**
+- Beets - 2 pcs
+- Garlic - 3 cloves
+- Walnuts - 50g
+- Mayonnaise or sour cream - 3 tbsp
+- Salt - to taste
+
+**Preparation Steps:**
+1. Boil beets until tender, cool
+2. Grate on a coarse grater
+3. Mince garlic, chop walnuts
+4. Mix beets with garlic and walnuts
+5. Dress with mayonnaise or sour cream
+6. Season with salt, toss, chill
+
+**Historical Context:**
+A simple but exquisite appetizer. F.M. Dostoevsky's favorite dish, who valued simple Russian cuisine. In Soviet canteens, it was a hit of the "lenten menu." Served with black bread and onions.
+
+---
+
+### RECIPE: Homemade Liver Pâté
+- ID: snack-11
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-11
+- Name: Homemade Liver Pâté (Печёночный паштет домашний)
+- Epoch: 19th century
+- Time: 1 hour
+- Image: /publicimagessnacks/pashtet.jpg
+- Keywords: homemade liver pâté recipe, chicken liver pâté, tender beef liver spread
+
+**Description:**
+Tender homemade liver pâté made from chicken or beef liver with carrots, onions, and butter.
+
+**Ingredients:**
+- Chicken or beef liver - 500g
+- Onion - 1 pc
+- Carrot - 1 pc
+- Butter - 150g
+- Cognac or brandy - 1 tbsp
+- Salt, pepper, nutmeg - to taste
+
+**Preparation Steps:**
+1. Rinse liver, pat dry
+2. Sauté with onion and carrot until cooked
+3. Grind through a meat grinder or blend
+4. Add softened butter, cognac, and spices
+5. Whip until airy
+6. Transfer to a mold, chill for 2 hours
+
+**Historical Context:**
+A dish of noble kitchens. A.P. Chekhov mentions pâté as a mandatory appetizer with champagne. In the 19th century, it was served with toasts and pickles. A favorite dish of Anton Chekhov.
+
+---
+
+### RECIPE: Stolichny Salad
+- ID: snack-12
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-12
+- Name: Stolichny Salad (Салат 'Столичный')
+- Epoch: 1960s
+- Time: 40 minutes
+- Image: /publicimagessnacks/stolichny.jpg
+- Keywords: stolichny salad recipe, Olivier with chicken, classic Soviet salad
+
+**Description:**
+An elegant version of Olivier salad with tender chicken fillet, fresh cucumbers, and eggs. A classic of Soviet restaurant cuisine.
+
+**Ingredients:**
+- Chicken fillet - 300g
+- Eggs - 3 pcs
+- Fresh cucumbers - 2 pcs
+- Green peas - 1 can
+- Mayonnaise - 150g
+- Fresh dill - for garnish
+- Salt, pepper - to taste
+
+**Preparation Steps:**
+1. Boil chicken and eggs
+2. Dice chicken, eggs, and cucumbers
+3. Add peas (drain liquid)
+4. Dress with mayonnaise, season with salt
+5. Toss, mound on a plate
+6. Garnish with dill
+
+**Historical Context:**
+A variation of Olivier, but with chicken instead of sausage. Named after the Stolichnaya Hotel. Yuri Gagarin asked for Stolichny Salad after his space flight. Became a symbol of Soviet elite cuisine.
+
+---
+
+### RECIPE: Siberian Stroganina
+- ID: snack-13
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-13
+- Name: Siberian Stroganina (Строганина из сибирской рыбы)
+- Epoch: 16th-17th century
+- Time: 20 minutes (frozen in advance)
+- Image: /publicimagessnacks/stroganina.jpg
+- Keywords: fish stroganina recipe, Siberian appetizer, frozen fish shavings
+
+**Description:**
+Traditional Siberian stroganina made from frozen fish (muksun, nelma). An authentic northern appetizer with pepper and salt.
+
+**Ingredients:**
+- Frozen fish (muksun, nelma, chir) - 500g
+- Coarse salt - 1 tsp
+- Black pepper - to taste
+- Vinegar or lemon juice - 1 tbsp
+- Onion - 1 pc
+
+**Preparation Steps:**
+1. Do not fully thaw fish (should be firm)
+2. Remove skin, slice into thin shavings with a knife
+3. Arrange on an ice-cold plate
+4. Sprinkle with salt and pepper
+5. Drizzle with vinegar or lemon juice
+6. Serve with onion rings
+
+**Historical Context:**
+A tradition of Pomors and Siberians. Yermak and his Cossacks ate stroganina on campaigns to restore strength. Tsar Alexei Mikhailovich received stroganina from Siberia as a precious gift. A symbol of northern resilience.
+
+---
+
+### RECIPE: Chicken Kholodets
+- ID: snack-14
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-14
+- Name: Chicken Kholodets (Холодец из курицы)
+- Epoch: 18th century
+- Time: 4 hours + setting
+- Image: /publicimagessnacks/kholodets_kurica.jpg
+- Keywords: chicken jelly recipe, light chicken kholodets, how to make chicken aspic
+
+**Description:**
+Light and clear chicken kholodets with garlic and spices. An excellent alternative to heavy meat kholodets.
+
+**Ingredients:**
+- Chicken - 1 whole
+- Carrot - 1 pc
+- Onion - 1 pc
+- Gelatin - 15g (optional)
+- Garlic - 3 cloves
+- Bay leaf, peppercorns - to taste
+- Salt - to taste
+
+**Preparation Steps:**
+1. Cook chicken for 2 hours with vegetables and spices
+2. Strain broth, add soaked gelatin
+3. Separate meat from bones, chop
+4. Arrange in a mold, pour broth over
+5. Garnish with carrot and herbs
+6. Refrigerate until set
+
+**Historical Context:**
+A lighter version of meat kholodets. Popular in manor estates. I.S. Turgenev in "A Sportsman's Sketches" describes kholodets as a mandatory dish after hunting. Served with mustard and horseradish.
+
+---
+
+### RECIPE: Green Radish with Oil and Onion
+- ID: snack-15
+- URL: https://russka-kuhnya-9551.vercel.app/recipe/snack-15
+- Name: Green Radish with Oil and Onion (Редька зелёная с маслом и луком)
+- Epoch: Ancient Rus
+- Time: 15 minutes
+- Image: /publicimagessnacks/redisyka.jpg
+- Keywords: green radish with onion recipe, simple Russian appetizer, lenten radish salad
+
+**Description:**
+A refreshing and healthy appetizer made from green radish with onion and aromatic vegetable oil. An ancient Russian dish.
+
+**Ingredients:**
+- Green radish - 2 pcs
+- Vegetable oil - 3 tbsp
+- Onion - 1 pc
+- Salt - to taste
+
+**Preparation Steps:**
+1. Peel radish, grate on a coarse grater
+2. Salt and let sit for 10 minutes to remove bitterness
+3. Slice onion into thin rings
+4. Mix radish with onion
+5. Dress with vegetable oil
+6. Serve immediately
+
+**Historical Context:**
+One of the oldest Russian appetizers, mentioned in 11th-century chronicles. Simple, sharp, invigorating. A favorite snack of Alexander Suvorov during military campaigns. Considered a "peasant's energy booster."
+
+---
+
+## SNACKS & APPETIZERS Index Summary
+
+**Total Recipes Added:** 15
+**Total Recipes Overall:** 122 (17 Baking + 15 Desserts + 20 Dough + 9 Drinks + 15 Fish + 16 Meat + 15 Porridges + 15 Snacks)
+
+**Appetizer Types Covered:**
+- 🥗 Salads: Vinegret, Olivier, Stolichny, Mimosa, Beets with Garlic
+- 🥒 Pickled & Fermented: Sauerkraut, Marinated Mushrooms
+- 🍞 Spreads & Pâtés: Forshmak, Mushroom Caviar, Liver Pâté
+- 🥩 Cold Meats: Boiled Tongue, Chicken Kholodets
+- 🐟 Fish: Stroganina, Caviar Sandwiches
+- 🌿 Vegetable: Green Radish
+
+**Cooking Methods:**
+- 🥗 Mixed salads: Vinegret, Olivier, Stolichny
+- 🥫 Fermented: Sauerkraut
+- 🫙 Pickled: Marinated Mushrooms
+- 🧈 Blended: Forshmak, Pâté, Mushroom Caviar
+- 🍖 Boiled: Tongue, Kholodets
+- ❄️ Frozen: Stroganina
+
+**Historical Highlights:**
+- Ancient Rus: Sauerkraut, Radish, Kholodets
+- 19th century: Vinegret, Olivier, Forshmak, Tongue, Pâté
+- Soviet era: Mimosa, Stolichny
+- Regional: Stroganina (Siberia), Forshmak (Odessa)
+
+---
+
+## Complete Recipe Summary
+
+| Category | Count |
+|----------|-------|
+| 🥖 Baking & Pastry | 17 |
+| 🍰 Desserts & Sweets | 15 |
+| 🥖 Dough & Pastry | 20 |
+| 🍹 Beverages | 9 |
+| 🐟 Fish & Seafood | 15 |
+| 🥩 Meat Dishes | 16 |
+| 🥣 Porridges & Grains | 15 |
+| 🥗 Snacks & Appetizers | 15 |
+| **TOTAL** | **122** |
+
+---
+
+## Final Check
+
+```bash
+curl https://russka-kuhnya-9551.vercel.app/llms-full.txt | grep "### RECIPE:" | wc -l
+# Should output: 122
 
 
 *This file is intended for AI agents and crawlers. For detailed recipe pages, append the recipe ID to the base URL.*
