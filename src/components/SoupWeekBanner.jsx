@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-const NewRecipeBanner = () => {
+const SoupWeekBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  // 🔥 Заголовок баннера (меняй его при смене новинки)
+  // 🔥 Автоматически генерируем ключ на основе заголовка баннера
   const bannerTitle = "НАСТОЙКА НА ЧЕРЁМУХЕ: СВЕЖАЯ И СУШЁНАЯ"; 
-  
-  // 🔥 Безопасное создание ключа для localStorage
-  const bannerKey = 'newRecipeBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
+  // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
+  const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
   useEffect(() => {
     const closed = localStorage.getItem(bannerKey);
@@ -27,7 +26,7 @@ const NewRecipeBanner = () => {
   return (
     <div style={{
       position: 'relative',
-      // 🔥 Благородный бордово-винный градиент, идеально подходящий для темы настоек
+      // 🔥 Благородный винно-ягодный градиент под тему черёмухи
       background: 'linear-gradient(135deg, #581018 0%, #8B0000 50%, #A52A2A 100%)',
       borderRadius: '15px',
       padding: '30px',
@@ -73,7 +72,7 @@ const NewRecipeBanner = () => {
         🌟 НОВИНКА НА САЙТЕ! 🌟
       </h2>
 
-      {/* Подзаголовок */}
+      {/* День / Подзаголовок */}
       <p style={{
         color: '#fff',
         fontSize: '0.9rem',
@@ -87,7 +86,7 @@ const NewRecipeBanner = () => {
         Специальный выпуск: Традиционные рецепты
       </p>
 
-      {/* Название рецепта */}
+      {/* Заголовок рецепта */}
       <h3 style={{
         color: '#fff',
         fontSize: '1.5rem',
@@ -180,4 +179,4 @@ const NewRecipeBanner = () => {
   );
 };
 
-export default NewRecipeBanner;
+export default SoupWeekBanner;
