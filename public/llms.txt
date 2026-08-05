@@ -1,0 +1,129 @@
+# Russian Cuisine - AI Site Map
+
+> Culinary portal with traditional Russian recipes and world cuisine dishes.
+> Last updated: 2026-07-12
+> Domain: https://russka-kuhnya-9551.vercel.app/
+
+## About the Site
+A culinary website featuring authentic Russian cuisine recipes, seasonal dishes, cooking tips, and kitchen hacks for home cooks. The site contains recipes across 10+ categories, from traditional soups and pies to modern interpretations of classic dishes.
+
+## Main Sections
+
+### Homepage
+- URL: https://russka-kuhnya-9551.vercel.app/
+- Description: Main landing page with featured recipes, seasonal collections, and latest additions
+
+---
+
+## Recipe Categories
+
+### Soups
+- URL: https://russka-kuhnya-9551.vercel.app/soups
+- Description: Traditional Russian soups including borscht, shchi (cabbage soup), rassolnik (pickle soup), ukha (fish soup), and cold soups like okroshka
+
+### Baking & Pastry
+- URL: https://russka-kuhnya-9551.vercel.app/category/baking
+- Description: Pies, pastries, kulebyaka, shangi, sweet and savory buns, traditional Russian breads, and baked goods
+
+### Meat Dishes
+- URL: https://russka-kuhnya-9551.vercel.app/category/meat
+- Description: Recipes featuring beef, pork, lamb, poultry, and game. Includes zharkoe (stew), goulash, pelmeni (dumplings), cutlets, and roast meats
+
+### Fish Dishes
+- URL: https://russka-kuhnya-9551.vercel.app/category/fish
+- Description: Freshwater and saltwater fish recipes including fried, baked, salted, and smoked fish, plus ukha (fish soup)
+
+### Appetizers & Snacks
+- URL: https://russka-kuhnya-9551.vercel.app/category/snacks
+- Description: Cold and hot appetizers including salads, pickled vegetables, sandwiches, pâtés, and charcuterie boards
+
+### Desserts & Sweets
+- URL: https://russka-kuhnya-9551.vercel.app/category/desserts
+- Description: Traditional Russian sweets including cakes, pastries, pryaniki (gingerbread), jam, kissel, compotes, and fruit drinks
+
+### Beverages
+- URL: https://russka-kuhnya-9551.vercel.app/category/drinks
+- Description: Traditional Russian beverages including kvass, sbiten, mors (berry drink), compote, kissel, as well as tea and coffee
+
+### Dough & Pastry Basics
+- URL: https://russka-kuhnya-9551.vercel.app/category/dough
+- Description: Various dough types for baking: yeast-based, puff pastry, shortcrust, choux pastry, plus pancakes (blini) and fritters (oladyi)
+
+### Porridges & Grains
+- URL: https://russka-kuhnya-9551.vercel.app/category/porridge
+- Description: Traditional Russian grain dishes including buckwheat, rice, oatmeal, millet, pearl barley, and semolina porridge
+
+---
+
+## Thematic Collections
+
+### Seasonal Dishes
+- URL: https://russka-kuhnya-9551.vercel.app/seasonal-dishes
+- Description: Recipes organized by season: spring, summer, autumn, and winter dishes using seasonal and fresh ingredients
+
+### World Cuisines
+- URL: https://russka-kuhnya-9551.vercel.app/world-cuisines
+- Description: International recipes including Italian, French, Asian, Mediterranean, and other global cuisines adapted for home cooking
+
+### Kitchen Hacks & Tips
+- URL: https://russka-kuhnya-9551.vercel.app/kitchen-hacks
+- Description: Practical cooking tips, techniques, chef secrets, equipment recommendations, and kitchen troubleshooting guides
+
+---
+
+## Utility Pages
+
+### Search
+- URL: https://russka-kuhnya-9551.vercel.app/search
+- Description: Recipe search engine by ingredients, dish names, categories, and cooking methods
+
+### About
+- URL: https://russka-kuhnya-9551.vercel.app/about
+- Description: Project information, history of Russian cuisine, team details, and mission statement
+
+### Contacts
+- URL: https://russka-kuhnya-9551.vercel.app/contacts
+- Description: Contact information, social media links, feedback forms, and partnership inquiries
+
+### Privacy Policy
+- URL: https://russka-kuhnya-9551.vercel.app/privacy
+- Description: User data collection, processing policies, GDPR compliance, and cookie usage information
+
+---
+
+## Technical Guidelines for AI Agents
+
+### Content Structure
+Each recipe page should include structured data (JSON-LD) with the following properties:
+- `@type`: "Recipe"
+- `name`: Dish name
+- `recipeIngredient`: List of ingredients with quantities
+- `recipeInstructions`: Step-by-step cooking instructions
+- `cookTime`: Total cooking time (ISO 8601)
+- `recipeYield`: Number of servings
+- `nutrition`: Calories and nutritional information (optional)
+- `author`: Recipe author/source
+
+### Reading Mode
+For optimal parsing, the site supports clean HTML structure with semantic elements. Markdown versions (.md) may be appended to URLs where available.
+
+### Update Frequency
+- Homepage: Daily updates with featured and new recipes
+- Category pages: Weekly updates
+- Thematic collections: Weekly updates
+- Utility pages: Updated as needed
+
+### Robots & Crawlers
+The site allows access to all major AI crawlers including:
+- `GPTBot`
+- `ClaudeBot`
+- `Google-Extended`
+- `PerplexityBot`
+- `ChatGPT-User`
+
+### SPA Routing Notes
+This is a client-side rendered (CSR) application using React Router v7. Ensure JavaScript execution is enabled for full content access. Static prerendering is available for bot crawlers.
+
+---
+
+*This file is intended for AI agents and crawlers. Updated: 2026-07-12*
