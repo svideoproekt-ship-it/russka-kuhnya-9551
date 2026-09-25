@@ -5,7 +5,9 @@ const SoupWeekBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
   // 🔥 Автоматически генерируем ключ на основе заголовка баннера
-  const bannerTitle = "НАСТОЙКА НА ЧЕРЁМУХЕ: СВЕЖАЯ И СУШЁНАЯ"; 
+  const bannerTitle = "НОВИНКА: ЛЁГКИЕ СУПЫ НА ПРОЗРАЧНОМ БУЛЬОНЕ";
+  const bannerSubtitle = "Специальное обновление по просьбе наших подписчиков!";   
+  
   // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
   const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
@@ -26,13 +28,13 @@ const SoupWeekBanner = () => {
   return (
     <div style={{
       position: 'relative',
-      // 🔥 Благородный винно-ягодный градиент под тему черёмухи
-      background: 'linear-gradient(135deg, #581018 0%, #8B0000 50%, #A52A2A 100%)',
+      // 🔥 ИСПРАВЛЕНО: Свежий весенний градиент (зелёный/золотой), идеально для лёгких супов
+      background: 'linear-gradient(135deg, #134E5E 0%, #71B280 100%)',
       borderRadius: '15px',
       padding: '30px',
       margin: '20px auto',
       maxWidth: '900px',
-      boxShadow: '0 8px 25px rgba(139, 0, 0, 0.4)',
+      boxShadow: '0 8px 25px rgba(113, 178, 128, 0.4)',
       border: '3px solid #FFD700',
       animation: 'slideIn 0.5s ease'
     }}>
@@ -43,14 +45,20 @@ const SoupWeekBanner = () => {
           position: 'absolute',
           top: '10px',
           right: '15px',
-          background: 'none',
+          background: 'rgba(255, 255, 255, 0.2)',
           border: 'none',
           fontSize: '28px',
           color: '#fff',
           cursor: 'pointer',
           opacity: 0.8,
           transition: 'opacity 0.2s',
-          lineHeight: '1'
+          lineHeight: '1',
+          borderRadius: '50%',
+          width: '40px',
+          height: '40px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}
         onMouseOver={(e) => e.currentTarget.style.opacity = 1}
         onMouseOut={(e) => e.currentTarget.style.opacity = 0.8}
@@ -66,7 +74,7 @@ const SoupWeekBanner = () => {
         textAlign: 'center',
         margin: '0 0 10px 0',
         fontWeight: 'bold',
-        textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+        textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
         letterSpacing: '1px'
       }}>
         🌟 НОВИНКА НА САЙТЕ! 🌟
@@ -74,7 +82,7 @@ const SoupWeekBanner = () => {
 
       {/* День / Подзаголовок */}
       <p style={{
-        color: '#fff',
+        color: '#e8f5e9',
         fontSize: '0.9rem',
         textAlign: 'center',
         margin: '0 0 15px 0',
@@ -89,11 +97,11 @@ const SoupWeekBanner = () => {
       {/* Заголовок рецепта */}
       <h3 style={{
         color: '#fff',
-        fontSize: '1.5rem',
+        fontSize: '1.6rem',
         textAlign: 'center',
         margin: '0 0 25px 0',
         fontWeight: 'bold',
-        textShadow: '1px 1px 3px rgba(0,0,0,0.6)'
+        textShadow: '1px 1px 3px rgba(0,0,0,0.4)'
       }}>
         {bannerTitle}
       </h3>
@@ -107,21 +115,24 @@ const SoupWeekBanner = () => {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        gap: '10px 30px'
+        gap: '15px 30px'
       }}>
         {[
-          '🍒 Уникальный миндально-пряный аромат',
-          '🏺 Два проверенных временем рецепта',
-          '⏳ Идеально для зимних вечеров и лета',
-          '🌿 По старинным русским традициям'
+           '🥒 Нежные кабачки и цветная капуста',
+           '🌿 Весенний щавель и шпинат',
+           '🍜 Домашняя вермишель-паутинка',
+           '🍄 Ароматные шампиньоны'
         ].map((item, index) => (
           <li key={index} style={{
             color: '#fff',
             fontSize: '1.1rem',
-            textShadow: '1px 1px 2px rgba(0,0,0,0.4)',
+            textShadow: '1px 1px 2px rgba(0,0,0,0.3)',
             display: 'flex',
             alignItems: 'center',
-            gap: '8px'
+            gap: '8px',
+            background: 'rgba(255,255,255,0.1)',
+            padding: '8px 16px',
+            borderRadius: '20px'
           }}>
             {item}
           </li>
@@ -131,12 +142,12 @@ const SoupWeekBanner = () => {
       {/* Кнопка */}
       <div style={{ textAlign: 'center' }}>
         <Link
-          to="/category/drinks"
+          to="/soups" /* 🔥 ИСПРАВЛЕНО: теперь ведёт на супы, а не на напитки! */
           style={{
             display: 'inline-block',
             padding: '14px 35px',
             background: 'linear-gradient(135deg, #FFD700 0%, #FFA500 100%)',
-            color: '#581018',
+            color: '#134E5E',
             textDecoration: 'none',
             borderRadius: '10px',
             fontSize: '1.15rem',
@@ -153,13 +164,13 @@ const SoupWeekBanner = () => {
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 215, 0, 0.4)';
           }}
         >
-          👉 Смотреть рецепты настоек
+          👉 Смотреть рецепты супов /* 🔥 ИСПРАВЛЕНО: текст кнопки */
         </Link>
       </div>
 
       {/* Иконка */}
       <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '25px', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}>
-        🍒🏺
+        🥣🌿 /* 🔥 ИСПРАВЛЕНО: иконка супа и зелени вместо черёмухи */
       </div>
 
       {/* CSS анимация */}
