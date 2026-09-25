@@ -9,7 +9,8 @@ const Soups = () => {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
   const navigate = useNavigate();
 
-  const allSoups = [...soupsData];
+  // Фильтруем массив, убирая пустые элементы (если вдруг закралась лишняя запятая)
+const allSoups = soupsData.filter(recipe => recipe !== undefined);
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search);
