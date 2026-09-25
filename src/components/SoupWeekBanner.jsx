@@ -4,11 +4,9 @@ import { Link } from 'react-router-dom';
 const SoupWeekBanner = () => {
   const [isVisible, setIsVisible] = useState(true);
 
-  // 🔥 Автоматически генерируем ключ на основе заголовка баннера
   const bannerTitle = "НОВИНКА: ЛЁГКИЕ СУПЫ НА ПРОЗРАЧНОМ БУЛЬОНЕ";
   const bannerSubtitle = "Специальное обновление по просьбе наших подписчиков!";   
   
-  // 🔥 Безопасное создание ключа без btoa (работает с русским текстом)
   const bannerKey = 'soupWeekBanner_' + bannerTitle.replace(/[^a-zA-Z0-9а-яА-ЯёЁ]/g, '').slice(0, 20);
 
   useEffect(() => {
@@ -28,7 +26,6 @@ const SoupWeekBanner = () => {
   return (
     <div style={{
       position: 'relative',
-      // 🔥 ИСПРАВЛЕНО: Свежий весенний градиент (зелёный/золотой), идеально для лёгких супов
       background: 'linear-gradient(135deg, #134E5E 0%, #71B280 100%)',
       borderRadius: '15px',
       padding: '30px',
@@ -77,10 +74,10 @@ const SoupWeekBanner = () => {
         textShadow: '2px 2px 4px rgba(0,0,0,0.3)',
         letterSpacing: '1px'
       }}>
-        🌟 НОВИНКА НА САЙТЕ! 🌟
+        🌟 НОВИНКА НА САЙТЕ! 
       </h2>
 
-      {/* День / Подзаголовок */}
+      {/* Подзаголовок */}
       <p style={{
         color: '#e8f5e9',
         fontSize: '0.9rem',
@@ -142,7 +139,7 @@ const SoupWeekBanner = () => {
       {/* Кнопка */}
       <div style={{ textAlign: 'center' }}>
         <Link
-          to="/soups" /* 🔥 ИСПРАВЛЕНО: теперь ведёт на супы, а не на напитки! */
+          to="/soups"
           style={{
             display: 'inline-block',
             padding: '14px 35px',
@@ -164,13 +161,13 @@ const SoupWeekBanner = () => {
             e.currentTarget.style.boxShadow = '0 4px 12px rgba(255, 215, 0, 0.4)';
           }}
         >
-          👉 Смотреть рецепты супов /* 🔥 ИСПРАВЛЕНО: текст кнопки */
+          👉 Смотреть рецепты супов
         </Link>
       </div>
 
       {/* Иконка */}
       <div style={{ fontSize: '60px', textAlign: 'center', marginTop: '25px', filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))' }}>
-        🥣🌿 /* 🔥 ИСПРАВЛЕНО: иконка супа и зелени вместо черёмухи */
+        🥣🌿
       </div>
 
       {/* CSS анимация */}
