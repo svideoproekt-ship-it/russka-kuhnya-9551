@@ -121,7 +121,7 @@ const WorldCuisines = () => {
     },
       {
       id: 6,
-      title: 'Торт Павлова',
+      title: 'Торт Павловой',
       image: '/publicimagesworld/pavlova.jpg',
       country: 'Австралия',
       flag: '🇦🇺',
